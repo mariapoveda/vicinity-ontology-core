@@ -14,383 +14,244 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix saref: <https://w3id.org/saref#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://iot.linkeddata.es/def/core#> .
 
-<http://iot.linkeddata.es/def/core#> rdf:type owl:Ontology ;
-                                     dcterms:creator <http://purl.org/net/mpoveda> ;
-                                     dcterms:creator <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
-                                     dc:title "Vicinity core model"@en ;
-                                     dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                     vann:preferredNamespacePrefix "vicinity" ;
-                                     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                     owl:versionInfo "1.0" ;
-                                     vann:preferredNamespaceUri "http://iot.linkeddata.es/def/core" ;
-                                     rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
-                                     dc:publisher <http://www.oeg-upm.net/> .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
-vs:term_status rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://iot.linkeddata.es/def/core#describes
-<http://iot.linkeddata.es/def/core#describes> rdf:type owl:ObjectProperty ;
-                                             owl:inverseOf <http://iot.linkeddata.es/def/core#isDescribedBy> ;
-                                             rdfs:label "describesThing"@en .
-
-
-###  http://iot.linkeddata.es/def/core#hasComponent
-<http://iot.linkeddata.es/def/core#hasComponent> rdf:type owl:ObjectProperty ;
-                                                owl:inverseOf <http://iot.linkeddata.es/def/core#isComponentOf> ;
-                                                rdfs:label "hasComponent"@en .
-
-
-###  http://iot.linkeddata.es/def/core#hasInputData
-<http://iot.linkeddata.es/def/core#hasInputData> rdf:type owl:ObjectProperty ;
-                                                rdfs:label "hasInputData"@en .
-
-
-###  http://iot.linkeddata.es/def/core#hasMediaType
-<http://iot.linkeddata.es/def/core#hasMediaType> rdf:type owl:ObjectProperty ;
-                                                rdfs:label "hasMediaType"@en .
-
-
-###  http://iot.linkeddata.es/def/core#hasOutputData
-<http://iot.linkeddata.es/def/core#hasOutputData> rdf:type owl:ObjectProperty ;
-                                                 rdfs:label "hasOutputData"@en .
-
-
-###  http://iot.linkeddata.es/def/core#hasValueType
-<http://iot.linkeddata.es/def/core#hasValueType> rdf:type owl:ObjectProperty ;
-                                                rdfs:label "hasValueType"@en .
-
-
-###  http://iot.linkeddata.es/def/core#isAccesibleThrough
-<http://iot.linkeddata.es/def/core#isAccesibleThrough> rdf:type owl:ObjectProperty ;
-                                                      rdfs:label "isAccesibleThrough"@en .
-
-
-###  http://iot.linkeddata.es/def/core#isComponentOf
-<http://iot.linkeddata.es/def/core#isComponentOf> rdf:type owl:ObjectProperty ;
-                                                 rdfs:label "isComponentOf"@en .
-
-
-###  http://iot.linkeddata.es/def/core#isDescribedBy
-<http://iot.linkeddata.es/def/core#isDescribedBy> rdf:type owl:ObjectProperty ;
-                                                 rdfs:label "isDescribedBy"@en .
-
-
-###  http://iot.linkeddata.es/def/core#isMeasuredIn
-<http://iot.linkeddata.es/def/core#isMeasuredIn> rdf:type owl:ObjectProperty ;
-                                                rdfs:label "isMeasuredIn"@en .
-
-
-###  http://iot.linkeddata.es/def/core#isProvidedOverProtocol
-<http://iot.linkeddata.es/def/core#isProvidedOverProtocol> rdf:type owl:ObjectProperty ,
-                                                                   owl:FunctionalProperty ;
-                                                          rdfs:label "is provided over protocol"@en .
-
-
-###  http://iot.linkeddata.es/def/core#providedBy
-<http://iot.linkeddata.es/def/core#providedBy> rdf:type owl:ObjectProperty ;
-                                              rdfs:label "providedBy"@en ;
-                                              vs:term_status "propose for deletion" .
-
-
-###  http://iot.linkeddata.es/def/core#providesInteractionPattern
-<http://iot.linkeddata.es/def/core#providesInteractionPattern> rdf:type owl:ObjectProperty ;
-                                                              rdfs:domain <http://iot.linkeddata.es/def/core#InteractionPattern> ;
-                                                              rdfs:label "providesInteractionPattern"@en .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://iot.linkeddata.es/def/core#baseURI
-<http://iot.linkeddata.es/def/core#baseURI> rdf:type owl:DatatypeProperty ;
-                                           rdfs:domain <http://iot.linkeddata.es/def/core#Entity> ;
-                                           rdfs:range xsd:string ;
-                                           rdfs:label "baseURI"@en .
-
-
-###  http://iot.linkeddata.es/def/core#defaultValue
-<http://iot.linkeddata.es/def/core#defaultValue> rdf:type owl:DatatypeProperty ;
-                                                rdfs:range rdfs:Literal ;
-                                                rdfs:label "defaultValue"@en .
-
-
-###  http://iot.linkeddata.es/def/core#entityName
-<http://iot.linkeddata.es/def/core#entityName> rdf:type owl:DatatypeProperty ;
-                                              rdfs:subPropertyOf <http://iot.linkeddata.es/def/core#name> ;
-                                              rdfs:label "entityName"@en .
-
-
-###  http://iot.linkeddata.es/def/core#href
-<http://iot.linkeddata.es/def/core#href> rdf:type owl:DatatypeProperty ,
-                                                 owl:FunctionalProperty ;
-                                        rdfs:range xsd:string ;
-                                        rdfs:label "href"@en .
-
-
-###  http://iot.linkeddata.es/def/core#interactionName
-<http://iot.linkeddata.es/def/core#interactionName> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:subPropertyOf <http://iot.linkeddata.es/def/core#name> ;
-                                                   rdfs:label "interactionName"@en .
-
-
-###  http://iot.linkeddata.es/def/core#isRequired
-<http://iot.linkeddata.es/def/core#isRequired> rdf:type owl:DatatypeProperty ,
-                                                       owl:FunctionalProperty ;
-                                              rdfs:range xsd:boolean ;
-                                              rdfs:label "isRequired"@en .
-
-
-###  http://iot.linkeddata.es/def/core#isWritable
-<http://iot.linkeddata.es/def/core#isWritable> rdf:type owl:DatatypeProperty ,
-                                                       owl:FunctionalProperty ;
-                                              rdfs:range xsd:boolean ;
-                                              rdfs:label "isWritable"@en .
-
-
-###  http://iot.linkeddata.es/def/core#name
-<http://iot.linkeddata.es/def/core#name> rdf:type owl:DatatypeProperty ;
-                                        rdfs:range xsd:string ;
-                                        rdfs:label "name"@en .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://iot.linkeddata.es/def/core#Action
-<http://iot.linkeddata.es/def/core#Action> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://iot.linkeddata.es/def/core#InteractionPattern> ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://iot.linkeddata.es/def/core#hasInputData> ;
-                                                            owl:allValuesFrom <http://iot.linkeddata.es/def/core#DataFormat>
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://iot.linkeddata.es/def/core#hasOutputData> ;
-                                                            owl:allValuesFrom <http://iot.linkeddata.es/def/core#DataFormat>
-                                                          ] ;
-                                          rdfs:label "Action"@en .
-
-
-###  http://iot.linkeddata.es/def/core#CommunicationProtocol
-<http://iot.linkeddata.es/def/core#CommunicationProtocol> rdf:type owl:Class ;
-                                                         owl:disjointWith <http://iot.linkeddata.es/def/core#DigitalRepresentation> ,
-                                                                          <http://iot.linkeddata.es/def/core#Property> ,
-                                                                          <http://iot.linkeddata.es/def/core#WoTInterface> ,
-                                                                          saref:Service ;
-                                                         rdfs:comment "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en ;
-                                                         rdfs:label "Communication protocol"@en .
-
-
-###  http://iot.linkeddata.es/def/core#DataFormat
-<http://iot.linkeddata.es/def/core#DataFormat> rdf:type owl:Class ;
-                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://iot.linkeddata.es/def/core#hasValueType> ;
-                                                                owl:allValuesFrom <http://iot.linkeddata.es/def/core#DataType>
-                                                              ] ;
-                                              rdfs:label "DataFormat"@en .
-
-
-###  http://iot.linkeddata.es/def/core#DataType
-<http://iot.linkeddata.es/def/core#DataType> rdf:type owl:Class ;
-                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://iot.linkeddata.es/def/core#isMeasuredIn> ;
-                                                              owl:allValuesFrom <http://iot.linkeddata.es/def/core#UnitOfMeasure>
-                                                            ] ;
-                                            rdfs:label "DataType"@en .
-
-
-###  http://iot.linkeddata.es/def/core#DigitalRepresentation
-<http://iot.linkeddata.es/def/core#DigitalRepresentation> rdf:type owl:Class ;
-                                                         owl:disjointWith <http://iot.linkeddata.es/def/core#WoTInterface> ;
-                                                         rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
-                                                         rdfs:label "Digital representation"@en ;
-                                                         vs:term_status "unstable" .
-
-
-###  http://iot.linkeddata.es/def/core#Ecosystem
-<http://iot.linkeddata.es/def/core#Ecosystem> rdf:type owl:Class ;
-                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://iot.linkeddata.es/def/core#hasComponent> ;
-                                                               owl:someValuesFrom <http://iot.linkeddata.es/def/core#Entity>
-                                                             ] ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://iot.linkeddata.es/def/core#isDescribedBy> ;
-                                                               owl:someValuesFrom <http://iot.linkeddata.es/def/core#ThingEcosystemDescription>
-                                                             ] ;
-                                             rdfs:label "Ecosystem"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Endpoint
-<http://iot.linkeddata.es/def/core#Endpoint> rdf:type owl:Class ;
-                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://iot.linkeddata.es/def/core#isProvidedOverProtocol> ;
-                                                              owl:someValuesFrom <http://iot.linkeddata.es/def/core#CommunicationProtocol>
-                                                            ] ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://iot.linkeddata.es/def/core#hasMediaType> ;
-                                                              owl:allValuesFrom <http://iot.linkeddata.es/def/core#MediaType>
-                                                            ] ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://iot.linkeddata.es/def/core#href> ;
-                                                              owl:someValuesFrom xsd:string
-                                                            ] ;
-                                            rdfs:label "Endpoint"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Entity
-<http://iot.linkeddata.es/def/core#Entity> rdf:type owl:Class ;
-                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://iot.linkeddata.es/def/core#isComponentOf> ;
-                                                            owl:allValuesFrom <http://iot.linkeddata.es/def/core#Ecosystem>
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://iot.linkeddata.es/def/core#isDescribedBy> ;
-                                                            owl:allValuesFrom <http://iot.linkeddata.es/def/core#ThingDescription>
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://iot.linkeddata.es/def/core#providesInteractionPattern> ;
-                                                            owl:allValuesFrom <http://iot.linkeddata.es/def/core#InteractionPattern>
-                                                          ] ;
-                                          rdfs:comment "The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices"@en ;
-                                          rdfs:label "Entity"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Event
-<http://iot.linkeddata.es/def/core#Event> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://iot.linkeddata.es/def/core#InteractionPattern> ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://iot.linkeddata.es/def/core#hasOutputData> ;
-                                                           owl:allValuesFrom <http://iot.linkeddata.es/def/core#DataFormat>
-                                                         ] ;
-                                         rdfs:label "Event"@en .
-
-
-###  http://iot.linkeddata.es/def/core#InteractionPattern
-<http://iot.linkeddata.es/def/core#InteractionPattern> rdf:type owl:Class ;
-                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty <http://iot.linkeddata.es/def/core#isAccesibleThrough> ;
-                                                                        owl:someValuesFrom <http://iot.linkeddata.es/def/core#Endpoint>
-                                                                      ] ,
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty <http://iot.linkeddata.es/def/core#providedBy> ;
-                                                                        owl:someValuesFrom <http://iot.linkeddata.es/def/core#WebResource>
-                                                                      ] ,
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty <http://iot.linkeddata.es/def/core#interactionName> ;
-                                                                        owl:someValuesFrom xsd:string
-                                                                      ] ;
-                                                      rdfs:label "Interaction"@en .
-
-
-###  http://iot.linkeddata.es/def/core#MediaType
-<http://iot.linkeddata.es/def/core#MediaType> rdf:type owl:Class ;
-                                             rdfs:label "MediaType"@en .
-
-
-###  http://iot.linkeddata.es/def/core#PhysicalEntity
-<http://iot.linkeddata.es/def/core#PhysicalEntity> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://iot.linkeddata.es/def/core#Entity> ;
-                                                  rdfs:comment "Any entity that has a proper space region."@en ;
-                                                  rdfs:label "Physical entity"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Property
-<http://iot.linkeddata.es/def/core#Property> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://iot.linkeddata.es/def/core#InteractionPattern> ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://iot.linkeddata.es/def/core#hasOutputData> ;
-                                                              owl:someValuesFrom <http://iot.linkeddata.es/def/core#DataFormat>
-                                                            ] ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://iot.linkeddata.es/def/core#hasOutputData> ;
-                                                              owl:allValuesFrom <http://iot.linkeddata.es/def/core#DataFormat>
-                                                            ] ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://iot.linkeddata.es/def/core#isRequired> ;
-                                                              owl:allValuesFrom xsd:boolean
-                                                            ] ,
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://iot.linkeddata.es/def/core#isWritable> ;
-                                                              owl:allValuesFrom xsd:boolean
-                                                            ] ;
-                                            owl:disjointWith <http://iot.linkeddata.es/def/core#WoTInterface> ,
-                                                             saref:Service ;
-                                            rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
-                                            rdfs:label "Property"@en .
-
-
-###  http://iot.linkeddata.es/def/core#ThingDescription
-<http://iot.linkeddata.es/def/core#ThingDescription> rdf:type owl:Class ;
-                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <http://iot.linkeddata.es/def/core#describes> ;
-                                                                      owl:someValuesFrom <http://iot.linkeddata.es/def/core#Entity>
-                                                                    ] ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <http://iot.linkeddata.es/def/core#describes> ;
-                                                                      owl:allValuesFrom <http://iot.linkeddata.es/def/core#Entity>
-                                                                    ] ;
-                                                    rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
-                                                    rdfs:label "Thing description"@en .
-
-
-###  http://iot.linkeddata.es/def/core#ThingEcosystemDescription
-<http://iot.linkeddata.es/def/core#ThingEcosystemDescription> rdf:type owl:Class ;
-                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty <http://iot.linkeddata.es/def/core#describes> ;
-                                                                               owl:someValuesFrom <http://iot.linkeddata.es/def/core#Ecosystem>
-                                                                             ] ;
-                                                             rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
-                                                             rdfs:label "Thing ecosystem description"@en .
-
-
-###  http://iot.linkeddata.es/def/core#UnitOfMeasure
-<http://iot.linkeddata.es/def/core#UnitOfMeasure> rdf:type owl:Class ;
-                                                 rdfs:label "UnitOfMeasure"@en .
-
-
-###  http://iot.linkeddata.es/def/core#VirtualEntity
-<http://iot.linkeddata.es/def/core#VirtualEntity> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://iot.linkeddata.es/def/core#Entity> ;
-                                                 rdfs:label "VirtualEntity"@en .
-
-
-###  http://iot.linkeddata.es/def/core#WebResource
-<http://iot.linkeddata.es/def/core#WebResource> rdf:type owl:Class ;
-                                               rdfs:label "WebResource"@en ;
-                                               vs:term_status "unstable" .
-
-
-###  http://iot.linkeddata.es/def/core#WoTInterface
-<http://iot.linkeddata.es/def/core#WoTInterface> rdf:type owl:Class ;
-                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://iot.linkeddata.es/def/core#providesInteractionPattern> ;
-                                                                  owl:allValuesFrom <http://iot.linkeddata.es/def/core#InteractionPattern>
-                                                                ] ;
-                                                rdfs:comment "A WoT interface is also a web API that follows the recommendations of the WoT Interest Group."@en ,
-                                                             "Resource-oriented Web interface (often called \"Web API\") that allows access to servients over the network using different Protocol Bindings."@en ;
-                                                rdfs:label "Web of Thing interface"@en ;
-                                                vs:term_status "proposed for deletion" .
-
-
-###  https://w3id.org/saref#Service
-saref:Service rdf:type owl:Class ;
-              rdfs:comment "A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service."@en ;
-              rdfs:isDefinedBy saref: ;
-              rdfs:label "Service"@en ;
-              vs:term_status "unstable" .
-
-
-###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
+<http://iot.linkeddata.es/def/core#> a owl:Ontology ;
+	owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
+	dcterms:creator <http://purl.org/net/mpoveda> ;
+	rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
+	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+	dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
+	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+	owl:versionInfo "1.0" ;
+	vann:preferredNamespacePrefix "vcnt-core" ;
+	dc:publisher <http://www.oeg-upm.net/> ;
+	vann:preferredNamespaceUri "http://iot.linkeddata.es/def/core" ;
+	dc:title "Vicinity core model"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+
+dcterms:contributor a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+
+vs:term_status a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://iot.linkeddata.es/def/core#describesEcosystem
+
+:describesEcosystem a owl:ObjectProperty ;
+	owl:inverseOf :isEcosystemDescribedBy ;
+	rdfs:label "describesEcosystem"@en .
+# 
+# http://iot.linkeddata.es/def/core#hasComponent
+
+:hasComponent a owl:ObjectProperty ;
+	owl:inverseOf :isComponentOf ;
+	rdfs:label "hasComponent"@en .
+# 
+# http://iot.linkeddata.es/def/core#hasNeighbourhood
+
+:hasNeighbourhood a owl:ObjectProperty ;
+	rdfs:subPropertyOf :isInvolvedIn ;
+	owl:inverseOf :isNeighbourhoodOf ;
+	a owl:FunctionalProperty ;
+	rdfs:label "hasNeighbourhood"@en .
+# 
+# http://iot.linkeddata.es/def/core#hasOwner
+
+:hasOwner a owl:ObjectProperty ;
+	owl:inverseOf :owns ;
+	rdfs:label "has owner"@en .
+# 
+# http://iot.linkeddata.es/def/core#hasPartnershipWith
+
+:hasPartnershipWith a owl:ObjectProperty , owl:SymmetricProperty ;
+	rdfs:label "hasPartnershipWith"@en .
+# 
+# http://iot.linkeddata.es/def/core#hasProducer
+
+:hasProducer a owl:ObjectProperty ;
+	rdfs:label "hasProducer"@en .
+# 
+# http://iot.linkeddata.es/def/core#hasVendor
+
+:hasVendor a owl:ObjectProperty ;
+	rdfs:label "hasVendor"@en .
+# 
+# http://iot.linkeddata.es/def/core#involves
+
+:involves a owl:ObjectProperty ;
+	owl:inverseOf :isInvolvedIn ;
+	rdfs:label "involves"@en .
+# 
+# http://iot.linkeddata.es/def/core#isComponentOf
+
+:isComponentOf a owl:ObjectProperty ;
+	rdfs:label "isComponentOf"@en .
+# 
+# http://iot.linkeddata.es/def/core#isEcosystemDescribedBy
+
+:isEcosystemDescribedBy a owl:ObjectProperty ;
+	rdfs:label "isEcosystemDescribedBy"@en .
+# 
+# http://iot.linkeddata.es/def/core#isInvolvedIn
+
+:isInvolvedIn a owl:ObjectProperty ;
+	rdfs:label "isInvolvedIn"@en .
+# 
+# http://iot.linkeddata.es/def/core#isNeighbourhoodOf
+
+:isNeighbourhoodOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :involves ;
+	a owl:FunctionalProperty ;
+	rdfs:label "isNeighbourhoodOf"@en .
+# 
+# http://iot.linkeddata.es/def/core#owns
+
+:owns a owl:ObjectProperty ;
+	rdfs:label "owns"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#location
+
+geo:location a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4bldg#isContainedIn
+
+<https://w3id.org/def/saref4bldg#isContainedIn> a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://iot.linkeddata.es/def/core#desctiption
+
+:desctiption a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	rdfs:label "desctiption"@en .
+# 
+# http://iot.linkeddata.es/def/core#deviceDescription
+
+:deviceDescription a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :desctiption ;
+	rdfs:domain :Device ;
+	rdfs:range xsd:string ;
+	rdfs:label "deviceDescription"@en .
+# 
+# http://iot.linkeddata.es/def/core#deviceName
+
+:deviceName a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :name ;
+	rdfs:domain :Device ;
+	rdfs:range xsd:string ;
+	rdfs:label "deviceName"@en .
+# 
+# http://iot.linkeddata.es/def/core#name
+
+:name a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	rdfs:label "name"@en .
+# 
+# http://iot.linkeddata.es/def/core#serialNumber
+
+:serialNumber a owl:DatatypeProperty ;
+	rdfs:domain :Device ;
+	rdfs:range xsd:string ;
+	rdfs:label "serialNumber"@en .
+# 
+# http://iot.linkeddata.es/def/core#serviceDescription
+
+:serviceDescription a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :desctiption ;
+	rdfs:domain :Service ;
+	rdfs:range xsd:string ;
+	rdfs:label "service description"@en .
+# 
+# http://iot.linkeddata.es/def/core#serviceName
+
+:serviceName a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :name ;
+	rdfs:domain :Service ;
+	rdfs:range xsd:string ;
+	rdfs:label "serviceName"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://iot.linkeddata.es/def/core#Agent
+
+:Agent a owl:Class ;
+	rdfs:subClassOf foaf:Agent ;
+	rdfs:label "Agent"@en .
+# 
+# http://iot.linkeddata.es/def/core#Device
+
+:Device a owl:Class ;
+	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#PhysicalEntity> ;
+	rdfs:label "Device"@en .
+# 
+# http://iot.linkeddata.es/def/core#Ecosystem
+
+:Ecosystem a owl:Class ;
+	rdfs:label "Ecosystem"@en .
+# 
+# http://iot.linkeddata.es/def/core#Neighbourhood
+
+:Neighbourhood a owl:Class ;
+	rdfs:label "Neighbourhood"@en .
+# 
+# http://iot.linkeddata.es/def/core#Service
+
+:Service a owl:Class ;
+	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#VirtualEntity> ;
+	rdfs:label "Service"@en .
+# 
+# http://iot.linkeddata.es/def/core#ThingEcosystemDescription
+
+:ThingEcosystemDescription a owl:Class ;
+	rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
+	rdfs:label "Thing ecosystem description"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+
+geo:SpatialThing a owl:Class .
+# 
+# https://w3id.org/def/saref4bldg#BuildingSpace
+
+<https://w3id.org/def/saref4bldg#BuildingSpace> a owl:Class .
+# 
+# https://w3id.org/saref#Service
+
+saref:Service a owl:Class ;
+	rdfs:comment "A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service."@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "Service"@en ;
+	vs:term_status "unstable" .
+# 
+# Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
