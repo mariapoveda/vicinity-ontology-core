@@ -219,7 +219,19 @@ geo:location a owl:ObjectProperty .
 # http://iot.linkeddata.es/def/core#Ecosystem
 
 :Ecosystem a owl:Class ;
-	rdfs:label "Ecosystem"@en .
+	rdfs:subClassOf _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty <http://iot.linkeddata.es/def/core#hasComponent> ;
+	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Entity> .
+
+:Ecosystem rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty <http://iot.linkeddata.es/def/wot#isDescribedBy> ;
+	owl:someValuesFrom :ThingEcosystemDescription .
+
+:Ecosystem rdfs:label "Ecosystem"@en .
 # 
 # http://iot.linkeddata.es/def/core#Neighbourhood
 
@@ -235,7 +247,13 @@ geo:location a owl:ObjectProperty .
 # http://iot.linkeddata.es/def/core#ThingEcosystemDescription
 
 :ThingEcosystemDescription a owl:Class ;
-	rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
+	rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty <http://iot.linkeddata.es/def/wot#describes> ;
+	owl:someValuesFrom :Ecosystem .
+
+:ThingEcosystemDescription rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
 	rdfs:label "Thing ecosystem description"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
