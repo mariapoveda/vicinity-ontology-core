@@ -53,10 +53,17 @@ vs:term_status a owl:AnnotationProperty .
 # #################################################################
 # 
 # 
+# http://iot.linkeddata.es/def/core#avatar
+
+:avatar a owl:ObjectProperty ;
+	rdfs:subPropertyOf foaf:depiction ;
+	rdfs:label "avatar"@en .
+# 
 # http://iot.linkeddata.es/def/core#describesEcosystem
 
 :describesEcosystem a owl:ObjectProperty ;
 	owl:inverseOf :isEcosystemDescribedBy ;
+	a owl:FunctionalProperty ;
 	rdfs:label "describesEcosystem"@en .
 # 
 # http://iot.linkeddata.es/def/core#hasComponent
@@ -77,22 +84,17 @@ vs:term_status a owl:AnnotationProperty .
 
 :hasOwner a owl:ObjectProperty ;
 	owl:inverseOf :owns ;
-	rdfs:label "has owner"@en .
+	rdfs:label "has owner"@en , "has provider"@en .
 # 
 # http://iot.linkeddata.es/def/core#hasPartnershipWith
 
 :hasPartnershipWith a owl:ObjectProperty , owl:SymmetricProperty ;
 	rdfs:label "hasPartnershipWith"@en .
 # 
-# http://iot.linkeddata.es/def/core#hasProducer
-
-:hasProducer a owl:ObjectProperty ;
-	rdfs:label "hasProducer"@en .
-# 
 # http://iot.linkeddata.es/def/core#hasVendor
 
 :hasVendor a owl:ObjectProperty ;
-	rdfs:label "hasVendor"@en .
+	rdfs:label "has producer"@en , "has vendor"@en .
 # 
 # http://iot.linkeddata.es/def/core#involves
 
@@ -107,7 +109,7 @@ vs:term_status a owl:AnnotationProperty .
 # 
 # http://iot.linkeddata.es/def/core#isEcosystemDescribedBy
 
-:isEcosystemDescribedBy a owl:ObjectProperty ;
+:isEcosystemDescribedBy a owl:ObjectProperty , owl:InverseFunctionalProperty ;
 	rdfs:label "isEcosystemDescribedBy"@en .
 # 
 # http://iot.linkeddata.es/def/core#isInvolvedIn
@@ -125,11 +127,15 @@ vs:term_status a owl:AnnotationProperty .
 # http://iot.linkeddata.es/def/core#owns
 
 :owns a owl:ObjectProperty ;
-	rdfs:label "owns"@en .
+	rdfs:label "owns"@en , "provides"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 
 geo:location a owl:ObjectProperty .
+# 
+# http://xmlns.com/foaf/0.1/depiction
+
+foaf:depiction a owl:ObjectProperty .
 # 
 # https://w3id.org/def/saref4bldg#isContainedIn
 
@@ -222,7 +228,7 @@ geo:location a owl:ObjectProperty .
 	rdfs:subClassOf _:genid1 .
 
 _:genid1 a owl:Restriction ;
-	owl:onProperty <http://iot.linkeddata.es/def/core#hasComponent> ;
+	owl:onProperty :hasComponent ;
 	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Entity> .
 
 :Ecosystem rdfs:subClassOf _:genid2 .
@@ -259,6 +265,10 @@ _:genid3 a owl:Restriction ;
 # http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 
 geo:SpatialThing a owl:Class .
+# 
+# http://xmlns.com/foaf/0.1/Image
+
+foaf:Image a owl:Class .
 # 
 # https://w3id.org/def/saref4bldg#BuildingSpace
 
