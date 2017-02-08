@@ -1,0 +1,179 @@
+{
+  "@context" : {
+    "entityName" : {
+      "@id" : "http://iot.linkeddata.es/def/core#entityName"
+    },
+    "UnitOfMeasure" : {
+      "@id" : "http://iot.linkeddata.es/def/core#UnitOfMeasure"
+    },
+    "term_status" : {
+      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+    },
+    "DataType" : {
+      "@id" : "http://iot.linkeddata.es/def/core#DataType"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "WebResource" : {
+      "@id" : "http://iot.linkeddata.es/def/core#WebResource"
+    },
+    "describes" : {
+      "@id" : "http://iot.linkeddata.es/def/core#describes",
+      "@type" : "@id"
+    },
+    "DigitalRepresentation" : {
+      "@id" : "http://iot.linkeddata.es/def/core#DigitalRepresentation"
+    },
+    "MediaType" : {
+      "@id" : "http://iot.linkeddata.es/def/core#MediaType"
+    },
+    "interactionName" : {
+      "@id" : "http://iot.linkeddata.es/def/core#interactionName"
+    },
+    "DataFormat" : {
+      "@id" : "http://iot.linkeddata.es/def/core#DataFormat"
+    },
+    "WoTInterface" : {
+      "@id" : "http://iot.linkeddata.es/def/core#WoTInterface"
+    },
+    "Ecosystem" : {
+      "@id" : "http://iot.linkeddata.es/def/core#Ecosystem"
+    },
+    "providesInteractionPattern" : {
+      "@id" : "http://iot.linkeddata.es/def/core#providesInteractionPattern",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasValueType" : {
+      "@id" : "http://iot.linkeddata.es/def/core#hasValueType",
+      "@type" : "@id"
+    },
+    "baseURI" : {
+      "@id" : "http://iot.linkeddata.es/def/core#baseURI",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "providedBy" : {
+      "@id" : "http://iot.linkeddata.es/def/core#providedBy",
+      "@type" : "@id"
+    },
+    "hasOutputData" : {
+      "@id" : "http://iot.linkeddata.es/def/core#hasOutputData",
+      "@type" : "@id"
+    },
+    "Event" : {
+      "@id" : "http://iot.linkeddata.es/def/core#Event"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "href" : {
+      "@id" : "http://iot.linkeddata.es/def/core#href",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "name" : {
+      "@id" : "http://iot.linkeddata.es/def/core#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "CommunicationProtocol" : {
+      "@id" : "http://iot.linkeddata.es/def/core#CommunicationProtocol"
+    },
+    "isProvidedOverProtocol" : {
+      "@id" : "http://iot.linkeddata.es/def/core#isProvidedOverProtocol",
+      "@type" : "@id"
+    },
+    "isComponentOf" : {
+      "@id" : "http://iot.linkeddata.es/def/core#isComponentOf",
+      "@type" : "@id"
+    },
+    "VirtualEntity" : {
+      "@id" : "http://iot.linkeddata.es/def/core#VirtualEntity"
+    },
+    "isAccesibleThrough" : {
+      "@id" : "http://iot.linkeddata.es/def/core#isAccesibleThrough",
+      "@type" : "@id"
+    },
+    "hasInputData" : {
+      "@id" : "http://iot.linkeddata.es/def/core#hasInputData",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "ThingEcosystemDescription" : {
+      "@id" : "http://iot.linkeddata.es/def/core#ThingEcosystemDescription"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "hasMediaType" : {
+      "@id" : "http://iot.linkeddata.es/def/core#hasMediaType",
+      "@type" : "@id"
+    },
+    "Property" : {
+      "@id" : "http://iot.linkeddata.es/def/core#Property"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "isMeasuredIn" : {
+      "@id" : "http://iot.linkeddata.es/def/core#isMeasuredIn",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "Endpoint" : {
+      "@id" : "http://iot.linkeddata.es/def/core#Endpoint"
+    },
+    "ThingDescription" : {
+      "@id" : "http://iot.linkeddata.es/def/core#ThingDescription"
+    },
+    "Entity" : {
+      "@id" : "http://iot.linkeddata.es/def/core#Entity"
+    },
+    "InteractionPattern" : {
+      "@id" : "http://iot.linkeddata.es/def/core#InteractionPattern"
+    },
+    "defaultValue" : {
+      "@id" : "http://iot.linkeddata.es/def/core#defaultValue",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Service" : {
+      "@id" : "https://w3id.org/saref#Service"
+    },
+    "isWritable" : {
+      "@id" : "http://iot.linkeddata.es/def/core#isWritable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasComponent" : {
+      "@id" : "http://iot.linkeddata.es/def/core#hasComponent",
+      "@type" : "@id"
+    },
+    "Action" : {
+      "@id" : "http://iot.linkeddata.es/def/core#Action"
+    },
+    "PhysicalEntity" : {
+      "@id" : "http://iot.linkeddata.es/def/core#PhysicalEntity"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "isDescribedBy" : {
+      "@id" : "http://iot.linkeddata.es/def/core#isDescribedBy",
+      "@type" : "@id"
+    },
+    "isRequired" : {
+      "@id" : "http://iot.linkeddata.es/def/core#isRequired",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+  }
+}

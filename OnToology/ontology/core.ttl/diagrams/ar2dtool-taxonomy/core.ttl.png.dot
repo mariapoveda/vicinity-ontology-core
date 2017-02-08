@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "vicinity:Property" "vicinity:Event" "vicinity:PhysicalEntity" "vicinity:InteractionPattern" "vicinity:Entity" "vicinity:Action" "vicinity:VirtualEntity" ; /*classes style*/
+	"vicinity:Event" -> "vicinity:InteractionPattern" [ label = "rdfs:subClassOf" ];
+	"vicinity:VirtualEntity" -> "vicinity:Entity" [ label = "rdfs:subClassOf" ];
+	"vicinity:PhysicalEntity" -> "vicinity:Entity" [ label = "rdfs:subClassOf" ];
+	"vicinity:Action" -> "vicinity:InteractionPattern" [ label = "rdfs:subClassOf" ];
+	"vicinity:Property" -> "vicinity:InteractionPattern" [ label = "rdfs:subClassOf" ];
+
+}
