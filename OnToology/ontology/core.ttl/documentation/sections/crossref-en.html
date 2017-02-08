@@ -1,0 +1,947 @@
+<h2>4. Cross reference for Vicinity core model classes, properties and dataproperties</h2>
+This section provides details for each class and property defined by Vicinity core model.
+<div id="classes">
+   <h2>Classes</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#Action" title="http://iot.linkeddata.es/def/core#Action">Action</a>
+      </li>
+      <li>
+         <a href="#CommunicationProtocol"
+            title="http://iot.linkeddata.es/def/core#CommunicationProtocol">Communication protocol</a>
+      </li>
+      <li>
+         <a href="#DataFormat" title="http://iot.linkeddata.es/def/core#DataFormat">DataFormat</a>
+      </li>
+      <li>
+         <a href="#DataType" title="http://iot.linkeddata.es/def/core#DataType">DataType</a>
+      </li>
+      <li>
+         <a href="#DigitalRepresentation"
+            title="http://iot.linkeddata.es/def/core#DigitalRepresentation">Digital representation</a>
+      </li>
+      <li>
+         <a href="#Ecosystem" title="http://iot.linkeddata.es/def/core#Ecosystem">Ecosystem</a>
+      </li>
+      <li>
+         <a href="#Endpoint" title="http://iot.linkeddata.es/def/core#Endpoint">Endpoint</a>
+      </li>
+      <li>
+         <a href="#Entity" title="http://iot.linkeddata.es/def/core#Entity">Entity</a>
+      </li>
+      <li>
+         <a href="#Event" title="http://iot.linkeddata.es/def/core#Event">Event</a>
+      </li>
+      <li>
+         <a href="#InteractionPattern"
+            title="http://iot.linkeddata.es/def/core#InteractionPattern">Interaction</a>
+      </li>
+      <li>
+         <a href="#MediaType" title="http://iot.linkeddata.es/def/core#MediaType">MediaType</a>
+      </li>
+      <li>
+         <a href="#PhysicalEntity" title="http://iot.linkeddata.es/def/core#PhysicalEntity">Physical entity</a>
+      </li>
+      <li>
+         <a href="#Property" title="http://iot.linkeddata.es/def/core#Property">Property</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
+      </li>
+      <li>
+         <a href="#ThingDescription"
+            title="http://iot.linkeddata.es/def/core#ThingDescription">Thing description</a>
+      </li>
+      <li>
+         <a href="#ThingEcosystemDescription"
+            title="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">Thing ecosystem description</a>
+      </li>
+      <li>
+         <a href="#UnitOfMeasure" title="http://iot.linkeddata.es/def/core#UnitOfMeasure">UnitOfMeasure</a>
+      </li>
+      <li>
+         <a href="#VirtualEntity" title="http://iot.linkeddata.es/def/core#VirtualEntity">VirtualEntity</a>
+      </li>
+      <li>
+         <a href="#WoTInterface" title="http://iot.linkeddata.es/def/core#WoTInterface">Web of Thing interface</a>
+      </li>
+      <li>
+         <a href="#WebResource" title="http://iot.linkeddata.es/def/core#WebResource">WebResource</a>
+      </li>
+   </ul>
+   <div class="entity" id="Action">
+      <h3>Action<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Action</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#InteractionPattern"
+               title="http://iot.linkeddata.es/def/core#InteractionPattern">Interaction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasInputData" title="http://iot.linkeddata.es/def/core#hasInputData">hasInputData</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#DataFormat" title="http://iot.linkeddata.es/def/core#DataFormat">DataFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasOutputData" title="http://iot.linkeddata.es/def/core#hasOutputData">hasOutputData</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#DataFormat" title="http://iot.linkeddata.es/def/core#DataFormat">DataFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CommunicationProtocol">
+      <h3>Communication protocol<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#CommunicationProtocol</p>
+      <div class="comment">
+         <span class="markdown">A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from "Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.")</span>
+      </div>
+      <dl class="description">
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#DigitalRepresentation"
+               title="http://iot.linkeddata.es/def/core#DigitalRepresentation">Digital representation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://iot.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WoTInterface" title="http://iot.linkeddata.es/def/core#WoTInterface">Web of Thing interface</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataFormat">
+      <h3>DataFormat<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DataFormat</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasValueType" title="http://iot.linkeddata.es/def/core#hasValueType">hasValueType</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#DataType" title="http://iot.linkeddata.es/def/core#DataType">DataType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataType">
+      <h3>DataType<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DataType</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#isMeasuredIn" title="http://iot.linkeddata.es/def/core#isMeasuredIn">isMeasuredIn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#UnitOfMeasure" title="http://iot.linkeddata.es/def/core#UnitOfMeasure">UnitOfMeasure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DigitalRepresentation">
+      <h3>Digital representation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DigitalRepresentation</p>
+      <div class="comment">
+         <span class="markdown">A digital representation encapsulates a physical object accessible via Web services</span>
+      </div>
+      <dl class="description">
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#CommunicationProtocol"
+               title="http://iot.linkeddata.es/def/core#CommunicationProtocol">Communication protocol</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WoTInterface" title="http://iot.linkeddata.es/def/core#WoTInterface">Web of Thing interface</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Ecosystem">
+      <h3>Ecosystem<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Ecosystem</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#isDescribedBy" title="http://iot.linkeddata.es/def/core#isDescribedBy">isDescribedBy</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#ThingEcosystemDescription"
+               title="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">Thing ecosystem description</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">hasComponent</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Entity" title="http://iot.linkeddata.es/def/core#Entity">Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Endpoint">
+      <h3>Endpoint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Endpoint</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasMediaType" title="http://iot.linkeddata.es/def/core#hasMediaType">hasMediaType</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#MediaType" title="http://iot.linkeddata.es/def/core#MediaType">MediaType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#href" title="http://iot.linkeddata.es/def/core#href">href</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#isProvidedOverProtocol"
+               title="http://iot.linkeddata.es/def/core#isProvidedOverProtocol">is provided over protocol</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#CommunicationProtocol"
+               title="http://iot.linkeddata.es/def/core#CommunicationProtocol">Communication protocol</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Entity">
+      <h3>Entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Entity</p>
+      <div class="comment">
+         <span class="markdown">The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">isComponentOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Ecosystem" title="http://iot.linkeddata.es/def/core#Ecosystem">Ecosystem</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isDescribedBy" title="http://iot.linkeddata.es/def/core#isDescribedBy">isDescribedBy</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#ThingDescription"
+               title="http://iot.linkeddata.es/def/core#ThingDescription">Thing description</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#providesInteractionPattern"
+               title="http://iot.linkeddata.es/def/core#providesInteractionPattern">providesInteractionPattern</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#InteractionPattern"
+               title="http://iot.linkeddata.es/def/core#InteractionPattern">Interaction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PhysicalEntity" title="http://iot.linkeddata.es/def/core#PhysicalEntity">Physical entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VirtualEntity" title="http://iot.linkeddata.es/def/core#VirtualEntity">VirtualEntity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#baseURI" title="http://iot.linkeddata.es/def/core#baseURI">baseURI</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Event">
+      <h3>Event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Event</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#InteractionPattern"
+               title="http://iot.linkeddata.es/def/core#InteractionPattern">Interaction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasOutputData" title="http://iot.linkeddata.es/def/core#hasOutputData">hasOutputData</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#DataFormat" title="http://iot.linkeddata.es/def/core#DataFormat">DataFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InteractionPattern">
+      <h3>Interaction<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#InteractionPattern</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#interactionName"
+               title="http://iot.linkeddata.es/def/core#interactionName">interactionName</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#isAccesibleThrough"
+               title="http://iot.linkeddata.es/def/core#isAccesibleThrough">isAccesibleThrough</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Endpoint" title="http://iot.linkeddata.es/def/core#Endpoint">Endpoint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#providedBy" title="http://iot.linkeddata.es/def/core#providedBy">providedBy</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#WebResource" title="http://iot.linkeddata.es/def/core#WebResource">WebResource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Action" title="http://iot.linkeddata.es/def/core#Action">Action</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Event" title="http://iot.linkeddata.es/def/core#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://iot.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#providesInteractionPattern"
+               title="http://iot.linkeddata.es/def/core#providesInteractionPattern">providesInteractionPattern</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MediaType">
+      <h3>MediaType<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#MediaType</p>
+   </div>
+   <div class="entity" id="PhysicalEntity">
+      <h3>Physical entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#PhysicalEntity</p>
+      <div class="comment">
+         <span class="markdown">Any entity that has a proper space region.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Entity" title="http://iot.linkeddata.es/def/core#Entity">Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Property">
+      <h3>Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Property</p>
+      <div class="comment">
+         <span class="markdown">An aspect of an entity that can be observable by a sensor.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#InteractionPattern"
+               title="http://iot.linkeddata.es/def/core#InteractionPattern">Interaction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isRequired" title="http://iot.linkeddata.es/def/core#isRequired">isRequired</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#hasOutputData" title="http://iot.linkeddata.es/def/core#hasOutputData">hasOutputData</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#DataFormat" title="http://iot.linkeddata.es/def/core#DataFormat">DataFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasOutputData" title="http://iot.linkeddata.es/def/core#hasOutputData">hasOutputData</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#DataFormat" title="http://iot.linkeddata.es/def/core#DataFormat">DataFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isWritable" title="http://iot.linkeddata.es/def/core#isWritable">isWritable</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#CommunicationProtocol"
+               title="http://iot.linkeddata.es/def/core#CommunicationProtocol">Communication protocol</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WoTInterface" title="http://iot.linkeddata.es/def/core#WoTInterface">Web of Thing interface</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#Service">
+      <h3>Service<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Service</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service.</span>
+      </div>
+      <dl class="description">
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#CommunicationProtocol"
+               title="http://iot.linkeddata.es/def/core#CommunicationProtocol">Communication protocol</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://iot.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ThingDescription">
+      <h3>Thing description<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#ThingDescription</p>
+      <div class="comment">
+         <span class="markdown">A digital representation encapsulates a physical object accessible via Web services</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describesThing</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Entity" title="http://iot.linkeddata.es/def/core#Entity">Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describesThing</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Entity" title="http://iot.linkeddata.es/def/core#Entity">Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ThingEcosystemDescription">
+      <h3>Thing ecosystem description<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#ThingEcosystemDescription</p>
+      <div class="comment">
+         <span class="markdown">A digital representation that encapsulates an ecosystem taht is accessible via Web services</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describesThing</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Ecosystem" title="http://iot.linkeddata.es/def/core#Ecosystem">Ecosystem</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UnitOfMeasure">
+      <h3>UnitOfMeasure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#UnitOfMeasure</p>
+   </div>
+   <div class="entity" id="VirtualEntity">
+      <h3>VirtualEntity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#VirtualEntity</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Entity" title="http://iot.linkeddata.es/def/core#Entity">Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WoTInterface">
+      <h3>Web of Thing interface<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#WoTInterface</p>
+      <div class="comment">
+         <span class="markdown">A WoT interface is also a web API that follows the recommendations of the WoT Interest Group.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#providesInteractionPattern"
+               title="http://iot.linkeddata.es/def/core#providesInteractionPattern">providesInteractionPattern</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#InteractionPattern"
+               title="http://iot.linkeddata.es/def/core#InteractionPattern">Interaction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#CommunicationProtocol"
+               title="http://iot.linkeddata.es/def/core#CommunicationProtocol">Communication protocol</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DigitalRepresentation"
+               title="http://iot.linkeddata.es/def/core#DigitalRepresentation">Digital representation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://iot.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WebResource">
+      <h3>WebResource<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#WebResource</p>
+   </div>
+</div><div id="objectproperties">
+   <h2>Object Properties</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describesThing</a>
+      </li>
+      <li>
+         <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">hasComponent</a>
+      </li>
+      <li>
+         <a href="#hasInputData" title="http://iot.linkeddata.es/def/core#hasInputData">hasInputData</a>
+      </li>
+      <li>
+         <a href="#hasMediaType" title="http://iot.linkeddata.es/def/core#hasMediaType">hasMediaType</a>
+      </li>
+      <li>
+         <a href="#hasOutputData" title="http://iot.linkeddata.es/def/core#hasOutputData">hasOutputData</a>
+      </li>
+      <li>
+         <a href="#hasValueType" title="http://iot.linkeddata.es/def/core#hasValueType">hasValueType</a>
+      </li>
+      <li>
+         <a href="#isProvidedOverProtocol"
+            title="http://iot.linkeddata.es/def/core#isProvidedOverProtocol">is provided over protocol</a>
+      </li>
+      <li>
+         <a href="#isAccesibleThrough"
+            title="http://iot.linkeddata.es/def/core#isAccesibleThrough">isAccesibleThrough</a>
+      </li>
+      <li>
+         <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">isComponentOf</a>
+      </li>
+      <li>
+         <a href="#isDescribedBy" title="http://iot.linkeddata.es/def/core#isDescribedBy">isDescribedBy</a>
+      </li>
+      <li>
+         <a href="#isMeasuredIn" title="http://iot.linkeddata.es/def/core#isMeasuredIn">isMeasuredIn</a>
+      </li>
+      <li>
+         <a href="#providedBy" title="http://iot.linkeddata.es/def/core#providedBy">providedBy</a>
+      </li>
+      <li>
+         <a href="#providesInteractionPattern"
+            title="http://iot.linkeddata.es/def/core#providesInteractionPattern">providesInteractionPattern</a>
+      </li>
+   </ul>
+   <div class="entity" id="describes">
+      <h3>describesThing<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#describes</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isDescribedBy" title="http://iot.linkeddata.es/def/core#isDescribedBy">isDescribedBy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasComponent">
+      <h3>hasComponent<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasComponent</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">isComponentOf</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasInputData">
+      <h3>hasInputData<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasInputData</p>
+   </div>
+   <div class="entity" id="hasMediaType">
+      <h3>hasMediaType<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasMediaType</p>
+   </div>
+   <div class="entity" id="hasOutputData">
+      <h3>hasOutputData<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasOutputData</p>
+   </div>
+   <div class="entity" id="hasValueType">
+      <h3>hasValueType<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasValueType</p>
+   </div>
+   <div class="entity" id="isProvidedOverProtocol">
+      <h3>is provided over protocol<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isProvidedOverProtocol</p>
+   </div>
+   <div class="entity" id="isAccesibleThrough">
+      <h3>isAccesibleThrough<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isAccesibleThrough</p>
+   </div>
+   <div class="entity" id="isComponentOf">
+      <h3>isComponentOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isComponentOf</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">hasComponent</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isDescribedBy">
+      <h3>isDescribedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isDescribedBy</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describesThing</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isMeasuredIn">
+      <h3>isMeasuredIn<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isMeasuredIn</p>
+   </div>
+   <div class="entity" id="providedBy">
+      <h3>providedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#providedBy</p>
+   </div>
+   <div class="entity" id="providesInteractionPattern">
+      <h3>providesInteractionPattern<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#providesInteractionPattern</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#InteractionPattern"
+                  title="http://iot.linkeddata.es/def/core#InteractionPattern">Interaction</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h2>Data Properties</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#baseURI" title="http://iot.linkeddata.es/def/core#baseURI">baseURI</a>
+      </li>
+      <li>
+         <a href="#defaultValue" title="http://iot.linkeddata.es/def/core#defaultValue">defaultValue</a>
+      </li>
+      <li>
+         <a href="#entityName" title="http://iot.linkeddata.es/def/core#entityName">entityName</a>
+      </li>
+      <li>
+         <a href="#href" title="http://iot.linkeddata.es/def/core#href">href</a>
+      </li>
+      <li>
+         <a href="#interactionName"
+            title="http://iot.linkeddata.es/def/core#interactionName">interactionName</a>
+      </li>
+      <li>
+         <a href="#isRequired" title="http://iot.linkeddata.es/def/core#isRequired">isRequired</a>
+      </li>
+      <li>
+         <a href="#isWritable" title="http://iot.linkeddata.es/def/core#isWritable">isWritable</a>
+      </li>
+      <li>
+         <a href="#name" title="http://iot.linkeddata.es/def/core#name">name</a>
+      </li>
+   </ul>
+   <div class="entity" id="baseURI">
+      <h3>baseURI<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#baseURI</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Entity" title="http://iot.linkeddata.es/def/core#Entity">Entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="defaultValue">
+      <h3>defaultValue<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#defaultValue</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="entityName">
+      <h3>entityName<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#entityName</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#name" title="http://iot.linkeddata.es/def/core#name">name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="href">
+      <h3>href<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#href</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="interactionName">
+      <h3>interactionName<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#interactionName</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#name" title="http://iot.linkeddata.es/def/core#name">name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isRequired">
+      <h3>isRequired<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isRequired</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isWritable">
+      <h3>isWritable<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isWritable</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#name</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#entityName" title="http://iot.linkeddata.es/def/core#entityName">entityName</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#interactionName"
+                  title="http://iot.linkeddata.es/def/core#interactionName">interactionName</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div>
