@@ -34,13 +34,13 @@ vs:term_status
       rdfs:label "Ecosystem"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty <http://iot.linkeddata.es/def/wot#isDescribedBy> ;
-                owl:someValuesFrom :ThingEcosystemDescription
+                owl:onProperty :hasComponent ;
+                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Entity>
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :hasComponent ;
-                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Entity>
+                owl:onProperty <http://iot.linkeddata.es/def/wot#isDescribedBy> ;
+                owl:someValuesFrom :ThingEcosystemDescription
               ] .
 
 :avatar
@@ -98,7 +98,7 @@ vs:term_status
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/core" ;
       owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
-      owl:versionInfo "1.0" .
+      owl:versionInfo "0.0.1" .
 
 :serviceName
       a       owl:DatatypeProperty ;

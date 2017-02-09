@@ -1,6 +1,6 @@
 <http://iot.linkeddata.es/def/core#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "isComponentOf"@en .
 <http://iot.linkeddata.es/def/core#isComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/terms/contributor> <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/elements/1.1/title> "Vicinity core model"@en .
@@ -28,15 +28,12 @@
 <http://iot.linkeddata.es/def/core#Neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Thing ecosystem description"@en .
 <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital representation that encapsulates an ecosystem taht is accessible via Web services" .
-<http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffa .
+<http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffa .
 <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "isInvolvedIn"@en .
 <http://iot.linkeddata.es/def/core#isInvolvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4bldg#BuildingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#Entity> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#hasComponent> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
 <http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
 <http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -56,6 +53,9 @@ _:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syn
 <http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isEcosystemDescribedBy"@en .
 <http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
 <http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#Entity> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#hasComponent> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://iot.linkeddata.es/def/core#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
 <http://iot.linkeddata.es/def/core#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#VirtualEntity> .
@@ -67,9 +67,6 @@ _:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syn
 <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#involves> .
 <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isDescribedBy> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "service description"@en .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Service> .
@@ -88,9 +85,9 @@ _:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syn
 <http://iot.linkeddata.es/def/core#serviceName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#name> .
 <http://iot.linkeddata.es/def/core#serviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#Ecosystem> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#describes> .
-_:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isDescribedBy> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2000/01/rdf-schema#label> "hasNeighbourhood"@en .
 <http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2002/07/owl#inverseOf> <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> .
@@ -112,9 +109,12 @@ _:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syn
 <http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/2000/01/rdf-schema#label> "hasPartnershipWith"@en .
 <http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#Ecosystem> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#describes> .
+_:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#label> "Ecosystem"@en .
-<http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffb .
-<http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX758c65f1X3aX15a222a5ad9X3aXX2dX7ffc .
+<http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffb .
+<http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX5d7a41d2X3aX15a2256c892X3aXX2dX7ffc .
 <http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 <http://iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
