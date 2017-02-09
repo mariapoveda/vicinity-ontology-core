@@ -15,79 +15,66 @@
 @prefix saref:   <https://w3id.org/saref#> .
 @prefix doap:    <http://usefulinc.com/ns/doap#> .
 
+:hasNeighbourhood
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:label "hasNeighbourhood"@en ;
+      rdfs:subPropertyOf :isInvolvedIn ;
+      owl:inverseOf :isNeighbourhoodOf .
+
 vs:term_status
       a       owl:AnnotationProperty .
 
-:entityName
+:desctiption
       a       owl:DatatypeProperty ;
-      rdfs:label "entityName"@en ;
-      rdfs:subPropertyOf :name .
-
-:isMeasuredIn
-      a       owl:ObjectProperty ;
-      rdfs:label "isMeasuredIn"@en .
-
-:Property
-      a       owl:Class ;
-      rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
-      rdfs:label "Property"@en ;
-      rdfs:subClassOf :InteractionPattern ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :hasOutputData ;
-                owl:someValuesFrom :DataFormat
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isRequired
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isWritable
-              ] ;
-      owl:disjointWith saref:Service , :WoTInterface .
+      rdfs:label "desctiption"@en ;
+      rdfs:range xsd:string .
 
 :Ecosystem
       a       owl:Class ;
       rdfs:label "Ecosystem"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :hasComponent ;
-                owl:someValuesFrom :Entity
+                owl:onProperty <http://iot.linkeddata.es/def/wot#isDescribedBy> ;
+                owl:someValuesFrom :ThingEcosystemDescription
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :isDescribedBy ;
-                owl:someValuesFrom :ThingEcosystemDescription
+                owl:onProperty :hasComponent ;
+                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Entity>
               ] .
+
+:avatar
+      a       owl:ObjectProperty ;
+      rdfs:label "avatar"@en ;
+      rdfs:subPropertyOf foaf:depiction .
+
+:serviceDescription
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Service ;
+      rdfs:label "service description"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :desctiption .
+
+:hasOwner
+      a       owl:ObjectProperty ;
+      rdfs:label "has owner"@en , "has provider"@en ;
+      owl:inverseOf :owns .
 
 :hasComponent
       a       owl:ObjectProperty ;
       rdfs:label "hasComponent"@en ;
       owl:inverseOf :isComponentOf .
 
-:href
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:label "href"@en ;
-      rdfs:range xsd:string .
+:isComponentOf
+      a       owl:ObjectProperty ;
+      rdfs:label "isComponentOf"@en .
 
-:WoTInterface
-      a       owl:Class ;
-      rdfs:comment "Resource-oriented Web interface (often called \"Web API\") that allows access to servients over the network using different Protocol Bindings."@en , "A WoT interface is also a web API that follows the recommendations of the WoT Interest Group."@en ;
-      rdfs:label "Web of Thing interface"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :InteractionPattern ;
-                owl:onProperty :providesInteractionPattern
-              ] ;
-      vs:term_status "proposed for deletion" .
+:deviceDescription
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Device ;
+      rdfs:label "deviceDescription"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :desctiption .
 
 :ThingEcosystemDescription
       a       owl:Class ;
@@ -95,207 +82,66 @@ vs:term_status
       rdfs:label "Thing ecosystem description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :describes ;
+                owl:onProperty <http://iot.linkeddata.es/def/wot#describes> ;
                 owl:someValuesFrom :Ecosystem
               ] .
-
-:Entity
-      a       owl:Class ;
-      rdfs:comment "The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices"@en ;
-      rdfs:label "Entity"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :ThingDescription ;
-                owl:onProperty :isDescribedBy
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Ecosystem ;
-                owl:onProperty :isComponentOf
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :InteractionPattern ;
-                owl:onProperty :providesInteractionPattern
-              ] .
-
-:isProvidedOverProtocol
-      a       owl:FunctionalProperty , owl:ObjectProperty ;
-      rdfs:label "is provided over protocol"@en .
-
-:interactionName
-      a       owl:DatatypeProperty ;
-      rdfs:label "interactionName"@en ;
-      rdfs:subPropertyOf :name .
-
-:hasInputData
-      a       owl:ObjectProperty ;
-      rdfs:label "hasInputData"@en .
-
-:defaultValue
-      a       owl:DatatypeProperty ;
-      rdfs:label "defaultValue"@en ;
-      rdfs:range rdfs:Literal .
-
-:hasMediaType
-      a       owl:ObjectProperty ;
-      rdfs:label "hasMediaType"@en .
-
-:WebResource
-      a       owl:Class ;
-      rdfs:label "WebResource"@en ;
-      vs:term_status "unstable" .
-
-:VirtualEntity
-      a       owl:Class ;
-      rdfs:label "VirtualEntity"@en ;
-      rdfs:subClassOf :Entity .
-
-:UnitOfMeasure
-      a       owl:Class ;
-      rdfs:label "UnitOfMeasure"@en .
-
-:Action
-      a       owl:Class ;
-      rdfs:label "Action"@en ;
-      rdfs:subClassOf :InteractionPattern ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasInputData
-              ] .
-
-:Endpoint
-      a       owl:Class ;
-      rdfs:label "Endpoint"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :isProvidedOverProtocol ;
-                owl:someValuesFrom :CommunicationProtocol
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :href ;
-                owl:someValuesFrom xsd:string
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :MediaType ;
-                owl:onProperty :hasMediaType
-              ] .
-
-:DataType
-      a       owl:Class ;
-      rdfs:label "DataType"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :UnitOfMeasure ;
-                owl:onProperty :isMeasuredIn
-              ] .
-
-:PhysicalEntity
-      a       owl:Class ;
-      rdfs:comment "Any entity that has a proper space region."@en ;
-      rdfs:label "Physical entity"@en ;
-      rdfs:subClassOf :Entity .
-
-:MediaType
-      a       owl:Class ;
-      rdfs:label "MediaType"@en .
-
-:providedBy
-      a       owl:ObjectProperty ;
-      rdfs:label "providedBy"@en ;
-      vs:term_status "propose for deletion" .
-
-:providesInteractionPattern
-      a       owl:ObjectProperty ;
-      rdfs:domain :InteractionPattern ;
-      rdfs:label "providesInteractionPattern"@en .
-
-:describes
-      a       owl:ObjectProperty ;
-      rdfs:label "describesThing"@en ;
-      owl:inverseOf :isDescribedBy .
-
-:ThingDescription
-      a       owl:Class ;
-      rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
-      rdfs:label "Thing description"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Entity ;
-                owl:onProperty :describes
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :describes ;
-                owl:someValuesFrom :Entity
-              ] .
-
-:DataFormat
-      a       owl:Class ;
-      rdfs:label "DataFormat"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :DataType ;
-                owl:onProperty :hasValueType
-              ] .
-
-:isComponentOf
-      a       owl:ObjectProperty ;
-      rdfs:label "isComponentOf"@en .
-
-:InteractionPattern
-      a       owl:Class ;
-      rdfs:label "Interaction"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :providedBy ;
-                owl:someValuesFrom :WebResource
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :interactionName ;
-                owl:someValuesFrom xsd:string
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :isAccesibleThrough ;
-                owl:someValuesFrom :Endpoint
-              ] .
-
-:isDescribedBy
-      a       owl:ObjectProperty ;
-      rdfs:label "isDescribedBy"@en .
-
-:isWritable
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:label "isWritable"@en ;
-      rdfs:range xsd:boolean .
 
 :     a       owl:Ontology ;
       rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
       dc:publisher <http://www.oeg-upm.net/> ;
       dc:title "Vicinity core model"@en ;
-      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> , <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
+      dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
+      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
       dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
       vann:preferredNamespacePrefix
-              "vicinity" ;
+              "vcnt-core" ;
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/core" ;
+      owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
       owl:versionInfo "1.0" .
 
-:baseURI
+:serviceName
       a       owl:DatatypeProperty ;
-      rdfs:domain :Entity ;
-      rdfs:label "baseURI"@en ;
-      rdfs:range xsd:string .
+      rdfs:domain :Service ;
+      rdfs:label "serviceName"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :name .
+
+:describesEcosystem
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:label "describesEcosystem"@en ;
+      owl:inverseOf :isEcosystemDescribedBy .
+
+:Device
+      a       owl:Class ;
+      rdfs:label "Device"@en ;
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#PhysicalEntity> .
+
+:deviceName
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Device ;
+      rdfs:label "deviceName"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :name .
+
+:Agent
+      a       owl:Class ;
+      rdfs:label "Agent"@en ;
+      rdfs:subClassOf foaf:Agent .
+
+:isEcosystemDescribedBy
+      a       owl:InverseFunctionalProperty , owl:ObjectProperty ;
+      rdfs:label "isEcosystemDescribedBy"@en .
+
+<https://w3id.org/def/saref4bldg#BuildingSpace>
+      a       owl:Class .
+
+geo:location
+      a       owl:ObjectProperty .
+
+:isInvolvedIn
+      a       owl:ObjectProperty ;
+      rdfs:label "isInvolvedIn"@en .
 
 saref:Service
       a       owl:Class ;
@@ -304,47 +150,59 @@ saref:Service
       rdfs:label "Service"@en ;
       vs:term_status "unstable" .
 
-:Event
+dcterms:contributor
+      a       owl:AnnotationProperty .
+
+:Neighbourhood
       a       owl:Class ;
-      rdfs:label "Event"@en ;
-      rdfs:subClassOf :InteractionPattern ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
-              ] .
+      rdfs:label "Neighbourhood"@en .
 
-:DigitalRepresentation
+geo:SpatialThing
+      a       owl:Class .
+
+:owns
+      a       owl:ObjectProperty ;
+      rdfs:label "provides"@en , "owns"@en .
+
+:involves
+      a       owl:ObjectProperty ;
+      rdfs:label "involves"@en ;
+      owl:inverseOf :isInvolvedIn .
+
+:hasVendor
+      a       owl:ObjectProperty ;
+      rdfs:label "has producer"@en , "has vendor"@en .
+
+<https://w3id.org/def/saref4bldg#isContainedIn>
+      a       owl:ObjectProperty .
+
+:serialNumber
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Device ;
+      rdfs:label "serialNumber"@en ;
+      rdfs:range xsd:string .
+
+:isNeighbourhoodOf
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:label "isNeighbourhoodOf"@en ;
+      rdfs:subPropertyOf :involves .
+
+:Service
       a       owl:Class ;
-      rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
-      rdfs:label "Digital representation"@en ;
-      owl:disjointWith :WoTInterface ;
-      vs:term_status "unstable" .
+      rdfs:label "Service"@en ;
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#VirtualEntity> .
 
-:isRequired
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:label "isRequired"@en ;
-      rdfs:range xsd:boolean .
+:hasPartnershipWith
+      a       owl:ObjectProperty , owl:SymmetricProperty ;
+      rdfs:label "hasPartnershipWith"@en .
 
-:CommunicationProtocol
-      a       owl:Class ;
-      rdfs:comment "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en ;
-      rdfs:label "Communication protocol"@en ;
-      owl:disjointWith saref:Service , :Property , :DigitalRepresentation , :WoTInterface .
-
-:hasValueType
-      a       owl:ObjectProperty ;
-      rdfs:label "hasValueType"@en .
-
-:hasOutputData
-      a       owl:ObjectProperty ;
-      rdfs:label "hasOutputData"@en .
-
-:isAccesibleThrough
-      a       owl:ObjectProperty ;
-      rdfs:label "isAccesibleThrough"@en .
+foaf:Image
+      a       owl:Class .
 
 :name
       a       owl:DatatypeProperty ;
       rdfs:label "name"@en ;
       rdfs:range xsd:string .
+
+foaf:depiction
+      a       owl:ObjectProperty .
