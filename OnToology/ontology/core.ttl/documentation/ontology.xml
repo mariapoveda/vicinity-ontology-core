@@ -30,14 +30,14 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A0">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Entity"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#hasComponent"/>
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Ecosystem"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#describes"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Ecosystem">
     <rdfs:label xml:lang="en">Ecosystem</rdfs:label>
     <rdfs:subClassOf rdf:nodeID="A1"/>
-    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:nodeID="A2"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#avatar">
@@ -77,11 +77,11 @@
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">
     <rdfs:label xml:lang="en">Thing ecosystem description</rdfs:label>
     <rdfs:comment>A digital representation that encapsulates an ecosystem taht is accessible via Web services</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A2"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#">
-    <owl:versionInfo>1.0</owl:versionInfo>
+    <owl:versionInfo>0.0.1</owl:versionInfo>
     <dcterms:contributor rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
     <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
     <dc:title xml:lang="en">Vicinity core model</dc:title>
@@ -130,13 +130,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Ecosystem"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#describes"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#BuildingSpace">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#ThingEcosystemDescription"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isDescribedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -154,11 +154,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#ThingEcosystemDescription"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isDescribedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Neighbourhood">
     <rdfs:label xml:lang="en">Neighbourhood</rdfs:label>
@@ -201,6 +196,11 @@
     <rdfs:label xml:lang="en">Service</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#VirtualEntity"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Entity"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#hasComponent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasPartnershipWith">
     <rdfs:label xml:lang="en">hasPartnershipWith</rdfs:label>
