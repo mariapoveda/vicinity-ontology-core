@@ -22,7 +22,7 @@
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
 	dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-	owl:versionInfo "1.0" ;
+	owl:versionInfo "0.0.1" ;
 	vann:preferredNamespacePrefix "vcnt-core" ;
 	dc:publisher <http://www.oeg-upm.net/> ;
 	vann:preferredNamespaceUri "http://iot.linkeddata.es/def/core" ;
