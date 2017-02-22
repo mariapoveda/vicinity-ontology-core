@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-02-21 13:32:43 +0000</string>
+	<string>2017-02-22 09:49:37 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -285,7 +285,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{485.46776845721956, 482.39635258455155}, {76.363261654226733, 16.854378350365323}}</string>
+					<string>{{485.46776845721956, 482.39635315527698}, {76.363261654226733, 16.854378350365323}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -3340,7 +3340,7 @@ core:serviceName:: string\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{435.80939722439643, 522.91721182119647}, {175.68000411987308, 23.012603759765625}}</string>
+					<string>{{435.80939722439638, 522.91721182119647}, {175.68000411987316, 23.012603759765625}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -3794,7 +3794,7 @@ core:hasOwner}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{435.80939722439643, 544.11172131203011}, {175.68000411987308, 53.650984258346284}}</string>
+					<string>{{435.80939722439643, 544.11172131203011}, {175.68000411987305, 53.650984258346284}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -4286,7 +4286,7 @@ core:owns}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:VirtualEntity}</string>
+wot:VirtualThing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -4734,7 +4734,7 @@ s4bldg:BuildingSpace}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{309.45579228202376, 562.51003705741209}, {76.363261654226733, 16.854378350365323}}</string>
+					<string>{{309.45579228202382, 562.51003705741209}, {76.363261654226733, 16.854378350365323}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -7464,7 +7464,7 @@ core:Agent}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:PhysicalEntity}</string>
+wot:PhysicalThing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -8794,7 +8794,7 @@ wot:ThingDescription}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural
 \ls1\ilvl0
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:entityName:: String\
+wot:thingName:: String\
 wot:baseURI:: String}</string>
 					</dict>
 					<key>VFlip</key>
@@ -8883,7 +8883,7 @@ wot:baseURI:: String}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:Entity}</string>
+wot:Thing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -9988,7 +9988,7 @@ wot:MediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>37.958199786324798</real>
+					<real>37.958198547363281</real>
 					<key>Points</key>
 					<array>
 						<string>{229.60062978688677, 54.25843990426452}</string>
@@ -10210,7 +10210,7 @@ wot:MediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>29.048076923076934</real>
+					<real>29.048076629638672</real>
 					<key>Points</key>
 					<array>
 						<string>{229.60062978688674, 61.929291364289092}</string>
@@ -10416,7 +10416,7 @@ wot:MediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>37.555021367521334</real>
+					<real>37.555023193359375</real>
 					<key>Points</key>
 					<array>
 						<string>{150.95992017611843, 144.31833484952875}</string>
@@ -10934,7 +10934,7 @@ wot:MediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>52.292019612332126</real>
+					<real>52.292018890380859</real>
 					<key>Points</key>
 					<array>
 						<string>{413.80287858759374, 61.672077267165847}</string>
@@ -11444,7 +11444,7 @@ wot:MediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>4.6325120192307736</real>
+					<real>4.632512092590332</real>
 					<key>Points</key>
 					<array>
 						<string>{452.76128244684054, 440.08375187484637}</string>
@@ -11880,7 +11880,7 @@ wot:MediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>39.467872405372361</real>
+					<real>39.467872619628906</real>
 					<key>Points</key>
 					<array>
 						<string>{420.54808551722755, 315.32246549597636}</string>
@@ -12258,7 +12258,7 @@ geo:SpatialThing}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>65.162352438217113</real>
+					<real>65.162353515625</real>
 					<key>Points</key>
 					<array>
 						<string>{487.99998873472214, 216.33984508755938}</string>
@@ -15180,7 +15180,7 @@ core:Device}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:VirtualEntity}</string>
+wot:VirtualThing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -15958,7 +15958,7 @@ core:Agent}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:PhysicalEntity}</string>
+wot:PhysicalThing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -16258,7 +16258,7 @@ core:ThingEcosystemDescription}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:Entity}</string>
+wot:Thing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -16551,7 +16551,7 @@ wot:Entity}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1133, 860}}</string>
+				<string>{{0, 0}, {1094, 804}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -16570,7 +16570,7 @@ wot:Entity}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1133, 860}</string>
+			<string>{1094, 804}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -25387,7 +25387,7 @@ IoT-User}</string>
 				<string>YES</string>
 			</dict>
 			<key>HPages</key>
-			<integer>3</integer>
+			<integer>2</integer>
 			<key>KeepToScale</key>
 			<false/>
 			<key>Layers</key>
@@ -25471,7 +25471,7 @@ IoT-User}</string>
 			<array>
 				<string>core</string>
 				<real>0.0</real>
-				<real>1.6000000238418579</real>
+				<real>1</real>
 			</array>
 			<array>
 				<string>ISO-AR</string>
