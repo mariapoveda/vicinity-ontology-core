@@ -15,19 +15,19 @@
 @prefix saref:   <https://w3id.org/saref#> .
 @prefix doap:    <http://usefulinc.com/ns/doap#> .
 
+vs:term_status
+      a       owl:AnnotationProperty .
+
 :hasNeighbourhood
       a       owl:FunctionalProperty , owl:ObjectProperty ;
       rdfs:label "hasNeighbourhood"@en ;
       rdfs:subPropertyOf :isInvolvedIn ;
       owl:inverseOf :isNeighbourhoodOf .
 
-vs:term_status
-      a       owl:AnnotationProperty .
-
-:desctiption
-      a       owl:DatatypeProperty ;
-      rdfs:label "desctiption"@en ;
-      rdfs:range xsd:string .
+:monitors
+      a       owl:ObjectProperty ;
+      rdfs:label "monitors"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
 
 :Ecosystem
       a       owl:Class ;
@@ -43,11 +43,6 @@ vs:term_status
                 owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Entity>
               ] .
 
-:avatar
-      a       owl:ObjectProperty ;
-      rdfs:label "avatar"@en ;
-      rdfs:subPropertyOf foaf:depiction .
-
 :serviceDescription
       a       owl:DatatypeProperty ;
       rdfs:domain :Service ;
@@ -55,19 +50,15 @@ vs:term_status
       rdfs:range xsd:string ;
       rdfs:subPropertyOf :desctiption .
 
-:hasOwner
-      a       owl:ObjectProperty ;
-      rdfs:label "has owner"@en , "has provider"@en ;
-      owl:inverseOf :owns .
-
 :hasComponent
       a       owl:ObjectProperty ;
       rdfs:label "hasComponent"@en ;
       owl:inverseOf :isComponentOf .
 
-:isComponentOf
+:hasOwner
       a       owl:ObjectProperty ;
-      rdfs:label "isComponentOf"@en .
+      rdfs:label "has owner"@en , "has provider"@en ;
+      owl:inverseOf :owns .
 
 :deviceDescription
       a       owl:DatatypeProperty ;
@@ -86,43 +77,13 @@ vs:term_status
                 owl:someValuesFrom :Ecosystem
               ] .
 
-:     a       owl:Ontology ;
-      rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
-      dc:publisher <http://www.oeg-upm.net/> ;
-      dc:title "Vicinity core model"@en ;
-      dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
-      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
-      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-      vann:preferredNamespacePrefix
-              "vcnt-core" ;
-      vann:preferredNamespaceUri
-              "http://iot.linkeddata.es/def/core" ;
-      owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
-      owl:versionInfo "1.0" .
-
-:serviceName
-      a       owl:DatatypeProperty ;
-      rdfs:domain :Service ;
-      rdfs:label "serviceName"@en ;
-      rdfs:range xsd:string ;
-      rdfs:subPropertyOf :name .
-
-:describesEcosystem
-      a       owl:FunctionalProperty , owl:ObjectProperty ;
-      rdfs:label "describesEcosystem"@en ;
-      owl:inverseOf :isEcosystemDescribedBy .
+<http://iot.linkeddata.es/def/wot#Entity>
+      a       owl:Class .
 
 :Device
       a       owl:Class ;
       rdfs:label "Device"@en ;
-      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#PhysicalEntity> .
-
-:deviceName
-      a       owl:DatatypeProperty ;
-      rdfs:domain :Device ;
-      rdfs:label "deviceName"@en ;
-      rdfs:range xsd:string ;
-      rdfs:subPropertyOf :name .
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#PhysicalThing> .
 
 :Agent
       a       owl:Class ;
@@ -136,33 +97,29 @@ vs:term_status
 <https://w3id.org/def/saref4bldg#BuildingSpace>
       a       owl:Class .
 
-geo:location
-      a       owl:ObjectProperty .
-
 :isInvolvedIn
       a       owl:ObjectProperty ;
       rdfs:label "isInvolvedIn"@en .
 
-saref:Service
+<http://purl.oclc.org/NET/ssnx/ssn#Property>
       a       owl:Class ;
-      rdfs:comment "A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service."@en ;
-      rdfs:isDefinedBy saref: ;
-      rdfs:label "Service"@en ;
-      vs:term_status "unstable" .
+      rdfs:comment "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn#" ;
+      rdfs:label "property (ssn)" .
 
-dcterms:contributor
-      a       owl:AnnotationProperty .
-
-:Neighbourhood
+:Sensor
       a       owl:Class ;
-      rdfs:label "Neighbourhood"@en .
-
-geo:SpatialThing
-      a       owl:Class .
-
-:owns
-      a       owl:ObjectProperty ;
-      rdfs:label "provides"@en , "owns"@en .
+      rdfs:label "Sensor"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
+      rdfs:subClassOf :Device ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (<http://iot.linkeddata.es/def/wot#PhysicalThing> <http://purl.oclc.org/NET/ssnx/ssn#Property>)
+                        ] ;
+                owl:onProperty :monitors
+              ] .
 
 :involves
       a       owl:ObjectProperty ;
@@ -176,25 +133,149 @@ geo:SpatialThing
 <https://w3id.org/def/saref4bldg#isContainedIn>
       a       owl:ObjectProperty .
 
+:isNeighbourhoodOf
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:label "isNeighbourhoodOf"@en ;
+      rdfs:subPropertyOf :involves .
+
+:actsOn
+      a       owl:ObjectProperty ;
+      rdfs:label "actsOn"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+
+:hasPartnershipWith
+      a       owl:ObjectProperty , owl:SymmetricProperty ;
+      rdfs:label "hasPartnershipWith"@en .
+
+:desctiption
+      a       owl:DatatypeProperty ;
+      rdfs:label "desctiption"@en ;
+      rdfs:range xsd:string .
+
+:Actuator
+      a       owl:Class ;
+      rdfs:label "Actuator"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
+      rdfs:subClassOf :Device ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (<http://iot.linkeddata.es/def/wot#PhysicalThing> <http://purl.oclc.org/NET/ssnx/ssn#Property>)
+                        ] ;
+                owl:onProperty :actsOn
+              ] .
+
+:avatar
+      a       owl:ObjectProperty ;
+      rdfs:label "avatar"@en ;
+      rdfs:subPropertyOf foaf:depiction .
+
+:interactsUsing
+      a       owl:ObjectProperty ;
+      rdfs:label "interacts using"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+
+:isComponentOf
+      a       owl:ObjectProperty ;
+      rdfs:label "isComponentOf"@en .
+
+:     a       owl:Ontology ;
+      rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
+      dc:publisher <http://www.oeg-upm.net/> ;
+      dc:title "Vicinity core model"@en ;
+      dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
+      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
+      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+      vann:preferredNamespacePrefix
+              "vcnt-core" ;
+      vann:preferredNamespaceUri
+              "http://iot.linkeddata.es/def/core" ;
+      owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
+      owl:versionInfo "0.0.2" .
+
+:describesEcosystem
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:label "describesEcosystem"@en ;
+      owl:inverseOf :isEcosystemDescribedBy .
+
+:serviceName
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Service ;
+      rdfs:label "serviceName"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :name .
+
+:deviceName
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Device ;
+      rdfs:label "deviceName"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :name .
+
+:HumanUser
+      a       owl:Class ;
+      rdfs:label "Human user"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
+      rdfs:subClassOf foaf:Person ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Application ;
+                owl:onProperty :interactsUsing
+              ] .
+
+geo:location
+      a       owl:ObjectProperty .
+
+saref:Service
+      a       owl:Class ;
+      rdfs:comment "A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service."@en ;
+      rdfs:isDefinedBy saref: ;
+      rdfs:label "Service"@en ;
+      vs:term_status "unstable" .
+
+dcterms:contributor
+      a       owl:AnnotationProperty .
+
+:Application
+      a       owl:Class ;
+      rdfs:label "Application"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
+      rdfs:subClassOf :Service .
+
+:Neighbourhood
+      a       owl:Class ;
+      rdfs:label "Neighbourhood"@en .
+
+geo:SpatialThing
+      a       owl:Class .
+
+:owns
+      a       owl:ObjectProperty ;
+      rdfs:label "provides"@en , "owns"@en .
+
+:DigitalUser
+      a       owl:Class ;
+      rdfs:label "Digital user"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
+      rdfs:subClassOf foaf:Agent ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Service ;
+                owl:onProperty :interactsUsing
+              ] .
+
 :serialNumber
       a       owl:DatatypeProperty ;
       rdfs:domain :Device ;
       rdfs:label "serialNumber"@en ;
       rdfs:range xsd:string .
 
-:isNeighbourhoodOf
-      a       owl:FunctionalProperty , owl:ObjectProperty ;
-      rdfs:label "isNeighbourhoodOf"@en ;
-      rdfs:subPropertyOf :involves .
-
 :Service
       a       owl:Class ;
       rdfs:label "Service"@en ;
-      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#VirtualEntity> .
-
-:hasPartnershipWith
-      a       owl:ObjectProperty , owl:SymmetricProperty ;
-      rdfs:label "hasPartnershipWith"@en .
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#VirtualThing> .
 
 foaf:Image
       a       owl:Class .
