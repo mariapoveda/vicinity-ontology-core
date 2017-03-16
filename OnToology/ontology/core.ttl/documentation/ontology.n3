@@ -1,4 +1,7 @@
-<http://iot.linkeddata.es/def/core#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "isComponentOf"@en .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#unionOf> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff3 .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://iot.linkeddata.es/def/core#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is component of"@en .
+<http://iot.linkeddata.es/def/core#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A link between a thing and the ecosystems it belongs to."@en .
 <http://iot.linkeddata.es/def/core#isComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/terms/contributor> <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
@@ -13,91 +16,115 @@
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core" .
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 <http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+<http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en .
 <http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#PhysicalThing> .
 <http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "hasComponent"@en .
+<http://iot.linkeddata.es/def/core#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component"@en .
+<http://iot.linkeddata.es/def/core#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A link between an ecosystem and the things that compose such ecosystem."@en .
 <http://iot.linkeddata.es/def/core#hasComponent> <http://www.w3.org/2002/07/owl#inverseOf> <http://iot.linkeddata.es/def/core#isComponentOf> .
 <http://iot.linkeddata.es/def/core#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#allValuesFrom> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff3 .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#monitors> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff9 .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://iot.linkeddata.es/def/wot#PhysicalThing> .
 <http://xmlns.com/foaf/0.1/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+<http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 <http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#label> "Human user"@en .
-<http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff5 .
+<http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#comment> "A human user is person who uses an IoT system. A human user is a specialization of an IoT-User. A human user interacts across the network via an application. (definition taken from ISO/IEC 11404:2007)"@en .
+<http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff6 .
 <http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
 <http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#describesEcosystem> <http://www.w3.org/2000/01/rdf-schema#label> "describesEcosystem"@en .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#describesEcosystem> <http://www.w3.org/2000/01/rdf-schema#label> "describes ecosystem"@en .
+<http://iot.linkeddata.es/def/core#describesEcosystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a thing ecosystem description and the ecosystem being described."@en .
 <http://iot.linkeddata.es/def/core#describesEcosystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/core#describesEcosystem> <http://www.w3.org/2002/07/owl#inverseOf> <http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> .
 <http://iot.linkeddata.es/def/core#describesEcosystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff9 .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://iot.linkeddata.es/def/wot#PhysicalThing> .
-<http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+<http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 <http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator"@en .
-<http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffc .
+<http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)"@en .
+<http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffc .
 <http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff2 .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://iot.linkeddata.es/def/wot#PhysicalThing> .
 <http://iot.linkeddata.es/def/core#Neighbourhood> <http://www.w3.org/2000/01/rdf-schema#label> "Neighbourhood"@en .
+<http://iot.linkeddata.es/def/core#Neighbourhood> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of IoT infrastructures and value-added services integrated through a peer-to-peer (P2P) network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them."@en .
 <http://iot.linkeddata.es/def/core#Neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
 <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Thing ecosystem description"@en .
 <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital representation that encapsulates an ecosystem taht is accessible via Web services" .
-<http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff0 .
+<http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff1 .
 <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "isInvolvedIn"@en .
+<http://iot.linkeddata.es/def/core#isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is involved in"@en .
+<http://iot.linkeddata.es/def/core#isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A link between an agent and all the neighbouthoods it is involved in."@en .
 <http://iot.linkeddata.es/def/core#isInvolvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#label> "property (ssn)" .
 <http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn#" .
 <http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en .
 <http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#unionOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff2 .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Building space"@en .
+<https://w3id.org/def/saref4bldg#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/saref4bldg#> .
+<https://w3id.org/def/saref4bldg#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en .
 <https://w3id.org/def/saref4bldg#BuildingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/wot#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#interactsUsing> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
 <http://iot.linkeddata.es/def/core#interactsUsing> <http://www.w3.org/2000/01/rdf-schema#label> "interacts using"@en .
+<http://iot.linkeddata.es/def/core#interactsUsing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Linkg between an agent and the virtual thing it interatcs with."@en .
 <http://iot.linkeddata.es/def/core#interactsUsing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/core#Service> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#interactsUsing> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
+<http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent is a person or piece of software involved in a VICINITY neighbourhood."@en .
 <http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
 <http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#label> "provides"@en .
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#label> "owns"@en .
+<http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A linkd between an agent and the entities, like devices or services, it provides or owns."@en .
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/core#Service> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#interactsUsing> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#Application> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
 <http://iot.linkeddata.es/def/core#Application> <http://www.w3.org/2000/01/rdf-schema#label> "Application"@en .
+<http://iot.linkeddata.es/def/core#Application> <http://www.w3.org/2000/01/rdf-schema#comment> "An application is a software entity or system that offers a collection of functions with which a user can perform a task or achieve a business objective. An application typically uses services. The functions of an application may be presented as services. (definition taken from ISO/IEC 11404:2007)"@en .
 <http://iot.linkeddata.es/def/core#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Service> .
 <http://iot.linkeddata.es/def/core#Application> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#hasVendor> <http://www.w3.org/2000/01/rdf-schema#label> "has vendor"@en .
 <http://iot.linkeddata.es/def/core#hasVendor> <http://www.w3.org/2000/01/rdf-schema#label> "has producer"@en .
+<http://iot.linkeddata.es/def/core#hasVendor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Link from a device to its vendor or manufacturer or producer."@en .
 <http://iot.linkeddata.es/def/core#hasVendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4bldg#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in"@en .
+<https://w3id.org/def/saref4bldg#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/def/saref4bldg#"@en .
+<https://w3id.org/def/saref4bldg#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an object and the physical space in which it is located."@en .
 <https://w3id.org/def/saref4bldg#isContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff1 .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://iot.linkeddata.es/def/wot#PhysicalThing> .
 <http://iot.linkeddata.es/def/core#deviceName> <http://www.w3.org/2000/01/rdf-schema#label> "deviceName"@en .
 <http://iot.linkeddata.es/def/core#deviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#deviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#deviceName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#name> .
 <http://iot.linkeddata.es/def/core#deviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isEcosystemDescribedBy"@en .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isDescribedBy> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is ecosystem described by"@en .
+<http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from an ecosystem to the thing ecosystem descriptions that provide information about such ecosystem."@en .
 <http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
 <http://iot.linkeddata.es/def/core#isEcosystemDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://iot.linkeddata.es/def/core#Service> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+<http://iot.linkeddata.es/def/core#Service> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 <http://iot.linkeddata.es/def/core#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+<http://iot.linkeddata.es/def/core#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A service is a set of distinct capabilities provided by a software component through a defined interface, which may be composed of other services. A service is implemented by one or more components. A service defines network interfaces and exposed by an Endpoint. (definition taken from ISO/IEC 11404:2007)"@en .
 <http://iot.linkeddata.es/def/core#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#VirtualThing> .
 <http://iot.linkeddata.es/def/core#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .
+<http://iot.linkeddata.es/def/core#involves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A link between a neighbourhood and all the agents involved in it."@en .
 <http://iot.linkeddata.es/def/core#involves> <http://www.w3.org/2002/07/owl#inverseOf> <http://iot.linkeddata.es/def/core#isInvolvedIn> .
 <http://iot.linkeddata.es/def/core#involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/2000/01/rdf-schema#label> "isNeighbourhoodOf"@en .
+<http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/2000/01/rdf-schema#label> "is neighbourhood of"@en .
+<http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A link between a neighbourhood and the specific agent around which the neighbourhood is built."@en .
+<http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://iot.linkeddata.es/def/core#Agent> .
+<http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Neighbourhood> .
 <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#involves> .
 <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -106,19 +133,20 @@ _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Service> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#desctiption> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#Entity> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#hasComponent> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#Ecosystem> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#describes> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#monitors> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
 <http://iot.linkeddata.es/def/core#monitors> <http://www.w3.org/2000/01/rdf-schema#label> "monitors"@en .
+<http://iot.linkeddata.es/def/core#monitors> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A link between a sensor an the entities or properties it can monitor."@en .
 <http://iot.linkeddata.es/def/core#monitors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
 <http://iot.linkeddata.es/def/core#avatar> <http://www.w3.org/2000/01/rdf-schema#label> "avatar"@en .
+<http://iot.linkeddata.es/def/core#avatar> <http://www.w3.org/2000/01/rdf-schema#comment> "A link from an entity to the image identifying it in a social network or system."@en .
 <http://iot.linkeddata.es/def/core#avatar> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/depiction> .
 <http://iot.linkeddata.es/def/core#avatar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/core#hasOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has provider"@en .
 <http://iot.linkeddata.es/def/core#hasOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has owner"@en .
+<http://iot.linkeddata.es/def/core#hasOwner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Link between an entity like a service or a device and its owners or providers."@en .
 <http://iot.linkeddata.es/def/core#hasOwner> <http://www.w3.org/2002/07/owl#inverseOf> <http://iot.linkeddata.es/def/core#owns> .
 <http://iot.linkeddata.es/def/core#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/core#serviceName> <http://www.w3.org/2000/01/rdf-schema#label> "serviceName"@en .
@@ -126,57 +154,65 @@ _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://iot.linkeddata.es/def/core#serviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Service> .
 <http://iot.linkeddata.es/def/core#serviceName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#name> .
 <http://iot.linkeddata.es/def/core#serviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
-<http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/2000/01/rdf-schema#label> "actsOn"@en .
+<http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)" .
+<http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/2000/01/rdf-schema#label> "acts on"@en .
+<http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "A link between an actuator an the entities or properties upon which it can act." .
 <http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2000/01/rdf-schema#label> "hasNeighbourhood"@en .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/core#Application> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#interactsUsing> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2000/01/rdf-schema#label> "has neighbourhood"@en .
+<http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "The link between an agent and its neighbourhood. Such neighbourhood will link to all the entities involved in such neighbourhood."@en .
+<http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2000/01/rdf-schema#range> <http://iot.linkeddata.es/def/core#Neighbourhood> .
+<http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Agent> .
 <http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2002/07/owl#inverseOf> <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> .
 <http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#isInvolvedIn> .
 <http://iot.linkeddata.es/def/core#hasNeighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#ThingEcosystemDescription> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isDescribedBy> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#serialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "serialNumber"@en .
 <http://iot.linkeddata.es/def/core#serialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#serialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#serialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://xmlns.com/foaf/0.1/depiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#allValuesFrom> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffb .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#actsOn> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#desctiption> <http://www.w3.org/2000/01/rdf-schema#label> "desctiption"@en .
 <http://iot.linkeddata.es/def/core#desctiption> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#desctiption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#Ecosystem> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#describes> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+<http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 <http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#label> "Digital user"@en .
-<http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff8 .
+<http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)"@en .
+<http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff8 .
 <http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
 <http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffc <http://www.w3.org/2002/07/owl#allValuesFrom> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffb .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#actsOn> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/saref#Service> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
 <https://w3id.org/saref#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
 <https://w3id.org/saref#Service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service."@en .
 <https://w3id.org/saref#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/2000/01/rdf-schema#label> "hasPartnershipWith"@en .
+<http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A link between two organizations who are in a partnership relation. A partnership is established between organizations, only 2 organizations."@en .
+<http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
+<http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
 <http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <http://iot.linkeddata.es/def/core#hasPartnershipWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#allValuesFrom> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff4 .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#monitors> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#label> "Ecosystem"@en .
-<http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff6 .
-<http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff7 .
+<http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of things that co-exist in a given environment."@en .
+<http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff7 .
 <http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/core#Application> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#interactsUsing> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
-<http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff4 .
+<http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)"@en .
+<http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ff5 .
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#unionOf> _:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffa .
+_:Afc433b2X3aX15ad80b5aa7X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 <http://iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -185,5 +221,3 @@ _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#desctiption> .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffb <http://www.w3.org/2002/07/owl#unionOf> _:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffa .
-_:A5ed8a86bX3aX15ab7eb5b7aX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
