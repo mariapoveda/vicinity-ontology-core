@@ -48,13 +48,15 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/core#actsOn
 :actsOn rdf:type owl:ObjectProperty ;
-        rdfs:label "actsOn"@en ;
+        rdfs:comment "A link between an actuator an the entities or properties upon which it can act." ;
+        rdfs:label "acts on"@en ;
         rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)" .
 
 
 ###  http://iot.linkeddata.es/def/core#avatar
 :avatar rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf foaf:depiction ;
+        rdfs:comment "A link from an entity to the image identifying it in a social network or system."@en ;
         rdfs:label "avatar"@en .
 
 
@@ -62,13 +64,15 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :describesEcosystem rdf:type owl:ObjectProperty ;
                     owl:inverseOf :isEcosystemDescribedBy ;
                     rdf:type owl:FunctionalProperty ;
-                    rdfs:label "describesEcosystem"@en .
+                    rdfs:comment "Link between a thing ecosystem description and the ecosystem being described."@en ;
+                    rdfs:label "describes ecosystem"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               owl:inverseOf :isComponentOf ;
-              rdfs:label "hasComponent"@en .
+              rdfs:comment "A link between an ecosystem and the things that compose such ecosystem."@en ;
+              rdfs:label "has component"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#hasNeighbourhood
@@ -78,12 +82,14 @@ vs:term_status rdf:type owl:AnnotationProperty .
                   rdf:type owl:FunctionalProperty ;
                   rdfs:domain :Agent ;
                   rdfs:range :Neighbourhood ;
-                  rdfs:label "hasNeighbourhood"@en .
+                  rdfs:isDefinedBy "The link between an agent and its neighbourhood. Such neighbourhood will link to all the entities involved in such neighbourhood."@en ;
+                  rdfs:label "has neighbourhood"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#hasOwner
 :hasOwner rdf:type owl:ObjectProperty ;
           owl:inverseOf :owns ;
+          rdfs:isDefinedBy "Link between an entity like a service or a device and its owners or providers."@en ;
           rdfs:label "has owner"@en ,
                      "has provider"@en .
 
@@ -91,17 +97,22 @@ vs:term_status rdf:type owl:AnnotationProperty .
 ###  http://iot.linkeddata.es/def/core#hasPartnershipWith
 :hasPartnershipWith rdf:type owl:ObjectProperty ,
                              owl:SymmetricProperty ;
+                    rdfs:domain <http://www.w3.org/ns/org#Organization> ;
+                    rdfs:range <http://www.w3.org/ns/org#Organization> ;
+                    rdfs:isDefinedBy "A link between two organizations who are in a partnership relation. A partnership is established between organizations, only 2 organizations."@en ;
                     rdfs:label "hasPartnershipWith"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#hasVendor
 :hasVendor rdf:type owl:ObjectProperty ;
+           rdfs:isDefinedBy "Link from a device to its vendor or manufacturer or producer."@en ;
            rdfs:label "has producer"@en ,
                       "has vendor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#interactsUsing
 :interactsUsing rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy "Linkg between an agent and the virtual thing it interatcs with."@en ;
                 rdfs:label "interacts using"@en ;
                 rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
 
@@ -109,23 +120,27 @@ vs:term_status rdf:type owl:AnnotationProperty .
 ###  http://iot.linkeddata.es/def/core#involves
 :involves rdf:type owl:ObjectProperty ;
           owl:inverseOf :isInvolvedIn ;
+          rdfs:isDefinedBy "A link between a neighbourhood and all the agents involved in it."@en ;
           rdfs:label "involves"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#isComponentOf
 :isComponentOf rdf:type owl:ObjectProperty ;
-               rdfs:label "isComponentOf"@en .
+               rdfs:comment "A link between a thing and the ecosystems it belongs to."@en ;
+               rdfs:label "is component of"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#isEcosystemDescribedBy
 :isEcosystemDescribedBy rdf:type owl:ObjectProperty ,
                                  owl:InverseFunctionalProperty ;
-                        rdfs:label "isEcosystemDescribedBy"@en .
+                        rdfs:comment "Link from an ecosystem to the thing ecosystem descriptions that provide information about such ecosystem."@en ;
+                        rdfs:label "is ecosystem described by"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#isInvolvedIn
 :isInvolvedIn rdf:type owl:ObjectProperty ;
-              rdfs:label "isInvolvedIn"@en .
+              rdfs:isDefinedBy "A link between an agent and all the neighbouthoods it is involved in."@en ;
+              rdfs:label "is involved in"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#isNeighbourhoodOf
@@ -134,17 +149,20 @@ vs:term_status rdf:type owl:AnnotationProperty .
                    rdf:type owl:FunctionalProperty ;
                    rdfs:domain :Neighbourhood ;
                    rdfs:range :Agent ;
-                   rdfs:label "isNeighbourhoodOf"@en .
+                   rdfs:isDefinedBy "A link between a neighbourhood and the specific agent around which the neighbourhood is built."@en ;
+                   rdfs:label "is neighbourhood of"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#monitors
 :monitors rdf:type owl:ObjectProperty ;
+          rdfs:isDefinedBy "A link between a sensor an the entities or properties it can monitor."@en ;
           rdfs:label "monitors"@en ;
           rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
 
 
 ###  http://iot.linkeddata.es/def/core#owns
 :owns rdf:type owl:ObjectProperty ;
+      rdfs:isDefinedBy "A linkd between an agent and the entities, like devices or services, it provides or owns."@en ;
       rdfs:label "owns"@en ,
                  "provides"@en .
 
@@ -158,7 +176,10 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/def/saref4bldg#isContainedIn
-<https://w3id.org/def/saref4bldg#isContainedIn> rdf:type owl:ObjectProperty .
+<https://w3id.org/def/saref4bldg#isContainedIn> rdf:type owl:ObjectProperty ;
+                                                rdfs:comment "A relation between an object and the physical space in which it is located."@en ;
+                                                rdfs:isDefinedBy "https://w3id.org/def/saref4bldg#"@en ;
+                                                rdfs:label "is contained in"@en .
 
 
 #################################################################
@@ -239,12 +260,14 @@ foaf:depiction rdf:type owl:ObjectProperty .
 ###  http://iot.linkeddata.es/def/core#Agent
 :Agent rdf:type owl:Class ;
        rdfs:subClassOf foaf:Agent ;
+       rdfs:comment "An agent is a person or piece of software involved in a VICINITY neighbourhood."@en ;
        rdfs:label "Agent"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Application
 :Application rdf:type owl:Class ;
              rdfs:subClassOf :Service ;
+             rdfs:comment "An application is a software entity or system that offers a collection of functions with which a user can perform a task or achieve a business objective. An application typically uses services. The functions of an application may be presented as services. (definition taken from ISO/IEC 11404:2007)"@en ;
              rdfs:label "Application"@en ;
              rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
 
@@ -293,6 +316,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 ###  http://iot.linkeddata.es/def/core#Neighbourhood
 :Neighbourhood rdf:type owl:Class ;
+               rdfs:comment "A set of IoT infrastructures and value-added services integrated through a peer-to-peer (P2P) network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them."@en ;
                rdfs:label "Neighbourhood"@en .
 
 
@@ -315,7 +339,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
 ###  http://iot.linkeddata.es/def/core#Service
 :Service rdf:type owl:Class ;
          rdfs:subClassOf <http://iot.linkeddata.es/def/wot#VirtualThing> ;
-         rdfs:comment "(definition taken from ISO/IEC 11404:2007)"@en ;
+         rdfs:comment "A service is a set of distinct capabilities provided by a software component through a defined interface, which may be composed of other services. A service is implemented by one or more components. A service defines network interfaces and exposed by an Endpoint. (definition taken from ISO/IEC 11404:2007)"@en ;
          rdfs:label "Service"@en ;
          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 

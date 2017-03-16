@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-03-10 11:39:16 +0000</string>
+	<string>2017-03-16 16:47:42 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -85,7 +85,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1248, 1009.9920948616601}}</string>
+				<string>{{0, 0}, {1247, 1009.1828063241106}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -104,7 +104,7 @@
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1248, 1009.9920948616601}</string>
+			<string>{1247, 1009.1828063241106}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -3047,7 +3047,7 @@ foaf:Image}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1108.8895644825616, 535.53211672703571}, {117.36001245975518, 14.40000057220459}}</string>
+					<string>{{1104.4043606166904, 511.9110087800758}, {108.60393773167482, 14.40000057220459}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -3070,6 +3070,15 @@ foaf:Image}</string>
 					</dict>
 					<key>ID</key>
 					<integer>41998</integer>
+					<key>Line</key>
+					<dict>
+						<key>ID</key>
+						<integer>41997</integer>
+						<key>Position</key>
+						<real>0.80712640285491943</real>
+						<key>RotationType</key>
+						<integer>0</integer>
+					</dict>
 					<key>Magnets</key>
 					<array>
 						<string>{-0.7396002417658698, -1.1094003915786703}</string>
@@ -3168,9 +3177,9 @@ foaf:Image}</string>
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{1079.3700676552601, 643.22092779931461}</string>
-						<string>{1177.2474672258259, 636.96297684823821}</string>
-						<string>{1172.1944636922572, 518.49158941277233}</string>
+						<string>{1079.3700676552601, 665.0000143258759}</string>
+						<string>{1225.3015975254984, 637.58239650164398}</string>
+						<string>{1220.2485939919297, 519.1110090661781}</string>
 						<string>{1079.3700482982163, 518.2232954322385}</string>
 					</array>
 					<key>Style</key>
@@ -3203,7 +3212,7 @@ foaf:Image}</string>
 						<key>ID</key>
 						<integer>41977</integer>
 						<key>Position</key>
-						<real>0.10845819860696793</real>
+						<real>0.15400081872940063</real>
 					</dict>
 				</dict>
 				<dict>
@@ -7941,7 +7950,7 @@ core:describes (F)}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{658.68792860149495, 654.16692231817865}, {116.82788178886312, 23.012603759765625}}</string>
+					<string>{{935.53929144707877, 161.07023974950576}, {109.2657568743663, 23.012603759765625}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -7969,7 +7978,7 @@ core:describes (F)}</string>
 						<key>ID</key>
 						<integer>41942</integer>
 						<key>Position</key>
-						<real>0.35916298627853394</real>
+						<real>0.39361976207204163</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -8035,7 +8044,8 @@ core:describes (F)}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-core:hasPartnershipWith (S)}</string>
+core:has\
+PartnershipWith (S)}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -8062,9 +8072,9 @@ core:hasPartnershipWith (S)}</string>
 					<key>Head</key>
 					<dict>
 						<key>ID</key>
-						<integer>41922</integer>
+						<integer>41924</integer>
 						<key>Info</key>
-						<integer>1</integer>
+						<integer>8</integer>
 					</dict>
 					<key>ID</key>
 					<integer>41942</integer>
@@ -8073,14 +8083,13 @@ core:hasPartnershipWith (S)}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>-1</real>
+					<real>11.582145569433877</real>
 					<key>Points</key>
 					<array>
-						<string>{783.38668737251305, 591.35477468597628}</string>
-						<string>{779.76981945970942, 665.67322419806146}</string>
-						<string>{650.46772635421235, 650.80754663090556}</string>
-						<string>{754.45526278877901, 641.25744092362106}</string>
-						<string>{760.38668660137785, 591.35477468597628}</string>
+						<string>{918.88460566911181, 204.64083276825633}</string>
+						<string>{1052.3102766798418, 172.57654162938857}</string>
+						<string>{1057.8784402722745, 200.85079051383397}</string>
+						<string>{1009.9394008935018, 216.1471309903842}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -8105,8 +8114,6 @@ core:hasPartnershipWith (S)}</string>
 							<true/>
 							<key>LineType</key>
 							<integer>2</integer>
-							<key>Pattern</key>
-							<integer>1</integer>
 							<key>TailArrow</key>
 							<string>0</string>
 						</dict>
@@ -8114,9 +8121,9 @@ core:hasPartnershipWith (S)}</string>
 					<key>Tail</key>
 					<dict>
 						<key>ID</key>
-						<integer>41922</integer>
+						<integer>41924</integer>
 						<key>Info</key>
-						<integer>3</integer>
+						<integer>15</integer>
 					</dict>
 				</dict>
 				<dict>
@@ -12202,7 +12209,7 @@ Class}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1288, 1042.3636363636363}}</string>
+				<string>{{0, 0}, {1288, 965}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -12221,7 +12228,7 @@ Class}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1288, 1042.3636363636363}</string>
+			<string>{1288, 965}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -23023,7 +23030,7 @@ Class}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1012, 819}}</string>
+				<string>{{0, 0}, {980, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -23042,7 +23049,7 @@ Class}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1012, 819}</string>
+			<string>{980, 783}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -31365,7 +31372,7 @@ wot:Thing}</string>
 			<key>UniqueID</key>
 			<integer>12</integer>
 			<key>VPages</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>ActiveLayerIndex</key>
@@ -40271,7 +40278,7 @@ IoT-User}</string>
 		<key>BottomSlabHeight</key>
 		<real>286</real>
 		<key>CurrentSheet</key>
-		<integer>2</integer>
+		<integer>0</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>FitInWindow</key>
@@ -40287,9 +40294,9 @@ IoT-User}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {1012, 819}}</string>
+		<string>{{0, 0}, {1246.9999999999998, 1009.1828063241106}}</string>
 		<key>Zoom</key>
-		<real>1</real>
+		<real>0.81154771451483565</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
@@ -40305,7 +40312,7 @@ IoT-User}</string>
 			<array>
 				<string>core</string>
 				<real>0.0</real>
-				<real>1</real>
+				<real>0.5</real>
 			</array>
 			<array>
 				<string>core 1</string>
