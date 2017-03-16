@@ -13,6 +13,9 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#Application" title="http://iot.linkeddata.es/def/core#Application">Application</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/saref4bldg#BuildingSpace" title="https://w3id.org/def/saref4bldg#BuildingSpace">Building space</a>
+      </li>
+      <li>
          <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
       </li>
       <li>
@@ -51,6 +54,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Actuator</p>
+      <div class="comment">
+         <span class="markdown">An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -80,6 +86,18 @@ This section provides details for each class and property defined by Vicinity co
          <dd>
             <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasNeighbourhood"
+               title="http://iot.linkeddata.es/def/core#hasNeighbourhood">hasNeighbourhood</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isNeighbourhoodOf"
+               title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">isNeighbourhoodOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Application">
@@ -97,6 +115,23 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/def/saref4bldg#BuildingSpace">
+      <h3>Building space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4bldg#BuildingSpace</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/saref4bldg#">https://w3id.org/def/saref4bldg#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">An entity used to define the physical spaces of the building. A building space contains devices or building objects.</span>
+      </div>
+   </div>
    <div class="entity" id="Device">
       <h3>Device<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -104,6 +139,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Device</p>
+      <div class="comment">
+         <span class="markdown">An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -132,6 +170,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DigitalUser</p>
+      <div class="comment">
+         <span class="markdown">A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -153,6 +194,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Ecosystem</p>
+      <div class="comment">
+         <span class="markdown">Collection of things that co-exist in a given environment.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -160,13 +204,6 @@ This section provides details for each class and property defined by Vicinity co
             <span class="logic">some</span> 
             <a href="#ThingEcosystemDescription"
                title="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">Thing ecosystem description</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">hasComponent</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Entity">entity</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -178,6 +215,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#HumanUser</p>
+      <div class="comment">
+         <span class="markdown">A human user is person who uses an IoT system. A human user is a specialization of an IoT-User. A human user interacts across the network via an application. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -199,6 +239,20 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Neighbourhood</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isNeighbourhoodOf"
+               title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">isNeighbourhoodOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasNeighbourhood"
+               title="http://iot.linkeddata.es/def/core#hasNeighbourhood">hasNeighbourhood</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#Property">
       <h3>property (ssn)<sup class="type-c" title="class">c</sup>
@@ -222,6 +276,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Sensor</p>
+      <div class="comment">
+         <span class="markdown">A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -246,6 +303,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Service</p>
+      <div class="comment">
+         <span class="markdown">(definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -462,6 +522,16 @@ This section provides details for each class and property defined by Vicinity co
                <a href="#isInvolvedIn" title="http://iot.linkeddata.es/def/core#isInvolvedIn">isInvolvedIn</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Neighbourhood" title="http://iot.linkeddata.es/def/core#Neighbourhood">Neighbourhood</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#isNeighbourhoodOf"
@@ -585,6 +655,16 @@ This section provides details for each class and property defined by Vicinity co
             <dd>
                <a href="#involves" title="http://iot.linkeddata.es/def/core#involves">involves</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Neighbourhood" title="http://iot.linkeddata.es/def/core#Neighbourhood">Neighbourhood</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
