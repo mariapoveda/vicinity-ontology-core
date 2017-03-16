@@ -1,0 +1,33 @@
+Termino ,URI
+"""avatar""@en",http://iot.linkeddata.es/def/core#avatar
+" ""describesEcosystem""@en",http://iot.linkeddata.es/def/core#describesEcosystem
+"""hasComponent""@en",http://iot.linkeddata.es/def/core#hasComponent
+"""hasNeighbourhood""@en",http://iot.linkeddata.es/def/core#hasNeighbourhood
+"""has owner""@en",http://iot.linkeddata.es/def/core#hasOwner
+"""has provider""@en",http://iot.linkeddata.es/def/core#hasOwner
+"""hasPartnershipWith""@en ",http://iot.linkeddata.es/def/core#hasPartnershipWith
+"""has producer""@en ",http://iot.linkeddata.es/def/core#hasVendor
+"""has vendor""@en",http://iot.linkeddata.es/def/core#hasVendor
+"""involves""@en",http://iot.linkeddata.es/def/core#involves
+"""isComponentOf""@en ",http://iot.linkeddata.es/def/core#isComponentOf
+"""isEcosystemDescribedBy""@en",http://iot.linkeddata.es/def/core#isEcosystemDescribedBy
+" ""isInvolvedIn""@en",http://iot.linkeddata.es/def/core#isInvolvedIn
+"""isNeighbourhoodOf""@en",http://iot.linkeddata.es/def/core#isNeighbourhoodOf
+"""owns""@en",http://iot.linkeddata.es/def/core#owns
+" ""provides""@en",http://iot.linkeddata.es/def/core#owns
+,http://www.w3.org/2003/01/geo/wgs84_pos#location
+,https://w3id.org/def/saref4bldg#isContainedIn
+"""desctiption""@en",http://iot.linkeddata.es/def/core#desctiption
+"""deviceDescription""@en",http://iot.linkeddata.es/def/core#deviceDescription
+"""deviceName""@en", http://iot.linkeddata.es/def/core#deviceName
+"""name""@en",http://iot.linkeddata.es/def/core#name
+"""serialNumber""@en",http://iot.linkeddata.es/def/core#serialNumber
+"""service description""@en ",http://iot.linkeddata.es/def/core#serviceDescription
+"""serviceName""@en",http://iot.linkeddata.es/def/core#serviceName
+"""Agent""@en",http://iot.linkeddata.es/def/core#Agent
+"""Device""@en",http://iot.linkeddata.es/def/core#Device
+"""Ecosystem""@en",http://iot.linkeddata.es/def/core#Ecosystem
+"""Neighbourhood""@en",http://iot.linkeddata.es/def/core#Neighbourhood
+"""Service""@en",http://iot.linkeddata.es/def/core#Service
+"""Thing ecosystem description""@en",http://iot.linkeddata.es/def/core#ThingEcosystemDescription
+"""Service""@en",https://w3id.org/saref#Service
