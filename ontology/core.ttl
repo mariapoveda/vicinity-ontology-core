@@ -49,7 +49,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 ###  http://iot.linkeddata.es/def/core#actsOn
 :actsOn rdf:type owl:ObjectProperty ;
         rdfs:label "actsOn"@en ;
-        rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+        rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)" .
 
 
 ###  http://iot.linkeddata.es/def/core#avatar
@@ -76,6 +76,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
                   rdfs:subPropertyOf :isInvolvedIn ;
                   owl:inverseOf :isNeighbourhoodOf ;
                   rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Agent ;
+                  rdfs:range :Neighbourhood ;
                   rdfs:label "hasNeighbourhood"@en .
 
 
@@ -130,6 +132,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :isNeighbourhoodOf rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :involves ;
                    rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :Neighbourhood ;
+                   rdfs:range :Agent ;
                    rdfs:label "isNeighbourhoodOf"@en .
 
 
@@ -227,8 +231,9 @@ foaf:depiction rdf:type owl:ObjectProperty .
                                                             )
                                               ]
                           ] ;
+          rdfs:comment "An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)"@en ;
           rdfs:label "Actuator"@en ;
-          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Agent
@@ -247,7 +252,9 @@ foaf:depiction rdf:type owl:ObjectProperty .
 ###  http://iot.linkeddata.es/def/core#Device
 :Device rdf:type owl:Class ;
         rdfs:subClassOf <http://iot.linkeddata.es/def/wot#PhysicalThing> ;
-        rdfs:label "Device"@en .
+        rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
+        rdfs:label "Device"@en ;
+        rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#DigitalUser
@@ -257,20 +264,18 @@ foaf:depiction rdf:type owl:ObjectProperty .
                                owl:onProperty :interactsUsing ;
                                owl:allValuesFrom :Service
                              ] ;
+             rdfs:comment "A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)"@en ;
              rdfs:label "Digital user"@en ;
-             rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+             rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Ecosystem
 :Ecosystem rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasComponent ;
-                             owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Entity>
-                           ] ,
-                           [ rdf:type owl:Restriction ;
                              owl:onProperty <http://iot.linkeddata.es/def/wot#isDescribedBy> ;
                              owl:someValuesFrom :ThingEcosystemDescription
                            ] ;
+           rdfs:comment "Collection of things that co-exist in a given environment."@en ;
            rdfs:label "Ecosystem"@en .
 
 
@@ -281,8 +286,9 @@ foaf:depiction rdf:type owl:ObjectProperty .
                              owl:onProperty :interactsUsing ;
                              owl:allValuesFrom :Application
                            ] ;
+           rdfs:comment "A human user is person who uses an IoT system. A human user is a specialization of an IoT-User. A human user interacts across the network via an application. (definition taken from ISO/IEC 11404:2007)"@en ;
            rdfs:label "Human user"@en ;
-           rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+           rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Neighbourhood
@@ -301,6 +307,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
                                                           )
                                             ]
                         ] ;
+        rdfs:comment "A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)"@en ;
         rdfs:label "Sensor"@en ;
         rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
 
@@ -308,8 +315,9 @@ foaf:depiction rdf:type owl:ObjectProperty .
 ###  http://iot.linkeddata.es/def/core#Service
 :Service rdf:type owl:Class ;
          rdfs:subClassOf <http://iot.linkeddata.es/def/wot#VirtualThing> ;
+         rdfs:comment "(definition taken from ISO/IEC 11404:2007)"@en ;
          rdfs:label "Service"@en ;
-         rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+         rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#ThingEcosystemDescription
@@ -320,10 +328,6 @@ foaf:depiction rdf:type owl:ObjectProperty .
                                            ] ;
                            rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
                            rdfs:label "Thing ecosystem description"@en .
-
-
-###  http://iot.linkeddata.es/def/wot#Entity
-<http://iot.linkeddata.es/def/wot#Entity> rdf:type owl:Class .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#Property
@@ -342,7 +346,10 @@ foaf:Image rdf:type owl:Class .
 
 
 ###  https://w3id.org/def/saref4bldg#BuildingSpace
-<https://w3id.org/def/saref4bldg#BuildingSpace> rdf:type owl:Class .
+<https://w3id.org/def/saref4bldg#BuildingSpace> rdf:type owl:Class ;
+                                                rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/def/saref4bldg#> ;
+                                                rdfs:label "Building space"@en .
 
 
 ###  https://w3id.org/saref#Service
