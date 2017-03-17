@@ -13,6 +13,9 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#Application" title="http://iot.linkeddata.es/def/core#Application">Application</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/saref4bldg#BuildingSpace" title="https://w3id.org/def/saref4bldg#BuildingSpace">Building space</a>
+      </li>
+      <li>
          <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
       </li>
       <li>
@@ -51,6 +54,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Actuator</p>
+      <div class="comment">
+         <span class="markdown">An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -58,7 +64,7 @@ This section provides details for each class and property defined by Vicinity co
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#actsOn" title="http://iot.linkeddata.es/def/core#actsOn">actsOn</a>
+            <a href="#actsOn" title="http://iot.linkeddata.es/def/core#actsOn">acts on</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://iot.linkeddata.es/def/wot#PhysicalThing">physical thing</span> 
@@ -75,10 +81,25 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Agent</p>
+      <div class="comment">
+         <span class="markdown">An agent is a person or piece of software involved in a VICINITY neighbourhood.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasNeighbourhood"
+               title="http://iot.linkeddata.es/def/core#hasNeighbourhood">has neighbourhood</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isNeighbourhoodOf"
+               title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">is neighbourhood of</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -89,6 +110,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Application</p>
+      <div class="comment">
+         <span class="markdown">An application is a software entity or system that offers a collection of functions with which a user can perform a task or achieve a business objective. An application typically uses services. The functions of an application may be presented as services. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -97,6 +121,23 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/def/saref4bldg#BuildingSpace">
+      <h3>Building space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4bldg#BuildingSpace</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/saref4bldg#">https://w3id.org/def/saref4bldg#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">An entity used to define the physical spaces of the building. A building space contains devices or building objects.</span>
+      </div>
+   </div>
    <div class="entity" id="Device">
       <h3>Device<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -104,6 +145,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Device</p>
+      <div class="comment">
+         <span class="markdown">An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -118,8 +162,8 @@ This section provides details for each class and property defined by Vicinity co
          <dt>is in domain of</dt>
          <dd>
             <a href="#deviceDescription"
-               title="http://iot.linkeddata.es/def/core#deviceDescription">deviceDescription</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#deviceName" title="http://iot.linkeddata.es/def/core#deviceName">deviceName</a>
+               title="http://iot.linkeddata.es/def/core#deviceDescription">device description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#deviceName" title="http://iot.linkeddata.es/def/core#deviceName">device name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#serialNumber" title="http://iot.linkeddata.es/def/core#serialNumber">serialNumber</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -132,6 +176,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DigitalUser</p>
+      <div class="comment">
+         <span class="markdown">A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -153,6 +200,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Ecosystem</p>
+      <div class="comment">
+         <span class="markdown">Collection of things that co-exist in a given environment.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -160,13 +210,6 @@ This section provides details for each class and property defined by Vicinity co
             <span class="logic">some</span> 
             <a href="#ThingEcosystemDescription"
                title="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">Thing ecosystem description</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">hasComponent</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Entity">entity</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -178,6 +221,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#HumanUser</p>
+      <div class="comment">
+         <span class="markdown">A human user is person who uses an IoT system. A human user is a specialization of an IoT-User. A human user interacts across the network via an application. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -199,6 +245,23 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Neighbourhood</p>
+      <div class="comment">
+         <span class="markdown">A set of IoT infrastructures and value-added services integrated through a network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isNeighbourhoodOf"
+               title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">is neighbourhood of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasNeighbourhood"
+               title="http://iot.linkeddata.es/def/core#hasNeighbourhood">has neighbourhood</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#Property">
       <h3>property (ssn)<sup class="type-c" title="class">c</sup>
@@ -222,6 +285,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Sensor</p>
+      <div class="comment">
+         <span class="markdown">A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -246,6 +312,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Service</p>
+      <div class="comment">
+         <span class="markdown">A service is a set of distinct capabilities provided by a software component through a defined interface, which may be composed of other services. A service is implemented by one or more components. A service defines network interfaces and exposed by an Endpoint. (definition taken from ISO/IEC 11404:2007)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -260,7 +329,7 @@ This section provides details for each class and property defined by Vicinity co
          <dd>
             <a href="#serviceDescription"
                title="http://iot.linkeddata.es/def/core#serviceDescription">service description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">serviceName</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">service name</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
@@ -306,27 +375,27 @@ This section provides details for each class and property defined by Vicinity co
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#actsOn" title="http://iot.linkeddata.es/def/core#actsOn">actsOn</a>
+         <a href="#actsOn" title="http://iot.linkeddata.es/def/core#actsOn">acts on</a>
       </li>
       <li>
          <a href="#avatar" title="http://iot.linkeddata.es/def/core#avatar">avatar</a>
       </li>
       <li>
          <a href="#describesEcosystem"
-            title="http://iot.linkeddata.es/def/core#describesEcosystem">describesEcosystem</a>
+            title="http://iot.linkeddata.es/def/core#describesEcosystem">describes ecosystem</a>
+      </li>
+      <li>
+         <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">has component</a>
+      </li>
+      <li>
+         <a href="#hasNeighbourhood"
+            title="http://iot.linkeddata.es/def/core#hasNeighbourhood">has neighbourhood</a>
       </li>
       <li>
          <a href="#hasOwner" title="http://iot.linkeddata.es/def/core#hasOwner">has owner</a>
       </li>
       <li>
          <a href="#hasVendor" title="http://iot.linkeddata.es/def/core#hasVendor">has producer</a>
-      </li>
-      <li>
-         <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">hasComponent</a>
-      </li>
-      <li>
-         <a href="#hasNeighbourhood"
-            title="http://iot.linkeddata.es/def/core#hasNeighbourhood">hasNeighbourhood</a>
       </li>
       <li>
          <a href="#hasPartnershipWith"
@@ -339,18 +408,21 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#involves" title="http://iot.linkeddata.es/def/core#involves">involves</a>
       </li>
       <li>
-         <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">isComponentOf</a>
+         <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">is component of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/saref4bldg#isContainedIn" title="https://w3id.org/def/saref4bldg#isContainedIn">is contained in</a>
       </li>
       <li>
          <a href="#isEcosystemDescribedBy"
-            title="http://iot.linkeddata.es/def/core#isEcosystemDescribedBy">isEcosystemDescribedBy</a>
+            title="http://iot.linkeddata.es/def/core#isEcosystemDescribedBy">is ecosystem described by</a>
       </li>
       <li>
-         <a href="#isInvolvedIn" title="http://iot.linkeddata.es/def/core#isInvolvedIn">isInvolvedIn</a>
+         <a href="#isInvolvedIn" title="http://iot.linkeddata.es/def/core#isInvolvedIn">is involved in</a>
       </li>
       <li>
          <a href="#isNeighbourhoodOf"
-            title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">isNeighbourhoodOf</a>
+            title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">is neighbourhood of</a>
       </li>
       <li>
          <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
@@ -360,12 +432,15 @@ This section provides details for each class and property defined by Vicinity co
       </li>
    </ul>
    <div class="entity" id="actsOn">
-      <h3>actsOn<sup class="type-op" title="object property">op</sup>
+      <h3>acts on<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#actsOn</p>
+      <div class="comment">
+         <span class="markdown">A link between an actuator an the entities or properties upon which it can act.</span>
+      </div>
    </div>
    <div class="entity" id="avatar">
       <h3>avatar<sup class="type-op" title="object property">op</sup>
@@ -374,6 +449,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#avatar</p>
+      <div class="comment">
+         <span class="markdown">A link from an entity to the image identifying it in a social network or system.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -385,12 +463,15 @@ This section provides details for each class and property defined by Vicinity co
       </div>
    </div>
    <div class="entity" id="describesEcosystem">
-      <h3>describesEcosystem<sup class="type-op" title="object property">op</sup>
+      <h3>describes ecosystem<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#describesEcosystem</p>
+      <div class="comment">
+         <span class="markdown">Link between a thing ecosystem description and the ecosystem being described.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
@@ -398,7 +479,66 @@ This section provides details for each class and property defined by Vicinity co
             <dt>is inverse of</dt>
             <dd>
                <a href="#isEcosystemDescribedBy"
-                  title="http://iot.linkeddata.es/def/core#isEcosystemDescribedBy">isEcosystemDescribedBy</a>
+                  title="http://iot.linkeddata.es/def/core#isEcosystemDescribedBy">is ecosystem described by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasComponent">
+      <h3>has component<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasComponent</p>
+      <div class="comment">
+         <span class="markdown">A link between an ecosystem and the things that compose such ecosystem.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">is component of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasNeighbourhood">
+      <h3>has neighbourhood<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasNeighbourhood</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isInvolvedIn" title="http://iot.linkeddata.es/def/core#isInvolvedIn">is involved in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Neighbourhood" title="http://iot.linkeddata.es/def/core#Neighbourhood">Neighbourhood</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isNeighbourhoodOf"
+                  title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">is neighbourhood of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -411,6 +551,10 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasOwner</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -428,48 +572,10 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasVendor</p>
-   </div>
-   <div class="entity" id="hasComponent">
-      <h3>hasComponent<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasComponent</p>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">isComponentOf</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasNeighbourhood">
-      <h3>hasNeighbourhood<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasNeighbourhood</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#isInvolvedIn" title="http://iot.linkeddata.es/def/core#isInvolvedIn">isInvolvedIn</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#isNeighbourhoodOf"
-                  title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">isNeighbourhoodOf</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
    </div>
    <div class="entity" id="hasPartnershipWith">
       <h3>hasPartnershipWith<sup class="type-op" title="object property">op</sup>
@@ -478,6 +584,24 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasPartnershipWith</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> symmetric</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/org#Organization">organization</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/org#Organization">organization</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="interactsUsing">
       <h3>interacts using<sup class="type-op" title="object property">op</sup>
@@ -486,6 +610,10 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#interactsUsing</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
    </div>
    <div class="entity" id="involves">
       <h3>involves<sup class="type-op" title="object property">op</sup>
@@ -494,46 +622,71 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#involves</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
             <dd>
                <a href="#isNeighbourhoodOf"
-                  title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">isNeighbourhoodOf</a>
+                  title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">is neighbourhood of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isInvolvedIn" title="http://iot.linkeddata.es/def/core#isInvolvedIn">isInvolvedIn</a>
+               <a href="#isInvolvedIn" title="http://iot.linkeddata.es/def/core#isInvolvedIn">is involved in</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isComponentOf">
-      <h3>isComponentOf<sup class="type-op" title="object property">op</sup>
+      <h3>is component of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isComponentOf</p>
+      <div class="comment">
+         <span class="markdown">A link between a thing and the ecosystems it belongs to.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">hasComponent</a>
+               <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">has component</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/def/saref4bldg#isContainedIn">
+      <h3>is contained in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4bldg#isContainedIn</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">A relation between an object and the physical space in which it is located.</span>
+      </div>
+   </div>
    <div class="entity" id="isEcosystemDescribedBy">
-      <h3>isEcosystemDescribedBy<sup class="type-op" title="object property">op</sup>
+      <h3>is ecosystem described by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isEcosystemDescribedBy</p>
+      <div class="comment">
+         <span class="markdown">Link from an ecosystem to the thing ecosystem descriptions that provide information about such ecosystem.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> inverse functional</p>
@@ -541,25 +694,29 @@ This section provides details for each class and property defined by Vicinity co
             <dt>is inverse of</dt>
             <dd>
                <a href="#describesEcosystem"
-                  title="http://iot.linkeddata.es/def/core#describesEcosystem">describesEcosystem</a>
+                  title="http://iot.linkeddata.es/def/core#describesEcosystem">describes ecosystem</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isInvolvedIn">
-      <h3>isInvolvedIn<sup class="type-op" title="object property">op</sup>
+      <h3>is involved in<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isInvolvedIn</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
             <dd>
                <a href="#hasNeighbourhood"
-                  title="http://iot.linkeddata.es/def/core#hasNeighbourhood">hasNeighbourhood</a>
+                  title="http://iot.linkeddata.es/def/core#hasNeighbourhood">has neighbourhood</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -571,12 +728,16 @@ This section provides details for each class and property defined by Vicinity co
       </div>
    </div>
    <div class="entity" id="isNeighbourhoodOf">
-      <h3>isNeighbourhoodOf<sup class="type-op" title="object property">op</sup>
+      <h3>is neighbourhood of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isNeighbourhoodOf</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
@@ -586,10 +747,20 @@ This section provides details for each class and property defined by Vicinity co
                <a href="#involves" title="http://iot.linkeddata.es/def/core#involves">involves</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Neighbourhood" title="http://iot.linkeddata.es/def/core#Neighbourhood">Neighbourhood</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasNeighbourhood"
-                  title="http://iot.linkeddata.es/def/core#hasNeighbourhood">hasNeighbourhood</a>
+                  title="http://iot.linkeddata.es/def/core#hasNeighbourhood">has neighbourhood</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -602,6 +773,10 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#monitors</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
    </div>
    <div class="entity" id="owns">
       <h3>owns<sup class="type-op" title="object property">op</sup>
@@ -610,6 +785,10 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#owns</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -628,13 +807,10 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#deviceDescription"
-            title="http://iot.linkeddata.es/def/core#deviceDescription">deviceDescription</a>
+            title="http://iot.linkeddata.es/def/core#deviceDescription">device description</a>
       </li>
       <li>
-         <a href="#deviceName" title="http://iot.linkeddata.es/def/core#deviceName">deviceName</a>
-      </li>
-      <li>
-         <a href="#name" title="http://iot.linkeddata.es/def/core#name">name</a>
+         <a href="#deviceName" title="http://iot.linkeddata.es/def/core#deviceName">device name</a>
       </li>
       <li>
          <a href="#serialNumber" title="http://iot.linkeddata.es/def/core#serialNumber">serialNumber</a>
@@ -644,7 +820,7 @@ This section provides details for each class and property defined by Vicinity co
             title="http://iot.linkeddata.es/def/core#serviceDescription">service description</a>
       </li>
       <li>
-         <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">serviceName</a>
+         <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">service name</a>
       </li>
    </ul>
    <div class="entity" id="desctiption">
@@ -654,12 +830,15 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#desctiption</p>
+      <div class="comment">
+         <span class="markdown">General attribute for descriptions assigned to any type of concept</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
             <dd>
                <a href="#deviceDescription"
-                  title="http://iot.linkeddata.es/def/core#deviceDescription">deviceDescription</a>
+                  title="http://iot.linkeddata.es/def/core#deviceDescription">device description</a>
                <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceDescription"
                   title="http://iot.linkeddata.es/def/core#serviceDescription">service description</a>
                <sup class="type-dp" title="data property">dp</sup>
@@ -672,12 +851,15 @@ This section provides details for each class and property defined by Vicinity co
       </div>
    </div>
    <div class="entity" id="deviceDescription">
-      <h3>deviceDescription<sup class="type-dp" title="data property">dp</sup>
+      <h3>device description<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#deviceDescription</p>
+      <div class="comment">
+         <span class="markdown">Natural languaje description of a device.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -698,45 +880,25 @@ This section provides details for each class and property defined by Vicinity co
       </div>
    </div>
    <div class="entity" id="deviceName">
-      <h3>deviceName<sup class="type-dp" title="data property">dp</sup>
+      <h3>device name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#deviceName</p>
+      <div class="comment">
+         <span class="markdown">Name of a device</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#name" title="http://iot.linkeddata.es/def/core#name">name</a>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://iot.linkeddata.es/def/wot#name">name</span>
             </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
                <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="name">
-      <h3>name<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#name</p>
-      <div class="description">
-         <dl>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#deviceName" title="http://iot.linkeddata.es/def/core#deviceName">deviceName</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">serviceName</a>
-               <sup class="type-dp" title="data property">dp</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -752,6 +914,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#serialNumber</p>
+      <div class="comment">
+         <span class="markdown">Device serial number</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -773,6 +938,9 @@ This section provides details for each class and property defined by Vicinity co
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#serviceDescription</p>
+      <div class="comment">
+         <span class="markdown">Natural languaje description of a service.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -793,18 +961,20 @@ This section provides details for each class and property defined by Vicinity co
       </div>
    </div>
    <div class="entity" id="serviceName">
-      <h3>serviceName<sup class="type-dp" title="data property">dp</sup>
+      <h3>service name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#serviceName</p>
+      <div class="comment">
+         <span class="markdown">Name of a service</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#name" title="http://iot.linkeddata.es/def/core#name">name</a>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://iot.linkeddata.es/def/wot#name">name</span>
             </dd>
             <dt>has domain</dt>
             <dd>
