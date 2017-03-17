@@ -131,7 +131,7 @@ _:AX2dX7c14bfa2X3aX15adbaf4e4aX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syn
 <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#involves> .
 <http://iot.linkeddata.es/def/core#isNeighbourhoodOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "service description"@en .
-<http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural languaje description of a service."@en .
+<http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural language description of a service."@en .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Service> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#desctiption> .
@@ -219,7 +219,7 @@ _:AX2dX7c14bfa2X3aX15adbaf4e4aX3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syn
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "device description"@en .
-<http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural languaje description of a device."@en .
+<http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural language description of a device."@en .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#desctiption> .

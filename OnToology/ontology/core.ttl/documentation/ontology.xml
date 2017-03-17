@@ -41,7 +41,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#serviceDescription">
     <rdfs:label xml:lang="en">service description</rdfs:label>
-    <rdfs:comment xml:lang="en">Natural languaje description of a service.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Natural language description of a service.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
     <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#desctiption"/>
@@ -67,7 +67,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#deviceDescription">
     <rdfs:label xml:lang="en">device description</rdfs:label>
-    <rdfs:comment xml:lang="en">Natural languaje description of a device.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Natural language description of a device.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
     <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#desctiption"/>

@@ -45,7 +45,7 @@ vs:term_status
 
 :serviceDescription
       a       owl:DatatypeProperty ;
-      rdfs:comment "Natural languaje description of a service."@en ;
+      rdfs:comment "Natural language description of a service."@en ;
       rdfs:domain :Service ;
       rdfs:label "service description"@en ;
       rdfs:range xsd:string ;
@@ -65,7 +65,7 @@ vs:term_status
 
 :deviceDescription
       a       owl:DatatypeProperty ;
-      rdfs:comment "Natural languaje description of a device."@en ;
+      rdfs:comment "Natural language description of a device."@en ;
       rdfs:domain :Device ;
       rdfs:label "device description"@en ;
       rdfs:range xsd:string ;
