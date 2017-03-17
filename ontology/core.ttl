@@ -198,7 +198,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
                    rdfs:subPropertyOf :desctiption ;
                    rdfs:domain :Device ;
                    rdfs:range xsd:string ;
-                   rdfs:comment "Natural languaje description of a device."@en ;
+                   rdfs:comment "Natural language description of a device."@en ;
                    rdfs:label "device description"@en .
 
 
@@ -224,7 +224,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
                     rdfs:subPropertyOf :desctiption ;
                     rdfs:domain :Service ;
                     rdfs:range xsd:string ;
-                    rdfs:comment "Natural languaje description of a service."@en ;
+                    rdfs:comment "Natural language description of a service."@en ;
                     rdfs:label "service description"@en .
 
 
