@@ -114,7 +114,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :interactsUsing rdf:type owl:ObjectProperty ;
                 rdfs:isDefinedBy "Linkg between an agent and the virtual thing it interatcs with."@en ;
                 rdfs:label "interacts using"@en ;
-                rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+                rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)" .
 
 
 ###  http://iot.linkeddata.es/def/core#involves
@@ -157,7 +157,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :monitors rdf:type owl:ObjectProperty ;
           rdfs:isDefinedBy "A link between a sensor an the entities or properties it can monitor."@en ;
           rdfs:label "monitors"@en ;
-          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)" .
 
 
 ###  http://iot.linkeddata.es/def/core#owns
@@ -189,6 +189,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
 ###  http://iot.linkeddata.es/def/core#desctiption
 :desctiption rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
+             rdfs:comment "General attribute for descriptions assigned to any type of concept" ;
              rdfs:label "desctiption"@en .
 
 
@@ -197,27 +198,24 @@ foaf:depiction rdf:type owl:ObjectProperty .
                    rdfs:subPropertyOf :desctiption ;
                    rdfs:domain :Device ;
                    rdfs:range xsd:string ;
-                   rdfs:label "deviceDescription"@en .
+                   rdfs:comment "Natural languaje description of a device."@en ;
+                   rdfs:label "device description"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#deviceName
 :deviceName rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :name ;
+            rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> ;
             rdfs:domain :Device ;
             rdfs:range xsd:string ;
-            rdfs:label "deviceName"@en .
-
-
-###  http://iot.linkeddata.es/def/core#name
-:name rdf:type owl:DatatypeProperty ;
-      rdfs:range xsd:string ;
-      rdfs:label "name"@en .
+            rdfs:comment "Name of a device" ;
+            rdfs:label "device name"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#serialNumber
 :serialNumber rdf:type owl:DatatypeProperty ;
               rdfs:domain :Device ;
               rdfs:range xsd:string ;
+              rdfs:comment "Device serial number" ;
               rdfs:label "serialNumber"@en .
 
 
@@ -226,15 +224,17 @@ foaf:depiction rdf:type owl:ObjectProperty .
                     rdfs:subPropertyOf :desctiption ;
                     rdfs:domain :Service ;
                     rdfs:range xsd:string ;
+                    rdfs:comment "Natural languaje description of a service."@en ;
                     rdfs:label "service description"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#serviceName
 :serviceName rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :name ;
+             rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> ;
              rdfs:domain :Service ;
              rdfs:range xsd:string ;
-             rdfs:label "serviceName"@en .
+             rdfs:comment "Name of a service" ;
+             rdfs:label "service name"@en .
 
 
 #################################################################
@@ -269,7 +269,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
              rdfs:subClassOf :Service ;
              rdfs:comment "An application is a software entity or system that offers a collection of functions with which a user can perform a task or achieve a business objective. An application typically uses services. The functions of an application may be presented as services. (definition taken from ISO/IEC 11404:2007)"@en ;
              rdfs:label "Application"@en ;
-             rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+             rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Device
@@ -316,7 +316,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 ###  http://iot.linkeddata.es/def/core#Neighbourhood
 :Neighbourhood rdf:type owl:Class ;
-               rdfs:comment "A set of IoT infrastructures and value-added services integrated through a peer-to-peer (P2P) network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them."@en ;
+               rdfs:comment "A set of IoT infrastructures and value-added services integrated through a network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them."@en ;
                rdfs:label "Neighbourhood"@en .
 
 
@@ -333,7 +333,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
                         ] ;
         rdfs:comment "A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)"@en ;
         rdfs:label "Sensor"@en ;
-        rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+        rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Service
