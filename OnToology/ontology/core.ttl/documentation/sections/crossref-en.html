@@ -46,6 +46,9 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#ThingEcosystemDescription"
             title="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">Thing ecosystem description</a>
       </li>
+      <li>
+         <a href="#Value" title="http://iot.linkeddata.es/def/core#Value">Value</a>
+      </li>
    </ul>
    <div class="entity" id="Actuator">
       <h3>Actuator<sup class="type-c" title="class">c</sup>
@@ -371,6 +374,46 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Value">
+      <h3>Value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Value</p>
+      <div class="comment">
+         <span class="markdown">Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasValue" title="http://iot.linkeddata.es/def/core#hasValue">has value</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dd>
+            <a href="#timeStamp" title="http://iot.linkeddata.es/def/core#timeStamp">time stamp</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#expressedInFormat"
+               title="http://iot.linkeddata.es/def/core#expressedInFormat">expressed in format</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://iot.linkeddata.es/def/wot#DataFormat">data format</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#expressedInFormat"
+               title="http://iot.linkeddata.es/def/core#expressedInFormat">expressed in format</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasLatestValue" title="http://iot.linkeddata.es/def/core#hasLatestValue">has latest value</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
@@ -385,7 +428,14 @@ This section provides details for each class and property defined by Vicinity co
             title="http://iot.linkeddata.es/def/core#describesEcosystem">describes ecosystem</a>
       </li>
       <li>
+         <a href="#expressedInFormat"
+            title="http://iot.linkeddata.es/def/core#expressedInFormat">expressed in format</a>
+      </li>
+      <li>
          <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">has component</a>
+      </li>
+      <li>
+         <a href="#hasLatestValue" title="http://iot.linkeddata.es/def/core#hasLatestValue">has latest value</a>
       </li>
       <li>
          <a href="#hasNeighbourhood"
@@ -485,6 +535,30 @@ This section provides details for each class and property defined by Vicinity co
          </dl>
       </div>
    </div>
+   <div class="entity" id="expressedInFormat">
+      <h3>expressed in format<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#expressedInFormat</p>
+      <div class="comment">
+         <span class="markdown">Link from a value to the data format in which it is expressed.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Value" title="http://iot.linkeddata.es/def/core#Value">Value</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://iot.linkeddata.es/def/wot#DataFormat">data format</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasComponent">
       <h3>has component<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -501,6 +575,31 @@ This section provides details for each class and property defined by Vicinity co
             <dd>
                <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">is component of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLatestValue">
+      <h3>has latest value<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasLatestValue</p>
+      <div class="comment">
+         <span class="markdown">Indicates the latest value provided by an interaction pattern.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://iot.linkeddata.es/def/wot#InteractionPattern">interaction pattern</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Value" title="http://iot.linkeddata.es/def/core#Value">Value</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -813,6 +912,9 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#deviceName" title="http://iot.linkeddata.es/def/core#deviceName">device name</a>
       </li>
       <li>
+         <a href="#hasValue" title="http://iot.linkeddata.es/def/core#hasValue">has value</a>
+      </li>
+      <li>
          <a href="#serialNumber" title="http://iot.linkeddata.es/def/core#serialNumber">serialNumber</a>
       </li>
       <li>
@@ -821,6 +923,9 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">service name</a>
+      </li>
+      <li>
+         <a href="#timeStamp" title="http://iot.linkeddata.es/def/core#timeStamp">time stamp</a>
       </li>
    </ul>
    <div class="entity" id="desctiption">
@@ -907,6 +1012,25 @@ This section provides details for each class and property defined by Vicinity co
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasValue">
+      <h3>has value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasValue</p>
+      <div class="comment">
+         <span class="markdown">Literal representation of the observed value.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="serialNumber">
       <h3>serialNumber<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -984,6 +1108,27 @@ This section provides details for each class and property defined by Vicinity co
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="timeStamp">
+      <h3>time stamp<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#timeStamp</p>
+      <div class="comment">
+         <span class="markdown">Time stamp in which a phenomenon takes place, for example when value has been taken.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
             </dd>
          </dl>
       </div>
