@@ -27,6 +27,13 @@ vs:term_status
       rdfs:subPropertyOf :isInvolvedIn ;
       owl:inverseOf :isNeighbourhoodOf .
 
+:expressedInFormat
+      a       owl:ObjectProperty ;
+      rdfs:comment "Link from a value to the data format in which it is expressed."@en ;
+      rdfs:domain :Value ;
+      rdfs:label "expressed in format"@en ;
+      rdfs:range <http://iot.linkeddata.es/def/wot#DataFormat> .
+
 :monitors
       a       owl:ObjectProperty ;
       rdfs:isDefinedBy "A link between a sensor an the entities or properties it can monitor."@en ;
@@ -50,6 +57,13 @@ vs:term_status
       rdfs:label "service description"@en ;
       rdfs:range xsd:string ;
       rdfs:subPropertyOf :desctiption .
+
+:hasLatestValue
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indicates the latest value provided by an interaction pattern."@en ;
+      rdfs:domain <http://iot.linkeddata.es/def/wot#InteractionPattern> ;
+      rdfs:label "has latest value"@en ;
+      rdfs:range :Value .
 
 :hasComponent
       a       owl:ObjectProperty ;
@@ -105,6 +119,28 @@ vs:term_status
       rdfs:isDefinedBy <https://w3id.org/def/saref4bldg#> ;
       rdfs:label "Building space"@en .
 
+:Value
+      a       owl:Class ;
+      rdfs:comment "Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed."@en ;
+      rdfs:label "Value"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :hasValue
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onDataRange xsd:dateTime ;
+                owl:onProperty :timeStamp
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataFormat> ;
+                owl:onProperty :expressedInFormat
+              ] .
+
 :isInvolvedIn
       a       owl:ObjectProperty ;
       rdfs:isDefinedBy "A link between an agent and all the neighbouthoods it is involved in."@en ;
@@ -130,6 +166,12 @@ vs:term_status
                         ] ;
                 owl:onProperty :monitors
               ] .
+
+:hasValue
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Literal representation of the observed value."@en ;
+      rdfs:label "has value"@en ;
+      rdfs:range rdfs:Literal .
 
 :involves
       a       owl:ObjectProperty ;
@@ -219,7 +261,7 @@ vs:term_status
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/core" ;
       owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
-      owl:versionInfo "0.0.2" .
+      owl:versionInfo "0.0.3" .
 
 :describesEcosystem
       a       owl:FunctionalProperty , owl:ObjectProperty ;
@@ -257,6 +299,12 @@ vs:term_status
 
 geo:location
       a       owl:ObjectProperty .
+
+:timeStamp
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:comment "Time stamp in which a phenomenon takes place, for example when value has been taken."@en ;
+      rdfs:label "time stamp"@en ;
+      rdfs:range xsd:dateTime .
 
 saref:Service
       a       owl:Class ;
