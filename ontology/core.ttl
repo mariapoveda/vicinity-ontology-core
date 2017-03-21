@@ -83,14 +83,6 @@ vs:term_status rdf:type owl:AnnotationProperty .
               rdfs:label "has component"@en .
 
 
-###  http://iot.linkeddata.es/def/core#hasLatestValue
-:hasLatestValue rdf:type owl:ObjectProperty ;
-                rdfs:domain <http://iot.linkeddata.es/def/wot#InteractionPattern> ;
-                rdfs:range :Value ;
-                rdfs:comment "Indicates the latest value provided by an interaction pattern."@en ;
-                rdfs:label "has latest value"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#hasNeighbourhood
 :hasNeighbourhood rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :isInvolvedIn ;
@@ -117,6 +109,14 @@ vs:term_status rdf:type owl:AnnotationProperty .
                     rdfs:range <http://www.w3.org/ns/org#Organization> ;
                     rdfs:isDefinedBy "A link between two organizations who are in a partnership relation. A partnership is established between organizations, only 2 organizations."@en ;
                     rdfs:label "hasPartnershipWith"@en .
+
+
+###  http://iot.linkeddata.es/def/core#hasValue
+:hasValue rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://iot.linkeddata.es/def/wot#InteractionPattern> ;
+          rdfs:range :Value ;
+          rdfs:comment "Indicates a value provided by an interaction pattern. In case one ore more values are indicated the order will be defined by the time stamp attributes."@en ;
+          rdfs:label "has value"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#hasVendor
@@ -227,11 +227,11 @@ foaf:depiction rdf:type owl:ObjectProperty .
             rdfs:label "device name"@en .
 
 
-###  http://iot.linkeddata.es/def/core#hasValue
-:hasValue rdf:type owl:DatatypeProperty ;
-          rdfs:range rdfs:Literal ;
-          rdfs:comment "Literal representation of the observed value."@en ;
-          rdfs:label "has value"@en .
+###  http://iot.linkeddata.es/def/core#literalValue
+:literalValue rdf:type owl:DatatypeProperty ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "Literal representation of the observed value."@en ;
+              rdfs:label "literal value"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#serialNumber
@@ -392,7 +392,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
                          owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataFormat>
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasValue ;
+                         owl:onProperty :literalValue ;
                          owl:cardinality "1"^^xsd:nonNegativeInteger
                        ] ,
                        [ rdf:type owl:Restriction ;
