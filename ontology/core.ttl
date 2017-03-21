@@ -21,8 +21,8 @@
                                                   <http://www.w3.org/ns/org#> ;
                                       dcterms:creator <http://purl.org/net/mpoveda> ;
                                       rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
+                                      owl:versionInfo "0.0.3" ;
                                       dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                      owl:versionInfo "0.0.2" ;
                                       dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
                                       dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                       vann:preferredNamespacePrefix "vcnt-core" ;
@@ -68,11 +68,27 @@ vs:term_status rdf:type owl:AnnotationProperty .
                     rdfs:label "describes ecosystem"@en .
 
 
+###  http://iot.linkeddata.es/def/core#expressedInFormat
+:expressedInFormat rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Value ;
+                   rdfs:range <http://iot.linkeddata.es/def/wot#DataFormat> ;
+                   rdfs:comment "Link from a value to the data format in which it is expressed."@en ;
+                   rdfs:label "expressed in format"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               owl:inverseOf :isComponentOf ;
               rdfs:comment "A link between an ecosystem and the things that compose such ecosystem."@en ;
               rdfs:label "has component"@en .
+
+
+###  http://iot.linkeddata.es/def/core#hasLatestValue
+:hasLatestValue rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://iot.linkeddata.es/def/wot#InteractionPattern> ;
+                rdfs:range :Value ;
+                rdfs:comment "Indicates the latest value provided by an interaction pattern."@en ;
+                rdfs:label "has latest value"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#hasNeighbourhood
@@ -211,6 +227,13 @@ foaf:depiction rdf:type owl:ObjectProperty .
             rdfs:label "device name"@en .
 
 
+###  http://iot.linkeddata.es/def/core#hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "Literal representation of the observed value."@en ;
+          rdfs:label "has value"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#serialNumber
 :serialNumber rdf:type owl:DatatypeProperty ;
               rdfs:domain :Device ;
@@ -235,6 +258,14 @@ foaf:depiction rdf:type owl:ObjectProperty .
              rdfs:range xsd:string ;
              rdfs:comment "Name of a service" ;
              rdfs:label "service name"@en .
+
+
+###  http://iot.linkeddata.es/def/core#timeStamp
+:timeStamp rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:range xsd:dateTime ;
+           rdfs:comment "Time stamp in which a phenomenon takes place, for example when value has been taken."@en ;
+           rdfs:label "time stamp"@en .
 
 
 #################################################################
@@ -352,6 +383,25 @@ foaf:depiction rdf:type owl:ObjectProperty .
                                            ] ;
                            rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
                            rdfs:label "Thing ecosystem description"@en .
+
+
+###  http://iot.linkeddata.es/def/core#Value
+:Value rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :expressedInFormat ;
+                         owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataFormat>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasValue ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :timeStamp ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:dateTime
+                       ] ;
+       rdfs:comment "Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed."@en ;
+       rdfs:label "Value"@en .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#Property
