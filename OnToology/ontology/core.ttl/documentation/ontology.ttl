@@ -15,9 +15,6 @@
 @prefix saref:   <https://w3id.org/saref#> .
 @prefix doap:    <http://usefulinc.com/ns/doap#> .
 
-vs:term_status
-      a       owl:AnnotationProperty .
-
 :hasNeighbourhood
       a       owl:FunctionalProperty , owl:ObjectProperty ;
       rdfs:domain :Agent ;
@@ -27,12 +24,21 @@ vs:term_status
       rdfs:subPropertyOf :isInvolvedIn ;
       owl:inverseOf :isNeighbourhoodOf .
 
+vs:term_status
+      a       owl:AnnotationProperty .
+
 :expressedInFormat
       a       owl:ObjectProperty ;
       rdfs:comment "Link from a value to the data format in which it is expressed."@en ;
       rdfs:domain :Value ;
       rdfs:label "expressed in format"@en ;
       rdfs:range <http://iot.linkeddata.es/def/wot#DataFormat> .
+
+:literalValue
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Literal representation of the observed value."@en ;
+      rdfs:label "literal value"@en ;
+      rdfs:range rdfs:Literal .
 
 :monitors
       a       owl:ObjectProperty ;
@@ -58,24 +64,17 @@ vs:term_status
       rdfs:range xsd:string ;
       rdfs:subPropertyOf :desctiption .
 
-:hasLatestValue
+:hasOwner
       a       owl:ObjectProperty ;
-      rdfs:comment "Indicates the latest value provided by an interaction pattern."@en ;
-      rdfs:domain <http://iot.linkeddata.es/def/wot#InteractionPattern> ;
-      rdfs:label "has latest value"@en ;
-      rdfs:range :Value .
+      rdfs:isDefinedBy "Link between an entity like a service or a device and its owners or providers."@en ;
+      rdfs:label "has owner"@en , "has provider"@en ;
+      owl:inverseOf :owns .
 
 :hasComponent
       a       owl:ObjectProperty ;
       rdfs:comment "A link between an ecosystem and the things that compose such ecosystem."@en ;
       rdfs:label "has component"@en ;
       owl:inverseOf :isComponentOf .
-
-:hasOwner
-      a       owl:ObjectProperty ;
-      rdfs:isDefinedBy "Link between an entity like a service or a device and its owners or providers."@en ;
-      rdfs:label "has owner"@en , "has provider"@en ;
-      owl:inverseOf :owns .
 
 :deviceDescription
       a       owl:DatatypeProperty ;
@@ -91,16 +90,23 @@ vs:term_status
       rdfs:label "Thing ecosystem description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty <http://iot.linkeddata.es/def/wot#describes> ;
+                owl:onProperty :describes ;
                 owl:someValuesFrom :Ecosystem
               ] .
+
+:relativeHref
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://iot.linkeddata.es/def/wot#RelativeEndpoint> ;
+      rdfs:label "relative href"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#href> .
 
 :Device
       a       owl:Class ;
       rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
       rdfs:label "Device"@en ;
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
-      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#PhysicalThing> .
+      rdfs:subClassOf :PhysicalThing .
 
 :Agent
       a       owl:Class ;
@@ -125,8 +131,8 @@ vs:term_status
       rdfs:label "Value"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty :hasValue
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataFormat> ;
+                owl:onProperty :expressedInFormat
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -137,8 +143,8 @@ vs:term_status
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataFormat> ;
-                owl:onProperty :expressedInFormat
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :literalValue
               ] .
 
 :isInvolvedIn
@@ -151,6 +157,12 @@ vs:term_status
       rdfs:comment "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en ;
       rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn#" ;
       rdfs:label "property (ssn)" .
+
+:contains
+      a       owl:ObjectProperty ;
+      rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things."@en ;
+      rdfs:label "contains"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
 
 :Sensor
       a       owl:Class ;
@@ -168,10 +180,11 @@ vs:term_status
               ] .
 
 :hasValue
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Literal representation of the observed value."@en ;
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indicates a value provided by an interaction pattern. In case one ore more values are indicated the order will be defined by the time stamp attributes."@en ;
+      rdfs:domain <http://iot.linkeddata.es/def/wot#InteractionPattern> ;
       rdfs:label "has value"@en ;
-      rdfs:range rdfs:Literal .
+      rdfs:range :Value .
 
 :involves
       a       owl:ObjectProperty ;
@@ -211,6 +224,27 @@ vs:term_status
       rdfs:label "hasPartnershipWith"@en ;
       rdfs:range <http://www.w3.org/ns/org#Organization> .
 
+:describes
+      a       owl:ObjectProperty ;
+      rdfs:comment "Link from a thing description to the thing being described"@en ;
+      rdfs:label "describes thing"@en ;
+      owl:inverseOf :isDescribedBy .
+
+:ThingDescription
+      a       owl:Class ;
+      rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
+      rdfs:label "Thing description"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
+                owl:onProperty :describes
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :describes ;
+                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
+              ] .
+
 :desctiption
       a       owl:DatatypeProperty ;
       rdfs:comment "General attribute for descriptions assigned to any type of concept" ;
@@ -238,6 +272,24 @@ vs:term_status
       rdfs:label "avatar"@en ;
       rdfs:subPropertyOf foaf:depiction .
 
+:RelativeEndpoint
+      a       owl:Class ;
+      rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
+      rdfs:label "Relative endpoint"@en ;
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Endpoint> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onClass
+                        [ a       owl:Class ;
+                          owl:intersectionOf (<http://iot.linkeddata.es/def/wot#Endpoint> [ a       owl:Class ;
+                                      owl:complementOf <http://iot.linkeddata.es/def/wot#RelativeEndpoint>
+                                    ])
+                        ] ;
+                owl:onProperty <http://iot.linkeddata.es/def/wot#isRelativeTo>
+              ] .
+
 :interactsUsing
       a       owl:ObjectProperty ;
       rdfs:isDefinedBy "Linkg between an agent and the virtual thing it interatcs with."@en ;
@@ -248,6 +300,11 @@ vs:term_status
       a       owl:ObjectProperty ;
       rdfs:comment "A link between a thing and the ecosystems it belongs to."@en ;
       rdfs:label "is component of"@en .
+
+:isDescribedBy
+      a       owl:ObjectProperty ;
+      rdfs:comment "Relation from a thing to its thing descriptions"@en ;
+      rdfs:label "is described by"@en .
 
 :     a       owl:Ontology ;
       rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
@@ -263,12 +320,6 @@ vs:term_status
       owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
       owl:versionInfo "0.0.3" .
 
-:describesEcosystem
-      a       owl:FunctionalProperty , owl:ObjectProperty ;
-      rdfs:comment "Link between a thing ecosystem description and the ecosystem being described."@en ;
-      rdfs:label "describes ecosystem"@en ;
-      owl:inverseOf :isEcosystemDescribedBy .
-
 :serviceName
       a       owl:DatatypeProperty ;
       rdfs:comment "Name of a service" ;
@@ -276,6 +327,12 @@ vs:term_status
       rdfs:label "service name"@en ;
       rdfs:range xsd:string ;
       rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> .
+
+:describesEcosystem
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "Link between a thing ecosystem description and the ecosystem being described."@en ;
+      rdfs:label "describes ecosystem"@en ;
+      owl:inverseOf :isEcosystemDescribedBy .
 
 :deviceName
       a       owl:DatatypeProperty ;
@@ -296,6 +353,11 @@ vs:term_status
                 owl:allValuesFrom :Application ;
                 owl:onProperty :interactsUsing
               ] .
+
+:isRelativeTo
+      a       owl:ObjectProperty ;
+      rdfs:comment "Link from a relative endpoint to the (non relative) endpoint to which it is relative."@en ;
+      rdfs:label "is relative to"@en .
 
 geo:location
       a       owl:ObjectProperty .
@@ -322,6 +384,36 @@ dcterms:contributor
       rdfs:label "Application"@en ;
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
       rdfs:subClassOf :Service .
+
+:PhysicalThing
+      a       owl:Class ;
+      rdfs:comment """A physical entity is a real-world thing. A physical entity is a specialization of entity. A physical entity may contain other physical entities. A physical entity is a discrete, identifiable part of the physical environment that is of interest to the user for the completion of her goal. Physical entities can be almost any physical object or environment; from humans or animals to cars; from store or logistics chain items to computers; from electronic appliances to closed or open environments.
+
+(Definition taken from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en , "Any entity that has a proper space region."@en ;
+      rdfs:label "Physical thing"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :PhysicalThing ;
+                owl:onProperty :contains
+              ] .
+
+:VirtualThing
+      a       owl:Class ;
+      rdfs:comment """A virtual entity is a digital representation of a physical entity, contained within a service. A virtual entity interacts through an endpoint. A virtual entity represents a physical entity.
+
+(Definition taken from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
+      rdfs:label "Virtual thing"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :VirtualThing ;
+                owl:onProperty :contains
+              ] .
 
 :Neighbourhood
       a       owl:Class ;
@@ -360,7 +452,7 @@ geo:SpatialThing
       rdfs:comment "A service is a set of distinct capabilities provided by a software component through a defined interface, which may be composed of other services. A service is implemented by one or more components. A service defines network interfaces and exposed by an Endpoint. (definition taken from ISO/IEC 11404:2007)"@en ;
       rdfs:label "Service"@en ;
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
-      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#VirtualThing> .
+      rdfs:subClassOf :VirtualThing .
 
 foaf:Image
       a       owl:Class .
