@@ -60,6 +60,20 @@ vs:term_status rdf:type owl:AnnotationProperty .
         rdfs:label "avatar"@en .
 
 
+###  http://iot.linkeddata.es/def/core#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things."@en ;
+          rdfs:label "contains"@en ;
+          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+
+
+###  http://iot.linkeddata.es/def/core#describes
+:describes rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isDescribedBy ;
+           rdfs:comment "Link from a thing description to the thing being described"@en ;
+           rdfs:label "describes thing"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#describesEcosystem
 :describesEcosystem rdf:type owl:ObjectProperty ;
                     owl:inverseOf :isEcosystemDescribedBy ;
@@ -146,6 +160,12 @@ vs:term_status rdf:type owl:AnnotationProperty .
                rdfs:label "is component of"@en .
 
 
+###  http://iot.linkeddata.es/def/core#isDescribedBy
+:isDescribedBy rdf:type owl:ObjectProperty ;
+               rdfs:comment "Relation from a thing to its thing descriptions"@en ;
+               rdfs:label "is described by"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#isEcosystemDescribedBy
 :isEcosystemDescribedBy rdf:type owl:ObjectProperty ,
                                  owl:InverseFunctionalProperty ;
@@ -167,6 +187,12 @@ vs:term_status rdf:type owl:AnnotationProperty .
                    rdfs:range :Agent ;
                    rdfs:isDefinedBy "A link between a neighbourhood and the specific agent around which the neighbourhood is built."@en ;
                    rdfs:label "is neighbourhood of"@en .
+
+
+###  http://iot.linkeddata.es/def/core#isRelativeTo
+:isRelativeTo rdf:type owl:ObjectProperty ;
+              rdfs:comment "Link from a relative endpoint to the (non relative) endpoint to which it is relative."@en ;
+              rdfs:label "is relative to"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#monitors
@@ -232,6 +258,14 @@ foaf:depiction rdf:type owl:ObjectProperty .
               rdfs:range rdfs:Literal ;
               rdfs:comment "Literal representation of the observed value."@en ;
               rdfs:label "literal value"@en .
+
+
+###  http://iot.linkeddata.es/def/core#relativeHref
+:relativeHref rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#href> ;
+              rdfs:domain <http://iot.linkeddata.es/def/wot#RelativeEndpoint> ;
+              rdfs:range xsd:string ;
+              rdfs:label "relative href"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#serialNumber
@@ -305,7 +339,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 ###  http://iot.linkeddata.es/def/core#Device
 :Device rdf:type owl:Class ;
-        rdfs:subClassOf <http://iot.linkeddata.es/def/wot#PhysicalThing> ;
+        rdfs:subClassOf :PhysicalThing ;
         rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
         rdfs:label "Device"@en ;
         rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
@@ -351,6 +385,40 @@ foaf:depiction rdf:type owl:ObjectProperty .
                rdfs:label "Neighbourhood"@en .
 
 
+###  http://iot.linkeddata.es/def/core#PhysicalThing
+:PhysicalThing rdf:type owl:Class ;
+               rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :contains ;
+                                 owl:allValuesFrom :PhysicalThing
+                               ] ;
+               rdfs:comment """A physical entity is a real-world thing. A physical entity is a specialization of entity. A physical entity may contain other physical entities. A physical entity is a discrete, identifiable part of the physical environment that is of interest to the user for the completion of her goal. Physical entities can be almost any physical object or environment; from humans or animals to cars; from store or logistics chain items to computers; from electronic appliances to closed or open environments.
+
+(Definition taken from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ,
+                            "Any entity that has a proper space region."@en ;
+               rdfs:label "Physical thing"@en ;
+               rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
+
+
+###  http://iot.linkeddata.es/def/core#RelativeEndpoint
+:RelativeEndpoint rdf:type owl:Class ;
+                  rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Endpoint> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://iot.linkeddata.es/def/wot#isRelativeTo> ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass [ owl:intersectionOf ( <http://iot.linkeddata.es/def/wot#Endpoint>
+                                                                       [ rdf:type owl:Class ;
+                                                                         owl:complementOf <http://iot.linkeddata.es/def/wot#RelativeEndpoint>
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ]
+                                  ] ;
+                  rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
+                  rdfs:label "Relative endpoint"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#Sensor
 :Sensor rdf:type owl:Class ;
         rdfs:subClassOf :Device ,
@@ -369,16 +437,30 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 ###  http://iot.linkeddata.es/def/core#Service
 :Service rdf:type owl:Class ;
-         rdfs:subClassOf <http://iot.linkeddata.es/def/wot#VirtualThing> ;
+         rdfs:subClassOf :VirtualThing ;
          rdfs:comment "A service is a set of distinct capabilities provided by a software component through a defined interface, which may be composed of other services. A service is implemented by one or more components. A service defines network interfaces and exposed by an Endpoint. (definition taken from ISO/IEC 11404:2007)"@en ;
          rdfs:label "Service"@en ;
          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
+###  http://iot.linkeddata.es/def/core#ThingDescription
+:ThingDescription rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :describes ;
+                                    owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :describes ;
+                                    owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
+                                  ] ;
+                  rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
+                  rdfs:label "Thing description"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#ThingEcosystemDescription
 :ThingEcosystemDescription rdf:type owl:Class ;
                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://iot.linkeddata.es/def/wot#describes> ;
+                                             owl:onProperty :describes ;
                                              owl:someValuesFrom :Ecosystem
                                            ] ;
                            rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
@@ -402,6 +484,21 @@ foaf:depiction rdf:type owl:ObjectProperty .
                        ] ;
        rdfs:comment "Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed."@en ;
        rdfs:label "Value"@en .
+
+
+###  http://iot.linkeddata.es/def/core#VirtualThing
+:VirtualThing rdf:type owl:Class ;
+              rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :contains ;
+                                owl:allValuesFrom :VirtualThing
+                              ] ;
+              rdfs:comment """A virtual entity is a digital representation of a physical entity, contained within a service. A virtual entity interacts through an endpoint. A virtual entity represents a physical entity.
+
+(Definition taken from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
+              rdfs:label "Virtual thing"@en ;
+              rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#Property
