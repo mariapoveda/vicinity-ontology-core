@@ -328,7 +328,7 @@
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#">
     <dcterms:contributor rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
     <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-    <owl:versionInfo>0.0.3</owl:versionInfo>
+    <owl:versionInfo>0.0.4</owl:versionInfo>
     <dc:title xml:lang="en">Vicinity core model</dc:title>
     <owl:imports rdf:resource="http://iot.linkeddata.es/def/wot#"/>
     <vann:preferredNamespaceUri>http://iot.linkeddata.es/def/core</vann:preferredNamespaceUri>

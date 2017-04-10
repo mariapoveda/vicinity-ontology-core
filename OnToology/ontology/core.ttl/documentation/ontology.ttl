@@ -318,7 +318,7 @@ vs:term_status
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/core" ;
       owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
-      owl:versionInfo "0.0.3" .
+      owl:versionInfo "0.0.4" .
 
 :serviceName
       a       owl:DatatypeProperty ;

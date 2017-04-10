@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-04-10 06:29:13 +0000</string>
+	<string>2017-04-10 07:52:53 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -85,7 +85,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1248, 1009.9920948616601}}</string>
+				<string>{{0, 0}, {1241, 1004.3270750988142}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -104,7 +104,7 @@
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1248, 1009.9920948616601}</string>
+			<string>{1241, 1004.3270750988142}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -235,7 +235,7 @@ core:relativeHref:: String}</string>
 						<key>ID</key>
 						<integer>42059</integer>
 						<key>Position</key>
-						<real>0.1965189052715956</real>
+						<real>0.19651889801025391</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -2472,7 +2472,7 @@ ssn:Property}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{977.11002671409824, 462.62740565229103}, {108.60393773167482, 16.854378350365323}}</string>
+					<string>{{974.86874820483649, 462.62740565229103}, {108.60393773167482, 16.854378350365323}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -2608,7 +2608,7 @@ core:interactsUsing}</string>
 					<key>Points</key>
 					<array>
 						<string>{963.31755826257427, 471.05459482747369}</string>
-						<string>{1112.3451236978963, 471.05461311624856}</string>
+						<string>{1107.4399853579753, 471.05461311624856}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2649,7 +2649,7 @@ core:interactsUsing}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{947.93786701437, 372.03663939280523}, {108.60393773167482, 16.854378350365323}}</string>
+					<string>{{945.61674532698635, 372.03663939280523}, {108.60393773167482, 16.854378350365323}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -2783,7 +2783,7 @@ core:interactsUsing}</string>
 					<key>Points</key>
 					<array>
 						<string>{929.6796124901399, 380.46382856798789}</string>
-						<string>{1083.0184461677559, 380.46384319900778}</string>
+						<string>{1078.1133078278349, 380.46384319900778}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3278,8 +3278,8 @@ foaf:Person}</string>
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{1112.3451236978963, 463.38372965086808}</string>
-						<string>{1095.7456571072362, 391.9701304478707}</string>
+						<string>{1107.4399853579753, 463.38372965086808}</string>
+						<string>{1090.8405187673152, 391.9701304478707}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3316,7 +3316,7 @@ foaf:Person}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1112.3451236978963, 459.54829660534585}, {96.639631110034998, 23.012603759765625}}</string>
+					<string>{{1107.4399853579753, 459.54829660534585}, {96.639631110034998, 23.012603759765625}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -3416,7 +3416,7 @@ core:Application}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1083.0184461677559, 368.95752668810508}, {76.363261654226733, 23.012603759765625}}</string>
+					<string>{{1078.1133078278349, 368.95752668810508}, {76.363261654226733, 23.012603759765625}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -4894,7 +4894,7 @@ foaf:Image}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1108.7823979807306, 541.48413130971619}, {108.60393773167482, 14.40000057220459}}</string>
+					<string>{{1098.475019898287, 540.72874209569898}, {108.60393773167482, 14.40000057220459}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -4922,7 +4922,7 @@ foaf:Image}</string>
 						<key>ID</key>
 						<integer>41997</integer>
 						<key>Position</key>
-						<real>0.80712640285491943</real>
+						<real>0.8271045322156535</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -5025,8 +5025,8 @@ foaf:Image}</string>
 					<key>Points</key>
 					<array>
 						<string>{1079.3700676552601, 694.57313685551628}</string>
-						<string>{1225.3015975254984, 667.15551903128437}</string>
-						<string>{1220.2485939919297, 548.68413159581849}</string>
+						<string>{1218.403162055336, 665.92885375494075}</string>
+						<string>{1215.9782608695652, 548.06471194241271}</string>
 						<string>{1079.3700482982163, 547.79641796187889}</string>
 					</array>
 					<key>Style</key>
@@ -14094,7 +14094,7 @@ Class}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1248, 1009.9920948616601}}</string>
+				<string>{{0, 0}, {1248, 988}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -14113,7 +14113,7 @@ Class}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1248, 1009.9920948616601}</string>
+			<string>{1248, 988}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -27672,7 +27672,7 @@ Class}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1247, 1009.1828063241106}}</string>
+				<string>{{0, 0}, {1247, 988}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -27691,7 +27691,7 @@ Class}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1247, 1009.1828063241106}</string>
+			<string>{1247, 988}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -40696,7 +40696,7 @@ Class}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1247, 1009.1828063241106}}</string>
+				<string>{{0, 0}, {1247, 980}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -40715,7 +40715,7 @@ Class}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1247, 1009.1828063241106}</string>
+			<string>{1247, 980}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -63641,7 +63641,7 @@ Class}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1086, 878.88735177865613}}</string>
+				<string>{{0, 0}, {1086, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -63660,7 +63660,7 @@ Class}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1086, 878.88735177865613}</string>
+			<string>{1086, 783}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -67565,7 +67565,7 @@ wot:MediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>179.57905138339925</real>
+					<real>179.57905578613281</real>
 					<key>Points</key>
 					<array>
 						<string>{525.75990268556575, 315.32246549597636}</string>
@@ -72236,7 +72236,7 @@ wot:Thing}</string>
 			<key>UniqueID</key>
 			<integer>12</integer>
 			<key>VPages</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>ActiveLayerIndex</key>
@@ -72246,7 +72246,7 @@ wot:Thing}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1012, 819}}</string>
+				<string>{{0, 0}, {980, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -72265,7 +72265,7 @@ wot:Thing}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1012, 819}</string>
+			<string>{980, 783}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -80841,7 +80841,7 @@ wot:Thing}</string>
 			<key>UniqueID</key>
 			<integer>18</integer>
 			<key>VPages</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>ActiveLayerIndex</key>
@@ -89752,8 +89752,6 @@ IoT-User}</string>
 		<array/>
 		<key>FitInWindow</key>
 		<true/>
-		<key>Frame</key>
-		<string>{{76, 63}, {1559, 964}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>ShowRuler</key>
@@ -89763,9 +89761,9 @@ IoT-User}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {1248, 1009.9920948616601}}</string>
+		<string>{{0, 0}, {1241, 1004.3270750988141}}</string>
 		<key>Zoom</key>
-		<real>0.8108974358974359</real>
+		<real>0.81547139403706692</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
