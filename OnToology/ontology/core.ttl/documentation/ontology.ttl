@@ -136,15 +136,15 @@ vs:term_status
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :literalValue
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onDataRange xsd:dateTime ;
                 owl:onProperty :timeStamp
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty :literalValue
               ] .
 
 :isInvolvedIn
@@ -236,13 +236,13 @@ vs:term_status
       rdfs:label "Thing description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
-                owl:onProperty :describes
+                owl:onProperty :describes ;
+                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :describes ;
-                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
+                owl:onProperty :describes
               ] .
 
 :desctiption
