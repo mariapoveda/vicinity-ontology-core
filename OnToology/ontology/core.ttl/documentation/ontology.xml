@@ -13,32 +13,25 @@
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" > 
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasNeighbourhood">
-    <rdfs:label xml:lang="en">has neighbourhood</rdfs:label>
-    <rdfs:isDefinedBy xml:lang="en">The link between an agent and its neighbourhood. Such neighbourhood will link to all the entities involved in such neighbourhood.</rdfs:isDefinedBy>
-    <rdfs:range rdf:resource="http://iot.linkeddata.es/def/core#Neighbourhood"/>
-    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Agent"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#isNeighbourhoodOf"/>
-    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#isInvolvedIn"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#expressedInFormat">
-    <rdfs:label xml:lang="en">expressed in format</rdfs:label>
-    <rdfs:comment xml:lang="en">Link from a value to the data format in which it is expressed.</rdfs:comment>
-    <rdfs:range rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
-    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Value"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Selectivity">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Selectivity</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>Selectivity is a property of a sensor whereby it provides observed values for one or more qualities such that the values of each quality are independent of other qualities in the phenomenon, body, or substance being investigated.</rdfs:comment>
+    <dc:source>skos:exactMatch 'selectivity' [VIM 4.13]
+                                 http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#literalValue">
-    <rdfs:label xml:lang="en">literal value</rdfs:label>
-    <rdfs:comment xml:lang="en">Literal representation of the observed value.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#describes"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#monitors">
     <rdfs:seeAlso>ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
@@ -46,28 +39,52 @@
     <rdfs:isDefinedBy xml:lang="en">A link between a sensor an the entities or properties it can monitor.</rdfs:isDefinedBy>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Ecosystem">
-    <rdfs:label xml:lang="en">Ecosystem</rdfs:label>
-    <rdfs:comment xml:lang="en">Collection of things that co-exist in a given environment.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A0"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#AmbientProperty">
+    <rdfs:label xml:lang="en">AmbientProperty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:nodeID="A2"/>
-    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot#PhysicalThing"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#serviceDescription">
-    <rdfs:label xml:lang="en">service description</rdfs:label>
-    <rdfs:comment xml:lang="en">Natural language description of a service.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
-    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#desctiption"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#ThingEcosystemDescription"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isDescribedBy"/>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#timeStamp"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Precision">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Precision</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation.</rdfs:comment>
+    <dc:source>skos:exactMatch 'measurement precision/precision' [VIM 2.15]
+                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#OperatingRange">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction</rdfs:seeAlso>
+    <rdfs:label>Operating Range</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The environmental conditions and characteristics of a system/sensor's normal operating environment.  Can be used to specify for example the standard environmental conditions in which the sensor is expected to operate (a Condition with no OperatingProperty), or how the environmental and other operating properties relate: i.e., that the maintenance schedule or power requirements differ according to the conditions.</rdfs:comment>
+    <dc:source>skos:broaderMatch 'reference operating condition' [VIM 4.11]
+                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf
+
+The difference is that here we also allow for qualities that aren't VIM influence quantities [VIM 2.52] - for example, a quantity that alters the power requirements, but doesn't affect the measurement properties - conditions specified in MeasurementCapability should be influence quantities.</dc:source>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
+    <rdfs:subClassOf rdf:nodeID="A4"/>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Measurement  Property</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>An identifiable and observable characteristic of a sensor's observations or ability to make observations.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasOwner">
     <rdfs:label xml:lang="en">has provider</rdfs:label>
@@ -76,41 +93,19 @@
     <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#owns"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasComponent">
-    <rdfs:label xml:lang="en">has component</rdfs:label>
-    <rdfs:comment xml:lang="en">A link between an ecosystem and the things that compose such ecosystem.</rdfs:comment>
-    <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#isComponentOf"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#deviceDescription">
-    <rdfs:label xml:lang="en">device description</rdfs:label>
-    <rdfs:comment xml:lang="en">Natural language description of a device.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
-    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#desctiption"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="A4"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">
-    <rdfs:label xml:lang="en">Thing ecosystem description</rdfs:label>
-    <rdfs:comment>A digital representation that encapsulates an ecosystem taht is accessible via Web services</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A5"/>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Resolution">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Resolution</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The smallest difference in the value of a quality being observed that would result in perceptably different values of observation results.</rdfs:comment>
+    <dc:source>skos:exactMatch 'resolution' [VIM 4.14]
+                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#relativeHref">
-    <rdfs:label xml:lang="en">relative href</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#RelativeEndpoint"/>
-    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#href"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#expressedInFormat"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A6"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Device">
     <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
@@ -119,17 +114,18 @@
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#PhysicalThing"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Agent">
-    <rdfs:label xml:lang="en">Agent</rdfs:label>
-    <rdfs:comment xml:lang="en">An agent is a person or piece of software involved in a VICINITY neighbourhood.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A5"/>
+    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot#Link"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isEcosystemDescribedBy">
-    <rdfs:label xml:lang="en">is ecosystem described by</rdfs:label>
-    <rdfs:comment xml:lang="en">Link from an ecosystem to the thing ecosystem descriptions that provide information about such ecosystem.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#forProperty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#HVACSensor">
+    <rdfs:label xml:lang="en">HVACSensor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Actuator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#BuildingSpace">
     <rdfs:label xml:lang="en">Building space</rdfs:label>
@@ -137,37 +133,23 @@
     <rdfs:comment xml:lang="en">An entity used to define the physical spaces of the building. A building space contains devices or building objects.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Value">
-    <rdfs:label xml:lang="en">Value</rdfs:label>
-    <rdfs:comment xml:lang="en">Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A7"/>
-    <rdfs:subClassOf rdf:nodeID="A8"/>
-    <rdfs:subClassOf rdf:nodeID="A6"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#CO2Sensor">
+    <rdfs:label xml:lang="en">CO2Sensor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <owl:allValuesFrom rdf:nodeID="A10"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#actsOn"/>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Frequency">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Frequency</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The smallest possible time between one observation and the next.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+    <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isInvolvedIn">
-    <rdfs:label xml:lang="en">is involved in</rdfs:label>
-    <rdfs:isDefinedBy xml:lang="en">A link between an agent and all the neighbouthoods it is involved in.</rdfs:isDefinedBy>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property">
-    <rdfs:label>property (ssn)</rdfs:label>
-    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn#</rdfs:isDefinedBy>
-    <rdfs:comment xml:lang="en">A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <owl:complementOf rdf:resource="http://iot.linkeddata.es/def/wot#RelativeEndpoint"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#contains">
     <rdfs:seeAlso>ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)</rdfs:seeAlso>
@@ -175,24 +157,13 @@
     <rdfs:comment xml:lang="en">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#interactsUsing"/>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#literalValue"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Sensor">
-    <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
-    <rdfs:label xml:lang="en">Sensor</rdfs:label>
-    <rdfs:comment xml:lang="en">A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A13"/>
-    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <owl:onClass rdf:nodeID="A3"/>
-    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isRelativeTo"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasValue">
     <rdfs:label xml:lang="en">has value</rdfs:label>
@@ -201,22 +172,24 @@
     <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#involves">
-    <rdfs:label xml:lang="en">involves</rdfs:label>
-    <rdfs:isDefinedBy xml:lang="en">A link between a neighbourhood and all the agents involved in it.</rdfs:isDefinedBy>
-    <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#isInvolvedIn"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Thermometer">
+    <rdfs:label xml:lang="en">Thermometer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Irradiance">
+    <rdfs:label xml:lang="en">Irradiance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#LightProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A7"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasVendor">
     <rdfs:label xml:lang="en">has vendor</rdfs:label>
     <rdfs:label xml:lang="en">has producer</rdfs:label>
     <rdfs:isDefinedBy xml:lang="en">Link from a device to its vendor or manufacturer or producer.</rdfs:isDefinedBy>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#isContainedIn">
-    <rdfs:label xml:lang="en">is contained in</rdfs:label>
-    <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/saref4bldg#</rdfs:isDefinedBy>
-    <rdfs:comment xml:lang="en">A relation between an object and the physical space in which it is located.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">
@@ -228,21 +201,13 @@
     <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#involves"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#actsOn">
-    <rdfs:seeAlso>ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
-    <rdfs:label xml:lang="en">acts on</rdfs:label>
-    <rdfs:comment>A link between an actuator an the entities or properties upon which it can act.</rdfs:comment>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#OperationalStatus">
+    <rdfs:label xml:lang="en">Operational status</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#inCondition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#literalValue"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#describes"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasPartnershipWith">
     <rdfs:label xml:lang="en">hasPartnershipWith</rdfs:label>
@@ -252,9 +217,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <owl:unionOf rdf:nodeID="A16"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"/>
+    <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#describes">
     <rdfs:label xml:lang="en">describes thing</rdfs:label>
@@ -265,49 +234,21 @@
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#ThingDescription">
     <rdfs:label xml:lang="en">Thing description</rdfs:label>
     <rdfs:comment xml:lang="en">A digital representation encapsulates a physical object accessible via Web services</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A17"/>
-    <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdfs:subClassOf rdf:nodeID="A12"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:nodeID="A11"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A13">
-    <owl:allValuesFrom rdf:nodeID="A19"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#ThingEcosystemDescription"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#isDescribedBy"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#desctiption">
-    <rdfs:label xml:lang="en">desctiption</rdfs:label>
-    <rdfs:comment>General attribute for descriptions assigned to any type of concept</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Actuator">
-    <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
-    <rdfs:label xml:lang="en">Actuator</rdfs:label>
-    <rdfs:comment xml:lang="en">An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A9"/>
-    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#avatar">
-    <rdfs:label xml:lang="en">avatar</rdfs:label>
-    <rdfs:comment xml:lang="en">A link from an entity to the image identifying it in a social network or system.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#RelativeEndpoint">
     <rdfs:label xml:lang="en">Relative endpoint</rdfs:label>
     <rdfs:comment xml:lang="en">An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative.</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="A14"/>
-    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Endpoint"/>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Link"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A20">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#interactsUsing">
     <rdfs:seeAlso>ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
@@ -315,30 +256,23 @@
     <rdfs:isDefinedBy xml:lang="en">Linkg between an agent and the virtual thing it interatcs with.</rdfs:isDefinedBy>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isComponentOf">
-    <rdfs:label xml:lang="en">is component of</rdfs:label>
-    <rdfs:comment xml:lang="en">A link between a thing and the ecosystems it belongs to.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isDescribedBy">
     <rdfs:label xml:lang="en">is described by</rdfs:label>
     <rdfs:comment xml:lang="en">Relation from a thing to its thing descriptions</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#">
-    <dcterms:contributor rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
-    <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-    <owl:versionInfo>0.0.4</owl:versionInfo>
-    <dc:title xml:lang="en">Vicinity core model</dc:title>
-    <owl:imports rdf:resource="http://iot.linkeddata.es/def/wot#"/>
-    <vann:preferredNamespaceUri>http://iot.linkeddata.es/def/core</vann:preferredNamespaceUri>
-    <dcterms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
-    <rdfs:comment xml:lang="en">This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions.</rdfs:comment>
-    <dcterms:creator rdf:resource="http://purl.org/net/mpoveda"/>
-    <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <vann:preferredNamespacePrefix>vcnt-core</vann:preferredNamespacePrefix>
-    <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+  <rdf:Description rdf:nodeID="A15">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataSchema"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#expressedInFormat"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#describesEcosystem">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">describes ecosystem</rdfs:label>
+    <rdfs:comment xml:lang="en">Link between a thing ecosystem description and the ecosystem being described.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#isEcosystemDescribedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#serviceName">
     <rdfs:label xml:lang="en">service name</rdfs:label>
@@ -348,56 +282,64 @@
     <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#name"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#describesEcosystem">
-    <rdfs:label xml:lang="en">describes ecosystem</rdfs:label>
-    <rdfs:comment xml:lang="en">Link between a thing ecosystem description and the ecosystem being described.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#isEcosystemDescribedBy"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#HumiditySensor">
+    <rdfs:label xml:lang="en">HumiditySensor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#timeStamp"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#deviceName">
-    <rdfs:label xml:lang="en">device name</rdfs:label>
-    <rdfs:comment>Name of a device</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
-    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#name"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A21">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#PhysicalThing"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#contains"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#HumanUser">
     <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
     <rdfs:label xml:lang="en">Human user</rdfs:label>
     <rdfs:comment xml:lang="en">A human user is person who uses an IoT system. A human user is a specialization of an IoT-User. A human user interacts across the network via an application. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A22"/>
+    <rdfs:subClassOf rdf:nodeID="A16"/>
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#describes"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction</rdfs:seeAlso>
+    <rdfs:label>Battery Lifetime</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>Total useful life of a battery.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <rdf:rest rdf:nodeID="A20"/>
-    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot#PhysicalThing"/>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction</rdfs:seeAlso>
+    <rdfs:label>Survival Property</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>An identifiable characteristic that represents the extent of the sensors useful life.  Might include for example total battery life or number of recharges, or, for sensors that are used only a fixed number of times, the number of observations that can be made before the sensing capability is depleted.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isRelativeTo">
-    <rdfs:label xml:lang="en">is relative to</rdfs:label>
-    <rdfs:comment xml:lang="en">Link from a relative endpoint to the (non relative) endpoint to which it is relative.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#PhysicalThing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Latency">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Latency</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The time between a request for an observation and the sensor providing a result.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#CarbonMonoxide">
+    <rdfs:label xml:lang="en">CarbonMonoxide</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction</rdfs:seeAlso>
+    <rdfs:label>Maintenance Schedule</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>Schedule of maintenance for a system/sensor in the specified conditions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#timeStamp">
     <rdfs:label xml:lang="en">time stamp</rdfs:label>
@@ -413,9 +355,482 @@
     <rdfs:comment xml:lang="en">A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A19">
-    <owl:unionOf rdf:nodeID="A1"/>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#interactsUsing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#LightSwitch">
+    <rdfs:label xml:lang="en">LightSwitch</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Actuator"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Quality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Ecosystem"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#describes"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#PhysicalThing">
+    <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">Physical thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Any entity that has a proper space region.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A physical entity is a real-world thing. A physical entity is a specialization of entity. A physical entity may contain other physical entities. A physical entity is a discrete, identifiable part of the physical environment that is of interest to the user for the completion of her goal. Physical entities can be almost any physical object or environment; from humans or animals to cars; from store or logistics chain items to computers; from electronic appliances to closed or open environments.
+
+(Definition taken from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A19"/>
+    <rdfs:subClassOf rdf:nodeID="A20"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Neighbourhood">
+    <rdfs:label xml:lang="en">Neighbourhood</rdfs:label>
+    <rdfs:comment xml:lang="en">A set of IoT infrastructures and value-added services integrated through a network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Presence">
+    <rdfs:label xml:lang="en">Presence</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>detection limit</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>An observed value for which the probability of falsely claiming the absence of a component in a material is Î², given a probability Î± of falsely claiming its presence.</rdfs:comment>
+    <dc:source>skos:exactMatch 'detection limit' [VIM 4.18] 
+                                 http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#LuminusIntensity">
+    <rdfs:label xml:lang="en">LuminusIntensity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#LightProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Accuracy">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Accuracy</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The closeness of agreement between the value of an observation and the true value of the observed quality.</rdfs:comment>
+    <dc:source>skos:exactMatch 'measurement accuracy/accuracy' [VIM 2.13] 
+		                    http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">
+    <rdfs:label xml:lang="en">TemperatureAmbientProperty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#AmbientProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#DigitalUser">
+    <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">Digital user</rdfs:label>
+    <rdfs:comment xml:lang="en">A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A17"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#ResponseTime">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Response time</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The time between a (step) change inthe value of an observed quality and a sensor (possibly with specified error) 'settling' on an observed value.</rdfs:comment>
+    <dc:source>skos:exactMatch 'step response time' [VIM 4.23]
+                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#serialNumber">
+    <rdfs:label xml:lang="en">serialNumber</rdfs:label>
+    <rdfs:comment>Device serial number</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensitivity">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Sensitivity</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>Sensitivity is the quotient of the change in a result of sensor and the corresponding change in a value of a quality being observed.</rdfs:comment>
+    <dc:source>skos:exactMatch 'sensitivity' [VIM 4.12]
+                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:complementOf rdf:resource="http://iot.linkeddata.es/def/core#RelativeEndpoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"/>
+    <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Condition"/>
+    <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inCondition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Image">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasNeighbourhood">
+    <rdfs:label xml:lang="en">has neighbourhood</rdfs:label>
+    <rdfs:isDefinedBy xml:lang="en">The link between an agent and its neighbourhood. Such neighbourhood will link to all the entities involved in such neighbourhood.</rdfs:isDefinedBy>
+    <rdfs:range rdf:resource="http://iot.linkeddata.es/def/core#Neighbourhood"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#isNeighbourhoodOf"/>
+    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#isInvolvedIn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#expressedInFormat">
+    <rdfs:label xml:lang="en">expressed in format</rdfs:label>
+    <rdfs:comment xml:lang="en">Link from a value to the data format in which it is expressed.</rdfs:comment>
+    <rdfs:range rdf:resource="http://iot.linkeddata.es/def/wot#DataSchema"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SystemLifetime">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction</rdfs:seeAlso>
+    <rdfs:label>System Lifetime</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>Total useful life of a sensor/system (expressed as total life since manufacture, time in use, number of operations, etc.).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#literalValue">
+    <rdfs:label xml:lang="en">literal value</rdfs:label>
+    <rdfs:comment xml:lang="en">Literal representation of the observed value.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Condition"/>
+    <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inCondition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Ecosystem">
+    <rdfs:label xml:lang="en">Ecosystem</rdfs:label>
+    <rdfs:comment xml:lang="en">Collection of things that co-exist in a given environment.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A13"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#serviceDescription">
+    <rdfs:label xml:lang="en">service description</rdfs:label>
+    <rdfs:comment xml:lang="en">Natural language description of a service.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
+    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#desctiption"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#hasComponent">
+    <rdfs:label xml:lang="en">has component</rdfs:label>
+    <rdfs:comment xml:lang="en">A link between an ecosystem and the things that compose such ecosystem.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#isComponentOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#deviceDescription">
+    <rdfs:label xml:lang="en">device description</rdfs:label>
+    <rdfs:comment xml:lang="en">Natural language description of a device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#desctiption"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#PeopleCounter">
+    <rdfs:label xml:lang="en">People counter</rdfs:label>
+    <rdfs:comment xml:lang="en">A people counter is a device that is used to measure the number of people traversing a certain passage or entrance. (Definition taken from https://en.wikipedia.org/wiki/People_counter)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#PhysicalThing"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#contains"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#relativeHref">
+    <rdfs:label xml:lang="en">relative href</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#RelativeEndpoint"/>
+    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#href"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">
+    <rdfs:label xml:lang="en">Thing ecosystem description</rdfs:label>
+    <rdfs:comment>A digital representation that encapsulates an ecosystem taht is accessible via Web services</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A18"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Radiance">
+    <rdfs:label xml:lang="en">Radiance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#LightProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Agent">
+    <rdfs:label xml:lang="en">Agent</rdfs:label>
+    <rdfs:comment xml:lang="en">An agent is a person or piece of software involved in a VICINITY neighbourhood.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isEcosystemDescribedBy">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">is ecosystem described by</rdfs:label>
+    <rdfs:comment xml:lang="en">Link from an ecosystem to the thing ecosystem descriptions that provide information about such ecosystem.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot#PhysicalThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:allValuesFrom rdf:nodeID="A24"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Value">
+    <rdfs:label xml:lang="en">Value</rdfs:label>
+    <rdfs:comment xml:lang="en">Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A2"/>
+    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#RadiantIntensity">
+    <rdfs:label xml:lang="en">Radiant intensity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#LightProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Motion">
+    <rdfs:label xml:lang="en">Motion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isInvolvedIn">
+    <rdfs:label xml:lang="en">is involved in</rdfs:label>
+    <rdfs:isDefinedBy xml:lang="en">A link between an agent and all the neighbouthoods it is involved in.</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction</rdfs:seeAlso>
+    <rdfs:label>Operating Power Range</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>Power range in which system/sensor is expected to operate.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dc:source>skos:exactMatch 'property' [O&amp;M] 
+		                    http://www.opengeospatial.org/standards/om</dc:source>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton</rdfs:seeAlso>
+    <rdfs:comment>An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor.</rdfs:comment>
+    <rdfs:label>Property</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn#</rdfs:isDefinedBy>
+    <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Quality"/>
+    <rdfs:comment xml:lang="en">A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest</rdfs:comment>
+    <rdfs:label>property (ssn)</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability">
+    <rdfs:comment>Collects together measurement properties (accuracy, range, precision, etc) and the environmental conditions in which those properties hold, representing a specification of a sensor's capability in those conditions.
+
+The conditions specified here are those that affect the measurement properties, while those in OperatingRange represent the sensor's standard operating conditions, including conditions that don't affect the observations.</rdfs:comment>
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Measurement Capability</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="A25"/>
+    <rdfs:subClassOf rdf:nodeID="A26"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <dc:source>Similar idea to MeasurementCapability in MMI Device Ontology
+                                  http://marinemetadata.org/community/teams/ontdevices
+
+But the the two express the relationship between constraints and multiple measurement properties differently.
+
+The conditions linked to a MeasurementCapability are skos:exactMatch to 'influence quantity' [VIM 2.52]
+http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:nodeID="A21"/>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Sensor">
+    <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    <rdfs:comment xml:lang="en">A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A23"/>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction</rdfs:seeAlso>
+    <rdfs:label>Survival Range</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The conditions a sensor can be exposed to without damage: i.e., the sensor continues to operate as defined using MeasurementCapability.  If, however, the SurvivalRange is exceeded, the sensor is 'damaged' and MeasurementCapability specifications may no longer hold.</rdfs:comment>
+    <dc:source>skos:narrowerMatch 'limiting operating condition' [VIM 4.10]
+                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:nodeID="A27"/>
+    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#LightProperty">
+    <rdfs:label xml:lang="en">LightProperty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Application"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#interactsUsing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#involves">
+    <rdfs:label xml:lang="en">involves</rdfs:label>
+    <rdfs:isDefinedBy xml:lang="en">A link between a neighbourhood and all the agents involved in it.</rdfs:isDefinedBy>
+    <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#isInvolvedIn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#isContainedIn">
+    <rdfs:label xml:lang="en">is contained in</rdfs:label>
+    <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/saref4bldg#</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">A relation between an object and the physical space in which it is located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction</rdfs:seeAlso>
+    <rdfs:label>Operating Property</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>An identifiable characteristic of the environmental and other conditions in which the sensor is intended to operate.  May include power ranges, power sources, standard configurations, attachments and the like.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Measurement  Range</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>The set of values that the sensor can return as the result of an observation under the defined conditions with the defined measurement properties.  (If no conditions are specified or the conditions do not specify a range for the observed qualities, the measurement range is to be taken as the condition for the observed qualities.)</rdfs:comment>
+    <dc:source>skos:exactMatch 'measuring interval/measurement range' [VIM 4.7]
+                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#actsOn">
+    <rdfs:seeAlso>ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">acts on</rdfs:label>
+    <rdfs:comment>A link between an actuator an the entities or properties upon which it can act.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <owl:unionOf rdf:nodeID="A28"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#describes"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#CarbonDioxide">
+    <rdfs:label xml:lang="en">CarbonDioxide</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#forProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#desctiption">
+    <rdfs:label xml:lang="en">desctiption</rdfs:label>
+    <rdfs:comment>General attribute for descriptions assigned to any type of concept</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Actuator">
+    <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    <rdfs:comment xml:lang="en">An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A29"/>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#avatar">
+    <rdfs:label xml:lang="en">avatar</rdfs:label>
+    <rdfs:comment xml:lang="en">A link from an entity to the image identifying it in a social network or system.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isComponentOf">
+    <rdfs:label xml:lang="en">is component of</rdfs:label>
+    <rdfs:comment xml:lang="en">A link between a thing and the ecosystems it belongs to.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <owl:onClass rdf:nodeID="A10"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#isRelativeTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#">
+    <dcterms:contributor rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
+    <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+    <owl:versionInfo>0.0.5</owl:versionInfo>
+    <dc:title xml:lang="en">Vicinity core model</dc:title>
+    <owl:imports rdf:resource="http://iot.linkeddata.es/def/wot#"/>
+    <vann:preferredNamespaceUri>http://iot.linkeddata.es/def/core</vann:preferredNamespaceUri>
+    <dcterms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+    <rdfs:comment xml:lang="en">This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions.</rdfs:comment>
+    <dcterms:creator rdf:resource="http://purl.org/net/mpoveda"/>
+    <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <vann:preferredNamespacePrefix>vcnt-core</vann:preferredNamespacePrefix>
+    <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Condition"/>
+    <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inCondition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#deviceName">
+    <rdfs:label xml:lang="en">device name</rdfs:label>
+    <rdfs:comment>Name of a device</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:rest rdf:nodeID="A30"/>
+    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot#PhysicalThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#isRelativeTo">
+    <rdfs:label xml:lang="en">is relative to</rdfs:label>
+    <rdfs:comment xml:lang="en">Link from a relative endpoint to the (non relative) endpoint to which it is relative.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <owl:allValuesFrom rdf:nodeID="A31"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#actsOn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -427,20 +842,12 @@
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:rest rdf:nodeID="A18"/>
-    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot#Endpoint"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#PhysicalThing">
-    <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
-    <rdfs:label xml:lang="en">Physical thing</rdfs:label>
-    <rdfs:comment xml:lang="en">Any entity that has a proper space region.</rdfs:comment>
-    <rdfs:comment xml:lang="en">A physical entity is a real-world thing. A physical entity is a specialization of entity. A physical entity may contain other physical entities. A physical entity is a discrete, identifiable part of the physical environment that is of interest to the user for the completion of her goal. Physical entities can be almost any physical object or environment; from humans or animals to cars; from store or logistics chain items to computers; from electronic appliances to closed or open environments.
-
-(Definition taken from 
-ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A21"/>
-    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Condition">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#ConstraintBlock</rdfs:seeAlso>
+    <rdfs:label>Condition</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>Used to specify ranges for qualities that act as conditions on a system/sensor's operation.  For example, wind speed of 10-60m/s is expressed as a condition linking a quality, wind speed, a unit of measurement, metres per second, and a set of values, 10-60, and may be used as the condition on a MeasurementProperty, for example, to state that a sensor has a particular accuracy in that condition.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#VirtualThing">
@@ -450,17 +857,35 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 (Definition taken from 
 ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A23"/>
+    <rdfs:subClassOf rdf:nodeID="A32"/>
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Neighbourhood">
-    <rdfs:label xml:lang="en">Neighbourhood</rdfs:label>
-    <rdfs:comment xml:lang="en">A set of IoT infrastructures and value-added services integrated through a network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them.</rdfs:comment>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Drift">
+    <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
+    <rdfs:label>Drift</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+    <rdfs:comment>A, continuous or incremental, change in the reported values of observations over time for an unchanging quality.</rdfs:comment>
+    <dc:source>skos:exactMatch 'instrumental drift' [VIM 4.21]
+                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#VirtualThing"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#contains"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#owns">
     <rdfs:label xml:lang="en">provides</rdfs:label>
@@ -468,30 +893,15 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     <rdfs:isDefinedBy xml:lang="en">A linkd between an agent and the entities, like devices or services, it provides or owns.</rdfs:isDefinedBy>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#DigitalUser">
-    <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
-    <rdfs:label xml:lang="en">Digital user</rdfs:label>
-    <rdfs:comment xml:lang="en">A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A12"/>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#LuminusFlux">
+    <rdfs:label xml:lang="en">Luminus flux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#LightProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#serialNumber">
-    <rdfs:label xml:lang="en">serialNumber</rdfs:label>
-    <rdfs:comment>Device serial number</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A23">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#VirtualThing"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#contains"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A22">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Application"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#interactsUsing"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">
+    <rdfs:label xml:lang="en">HumidityAmbientProperty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#AmbientProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#Service">
     <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
@@ -500,15 +910,20 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#VirtualThing"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Image">
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#OccupancySensor">
+    <rdfs:label xml:lang="en">OccupancySensor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/depiction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Ecosystem"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#describes"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:nodeID="A31">
+    <owl:unionOf rdf:nodeID="A22"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>
