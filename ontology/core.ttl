@@ -377,7 +377,11 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 ###  http://iot.linkeddata.es/def/core#CO2Sensor
 :CO2Sensor rdf:type owl:Class ;
-           rdfs:subClassOf :Sensor ;
+           rdfs:subClassOf :Sensor ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :monitors ;
+                             owl:someValuesFrom :CarbonDioxide
+                           ] ;
            rdfs:label "CO2Sensor"@en .
 
 
@@ -391,6 +395,12 @@ foaf:depiction rdf:type owl:ObjectProperty .
 :CarbonMonoxide rdf:type owl:Class ;
                 rdfs:subClassOf ssn:Property ;
                 rdfs:label "CarbonMonoxide"@en .
+
+
+###  http://iot.linkeddata.es/def/core#Charger
+:Charger rdf:type owl:Class ;
+         rdfs:subClassOf :Device ;
+         rdfs:label "Charger"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Device
@@ -411,6 +421,12 @@ foaf:depiction rdf:type owl:ObjectProperty .
              rdfs:comment "A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)"@en ;
              rdfs:label "Digital user"@en ;
              rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
+
+
+###  http://iot.linkeddata.es/def/core#EBikeCharger
+:EBikeCharger rdf:type owl:Class ;
+              rdfs:subClassOf :Charger ;
+              rdfs:label "eBikeCharger"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Ecosystem
@@ -450,7 +466,11 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 ###  http://iot.linkeddata.es/def/core#HumiditySensor
 :HumiditySensor rdf:type owl:Class ;
-                rdfs:subClassOf :Sensor ;
+                rdfs:subClassOf :Sensor ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :monitors ;
+                                  owl:someValuesFrom :HumidityAmbientProperty
+                                ] ;
                 rdfs:label "HumiditySensor"@en .
 
 
@@ -472,6 +492,18 @@ foaf:depiction rdf:type owl:ObjectProperty .
              rdfs:label "LightSwitch"@en .
 
 
+###  http://iot.linkeddata.es/def/core#Lightbulb
+:Lightbulb rdf:type owl:Class ;
+           rdfs:subClassOf :Device ;
+           rdfs:label "Lightbulb"@en .
+
+
+###  http://iot.linkeddata.es/def/core#LuminanceMeter
+:LuminanceMeter rdf:type owl:Class ;
+                rdfs:subClassOf :Sensor ;
+                rdfs:label "LuminanceMeter"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#LuminusFlux
 :LuminusFlux rdf:type owl:Class ;
              rdfs:subClassOf :LightProperty ;
@@ -490,10 +522,26 @@ foaf:depiction rdf:type owl:ObjectProperty .
         rdfs:label "Motion"@en .
 
 
+###  http://iot.linkeddata.es/def/core#MotionSensor
+:MotionSensor rdf:type owl:Class ;
+              rdfs:subClassOf :Sensor ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :monitors ;
+                                owl:someValuesFrom :Motion
+                              ] ;
+              rdfs:label "MotionSensor"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#Neighbourhood
 :Neighbourhood rdf:type owl:Class ;
                rdfs:comment "A set of IoT infrastructures and value-added services integrated through a network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them."@en ;
                rdfs:label "Neighbourhood"@en .
+
+
+###  http://iot.linkeddata.es/def/core#NoiseSensor
+:NoiseSensor rdf:type owl:Class ;
+             rdfs:subClassOf :Sensor ;
+             rdfs:label "NoiseSensor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#OccupancySensor
@@ -604,8 +652,18 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 ###  http://iot.linkeddata.es/def/core#Thermometer
 :Thermometer rdf:type owl:Class ;
-             rdfs:subClassOf :Sensor ;
+             rdfs:subClassOf :Sensor ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :monitors ;
+                               owl:someValuesFrom :TemperatureAmbientProperty
+                             ] ;
              rdfs:label "Thermometer"@en .
+
+
+###  http://iot.linkeddata.es/def/core#Thermostat
+:Thermostat rdf:type owl:Class ;
+            rdfs:subClassOf :Device ;
+            rdfs:label "Thermostat"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#ThingDescription
@@ -666,8 +724,22 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
 
 
+###  http://iot.linkeddata.es/def/wot#Action
+<http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :actsOn ;
+                                                            owl:someValuesFrom <http://purl.oclc.org/NET/ssnx/ssn#Property>
+                                                          ] .
+
+
 ###  http://iot.linkeddata.es/def/wot#PhysicalThing
 <http://iot.linkeddata.es/def/wot#PhysicalThing> rdf:type owl:Class .
+
+
+###  http://iot.linkeddata.es/def/wot#Property
+<http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :monitors ;
+                                                              owl:someValuesFrom <http://purl.oclc.org/NET/ssnx/ssn#Property>
+                                                            ] .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#Accuracy
