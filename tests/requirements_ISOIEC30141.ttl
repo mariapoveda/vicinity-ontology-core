@@ -981,23 +981,11 @@
 	dc:identifier "platform127";
 	mf:name "Test case 1-Datatype Properties";
 	dc:description "Related to requirement platform127 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=0";
-	mf:action[ qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-
-				} 
-				""";
-
+	mf:action[ 
 			qt:data """
 			
 				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#PhysicalThing> .
-				<http://iot.linkeddata.es/def/core#tag> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/core#range1>   a <"tag"> .
-				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#tag> <http://iot.linkeddata.es/def/core#range1>.
- 				<http://iot.linkeddata.es/def/core#range2>   a <"tag"> .
-				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#tag> <http://iot.linkeddata.es/def/core#range2>.
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#tag> "Tag".
   
 				"""
 			];
@@ -1011,23 +999,12 @@
 	dc:identifier "platform133";
 	mf:name "Test case 2-Datatype Properties";
 	dc:description "Related to requirement platform133 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
-	mf:action[ qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-
-				} 
-				""";
+	mf:action[ 
 
 			qt:data """
 			
 				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Thing> .
-				<http://iot.linkeddata.es/def/core#identifier> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/core#range1>   a <"id"> .
-				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#identifier> <http://iot.linkeddata.es/def/core#range1>.
- 				<http://iot.linkeddata.es/def/core#range2>   a <"id"> .
-				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#identifier> <http://iot.linkeddata.es/def/core#range2>.
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#identifier> "id".
   
 				"""
 			];
