@@ -622,20 +622,12 @@
 	dc:identifier "platform88";
 	mf:name "Test case 1-Datatype Properties";
 	dc:description "Related to requirement platform88 in undefined Requirement's link";
-	mf:action[ qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-
-				} 
-				""";
+	mf:action[ 
 
 			qt:data """
 			
 				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Device> .
-				<http://iot.linkeddata.es/def/core#deviceName> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#deviceName> " range1" . 
+ 				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#deviceName> " device Name" . 
  
 				"""
 			];
@@ -649,20 +641,12 @@
 	dc:identifier "platform92";
 	mf:name "Test case 2-Datatype Properties";
 	dc:description "Related to requirement platform92 in undefined Requirement's link";
-	mf:action[ qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-
-				} 
-				""";
+	mf:action[ 
 
 			qt:data """
 			
 				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Device> .
-				<http://iot.linkeddata.es/def/core#serialNumber> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#serialNumber> " range1" . 
+ 				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#serialNumber> " Serial Number" . 
  
 				"""
 			];
@@ -676,20 +660,13 @@
 	dc:identifier "platform95";
 	mf:name "Test case 3-Datatype Properties";
 	dc:description "Related to requirement platform95 in undefined Requirement's link";
-	mf:action[ qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-
-				} 
-				""";
+	mf:action[ 
 
 			qt:data """
 			
 				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Device> .
 				<http://iot.linkeddata.es/def/core#serviceName> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#serviceName> " range1" . 
+ 				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#serviceName> " service Name" . 
  
 				"""
 			];
@@ -730,21 +707,12 @@
 	dc:identifier "platform127";
 	mf:name "Test case 5-Datatype Properties";
 	dc:description "Related to requirement platform127 in undefined Requirement's link";
-	mf:action[ qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-
-				} 
-				""";
+	mf:action[ 
 
 			qt:data """
 			
 				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#PhysicalEntity> .
-				<http://iot.linkeddata.es/def/core#tag> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#tag> " range1" . 
-				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#tag> " range2" . 
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#tag> " Tag " . 
  
 				"""
 			];
@@ -758,21 +726,11 @@
 	dc:identifier "platform133";
 	mf:name "Test case 6-Datatype Properties";
 	dc:description "Related to requirement platform133 in undefined Requirement's link";
-	mf:action[ qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-
-				} 
-				""";
-
+	mf:action[ 
 			qt:data """
 			
 				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Entity> .
-				<http://iot.linkeddata.es/def/core#identifier> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#identifier> " range1" . 
-				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#identifier> " range2" . 
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#identifier> "id" . 
  
 				"""
 			];
