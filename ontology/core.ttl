@@ -24,7 +24,7 @@
                                       rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
                                       dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                       dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
-                                      owl:versionInfo "0.0.5" ;
+                                      owl:versionInfo "0.0.6" ;
                                       dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                       vann:preferredNamespacePrefix "vcnt-core" ;
                                       dc:publisher <http://www.oeg-upm.net/> ;
@@ -382,7 +382,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
                              owl:onProperty :monitors ;
                              owl:someValuesFrom :CarbonDioxide
                            ] ;
-           rdfs:label "CO2Sensor"@en .
+           rdfs:label "CO2 Sensor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#CarbonDioxide
@@ -443,7 +443,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
 :HVACSensor rdf:type owl:Class ;
             rdfs:subClassOf :Actuator ,
                             :Sensor ;
-            rdfs:label "HVACSensor"@en .
+            rdfs:label "HVAC Sensor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#HumanUser
@@ -471,7 +471,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
                                   owl:onProperty :monitors ;
                                   owl:someValuesFrom :HumidityAmbientProperty
                                 ] ;
-                rdfs:label "HumiditySensor"@en .
+                rdfs:label "Humidity sensor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Irradiance
@@ -489,7 +489,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
 ###  http://iot.linkeddata.es/def/core#LightSwitch
 :LightSwitch rdf:type owl:Class ;
              rdfs:subClassOf :Actuator ;
-             rdfs:label "LightSwitch"@en .
+             rdfs:label "Light switch"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Lightbulb
@@ -501,7 +501,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
 ###  http://iot.linkeddata.es/def/core#LuminanceMeter
 :LuminanceMeter rdf:type owl:Class ;
                 rdfs:subClassOf :Sensor ;
-                rdfs:label "LuminanceMeter"@en .
+                rdfs:label "Luminance meter"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#LuminusFlux
@@ -529,7 +529,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
                                 owl:onProperty :monitors ;
                                 owl:someValuesFrom :Motion
                               ] ;
-              rdfs:label "MotionSensor"@en .
+              rdfs:label "Motion sensor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Neighbourhood
@@ -541,13 +541,13 @@ foaf:depiction rdf:type owl:ObjectProperty .
 ###  http://iot.linkeddata.es/def/core#NoiseSensor
 :NoiseSensor rdf:type owl:Class ;
              rdfs:subClassOf :Sensor ;
-             rdfs:label "NoiseSensor"@en .
+             rdfs:label "Noise sensor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#OccupancySensor
 :OccupancySensor rdf:type owl:Class ;
                  rdfs:subClassOf :Sensor ;
-                 rdfs:label "OccupancySensor"@en .
+                 rdfs:label "Occupancy sensor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#OperationalStatus
@@ -558,7 +558,11 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 ###  http://iot.linkeddata.es/def/core#PeopleCounter
 :PeopleCounter rdf:type owl:Class ;
-               rdfs:subClassOf :Sensor ;
+               rdfs:subClassOf :Sensor ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :monitors ;
+                                 owl:someValuesFrom :Presence
+                               ] ;
                rdfs:comment "A people counter is a device that is used to measure the number of people traversing a certain passage or entrance. (Definition taken from https://en.wikipedia.org/wiki/People_counter)"@en ;
                rdfs:label "People counter"@en .
 
@@ -662,7 +666,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 ###  http://iot.linkeddata.es/def/core#Thermostat
 :Thermostat rdf:type owl:Class ;
-            rdfs:subClassOf :Device ;
+            rdfs:subClassOf :Actuator ,
+                            :Sensor ;
             rdfs:label "Thermostat"@en .
 
 
@@ -727,7 +732,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/wot#Action
 <http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                             owl:onProperty :actsOn ;
-                                                            owl:someValuesFrom <http://purl.oclc.org/NET/ssnx/ssn#Property>
+                                                            owl:someValuesFrom ssn:Property
                                                           ] .
 
 
@@ -738,7 +743,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/wot#Property
 <http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                               owl:onProperty :monitors ;
-                                                              owl:someValuesFrom <http://purl.oclc.org/NET/ssnx/ssn#Property>
+                                                              owl:someValuesFrom ssn:Property
                                                             ] .
 
 
