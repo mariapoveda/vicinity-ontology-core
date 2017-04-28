@@ -343,11 +343,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
           rdfs:subClassOf :Device ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :actsOn ;
-                            owl:allValuesFrom [ rdf:type owl:Class ;
-                                                owl:unionOf ( <http://iot.linkeddata.es/def/wot#PhysicalThing>
-                                                              ssn:Property
-                                                            )
-                                              ]
+                            owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property>
                           ] ;
           rdfs:comment "An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)"@en ;
           rdfs:label "Actuator"@en ;
@@ -423,10 +419,24 @@ foaf:depiction rdf:type owl:ObjectProperty .
              rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
+###  http://iot.linkeddata.es/def/core#DoorSensor
+:DoorSensor rdf:type owl:Class ;
+            rdfs:subClassOf :Sensor ;
+            rdfs:label "DoorSensor"@en ;
+            vs:term_status "unstable" .
+
+
 ###  http://iot.linkeddata.es/def/core#EBikeCharger
 :EBikeCharger rdf:type owl:Class ;
               rdfs:subClassOf :Charger ;
               rdfs:label "eBikeCharger"@en .
+
+
+###  http://iot.linkeddata.es/def/core#EVCharger
+:EVCharger rdf:type owl:Class ;
+           rdfs:subClassOf :Charger ;
+           rdfs:label "Electric vehicle chargeren" ,
+                      "Electric vehicle charging point"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Ecosystem
@@ -588,6 +598,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
+###  http://iot.linkeddata.es/def/core#PowerMeter
+:PowerMeter rdf:type owl:Class ;
+            rdfs:subClassOf :Sensor ;
+            rdfs:label "PowerMeter"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#Presence
 :Presence rdf:type owl:Class ;
           rdfs:subClassOf ssn:Property ;
@@ -629,11 +645,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
         rdfs:subClassOf :Device ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :monitors ;
-                          owl:allValuesFrom [ rdf:type owl:Class ;
-                                              owl:unionOf ( <http://iot.linkeddata.es/def/wot#PhysicalThing>
-                                                            ssn:Property
-                                                          )
-                                            ]
+                          owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property>
                         ] ;
         rdfs:comment "A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)"@en ;
         rdfs:label "Sensor"@en ;
@@ -727,6 +739,25 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
               rdfs:label "Virtual thing"@en ;
               rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
+
+
+###  http://iot.linkeddata.es/def/core#WaterEnergyMeter
+:WaterEnergyMeter rdf:type owl:Class ;
+                  rdfs:subClassOf :Sensor ;
+                  rdfs:label "WaterEnergyMeter"@en .
+
+
+###  http://iot.linkeddata.es/def/core#WaterFlowMeter
+:WaterFlowMeter rdf:type owl:Class ;
+                rdfs:subClassOf :Sensor ;
+                rdfs:label "WaterFlowMeter"@en .
+
+
+###  http://iot.linkeddata.es/def/core#WindowSensor
+:WindowSensor rdf:type owl:Class ;
+              rdfs:subClassOf :Sensor ;
+              rdfs:label "WindowSensor"@en ;
+              vs:term_status "unstable" .
 
 
 ###  http://iot.linkeddata.es/def/wot#Action
