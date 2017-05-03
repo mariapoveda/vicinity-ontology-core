@@ -4226,7 +4226,7 @@ rdf:type}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{0, 0}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>12.786271960160889</real>
+					<real>12.786272048950195</real>
 					<key>Points</key>
 					<array>
 						<string>{2153.2996921677309, 659.22298421635662}</string>
@@ -108758,9 +108758,9 @@ IoT-User}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{1560, 356}, {878, 701}}</string>
+		<string>{{-567, -903}, {3572, 2864}}</string>
 		<key>Zoom</key>
-		<real>1</real>
+		<real>0.25</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
@@ -108775,8 +108775,8 @@ IoT-User}</string>
 			</array>
 			<array>
 				<string>core</string>
+				<real>0.25</real>
 				<real>1</real>
-				<real>0.5</real>
 			</array>
 			<array>
 				<string>core 1</string>
