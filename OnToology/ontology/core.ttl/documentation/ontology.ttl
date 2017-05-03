@@ -229,13 +229,13 @@ dc:source
       rdfs:label "Thing description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
-                owl:onProperty :describes
+                owl:onProperty :describes ;
+                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :describes ;
-                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
+                owl:onProperty :describes
               ] .
 
 :RelativeEndpoint
@@ -561,6 +561,12 @@ ssn:SystemLifetime
       rdfs:label "has component"@en ;
       owl:inverseOf :isComponentOf .
 
+:WindowSensor
+      a       owl:Class ;
+      rdfs:label "WindowSensor"@en ;
+      rdfs:subClassOf :Sensor ;
+      vs:term_status "unstable" .
+
 :deviceDescription
       a       owl:DatatypeProperty ;
       rdfs:comment "Natural language description of a device."@en ;
@@ -625,15 +631,15 @@ ssn:SystemLifetime
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> ;
+                owl:onProperty :expressedInFormat
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onDataRange xsd:dateTime ;
                 owl:onProperty :timeStamp
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> ;
-                owl:onProperty :expressedInFormat
               ] .
 
 :RadiantIntensity
@@ -713,6 +719,16 @@ But the the two express the relationship between constraints and multiple measur
 The conditions linked to a MeasurementCapability are skos:exactMatch to 'influence quantity' [VIM 2.52]
 http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
+:WaterEnergyMeter
+      a       owl:Class ;
+      rdfs:label "WaterEnergyMeter"@en ;
+      rdfs:subClassOf :Sensor .
+
+:PowerMeter
+      a       owl:Class ;
+      rdfs:label "PowerMeter"@en ;
+      rdfs:subClassOf :Sensor .
+
 :Sensor
       a       owl:Class ;
       rdfs:comment "A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)"@en ;
@@ -721,10 +737,7 @@ http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
       rdfs:subClassOf :Device ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (<http://iot.linkeddata.es/def/wot#PhysicalThing> ssn:Property)
-                        ] ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property> ;
                 owl:onProperty :monitors
               ] .
 
@@ -737,13 +750,13 @@ ssn:SurvivalRange
       rdfs:subClassOf ssn:Property ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:SurvivalProperty ;
-                owl:onProperty ssn:hasSurvivalProperty
+                owl:allValuesFrom ssn:Condition ;
+                owl:onProperty ssn:inCondition
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:Condition ;
-                owl:onProperty ssn:inCondition
+                owl:allValuesFrom ssn:SurvivalProperty ;
+                owl:onProperty ssn:hasSurvivalProperty
               ] ;
       dc:source """skos:narrowerMatch 'limiting operating condition' [VIM 4.10]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
@@ -789,6 +802,17 @@ ssn:MeasurementRange
       rdfs:label "acts on"@en ;
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)" .
 
+:DoorSensor
+      a       owl:Class ;
+      rdfs:label "DoorSensor"@en ;
+      rdfs:subClassOf :Sensor ;
+      vs:term_status "unstable" .
+
+:WaterFlowMeter
+      a       owl:Class ;
+      rdfs:label "WaterFlowMeter"@en ;
+      rdfs:subClassOf :Sensor .
+
 :CarbonDioxide
       a       owl:Class ;
       rdfs:label "CarbonDioxide"@en ;
@@ -808,10 +832,7 @@ ssn:MeasurementRange
       rdfs:subClassOf :Device ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (<http://iot.linkeddata.es/def/wot#PhysicalThing> ssn:Property)
-                        ] ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property> ;
                 owl:onProperty :actsOn
               ] .
 
@@ -926,6 +947,11 @@ geo:SpatialThing
       rdfs:label "Service"@en ;
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
       rdfs:subClassOf :VirtualThing .
+
+:EVCharger
+      a       owl:Class ;
+      rdfs:label "Electric vehicle charging point"@en , "Electric vehicle chargeren" ;
+      rdfs:subClassOf :Charger .
 
 :OccupancySensor
       a       owl:Class ;
