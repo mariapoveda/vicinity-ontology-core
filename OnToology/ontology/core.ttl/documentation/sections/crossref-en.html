@@ -52,6 +52,9 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#DigitalUser" title="http://iot.linkeddata.es/def/core#DigitalUser">Digital user</a>
       </li>
       <li>
+         <a href="#DoorSensor" title="http://iot.linkeddata.es/def/core#DoorSensor">DoorSensor</a>
+      </li>
+      <li>
          <a href="#http://purl.oclc.org/NET/ssnx/ssn#Drift" title="http://purl.oclc.org/NET/ssnx/ssn#Drift">Drift</a>
       </li>
       <li>
@@ -59,6 +62,9 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#Ecosystem" title="http://iot.linkeddata.es/def/core#Ecosystem">Ecosystem</a>
+      </li>
+      <li>
+         <a href="#EVCharger" title="http://iot.linkeddata.es/def/core#EVCharger">Electric vehicle charging point</a>
       </li>
       <li>
          <a href="#http://purl.oclc.org/NET/ssnx/ssn#Frequency" title="http://purl.oclc.org/NET/ssnx/ssn#Frequency">Frequency</a>
@@ -118,7 +124,7 @@ This section provides details for each class and property defined by Vicinity co
             title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability">Measurement Capability</a>
       </li>
       <li>
-         <a href="#Motion" title="http://iot.linkeddata.es/def/core#Motion">Motion</a>
+         <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
       </li>
       <li>
          <a href="#MotionSensor" title="http://iot.linkeddata.es/def/core#MotionSensor">Motion sensor</a>
@@ -154,6 +160,13 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#PhysicalThing" title="http://iot.linkeddata.es/def/core#PhysicalThing">Physical thing</a>
+      </li>
+      <li>
+         <a href="#PowerConsumption"
+            title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+      </li>
+      <li>
+         <a href="#PowerMeter" title="http://iot.linkeddata.es/def/core#PowerMeter">PowerMeter</a>
       </li>
       <li>
          <a href="#http://purl.oclc.org/NET/ssnx/ssn#Precision" title="http://purl.oclc.org/NET/ssnx/ssn#Precision">Precision</a>
@@ -197,6 +210,9 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
       </li>
       <li>
+         <a href="#Sound" title="http://iot.linkeddata.es/def/core#Sound">Sound</a>
+      </li>
+      <li>
          <a href="#http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"
             title="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty">Survival Property</a>
       </li>
@@ -230,6 +246,17 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#VirtualThing" title="http://iot.linkeddata.es/def/core#VirtualThing">Virtual thing</a>
+      </li>
+      <li>
+         <a href="#WaterEnergyMeter"
+            title="http://iot.linkeddata.es/def/core#WaterEnergyMeter">WaterEnergyMeter</a>
+      </li>
+      <li>
+         <a href="#WaterFlowMeter"
+            title="http://iot.linkeddata.es/def/core#WaterFlowMeter">WaterFlowMeter</a>
+      </li>
+      <li>
+         <a href="#WindowSensor" title="http://iot.linkeddata.es/def/core#WindowSensor">WindowSensor</a>
       </li>
    </ul>
    <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#Accuracy">
@@ -275,11 +302,7 @@ This section provides details for each class and property defined by Vicinity co
             <a href="#actsOn" title="http://iot.linkeddata.es/def/core#actsOn">acts on</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#PhysicalThing">physical thing</span>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">or</span> 
-            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
+            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Property">property</span>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
@@ -413,6 +436,12 @@ This section provides details for each class and property defined by Vicinity co
             <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#CO2Concentration"
+               title="http://iot.linkeddata.es/def/core#CO2Concentration">CO2Concentration</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="CarbonMonoxide">
@@ -445,7 +474,8 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#EBikeCharger" title="http://iot.linkeddata.es/def/core#EBikeCharger">eBikeCharger</a>
+            <a href="#EVCharger" title="http://iot.linkeddata.es/def/core#EVCharger">Electric vehicle charging point</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EBikeCharger" title="http://iot.linkeddata.es/def/core#EBikeCharger">eBikeCharger</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -575,6 +605,21 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="DoorSensor">
+      <h3>DoorSensor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DoorSensor</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#Drift">
       <h3>Drift<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -631,6 +676,21 @@ This section provides details for each class and property defined by Vicinity co
             <span class="logic">some</span> 
             <a href="#ThingEcosystemDescription"
                title="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">Thing ecosystem description</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EVCharger">
+      <h3>Electric vehicle charging point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#EVCharger</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Charger" title="http://iot.linkeddata.es/def/core#Charger">Charger</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -718,6 +778,12 @@ This section provides details for each class and property defined by Vicinity co
             <a href="#AmbientProperty"
                title="http://iot.linkeddata.es/def/core#AmbientProperty">AmbientProperty</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#RelativeHumidity"
+               title="http://iot.linkeddata.es/def/core#RelativeHumidity">RelativeHumidity</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -832,6 +898,11 @@ This section provides details for each class and property defined by Vicinity co
                title="http://iot.linkeddata.es/def/core#RadiantIntensity">Radiant intensity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#LightColor" title="http://iot.linkeddata.es/def/core#LightColor">LightColor</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="LuminanceMeter">
@@ -876,6 +947,11 @@ This section provides details for each class and property defined by Vicinity co
          <dd>
             <a href="#LightProperty" title="http://iot.linkeddata.es/def/core#LightProperty">LightProperty</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Luminance" title="http://iot.linkeddata.es/def/core#Luminance">Luminance</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -987,12 +1063,10 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted"
-                  title="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">has measurement property</span>
+            <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#inCondition">in condition</span>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"
-               title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty">Measurement  Property</a>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Condition" title="http://purl.oclc.org/NET/ssnx/ssn#Condition">Condition</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -1003,26 +1077,33 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#inCondition">in condition</span>
+            <span class="dotted"
+                  title="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">has measurement property</span>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Condition" title="http://purl.oclc.org/NET/ssnx/ssn#Condition">Condition</a>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"
+               title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty">Measurement  Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Motion">
-      <h3>Motion<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="MotionProperty">
+      <h3>Motion property<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Motion</p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#MotionProperty</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Motion" title="http://iot.linkeddata.es/def/core#Motion">Motion</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -1043,7 +1124,7 @@ The conditions specified here are those that affect the measurement properties, 
             <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
-            <a href="#Motion" title="http://iot.linkeddata.es/def/core#Motion">Motion</a>
+            <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1152,6 +1233,8 @@ The conditions specified here are those that affect the measurement properties, 
                title="http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule">Maintenance Schedule</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange"
                title="http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange">Operating Power Range</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PowerConsumption"
+               title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1206,6 +1289,17 @@ The conditions specified here are those that affect the measurement properties, 
          <dd>
             <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#ChargeStatus" title="http://iot.linkeddata.es/def/core#ChargeStatus">ChargeStatus</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DimmingLevel" title="http://iot.linkeddata.es/def/core#DimmingLevel">DimmingLevel</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#FanSpeed" title="http://iot.linkeddata.es/def/core#FanSpeed">FanSpeed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Mode" title="http://iot.linkeddata.es/def/core#Mode">Mode</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#OnOff" title="http://iot.linkeddata.es/def/core#OnOff">OnOff</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#OpenClosed" title="http://iot.linkeddata.es/def/core#OpenClosed">OpenClosed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ValvePosition" title="http://iot.linkeddata.es/def/core#ValvePosition">ValvePosition</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -1279,6 +1373,47 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
       </dl>
    </div>
+   <div class="entity" id="PowerConsumption">
+      <h3>PowerConsumption<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#PowerConsumption</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"
+               title="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty">Operating Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#MaxPowerConsumption"
+               title="http://iot.linkeddata.es/def/core#MaxPowerConsumption">MaxPowerConsumption</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MeanPowerConsumption"
+               title="http://iot.linkeddata.es/def/core#MeanPowerConsumption">MeanPowerConsumption</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinPowerConsumption"
+               title="http://iot.linkeddata.es/def/core#MinPowerConsumption">MinPowerConsumption</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PowerMeter">
+      <h3>PowerMeter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#PowerMeter</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#Precision">
       <h3>Precision<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1314,6 +1449,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dd>
             <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#EntryExit" title="http://iot.linkeddata.es/def/core#EntryExit">EntryExit</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -1358,7 +1498,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty">Measurement  Property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"
                title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability">Measurement Capability</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Motion" title="http://iot.linkeddata.es/def/core#Motion">Motion</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"
                title="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty">Operating Property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingRange"
@@ -1366,6 +1506,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <sup class="type-c" title="class">c</sup>, <a href="#OperationalStatus"
                title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Presence" title="http://iot.linkeddata.es/def/core#Presence">Presence</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Sound" title="http://iot.linkeddata.es/def/core#Sound">Sound</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"
                title="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty">Survival Property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange" title="http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange">Survival Range</a>
@@ -1541,15 +1682,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#PhysicalThing">physical thing</span>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">or</span> 
-            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
+            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Property">property</span>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#CO2Sensor" title="http://iot.linkeddata.es/def/core#CO2Sensor">CO2 Sensor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DoorSensor" title="http://iot.linkeddata.es/def/core#DoorSensor">DoorSensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HVACSensor" title="http://iot.linkeddata.es/def/core#HVACSensor">HVAC Sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HumiditySensor" title="http://iot.linkeddata.es/def/core#HumiditySensor">Humidity sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LuminanceMeter" title="http://iot.linkeddata.es/def/core#LuminanceMeter">Luminance meter</a>
@@ -1558,8 +1696,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <sup class="type-c" title="class">c</sup>, <a href="#OccupancySensor"
                title="http://iot.linkeddata.es/def/core#OccupancySensor">Occupancy sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PeopleCounter" title="http://iot.linkeddata.es/def/core#PeopleCounter">People counter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PowerMeter" title="http://iot.linkeddata.es/def/core#PowerMeter">PowerMeter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Thermometer" title="http://iot.linkeddata.es/def/core#Thermometer">Thermometer</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Thermostat" title="http://iot.linkeddata.es/def/core#Thermostat">Thermostat</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WaterEnergyMeter"
+               title="http://iot.linkeddata.es/def/core#WaterEnergyMeter">WaterEnergyMeter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WaterFlowMeter"
+               title="http://iot.linkeddata.es/def/core#WaterFlowMeter">WaterFlowMeter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WindowSensor" title="http://iot.linkeddata.es/def/core#WindowSensor">WindowSensor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1608,6 +1752,26 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dt>is defined by</dt>
          <dd>
             <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Sound">
+      <h3>Sound<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Sound</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#NoiseLevel" title="http://iot.linkeddata.es/def/core#NoiseLevel">NoiseLevel</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -1716,6 +1880,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://iot.linkeddata.es/def/core#AmbientProperty">AmbientProperty</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#AmbientTemperature"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperature">AmbientTemperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Thermometer">
@@ -1775,13 +1945,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dd>
             <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describes thing</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
+            <span class="logic">some</span> 
             <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
          </dd>
          <dd>
             <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describes thing</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
+            <span class="logic">only</span> 
             <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
          </dd>
       </dl>
@@ -1876,6 +2046,51 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Service" title="http://iot.linkeddata.es/def/core#Service">Service</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WaterEnergyMeter">
+      <h3>WaterEnergyMeter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#WaterEnergyMeter</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WaterFlowMeter">
+      <h3>WaterFlowMeter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#WaterFlowMeter</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WindowSensor">
+      <h3>WindowSensor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#WindowSensor</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2707,6 +2922,353 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             </dd>
          </dl>
       </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AmbientTemperature"
+            title="http://iot.linkeddata.es/def/core#AmbientTemperature">AmbientTemperature</a>
+      </li>
+      <li>
+         <a href="#ChargeStatus" title="http://iot.linkeddata.es/def/core#ChargeStatus">ChargeStatus</a>
+      </li>
+      <li>
+         <a href="#CO2Concentration"
+            title="http://iot.linkeddata.es/def/core#CO2Concentration">CO2Concentration</a>
+      </li>
+      <li>
+         <a href="#DimmingLevel" title="http://iot.linkeddata.es/def/core#DimmingLevel">DimmingLevel</a>
+      </li>
+      <li>
+         <a href="#EntryExit" title="http://iot.linkeddata.es/def/core#EntryExit">EntryExit</a>
+      </li>
+      <li>
+         <a href="#FanSpeed" title="http://iot.linkeddata.es/def/core#FanSpeed">FanSpeed</a>
+      </li>
+      <li>
+         <a href="#LightColor" title="http://iot.linkeddata.es/def/core#LightColor">LightColor</a>
+      </li>
+      <li>
+         <a href="#Luminance" title="http://iot.linkeddata.es/def/core#Luminance">Luminance</a>
+      </li>
+      <li>
+         <a href="#MaxPowerConsumption"
+            title="http://iot.linkeddata.es/def/core#MaxPowerConsumption">MaxPowerConsumption</a>
+      </li>
+      <li>
+         <a href="#MeanPowerConsumption"
+            title="http://iot.linkeddata.es/def/core#MeanPowerConsumption">MeanPowerConsumption</a>
+      </li>
+      <li>
+         <a href="#MinPowerConsumption"
+            title="http://iot.linkeddata.es/def/core#MinPowerConsumption">MinPowerConsumption</a>
+      </li>
+      <li>
+         <a href="#Mode" title="http://iot.linkeddata.es/def/core#Mode">Mode</a>
+      </li>
+      <li>
+         <a href="#Motion" title="http://iot.linkeddata.es/def/core#Motion">Motion</a>
+      </li>
+      <li>
+         <a href="#NoiseLevel" title="http://iot.linkeddata.es/def/core#NoiseLevel">NoiseLevel</a>
+      </li>
+      <li>
+         <a href="#OnOff" title="http://iot.linkeddata.es/def/core#OnOff">OnOff</a>
+      </li>
+      <li>
+         <a href="#OpenClosed" title="http://iot.linkeddata.es/def/core#OpenClosed">OpenClosed</a>
+      </li>
+      <li>
+         <a href="#RelativeHumidity"
+            title="http://iot.linkeddata.es/def/core#RelativeHumidity">RelativeHumidity</a>
+      </li>
+      <li>
+         <a href="#ValvePosition" title="http://iot.linkeddata.es/def/core#ValvePosition">ValvePosition</a>
+      </li>
+   </ul>
+   <div class="entity" id="AmbientTemperature">
+      <h3>AmbientTemperature<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#AmbientTemperature</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TemperatureAmbientProperty"
+               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ChargeStatus">
+      <h3>ChargeStatus<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#ChargeStatus</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#OperationalStatus"
+               title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CO2Concentration">
+      <h3>CO2Concentration<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#CO2Concentration</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#CarbonDioxide" title="http://iot.linkeddata.es/def/core#CarbonDioxide">CarbonDioxide</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DimmingLevel">
+      <h3>DimmingLevel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DimmingLevel</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#OperationalStatus"
+               title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EntryExit">
+      <h3>EntryExit<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#EntryExit</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Presence" title="http://iot.linkeddata.es/def/core#Presence">Presence</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FanSpeed">
+      <h3>FanSpeed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#FanSpeed</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#OperationalStatus"
+               title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LightColor">
+      <h3>LightColor<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#LightColor</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#LightProperty" title="http://iot.linkeddata.es/def/core#LightProperty">LightProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Luminance">
+      <h3>Luminance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Luminance</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#LuminusIntensity"
+               title="http://iot.linkeddata.es/def/core#LuminusIntensity">LuminusIntensity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaxPowerConsumption">
+      <h3>MaxPowerConsumption<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#MaxPowerConsumption</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#PowerConsumption"
+               title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MeanPowerConsumption">
+      <h3>MeanPowerConsumption<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#MeanPowerConsumption</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#PowerConsumption"
+               title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MinPowerConsumption">
+      <h3>MinPowerConsumption<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#MinPowerConsumption</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#PowerConsumption"
+               title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Mode">
+      <h3>Mode<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Mode</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#OperationalStatus"
+               title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Motion">
+      <h3>Motion<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Motion</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NoiseLevel">
+      <h3>NoiseLevel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#NoiseLevel</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Sound" title="http://iot.linkeddata.es/def/core#Sound">Sound</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnOff">
+      <h3>OnOff<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#OnOff</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#OperationalStatus"
+               title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OpenClosed">
+      <h3>OpenClosed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#OpenClosed</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#OperationalStatus"
+               title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativeHumidity">
+      <h3>RelativeHumidity<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#RelativeHumidity</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HumidityAmbientProperty"
+               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ValvePosition">
+      <h3>ValvePosition<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#ValvePosition</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#OperationalStatus"
+               title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
