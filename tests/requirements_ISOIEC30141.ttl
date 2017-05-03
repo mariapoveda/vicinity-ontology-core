@@ -1,0 +1,1014 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+@prefix qt:    <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> 
+@prefix mf:    <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> 
+@prefix dc:    <http://purl.org/dc/terms/>
+@prefix  :     <http://vicinity.iot.linkeddata.es/vicinity/tests/testsuite-isoiec30141.ttl> 
+
+: rdf:type mf:Manifest;
+	mf:name "Test suite  for  ISO/IEC CC 30141. Information technology - Internet of Things Reference architecture"; 
+	mf:entries (
+		:class-test1
+		:class-test2
+		:class-test3
+		:class-test4
+		:class-test5
+		:class-test6
+		:class-test7
+		:class-test8
+		:class-test9
+		:class-test10
+		:class-test11
+		:class-test12
+		:class-test13
+		:class-test14
+		:class-test15
+		:objproperty-test1
+		:objproperty-test2
+		:objproperty-test3
+		:objproperty-test4
+		:objproperty-test5
+		:objproperty-test6
+		:objproperty-test7
+		:objproperty-test8
+		:objproperty-test9
+		:objproperty-test10
+		:objproperty-test11
+		:objproperty-test12
+		:objproperty-test13
+		:objproperty-test14
+		:objproperty-test15
+		:objproperty-test16
+		:objproperty-test17
+		:objproperty-test18
+		:objproperty-test19
+		:objproperty-test20
+		:objproperty-test21
+		:datatype-test1
+		:datatype-test2
+	) .
+#
+#
+# #################################################################
+# #
+# #    Tests about classes
+# #
+# #################################################################
+#
+#
+
+:TCC1 a mf:QueryEvaluationTest;
+	dc:identifier "platform119";
+	mf:name "Test case 1- Class";
+	dc:description "Related to requirement platform119 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415173";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#DigitalUser>),
+ 					Class(<http://iot.linkeddata.es/def/core#HumanUser>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#DigitalUser>,<http://xmlns.com/foaf/0.1/Agent>)  ,
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#HumanUser>,<http://xmlns.com/foaf/0.1/Person>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC2 a mf:QueryEvaluationTest;
+	dc:identifier "platform120";
+	mf:name "Test case 2- Class";
+	dc:description "Related to requirement platform120 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415174";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Service>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#Service>,<http://iot.linkeddata.es/def/core#VirtualThing>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC3 a mf:QueryEvaluationTest;
+	dc:identifier "platform121";
+	mf:name "Test case 3- Class";
+	dc:description "Related to requirement platform121 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415175";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Application>)
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC4 a mf:QueryEvaluationTest;
+	dc:identifier "platform122";
+	mf:name "Test case 4- Class";
+	dc:description "Related to requirement platform122 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415176";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Application>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#Application>,<http://iot.linkeddata.es/def/core#Service>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC5 a mf:QueryEvaluationTest;
+	dc:identifier "platform123";
+	mf:name "Test case 5- Class";
+	dc:description "Related to requirement platform123 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415177";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Network>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#Network>,<http://iot.linkeddata.es/def/core#Network>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC6 a mf:QueryEvaluationTest;
+	dc:identifier "platform124";
+	mf:name "Test case 6- Class";
+	dc:description "Related to requirement platform124 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415178";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Entity>)
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC7 a mf:QueryEvaluationTest;
+	dc:identifier "platform124";
+	mf:name "Test case 7- Class";
+	dc:description "Related to requirement platform124 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415179";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#PhysicalThing>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#PhysicalThing>,<http://iot.linkeddata.es/def/wot#Thing>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC8 a mf:QueryEvaluationTest;
+	dc:identifier "platform124";
+	mf:name "Test case 8- Class";
+	dc:description "Related to requirement platform124 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415180";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#VirtualThing>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#VirtualThing>,<http://iot.linkeddata.es/def/wot#Thing>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC9 a mf:QueryEvaluationTest;
+	dc:identifier "platform125";
+	mf:name "Test case 9- Class";
+	dc:description "Related to requirement platform125 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415181";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Actuator>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#Actuator>,<http://iot.linkeddata.es/def/core#Device>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC10 a mf:QueryEvaluationTest;
+	dc:identifier "platform126";
+	mf:name "Test case 10- Class";
+	dc:description "Related to requirement platform126 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415182";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Sensor>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#Sensor>,<http://iot.linkeddata.es/def/core#Device>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC11 a mf:QueryEvaluationTest;
+	dc:identifier "platform129";
+	mf:name "Test case 11- Class";
+	dc:description "Related to requirement platform129 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415183";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Device>),
+ 					Class(<http://iot.linkeddata.es/def/core#Actuator>),
+ 					Class(<http://iot.linkeddata.es/def/core#Sensor>)
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC12 a mf:QueryEvaluationTest;
+	dc:identifier "platform131";
+	mf:name "Test case 12- Class";
+	dc:description "Related to requirement platform131 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415184";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Gateway>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#Gateway>,<http://iot.linkeddata.es/def/wot#Thing>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC13 a mf:QueryEvaluationTest;
+	dc:identifier "plaform135";
+	mf:name "Test case 13- Class";
+	dc:description "Related to requirement plaform135 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415185";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/wot#Endpoint>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/wot#Endpoint>,<http://iot.linkeddata.es/def/wot#Thing>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC14 a mf:QueryEvaluationTest;
+	dc:identifier "platform137";
+	mf:name "Test case 14- Class";
+	dc:description "Related to requirement platform137 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415186";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Gateway>),
+ 					SubClassOf(<http://iot.linkeddata.es/def/core#Gateway>,<http://iot.linkeddata.es/def/core#VirtualThing>)  
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCC15 a mf:QueryEvaluationTest;
+	dc:identifier "platform151";
+	mf:name "Test case 15- Class";
+	dc:description "Related to requirement platform151 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415187";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class(<http://iot.linkeddata.es/def/core#Datastore>)
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+#
+#
+# #################################################################
+# #
+# #    Tests about object properties
+# #
+# #################################################################
+#
+#
+
+:TCP1 a mf:QueryEvaluationTest;
+	dc:identifier "platform120";
+	mf:name "Test case 1-Object Properties";
+	dc:description "Related to requirement platform120 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=0";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#interactsUsing>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#DigitalUser> .
+				<http://iot.linkeddata.es/def/core#interactsUsing> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Service> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interactsUsing> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP2 a mf:QueryEvaluationTest;
+	dc:identifier "platform121";
+	mf:name "Test case 2-Object Properties";
+	dc:description "Related to requirement platform121 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#interactsUsing>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#HumanUser> .
+				<http://iot.linkeddata.es/def/core#interactsUsing> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Application> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interactsUsing> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP3 a mf:QueryEvaluationTest;
+	dc:identifier "platform123";
+	mf:name "Test case 3-Object Properties";
+	dc:description "Related to requirement platform123 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#uses>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Application> .
+				<http://iot.linkeddata.es/def/core#uses> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Network> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#uses> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP4 a mf:QueryEvaluationTest;
+	dc:identifier "platform125";
+	mf:name "Test case 4-Object Properties";
+	dc:description "Related to requirement platform125 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#monitors>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Actuator> .
+				<http://iot.linkeddata.es/def/core#monitors> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#PhysicalThing> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#monitors> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP5 a mf:QueryEvaluationTest;
+	dc:identifier "platform126";
+	mf:name "Test case 5-Object Properties";
+	dc:description "Related to requirement platform126 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=4";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#actsOn>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Sensor> .
+				<http://iot.linkeddata.es/def/core#actsOn> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#PhysicalThing> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#actsOn> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP6 a mf:QueryEvaluationTest;
+	dc:identifier "platform128";
+	mf:name "Test case 6-Object Properties";
+	dc:description "Related to requirement platform128 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=5";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#represent>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#VirtualThing> .
+				<http://iot.linkeddata.es/def/core#represent> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#PhysicalThing> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#represent> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP7 a mf:QueryEvaluationTest;
+	dc:identifier "platform130";
+	mf:name "Test case 7-Object Properties";
+	dc:description "Related to requirement platform130 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=6";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#uses>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Device> .
+				<http://iot.linkeddata.es/def/core#uses> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Network> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#uses> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP8 a mf:QueryEvaluationTest;
+	dc:identifier "platform131";
+	mf:name "Test case 8-Object Properties";
+	dc:description "Related to requirement platform131 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=7";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#areConnected>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Device> .
+				<http://iot.linkeddata.es/def/core#areConnected> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Gateway> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#areConnected> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP9 a mf:QueryEvaluationTest;
+	dc:identifier "platform135";
+	mf:name "Test case 9-Object Properties";
+	dc:description "Related to requirement platform135 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=8";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#exposes>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Network> .
+				<http://iot.linkeddata.es/def/core#exposes> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Endpoint> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#exposes> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP10 a mf:QueryEvaluationTest;
+	dc:identifier "platform136";
+	mf:name "Test case 10-Object Properties";
+	dc:description "Related to requirement platform136 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=9";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/wot#isAccessibleThrough>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/core#Service> .
+				<http://iot.linkeddata.es/def/wot#isAccessibleThrough> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/wot#range1>   a <http://iot.linkeddata.es/def/core#Endpoint> .
+				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://iot.linkeddata.es/def/wot#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP11 a mf:QueryEvaluationTest;
+	dc:identifier "platform138";
+	mf:name "Test case 11-Object Properties";
+	dc:description "Related to requirement platform138 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=10";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#interactsUsing>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Gateway> .
+				<http://iot.linkeddata.es/def/core#interactsUsing> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Network> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interactsUsing> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP12 a mf:QueryEvaluationTest;
+	dc:identifier "platform139";
+	mf:name "Test case 12-Object Properties";
+	dc:description "Related to requirement platform139 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=11";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#interactsUsing>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Gateway> .
+				<http://iot.linkeddata.es/def/core#interactsUsing> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Endpoint> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interactsUsing> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP13 a mf:QueryEvaluationTest;
+	dc:identifier "platform140";
+	mf:name "Test case 13-Object Properties";
+	dc:description "Related to requirement platform140 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=12";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#interactsUsing>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Gateway> .
+				<http://iot.linkeddata.es/def/core#interactsUsing> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Device> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interactsUsing> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP14 a mf:QueryEvaluationTest;
+	dc:identifier "platform142";
+	mf:name "Test case 14-Object Properties";
+	dc:description "Related to requirement platform142 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=13";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#interactsUsing>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Device> .
+				<http://iot.linkeddata.es/def/core#interactsUsing> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Network> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interactsUsing> <http://iot.linkeddata.es/def/core#range1>.
+ 				<http://iot.linkeddata.es/def/core#range2>   a <http://iot.linkeddata.es/def/core#Network> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interactsUsing> <http://iot.linkeddata.es/def/core#range2>.
+ 				<http://iot.linkeddata.es/def/core#range2> owl:differentFrom <http://iot.linkeddata.es/def/core#range1> .
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP15 a mf:QueryEvaluationTest;
+	dc:identifier "platform143";
+	mf:name "Test case 15-Object Properties";
+	dc:description "Related to requirement platform143 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=14";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/wot#isAccessibleThrough>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/core#Device> .
+				<http://iot.linkeddata.es/def/wot#isAccessibleThrough> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/wot#range1>   a <http://iot.linkeddata.es/def/core#Endpoint> .
+				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://iot.linkeddata.es/def/wot#range1>.
+ 				<http://iot.linkeddata.es/def/wot#range2>   a <http://iot.linkeddata.es/def/core#Endpoint> .
+				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://iot.linkeddata.es/def/wot#range2>.
+ 				<http://iot.linkeddata.es/def/wot#range2> owl:differentFrom <http://iot.linkeddata.es/def/wot#range1> .
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP16 a mf:QueryEvaluationTest;
+	dc:identifier "platform144";
+	mf:name "Test case 16-Object Properties";
+	dc:description "Related to requirement platform144 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=15";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#uses>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Service> .
+				<http://iot.linkeddata.es/def/core#uses> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Network> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#uses> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP17 a mf:QueryEvaluationTest;
+	dc:identifier "platform145";
+	mf:name "Test case 17-Object Properties";
+	dc:description "Related to requirement platform145 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=16";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#contains>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Service> .
+				<http://iot.linkeddata.es/def/core#contains> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Gateway> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#contains> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP18 a mf:QueryEvaluationTest;
+	dc:identifier "platform146";
+	mf:name "Test case 18-Object Properties";
+	dc:description "Related to requirement platform146 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=17";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#interacts>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Service> .
+				<http://iot.linkeddata.es/def/core#interacts> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Device> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interacts> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP19 a mf:QueryEvaluationTest;
+	dc:identifier "platform147";
+	mf:name "Test case 19-Object Properties";
+	dc:description "Related to requirement platform147 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=18";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#interacts>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Service> .
+				<http://iot.linkeddata.es/def/core#interacts> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Service> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#interacts> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP20 a mf:QueryEvaluationTest;
+	dc:identifier "platform149";
+	mf:name "Test case 20-Object Properties";
+	dc:description "Related to requirement platform149 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=19";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/wot#isAccessibleThrough>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/core#VirtualThing> .
+				<http://iot.linkeddata.es/def/wot#isAccessibleThrough> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/wot#range1>   a <http://iot.linkeddata.es/def/core#Endpoint> .
+				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://iot.linkeddata.es/def/wot#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCP21 a mf:QueryEvaluationTest;
+	dc:identifier "platform151";
+	mf:name "Test case 21-Object Properties";
+	dc:description "Related to requirement platform151 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=20";
+	mf:action[ qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#uses>),
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#uses>),
+ 					ObjectProperty(<http://iot.linkeddata.es/def/core#uses>)
+				} 
+				""";
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Service> .
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Device> .
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Gateway> .
+				<http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Datastore> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses> <http://iot.linkeddata.es/def/core#range1>.
+ 				<http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Datastore> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses> <http://iot.linkeddata.es/def/core#range1>.
+ 				<http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
+ 				<http://iot.linkeddata.es/def/core#range1>   a <http://iot.linkeddata.es/def/core#Datastore> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses,http://iot.linkeddata.es/def/core#uses> <http://iot.linkeddata.es/def/core#range1>.
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+#
+#
+# #################################################################
+# #
+# #    Tests about datatype properties
+# #
+# #################################################################
+#
+#
+
+:TCDP1 a mf:QueryEvaluationTest;
+	dc:identifier "platform127";
+	mf:name "Test case 1-Datatype Properties";
+	dc:description "Related to requirement platform127 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=0";
+	mf:action[ 
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#PhysicalThing> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#tag> "Tag".
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:TCDP2 a mf:QueryEvaluationTest;
+	dc:identifier "platform133";
+	mf:name "Test case 2-Datatype Properties";
+	dc:description "Related to requirement platform133 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
+	mf:action[ 
+
+			qt:data """
+			
+				<http://iot.linkeddata.es/def/core#domain1> a <http://iot.linkeddata.es/def/core#Thing> .
+				<http://iot.linkeddata.es/def/core#domain1> <http://iot.linkeddata.es/def/core#identifier> "id".
+  
+				"""
+			];
+
+	mf:result "true".		
+
+

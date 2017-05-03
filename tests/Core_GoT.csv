@@ -1,29 +1,30 @@
 Termino ,URI
 """avatar""@en",http://iot.linkeddata.es/def/core#avatar
-" ""describesEcosystem""@en",http://iot.linkeddata.es/def/core#describesEcosystem
-"""hasComponent""@en",http://iot.linkeddata.es/def/core#hasComponent
-"""hasNeighbourhood""@en",http://iot.linkeddata.es/def/core#hasNeighbourhood
+"""describes ecosystem""@en",http://iot.linkeddata.es/def/core#describesEcosystem
+"""describes thing""@en",http://iot.linkeddata.es/def/core#describes
+"""has component""@en",http://iot.linkeddata.es/def/core#hasComponent
+"""has neighbourhood""@en",http://iot.linkeddata.es/def/core#hasNeighbourhood
 """has owner""@en",http://iot.linkeddata.es/def/core#hasOwner
 """has provider""@en",http://iot.linkeddata.es/def/core#hasOwner
 """hasPartnershipWith""@en ",http://iot.linkeddata.es/def/core#hasPartnershipWith
 """has producer""@en ",http://iot.linkeddata.es/def/core#hasVendor
 """has vendor""@en",http://iot.linkeddata.es/def/core#hasVendor
 """involves""@en",http://iot.linkeddata.es/def/core#involves
-"""isComponentOf""@en ",http://iot.linkeddata.es/def/core#isComponentOf
-"""isEcosystemDescribedBy""@en",http://iot.linkeddata.es/def/core#isEcosystemDescribedBy
-" ""isInvolvedIn""@en",http://iot.linkeddata.es/def/core#isInvolvedIn
-"""isNeighbourhoodOf""@en",http://iot.linkeddata.es/def/core#isNeighbourhoodOf
+"""is component of""@en ",http://iot.linkeddata.es/def/core#isComponentOf
+"""is ecosystem described by""@en",http://iot.linkeddata.es/def/core#isEcosystemDescribedBy
+"""is involved in""@en",http://iot.linkeddata.es/def/core#isInvolvedIn
+"""is neighbourhood of""@en",http://iot.linkeddata.es/def/core#isNeighbourhoodOf
 """owns""@en",http://iot.linkeddata.es/def/core#owns
-" ""provides""@en",http://iot.linkeddata.es/def/core#owns
+" ""provides""@en",http://iot.linkeddata.es/def/core#provides
 ,http://www.w3.org/2003/01/geo/wgs84_pos#location
-,https://w3id.org/def/saref4bldg#isContainedIn
+"""is contained in""@en",https://w3id.org/def/saref4bldg#isContainedIn
 """desctiption""@en",http://iot.linkeddata.es/def/core#desctiption
-"""deviceDescription""@en",http://iot.linkeddata.es/def/core#deviceDescription
-"""deviceName""@en", http://iot.linkeddata.es/def/core#deviceName
+"""device description""@en",http://iot.linkeddata.es/def/core#deviceDescription
+"""device name""@en", http://iot.linkeddata.es/def/core#deviceName
 """name""@en",http://iot.linkeddata.es/def/core#name
 """serialNumber""@en",http://iot.linkeddata.es/def/core#serialNumber
 """service description""@en ",http://iot.linkeddata.es/def/core#serviceDescription
-"""serviceName""@en",http://iot.linkeddata.es/def/core#serviceName
+"""service name""@en",http://iot.linkeddata.es/def/core#serviceName
 """Agent""@en",http://iot.linkeddata.es/def/core#Agent
 """Device""@en",http://iot.linkeddata.es/def/core#Device
 """Ecosystem""@en",http://iot.linkeddata.es/def/core#Ecosystem
