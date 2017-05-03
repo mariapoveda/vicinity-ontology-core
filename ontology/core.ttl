@@ -526,10 +526,10 @@ foaf:depiction rdf:type owl:ObjectProperty .
                   rdfs:label "LuminusIntensity"@en .
 
 
-###  http://iot.linkeddata.es/def/core#Motion
-:Motion rdf:type owl:Class ;
-        rdfs:subClassOf ssn:Property ;
-        rdfs:label "Motion"@en .
+###  http://iot.linkeddata.es/def/core#MotionProperty
+:MotionProperty rdf:type owl:Class ;
+                rdfs:subClassOf ssn:Property ;
+                rdfs:label "Motion property"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MotionSensor
@@ -537,7 +537,7 @@ foaf:depiction rdf:type owl:ObjectProperty .
               rdfs:subClassOf :Sensor ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :monitors ;
-                                owl:someValuesFrom :Motion
+                                owl:someValuesFrom :MotionProperty
                               ] ;
               rdfs:label "Motion sensor"@en .
 
@@ -596,6 +596,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                             "Any entity that has a proper space region."@en ;
                rdfs:label "Physical thing"@en ;
                rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
+
+
+###  http://iot.linkeddata.es/def/core#PowerConsumption
+:PowerConsumption rdf:type owl:Class ;
+                  rdfs:subClassOf ssn:OperatingProperty ;
+                  rdfs:label "PowerConsumption"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#PowerMeter
@@ -658,6 +664,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          rdfs:comment "A service is a set of distinct capabilities provided by a software component through a defined interface, which may be composed of other services. A service is implemented by one or more components. A service defines network interfaces and exposed by an Endpoint. (definition taken from ISO/IEC 11404:2007)"@en ;
          rdfs:label "Service"@en ;
          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
+
+
+###  http://iot.linkeddata.es/def/core#Sound
+:Sound rdf:type owl:Class ;
+       rdfs:subClassOf ssn:Property ;
+       rdfs:label "Sound"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#TemperatureAmbientProperty
@@ -1088,6 +1100,122 @@ saref:Service rdf:type owl:Class ;
               rdfs:isDefinedBy saref: ;
               rdfs:label "Service"@en ;
               vs:term_status "unstable" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://iot.linkeddata.es/def/core#AmbientTemperature
+:AmbientTemperature rdf:type owl:NamedIndividual ,
+                             :TemperatureAmbientProperty ;
+                    rdfs:label "AmbientTemperature"@en .
+
+
+###  http://iot.linkeddata.es/def/core#CO2Concentration
+:CO2Concentration rdf:type owl:NamedIndividual ,
+                           :CarbonDioxide ;
+                  rdfs:label "CO2Concentration"@en .
+
+
+###  http://iot.linkeddata.es/def/core#ChargeStatus
+:ChargeStatus rdf:type owl:NamedIndividual ,
+                       :OperationalStatus ;
+              rdfs:label "ChargeStatus"@en .
+
+
+###  http://iot.linkeddata.es/def/core#DimmingLevel
+:DimmingLevel rdf:type owl:NamedIndividual ,
+                       :OperationalStatus ;
+              rdfs:label "DimmingLevel"@en .
+
+
+###  http://iot.linkeddata.es/def/core#EntryExit
+:EntryExit rdf:type owl:NamedIndividual ,
+                    :Presence ;
+           rdfs:label "EntryExit"@en .
+
+
+###  http://iot.linkeddata.es/def/core#FanSpeed
+:FanSpeed rdf:type owl:NamedIndividual ,
+                   :OperationalStatus ;
+          rdfs:label "FanSpeed"@en .
+
+
+###  http://iot.linkeddata.es/def/core#LightColor
+:LightColor rdf:type owl:NamedIndividual ,
+                     :LightProperty ;
+            rdfs:label "LightColor"@en .
+
+
+###  http://iot.linkeddata.es/def/core#Luminance
+:Luminance rdf:type owl:NamedIndividual ,
+                    :LuminusIntensity ;
+           rdfs:label "Luminance"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MaxPowerConsumption
+:MaxPowerConsumption rdf:type owl:NamedIndividual ,
+                              :PowerConsumption ;
+                     rdfs:label "MaxPowerConsumption"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MeanPowerConsumption
+:MeanPowerConsumption rdf:type owl:NamedIndividual ,
+                               :PowerConsumption ;
+                      rdfs:label "MeanPowerConsumption"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MinPowerConsumption
+:MinPowerConsumption rdf:type owl:NamedIndividual ,
+                              :PowerConsumption ;
+                     rdfs:label "MinPowerConsumption"@en .
+
+
+###  http://iot.linkeddata.es/def/core#Mode
+:Mode rdf:type owl:NamedIndividual ,
+               :OperationalStatus ;
+      rdfs:label "Mode"@en .
+
+
+###  http://iot.linkeddata.es/def/core#Motion
+:Motion rdf:type owl:NamedIndividual ,
+                 :MotionProperty ;
+        rdfs:label "Motion"@en .
+
+
+###  http://iot.linkeddata.es/def/core#NoiseLevel
+:NoiseLevel rdf:type owl:NamedIndividual ,
+                     :Sound ;
+            rdfs:label "NoiseLevel"@en .
+
+
+###  http://iot.linkeddata.es/def/core#OnOff
+:OnOff rdf:type owl:NamedIndividual ,
+                :OperationalStatus ;
+       rdfs:label "OnOff"@en .
+
+
+###  http://iot.linkeddata.es/def/core#OpenClosed
+:OpenClosed rdf:type owl:NamedIndividual ,
+                     :OperationalStatus ;
+            rdfs:label "OpenClosed"@en .
+
+
+###  http://iot.linkeddata.es/def/core#RelativeHumidity
+:RelativeHumidity rdf:type owl:NamedIndividual ,
+                           :HumidityAmbientProperty ;
+                  rdfs:label "RelativeHumidity"@en .
+
+
+###  http://iot.linkeddata.es/def/core#ValvePosition
+:ValvePosition rdf:type owl:NamedIndividual ,
+                        :OperationalStatus ;
+               rdfs:label "ValvePosition"@en .
+
+
+###  http://www.w3.org/ns/org#Head
+<http://www.w3.org/ns/org#Head> rdf:type :OperationalStatus .
 
 
 ###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
