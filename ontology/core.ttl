@@ -43,6 +43,10 @@ dc:source rdf:type owl:AnnotationProperty .
 dcterms:contributor rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#cardinality
+owl:cardinality rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
 vs:term_status rdf:type owl:AnnotationProperty .
 
@@ -726,10 +730,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                          owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema>
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :literalValue ;
-                         owl:cardinality "1"^^xsd:nonNegativeInteger
-                       ] ,
-                       [ rdf:type owl:Restriction ;
                          owl:onProperty :timeStamp ;
                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onDataRange xsd:dateTime
@@ -1112,6 +1112,72 @@ saref:Service rdf:type owl:Class ;
                     rdfs:label "AmbientTemperature"@en .
 
 
+###  http://iot.linkeddata.es/def/core#AverageCO2Concentration
+:AverageCO2Concentration rdf:type owl:NamedIndividual ,
+                                  :CarbonDioxide ;
+                         rdfs:label "AverageCO2"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageCO2ConcentrationDeviation
+:AverageCO2ConcentrationDeviation rdf:type owl:NamedIndividual ,
+                                           :CarbonDioxide ;
+                                  rdfs:label "AverageCO2Deviation"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageHumidity
+:AverageHumidity rdf:type owl:NamedIndividual ,
+                          :HumidityAmbientProperty ;
+                 rdfs:label "Average Humidity"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageHumidityDeviation
+:AverageHumidityDeviation rdf:type owl:NamedIndividual ,
+                                   :HumidityAmbientProperty ;
+                          rdfs:label "Average humidity deviation"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageLightIntensity
+:AverageLightIntensity rdf:type owl:NamedIndividual ,
+                                :LuminusIntensity ;
+                       rdfs:label "AverageLightIntensity"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageMovemenetShare
+:AverageMovemenetShare rdf:type owl:NamedIndividual ,
+                                :MotionProperty ;
+                       rdfs:label "AverageMovemenetShare"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageMovementTime
+:AverageMovementTime rdf:type owl:NamedIndividual ,
+                              :MotionProperty ;
+                     rdfs:label "AverageMovementTime"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageSound
+:AverageSound rdf:type owl:NamedIndividual ,
+                       :Sound ;
+              rdfs:label "AverageSound"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageSoundDeviation
+:AverageSoundDeviation rdf:type owl:NamedIndividual ,
+                                :Sound ;
+                       rdfs:label "Average sound deviation"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageTemperature
+:AverageTemperature rdf:type owl:NamedIndividual ,
+                             :TemperatureAmbientProperty ;
+                    rdfs:label "AverageTemperature"@en .
+
+
+###  http://iot.linkeddata.es/def/core#AverageTemperatureDeviation
+:AverageTemperatureDeviation rdf:type owl:NamedIndividual ,
+                                      :TemperatureAmbientProperty ;
+                             rdfs:label "AverageTemperatureDeviation"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#CO2Concentration
 :CO2Concentration rdf:type owl:NamedIndividual ,
                            :CarbonDioxide ;
@@ -1142,10 +1208,41 @@ saref:Service rdf:type owl:Class ;
           rdfs:label "FanSpeed"@en .
 
 
+###  http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation
+:HighestCO2ConcentrationDeviation rdf:type owl:NamedIndividual ,
+                                           :CarbonDioxide ;
+                                  rdfs:label "HighestCO2Deviation"@en .
+
+
+###  http://iot.linkeddata.es/def/core#HighestHumidityDeviation
+:HighestHumidityDeviation rdf:type owl:NamedIndividual ,
+                                   :HumidityAmbientProperty ;
+                          rdfs:label "Highst humidity deviation"@en .
+
+
+###  http://iot.linkeddata.es/def/core#HighestSoundDeviation
+:HighestSoundDeviation rdf:type owl:NamedIndividual ,
+                                :Sound ;
+                       rdfs:label "HighestSoundDeviation"@en .
+
+
+###  http://iot.linkeddata.es/def/core#HighestTemperatureDeviation
+:HighestTemperatureDeviation rdf:type owl:NamedIndividual ,
+                                      :TemperatureAmbientProperty ;
+                             rdfs:label "Highst temperature deviation"@en .
+
+
+###  http://iot.linkeddata.es/def/core#IndoorEnvironmentalQualityScore
+:IndoorEnvironmentalQualityScore rdf:type owl:NamedIndividual ,
+                                          :AmbientProperty ;
+                                 rdfs:label "IEQ score"@en ,
+                                            "Indoor environmental quality score"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#LightColor
 :LightColor rdf:type owl:NamedIndividual ,
                      :LightProperty ;
-            rdfs:label "LightColor"@en .
+            rdfs:label "Light color"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Luminance
@@ -1154,10 +1251,40 @@ saref:Service rdf:type owl:Class ;
            rdfs:label "Luminance"@en .
 
 
+###  http://iot.linkeddata.es/def/core#MaxCO2Concentration
+:MaxCO2Concentration rdf:type owl:NamedIndividual ,
+                              :CarbonDioxide ;
+                     rdfs:label "MaxCO2"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MaxHumidity
+:MaxHumidity rdf:type owl:NamedIndividual ,
+                      :HumidityAmbientProperty ;
+             rdfs:label "MaxHumidity"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MaxLightIntensity
+:MaxLightIntensity rdf:type owl:NamedIndividual ,
+                            :LuminusIntensity ;
+                   rdfs:label "MaxLightIntensity"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#MaxPowerConsumption
 :MaxPowerConsumption rdf:type owl:NamedIndividual ,
                               :PowerConsumption ;
                      rdfs:label "MaxPowerConsumption"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MaxSound
+:MaxSound rdf:type owl:NamedIndividual ,
+                   :Sound ;
+          rdfs:label "MaxSound"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MaxTemperature
+:MaxTemperature rdf:type owl:NamedIndividual ,
+                         :TemperatureAmbientProperty ;
+                rdfs:label "MaxTemperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MeanPowerConsumption
@@ -1166,10 +1293,40 @@ saref:Service rdf:type owl:Class ;
                       rdfs:label "MeanPowerConsumption"@en .
 
 
+###  http://iot.linkeddata.es/def/core#MinCO2Concentration
+:MinCO2Concentration rdf:type owl:NamedIndividual ,
+                              :CarbonDioxide ;
+                     rdfs:label "MinCO2"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MinHumidity
+:MinHumidity rdf:type owl:NamedIndividual ,
+                      :HumidityAmbientProperty ;
+             rdfs:label "Minimun humidity"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MinLightIntensity
+:MinLightIntensity rdf:type owl:NamedIndividual ,
+                            :LuminusIntensity ;
+                   rdfs:label "MinLightIntensity"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#MinPowerConsumption
 :MinPowerConsumption rdf:type owl:NamedIndividual ,
                               :PowerConsumption ;
                      rdfs:label "MinPowerConsumption"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MinSound
+:MinSound rdf:type owl:NamedIndividual ,
+                   :Sound ;
+          rdfs:label "MinSound"@en .
+
+
+###  http://iot.linkeddata.es/def/core#MinTemperature
+:MinTemperature rdf:type owl:NamedIndividual ,
+                         :TemperatureAmbientProperty ;
+                rdfs:label "Minimun temperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Mode
@@ -1187,7 +1344,8 @@ saref:Service rdf:type owl:Class ;
 ###  http://iot.linkeddata.es/def/core#NoiseLevel
 :NoiseLevel rdf:type owl:NamedIndividual ,
                      :Sound ;
-            rdfs:label "NoiseLevel"@en .
+            rdfs:label "Noise level"@en ,
+                       "Sound level"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#OnOff
@@ -1217,5 +1375,8 @@ saref:Service rdf:type owl:Class ;
 ###  http://www.w3.org/ns/org#Head
 <http://www.w3.org/ns/org#Head> rdf:type :OperationalStatus .
 
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+] .
 
 ###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
