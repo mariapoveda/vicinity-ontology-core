@@ -45,24 +45,6 @@ ssn:Selectivity
       rdfs:label "Thermostat"@en ;
       rdfs:subClassOf :Actuator , :Sensor .
 
-ssn:Precision
-      a       owl:Class ;
-      rdfs:comment "The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation." ;
-      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
-      rdfs:label "Precision" ;
-      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
-      rdfs:subClassOf ssn:MeasurementProperty ;
-      dc:source """skos:exactMatch 'measurement precision/precision' [VIM 2.15]
-                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
-
-ssn:MeasurementProperty
-      a       owl:Class ;
-      rdfs:comment "An identifiable and observable characteristic of a sensor's observations or ability to make observations." ;
-      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
-      rdfs:label "Measurement  Property" ;
-      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
-      rdfs:subClassOf ssn:Property .
-
 ssn:OperatingRange
       a       owl:Class ;
       rdfs:comment "The environmental conditions and characteristics of a system/sensor's normal operating environment.  Can be used to specify for example the standard environmental conditions in which the sensor is expected to operate (a Condition with no OperatingProperty), or how the environmental and other operating properties relate: i.e., that the maintenance schedule or power requirements differ according to the conditions." ;
@@ -85,11 +67,23 @@ ssn:OperatingRange
 
 The difference is that here we also allow for qualities that aren't VIM influence quantities [VIM 2.52] - for example, a quantity that alters the power requirements, but doesn't affect the measurement properties - conditions specified in MeasurementCapability should be influence quantities.""" .
 
-:hasOwner
-      a       owl:ObjectProperty ;
-      rdfs:isDefinedBy "Link between an entity like a service or a device and its owners or providers."@en ;
-      rdfs:label "has owner"@en , "has provider"@en ;
-      owl:inverseOf :owns .
+ssn:MeasurementProperty
+      a       owl:Class ;
+      rdfs:comment "An identifiable and observable characteristic of a sensor's observations or ability to make observations." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "Measurement  Property" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
+      rdfs:subClassOf ssn:Property .
+
+ssn:Precision
+      a       owl:Class ;
+      rdfs:comment "The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "Precision" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
+      rdfs:subClassOf ssn:MeasurementProperty ;
+      dc:source """skos:exactMatch 'measurement precision/precision' [VIM 2.15]
+                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
 ssn:Resolution
       a       owl:Class ;
@@ -101,6 +95,10 @@ ssn:Resolution
       dc:source """skos:exactMatch 'resolution' [VIM 4.14]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
+:AverageMovementTime
+      a       owl:NamedIndividual , :MotionProperty ;
+      rdfs:label "AverageMovementTime"@en .
+
 :Device
       a       owl:Class ;
       rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
@@ -111,16 +109,9 @@ ssn:Resolution
 ssn:forProperty
       a       owl:ObjectProperty .
 
-:HVACSensor
-      a       owl:Class ;
-      rdfs:label "HVAC Sensor"@en ;
-      rdfs:subClassOf :Actuator , :Sensor .
-
-<https://w3id.org/def/saref4bldg#BuildingSpace>
-      a       owl:Class ;
-      rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
-      rdfs:isDefinedBy <https://w3id.org/def/saref4bldg#> ;
-      rdfs:label "Building space"@en .
+:HighestHumidityDeviation
+      a       :HumidityAmbientProperty , owl:NamedIndividual ;
+      rdfs:label "Highst humidity deviation"@en .
 
 :CO2Sensor
       a       owl:Class ;
@@ -140,24 +131,11 @@ ssn:Frequency
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
       rdfs:subClassOf ssn:MeasurementProperty .
 
-:NoiseSensor
-      a       owl:Class ;
-      rdfs:label "Noise sensor"@en ;
-      rdfs:subClassOf :Sensor .
+[]    owl:cardinality "1"^^xsd:nonNegativeInteger .
 
-:PowerConsumption
-      a       owl:Class ;
-      rdfs:label "PowerConsumption"@en ;
-      rdfs:subClassOf ssn:OperatingProperty .
-
-:contains
-      a       owl:ObjectProperty ;
-      rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things."@en ;
-      rdfs:label "contains"@en ;
-      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
-
-ssn:FeatureOfInterest
-      a       owl:Class .
+:AverageSoundDeviation
+      a       owl:NamedIndividual , :Sound ;
+      rdfs:label "Average sound deviation"@en .
 
 :hasValue
       a       owl:ObjectProperty ;
@@ -176,39 +154,12 @@ ssn:FeatureOfInterest
                 owl:someValuesFrom :TemperatureAmbientProperty
               ] .
 
-:Irradiance
-      a       owl:Class ;
-      rdfs:label "Irradiance"@en ;
-      rdfs:subClassOf :LightProperty .
-
-:hasVendor
-      a       owl:ObjectProperty ;
-      rdfs:isDefinedBy "Link from a device to its vendor or manufacturer or producer."@en ;
-      rdfs:label "has producer"@en , "has vendor"@en .
-
-:isNeighbourhoodOf
-      a       owl:FunctionalProperty , owl:ObjectProperty ;
-      rdfs:domain :Neighbourhood ;
-      rdfs:isDefinedBy "A link between a neighbourhood and the specific agent around which the neighbourhood is built."@en ;
-      rdfs:label "is neighbourhood of"@en ;
-      rdfs:range :Agent ;
-      rdfs:subPropertyOf :involves .
-
 :Mode
       a       :OperationalStatus , owl:NamedIndividual ;
       rdfs:label "Mode"@en .
 
-:OperationalStatus
-      a       owl:Class ;
-      rdfs:label "Operational status"@en ;
-      rdfs:subClassOf ssn:Property .
-
 ssn:inCondition
       a       owl:ObjectProperty .
-
-:MinPowerConsumption
-      a       :PowerConsumption , owl:NamedIndividual ;
-      rdfs:label "MinPowerConsumption"@en .
 
 :MotionSensor
       a       owl:Class ;
@@ -220,30 +171,10 @@ ssn:inCondition
                 owl:someValuesFrom :MotionProperty
               ] .
 
-:hasPartnershipWith
-      a       owl:ObjectProperty , owl:SymmetricProperty ;
-      rdfs:domain <http://www.w3.org/ns/org#Organization> ;
-      rdfs:isDefinedBy "A link between two organizations who are in a partnership relation. A partnership is established between organizations, only 2 organizations."@en ;
-      rdfs:label "hasPartnershipWith"@en ;
-      rdfs:range <http://www.w3.org/ns/org#Organization> .
-
 :Sound
       a       owl:Class ;
       rdfs:label "Sound"@en ;
       rdfs:subClassOf ssn:Property .
-
-dc:source
-      a       owl:AnnotationProperty .
-
-:LightColor
-      a       owl:NamedIndividual , :LightProperty ;
-      rdfs:label "LightColor"@en .
-
-:describes
-      a       owl:ObjectProperty ;
-      rdfs:comment "Link from a thing description to the thing being described"@en ;
-      rdfs:label "describes thing"@en ;
-      owl:inverseOf :isDescribedBy .
 
 :ThingDescription
       a       owl:Class ;
@@ -260,31 +191,13 @@ dc:source
                 owl:onProperty :describes
               ] .
 
-:AmbientTemperature
-      a       owl:NamedIndividual , :TemperatureAmbientProperty ;
-      rdfs:label "AmbientTemperature"@en .
-
-:RelativeEndpoint
-      a       owl:Class ;
-      rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
-      rdfs:label "Relative endpoint"@en ;
-      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Link> ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:maxQualifiedCardinality
-                        "1"^^xsd:nonNegativeInteger ;
-                owl:onClass
-                        [ a       owl:Class ;
-                          owl:intersectionOf (<http://iot.linkeddata.es/def/wot#Link> [ a       owl:Class ;
-                                      owl:complementOf :RelativeEndpoint
-                                    ])
-                        ] ;
-                owl:onProperty :isRelativeTo
-              ] .
+:AverageMovemenetShare
+      a       owl:NamedIndividual , :MotionProperty ;
+      rdfs:label "AverageMovemenetShare"@en .
 
 :NoiseLevel
       a       owl:NamedIndividual , :Sound ;
-      rdfs:label "NoiseLevel"@en .
+      rdfs:label "Sound level"@en , "Noise level"@en .
 
 :interactsUsing
       a       owl:ObjectProperty ;
@@ -297,22 +210,10 @@ dc:source
       rdfs:label "Luminance meter"@en ;
       rdfs:subClassOf :Sensor .
 
-:EntryExit
-      a       owl:NamedIndividual , :Presence ;
-      rdfs:label "EntryExit"@en .
-
 :isDescribedBy
       a       owl:ObjectProperty ;
       rdfs:comment "Relation from a thing to its thing descriptions"@en ;
       rdfs:label "is described by"@en .
-
-:serviceName
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Name of a service" ;
-      rdfs:domain :Service ;
-      rdfs:label "service name"@en ;
-      rdfs:range xsd:string ;
-      rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> .
 
 :describesEcosystem
       a       owl:FunctionalProperty , owl:ObjectProperty ;
@@ -320,11 +221,6 @@ dc:source
       rdfs:label "describes ecosystem"@en ;
       owl:deprecated "true"^^xsd:boolean ;
       owl:inverseOf :isEcosystemDescribedBy .
-
-:EBikeCharger
-      a       owl:Class ;
-      rdfs:label "eBikeCharger"@en ;
-      rdfs:subClassOf :Charger .
 
 :HumiditySensor
       a       owl:Class ;
@@ -351,14 +247,6 @@ ssn:hasMeasurementProperty
                 owl:onProperty :interactsUsing
               ] .
 
-ssn:BatteryLifetime
-      a       owl:Class ;
-      rdfs:comment "Total useful life of a battery." ;
-      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
-      rdfs:label "Battery Lifetime" ;
-      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction" ;
-      rdfs:subClassOf ssn:SurvivalProperty .
-
 ssn:SurvivalProperty
       a       owl:Class ;
       rdfs:comment "An identifiable characteristic that represents the extent of the sensors useful life.  Might include for example total battery life or number of recharges, or, for sensors that are used only a fixed number of times, the number of observations that can be made before the sensing capability is depleted." ;
@@ -367,24 +255,17 @@ ssn:SurvivalProperty
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
       rdfs:subClassOf ssn:Property .
 
-<http://iot.linkeddata.es/def/wot#PhysicalThing>
-      a       owl:Class .
-
 geo:location
       a       owl:ObjectProperty .
-
-ssn:Latency
-      a       owl:Class ;
-      rdfs:comment "The time between a request for an observation and the sensor providing a result." ;
-      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
-      rdfs:label "Latency" ;
-      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
-      rdfs:subClassOf ssn:MeasurementProperty .
 
 :CarbonMonoxide
       a       owl:Class ;
       rdfs:label "CarbonMonoxide"@en ;
       rdfs:subClassOf ssn:Property .
+
+:AverageHumidity
+      a       :HumidityAmbientProperty , owl:NamedIndividual ;
+      rdfs:label "Average Humidity"@en .
 
 ssn:MaintenanceSchedule
       a       owl:Class ;
@@ -393,12 +274,6 @@ ssn:MaintenanceSchedule
       rdfs:label "Maintenance Schedule" ;
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
       rdfs:subClassOf ssn:OperatingProperty .
-
-:timeStamp
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:comment "Time stamp in which a phenomenon takes place, for example when value has been taken."@en ;
-      rdfs:label "time stamp"@en ;
-      rdfs:range xsd:dateTime .
 
 saref:Service
       a       owl:Class ;
@@ -435,15 +310,15 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                 owl:onProperty geo:location
               ] .
 
-:Neighbourhood
-      a       owl:Class ;
-      rdfs:comment "A set of IoT infrastructures and value-added services integrated through a network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them."@en ;
-      rdfs:label "Neighbourhood"@en .
-
 :Presence
       a       owl:Class ;
       rdfs:label "Presence"@en ;
       rdfs:subClassOf ssn:Property .
+
+:Neighbourhood
+      a       owl:Class ;
+      rdfs:comment "A set of IoT infrastructures and value-added services integrated through a network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them."@en ;
+      rdfs:label "Neighbourhood"@en .
 
 rdfs:Resource
       a       owl:Class .
@@ -458,15 +333,9 @@ ssn:DetectionLimit
       dc:source """skos:exactMatch 'detection limit' [VIM 4.18] 
                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
-:LuminusIntensity
-      a       owl:Class ;
-      rdfs:label "LuminusIntensity"@en ;
-      rdfs:subClassOf :LightProperty .
-
-:MotionProperty
-      a       owl:Class ;
-      rdfs:label "Motion property"@en ;
-      rdfs:subClassOf ssn:Property .
+:MaxLightIntensity
+      a       owl:NamedIndividual , :LuminusIntensity ;
+      rdfs:label "MaxLightIntensity"@en .
 
 ssn:Accuracy
       a       owl:Class ;
@@ -478,41 +347,15 @@ ssn:Accuracy
       dc:source """skos:exactMatch 'measurement accuracy/accuracy' [VIM 2.13] 
 		                    http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
-:TemperatureAmbientProperty
+:MotionProperty
       a       owl:Class ;
-      rdfs:label "TemperatureAmbientProperty"@en ;
-      rdfs:subClassOf :AmbientProperty .
-
-:DigitalUser
-      a       owl:Class ;
-      rdfs:comment "A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)"@en ;
-      rdfs:label "Digital user"@en ;
-      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
-      rdfs:subClassOf foaf:Agent ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Service ;
-                owl:onProperty :interactsUsing
-              ] .
+      rdfs:label "Motion property"@en ;
+      rdfs:subClassOf ssn:Property .
 
 :Lightbulb
       a       owl:Class ;
       rdfs:label "Lightbulb"@en ;
       rdfs:subClassOf :Device .
-
-ssn:ResponseTime
-      a       owl:Class ;
-      rdfs:comment "The time between a (step) change inthe value of an observed quality and a sensor (possibly with specified error) 'settling' on an observed value." ;
-      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
-      rdfs:label "Response time" ;
-      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
-      rdfs:subClassOf ssn:MeasurementProperty ;
-      dc:source """skos:exactMatch 'step response time' [VIM 4.23]
-                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
-
-:RelativeHumidity
-      a       :HumidityAmbientProperty , owl:NamedIndividual ;
-      rdfs:label "RelativeHumidity"@en .
 
 :serialNumber
       a       owl:DatatypeProperty ;
@@ -520,6 +363,10 @@ ssn:ResponseTime
       rdfs:domain :Device ;
       rdfs:label "serialNumber"@en ;
       rdfs:range xsd:string .
+
+:MinSound
+      a       owl:NamedIndividual , :Sound ;
+      rdfs:label "MinSound"@en .
 
 ssn:Sensitivity
       a       owl:Class ;
@@ -531,27 +378,14 @@ ssn:Sensitivity
       dc:source """skos:exactMatch 'sensitivity' [VIM 4.12]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
-ssn:hasSurvivalProperty
-      a       owl:ObjectProperty .
-
 :Charger
       a       owl:Class ;
       rdfs:label "Charger"@en ;
       rdfs:subClassOf :Device .
 
-:OpenClosed
-      a       :OperationalStatus , owl:NamedIndividual ;
-      rdfs:label "OpenClosed"@en .
-
-foaf:Image
-      a       owl:Class .
-
-<http://iot.linkeddata.es/def/wot#Property>
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :monitors ;
-                owl:someValuesFrom ssn:Property
-              ] .
+:AverageTemperature
+      a       owl:NamedIndividual , :TemperatureAmbientProperty ;
+      rdfs:label "AverageTemperature"@en .
 
 :hasNeighbourhood
       a       owl:FunctionalProperty , owl:ObjectProperty ;
@@ -562,24 +396,6 @@ foaf:Image
       rdfs:subPropertyOf :isInvolvedIn ;
       owl:inverseOf :isNeighbourhoodOf .
 
-:MaxPowerConsumption
-      a       :PowerConsumption , owl:NamedIndividual ;
-      rdfs:label "MaxPowerConsumption"@en .
-
-:expressedInFormat
-      a       owl:ObjectProperty ;
-      rdfs:comment "Link from a value to the data format in which it is expressed."@en ;
-      rdfs:domain :Value ;
-      rdfs:label "expressed in format"@en ;
-      rdfs:range <http://iot.linkeddata.es/def/wot#DataSchema> .
-
-:literalValue
-      a       owl:ObjectProperty ;
-      rdfs:comment "Literal representation of the observed value."@en ;
-      rdfs:domain :Value ;
-      rdfs:label "literal value"@en ;
-      rdfs:range rdfs:Resource .
-
 ssn:SystemLifetime
       a       owl:Class ;
       rdfs:comment "Total useful life of a sensor/system (expressed as total life since manufacture, time in use, number of operations, etc.)." ;
@@ -587,6 +403,13 @@ ssn:SystemLifetime
       rdfs:label "System Lifetime" ;
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
       rdfs:subClassOf ssn:SurvivalProperty .
+
+:literalValue
+      a       owl:ObjectProperty ;
+      rdfs:comment "Literal representation of the observed value."@en ;
+      rdfs:domain :Value ;
+      rdfs:label "literal value"@en ;
+      rdfs:range rdfs:Resource .
 
 :Ecosystem
       a       owl:Class ;
@@ -609,40 +432,25 @@ ssn:SystemLifetime
       rdfs:range xsd:string ;
       rdfs:subPropertyOf :desctiption .
 
+:MaxCO2Concentration
+      a       owl:NamedIndividual , :CarbonDioxide ;
+      rdfs:label "MaxCO2"@en .
+
 :hasComponent
       a       owl:ObjectProperty ;
       rdfs:comment "A link between an ecosystem and the things that compose such ecosystem."@en ;
       rdfs:label "has component"@en ;
       owl:inverseOf :isComponentOf .
 
+:FanSpeed
+      a       :OperationalStatus , owl:NamedIndividual ;
+      rdfs:label "FanSpeed"@en .
+
 :WindowSensor
       a       owl:Class ;
       rdfs:label "WindowSensor"@en ;
       rdfs:subClassOf :Sensor ;
       vs:term_status "unstable" .
-
-:FanSpeed
-      a       :OperationalStatus , owl:NamedIndividual ;
-      rdfs:label "FanSpeed"@en .
-
-:deviceDescription
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Natural language description of a device."@en ;
-      rdfs:domain :Device ;
-      rdfs:label "device description"@en ;
-      rdfs:range xsd:string ;
-      rdfs:subPropertyOf :desctiption .
-
-:PeopleCounter
-      a       owl:Class ;
-      rdfs:comment "A people counter is a device that is used to measure the number of people traversing a certain passage or entrance. (Definition taken from https://en.wikipedia.org/wiki/People_counter)"@en ;
-      rdfs:label "People counter"@en ;
-      rdfs:subClassOf :Sensor ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :monitors ;
-                owl:someValuesFrom :Presence
-              ] .
 
 :CO2Concentration
       a       owl:NamedIndividual , :CarbonDioxide ;
@@ -654,16 +462,6 @@ ssn:SystemLifetime
       rdfs:label "relative href"@en ;
       rdfs:range xsd:string ;
       rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#href> .
-
-:ThingEcosystemDescription
-      a       owl:Class ;
-      rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
-      rdfs:label "Thing ecosystem description"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :describes ;
-                owl:someValuesFrom :Ecosystem
-              ] .
 
 :Radiance
       a       owl:Class ;
@@ -686,41 +484,42 @@ ssn:SystemLifetime
       rdfs:label "is ecosystem described by"@en ;
       owl:deprecated "true"^^xsd:boolean .
 
+:AverageLightIntensity
+      a       owl:NamedIndividual , :LuminusIntensity ;
+      rdfs:label "AverageLightIntensity"@en .
+
 :Value
       a       owl:Class ;
       rdfs:comment "Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed."@en ;
       rdfs:label "Value"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> ;
-                owl:onProperty :expressedInFormat
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty :literalValue
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onDataRange xsd:dateTime ;
                 owl:onProperty :timeStamp
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> ;
+                owl:onProperty :expressedInFormat
               ] .
 
-:RadiantIntensity
-      a       owl:Class ;
-      rdfs:label "Radiant intensity"@en ;
-      rdfs:subClassOf :LightProperty .
+:Motion
+      a       owl:NamedIndividual , :MotionProperty ;
+      rdfs:label "Motion"@en .
 
 :isInvolvedIn
       a       owl:ObjectProperty ;
       rdfs:isDefinedBy "A link between an agent and all the neighbouthoods it is involved in."@en ;
       rdfs:label "is involved in"@en .
 
-:Motion
-      a       owl:NamedIndividual , :MotionProperty ;
-      rdfs:label "Motion"@en .
+<http://iot.linkeddata.es/def/wot#Action>
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :actsOn ;
+                owl:someValuesFrom ssn:Property
+              ] .
 
 ssn:OperatingPowerRange
       a       owl:Class ;
@@ -730,12 +529,409 @@ ssn:OperatingPowerRange
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction" ;
       rdfs:subClassOf ssn:OperatingProperty .
 
-<http://iot.linkeddata.es/def/wot#Action>
+:PowerMeter
+      a       owl:Class ;
+      rdfs:label "PowerMeter"@en ;
+      rdfs:subClassOf :Sensor .
+
+:Luminance
+      a       owl:NamedIndividual , :LuminusIntensity ;
+      rdfs:label "Luminance"@en .
+
+:MinLightIntensity
+      a       owl:NamedIndividual , :LuminusIntensity ;
+      rdfs:label "MinLightIntensity"@en .
+
+:ValvePosition
+      a       :OperationalStatus , owl:NamedIndividual ;
+      rdfs:label "ValvePosition"@en .
+
+:involves
+      a       owl:ObjectProperty ;
+      rdfs:isDefinedBy "A link between a neighbourhood and all the agents involved in it."@en ;
+      rdfs:label "involves"@en ;
+      owl:inverseOf :isInvolvedIn .
+
+:AverageCO2ConcentrationDeviation
+      a       owl:NamedIndividual , :CarbonDioxide ;
+      rdfs:label "AverageCO2Deviation"@en .
+
+:actsOn
+      a       owl:ObjectProperty ;
+      rdfs:comment "A link between an actuator an the entities or properties upon which it can act." ;
+      rdfs:label "acts on"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)" .
+
+:DoorSensor
+      a       owl:Class ;
+      rdfs:label "DoorSensor"@en ;
+      rdfs:subClassOf :Sensor ;
+      vs:term_status "unstable" .
+
+:MaxSound
+      a       owl:NamedIndividual , :Sound ;
+      rdfs:label "MaxSound"@en .
+
+:DimmingLevel
+      a       :OperationalStatus , owl:NamedIndividual ;
+      rdfs:label "DimmingLevel"@en .
+
+:Actuator
+      a       owl:Class ;
+      rdfs:comment "An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)"@en ;
+      rdfs:label "Actuator"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
+      rdfs:subClassOf :Device ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :actsOn ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property> ;
+                owl:onProperty :actsOn
+              ] .
+
+:ChargeStatus
+      a       :OperationalStatus , owl:NamedIndividual ;
+      rdfs:label "ChargeStatus"@en .
+
+ssn:hasOperatingProperty
+      a       owl:ObjectProperty .
+
+:HighestSoundDeviation
+      a       owl:NamedIndividual , :Sound ;
+      rdfs:label "HighestSoundDeviation"@en .
+
+:deviceName
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Name of a device" ;
+      rdfs:domain :Device ;
+      rdfs:label "device name"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> .
+
+:AverageHumidityDeviation
+      a       :HumidityAmbientProperty , owl:NamedIndividual ;
+      rdfs:label "Average humidity deviation"@en .
+
+dcterms:contributor
+      a       owl:AnnotationProperty .
+
+ssn:Condition
+      a       owl:Class ;
+      rdfs:comment "Used to specify ranges for qualities that act as conditions on a system/sensor's operation.  For example, wind speed of 10-60m/s is expressed as a condition linking a quality, wind speed, a unit of measurement, metres per second, and a set of values, 10-60, and may be used as the condition on a MeasurementProperty, for example, to state that a sensor has a particular accuracy in that condition." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "Condition" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#ConstraintBlock" ;
+      rdfs:subClassOf ssn:Property .
+
+:VirtualThing
+      a       owl:Class ;
+      rdfs:comment """A virtual entity is a digital representation of a physical entity, contained within a service. A virtual entity interacts through an endpoint. A virtual entity represents a physical entity.
+
+(Definition taken from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
+      rdfs:label "Virtual thing"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :VirtualThing ;
+                owl:onProperty :contains
+              ] .
+
+ssn:isPropertyOf
+      a       owl:ObjectProperty .
+
+owl:cardinality
+      a       owl:AnnotationProperty .
+
+:MinHumidity
+      a       :HumidityAmbientProperty , owl:NamedIndividual ;
+      rdfs:label "Minimun humidity"@en .
+
+:owns
+      a       owl:ObjectProperty ;
+      rdfs:isDefinedBy "A linkd between an agent and the entities, like devices or services, it provides or owns."@en ;
+      rdfs:label "provides"@en , "owns"@en .
+
+:AverageTemperatureDeviation
+      a       owl:NamedIndividual , :TemperatureAmbientProperty ;
+      rdfs:label "AverageTemperatureDeviation"@en .
+
+:OccupancySensor
+      a       owl:Class ;
+      rdfs:label "Occupancy sensor"@en ;
+      rdfs:subClassOf :Sensor .
+
+foaf:depiction
+      a       owl:ObjectProperty .
+
+:HighestTemperatureDeviation
+      a       owl:NamedIndividual , :TemperatureAmbientProperty ;
+      rdfs:label "Highst temperature deviation"@en .
+
+:hasOwner
+      a       owl:ObjectProperty ;
+      rdfs:isDefinedBy "Link between an entity like a service or a device and its owners or providers."@en ;
+      rdfs:label "has owner"@en , "has provider"@en ;
+      owl:inverseOf :owns .
+
+:MinCO2Concentration
+      a       owl:NamedIndividual , :CarbonDioxide ;
+      rdfs:label "MinCO2"@en .
+
+:HVACSensor
+      a       owl:Class ;
+      rdfs:label "HVAC Sensor"@en ;
+      rdfs:subClassOf :Actuator , :Sensor .
+
+<https://w3id.org/def/saref4bldg#BuildingSpace>
+      a       owl:Class ;
+      rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
+      rdfs:isDefinedBy <https://w3id.org/def/saref4bldg#> ;
+      rdfs:label "Building space"@en .
+
+:PowerConsumption
+      a       owl:Class ;
+      rdfs:label "PowerConsumption"@en ;
+      rdfs:subClassOf ssn:OperatingProperty .
+
+:NoiseSensor
+      a       owl:Class ;
+      rdfs:label "Noise sensor"@en ;
+      rdfs:subClassOf :Sensor .
+
+:contains
+      a       owl:ObjectProperty ;
+      rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things."@en ;
+      rdfs:label "contains"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+
+ssn:FeatureOfInterest
+      a       owl:Class .
+
+:Irradiance
+      a       owl:Class ;
+      rdfs:label "Irradiance"@en ;
+      rdfs:subClassOf :LightProperty .
+
+:hasVendor
+      a       owl:ObjectProperty ;
+      rdfs:isDefinedBy "Link from a device to its vendor or manufacturer or producer."@en ;
+      rdfs:label "has producer"@en , "has vendor"@en .
+
+:isNeighbourhoodOf
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain :Neighbourhood ;
+      rdfs:isDefinedBy "A link between a neighbourhood and the specific agent around which the neighbourhood is built."@en ;
+      rdfs:label "is neighbourhood of"@en ;
+      rdfs:range :Agent ;
+      rdfs:subPropertyOf :involves .
+
+:OperationalStatus
+      a       owl:Class ;
+      rdfs:label "Operational status"@en ;
+      rdfs:subClassOf ssn:Property .
+
+:MinPowerConsumption
+      a       :PowerConsumption , owl:NamedIndividual ;
+      rdfs:label "MinPowerConsumption"@en .
+
+:hasPartnershipWith
+      a       owl:ObjectProperty , owl:SymmetricProperty ;
+      rdfs:domain <http://www.w3.org/ns/org#Organization> ;
+      rdfs:isDefinedBy "A link between two organizations who are in a partnership relation. A partnership is established between organizations, only 2 organizations."@en ;
+      rdfs:label "hasPartnershipWith"@en ;
+      rdfs:range <http://www.w3.org/ns/org#Organization> .
+
+dc:source
+      a       owl:AnnotationProperty .
+
+:describes
+      a       owl:ObjectProperty ;
+      rdfs:comment "Link from a thing description to the thing being described"@en ;
+      rdfs:label "describes thing"@en ;
+      owl:inverseOf :isDescribedBy .
+
+:LightColor
+      a       owl:NamedIndividual , :LightProperty ;
+      rdfs:label "Light color"@en .
+
+:AmbientTemperature
+      a       owl:NamedIndividual , :TemperatureAmbientProperty ;
+      rdfs:label "AmbientTemperature"@en .
+
+:RelativeEndpoint
+      a       owl:Class ;
+      rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
+      rdfs:label "Relative endpoint"@en ;
+      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Link> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onClass
+                        [ a       owl:Class ;
+                          owl:intersectionOf (<http://iot.linkeddata.es/def/wot#Link> [ a       owl:Class ;
+                                      owl:complementOf :RelativeEndpoint
+                                    ])
+                        ] ;
+                owl:onProperty :isRelativeTo
+              ] .
+
+:EntryExit
+      a       owl:NamedIndividual , :Presence ;
+      rdfs:label "EntryExit"@en .
+
+:serviceName
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Name of a service" ;
+      rdfs:domain :Service ;
+      rdfs:label "service name"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> .
+
+:EBikeCharger
+      a       owl:Class ;
+      rdfs:label "eBikeCharger"@en ;
+      rdfs:subClassOf :Charger .
+
+ssn:BatteryLifetime
+      a       owl:Class ;
+      rdfs:comment "Total useful life of a battery." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "Battery Lifetime" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction" ;
+      rdfs:subClassOf ssn:SurvivalProperty .
+
+:MinTemperature
+      a       owl:NamedIndividual , :TemperatureAmbientProperty ;
+      rdfs:label "Minimun temperature"@en .
+
+<http://iot.linkeddata.es/def/wot#PhysicalThing>
+      a       owl:Class .
+
+ssn:Latency
+      a       owl:Class ;
+      rdfs:comment "The time between a request for an observation and the sensor providing a result." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "Latency" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
+      rdfs:subClassOf ssn:MeasurementProperty .
+
+:timeStamp
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:comment "Time stamp in which a phenomenon takes place, for example when value has been taken."@en ;
+      rdfs:label "time stamp"@en ;
+      rdfs:range xsd:dateTime .
+
+:LuminusIntensity
+      a       owl:Class ;
+      rdfs:label "LuminusIntensity"@en ;
+      rdfs:subClassOf :LightProperty .
+
+:AverageCO2Concentration
+      a       owl:NamedIndividual , :CarbonDioxide ;
+      rdfs:label "AverageCO2"@en .
+
+:TemperatureAmbientProperty
+      a       owl:Class ;
+      rdfs:label "TemperatureAmbientProperty"@en ;
+      rdfs:subClassOf :AmbientProperty .
+
+:HighestCO2ConcentrationDeviation
+      a       owl:NamedIndividual , :CarbonDioxide ;
+      rdfs:label "HighestCO2Deviation"@en .
+
+:DigitalUser
+      a       owl:Class ;
+      rdfs:comment "A digital user is a digital entity which uses an IoT system. A digital user is a specialization of an IoT-User. A digital user interacts with one or more services offered by the IoT system across the network. (definition taken from ISO/IEC 11404:2007)"@en ;
+      rdfs:label "Digital user"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
+      rdfs:subClassOf foaf:Agent ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Service ;
+                owl:onProperty :interactsUsing
+              ] .
+
+ssn:ResponseTime
+      a       owl:Class ;
+      rdfs:comment "The time between a (step) change inthe value of an observed quality and a sensor (possibly with specified error) 'settling' on an observed value." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "Response time" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
+      rdfs:subClassOf ssn:MeasurementProperty ;
+      dc:source """skos:exactMatch 'step response time' [VIM 4.23]
+                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
+
+:RelativeHumidity
+      a       :HumidityAmbientProperty , owl:NamedIndividual ;
+      rdfs:label "RelativeHumidity"@en .
+
+ssn:hasSurvivalProperty
+      a       owl:ObjectProperty .
+
+:OpenClosed
+      a       :OperationalStatus , owl:NamedIndividual ;
+      rdfs:label "OpenClosed"@en .
+
+foaf:Image
+      a       owl:Class .
+
+<http://iot.linkeddata.es/def/wot#Property>
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :monitors ;
                 owl:someValuesFrom ssn:Property
               ] .
+
+:MaxPowerConsumption
+      a       :PowerConsumption , owl:NamedIndividual ;
+      rdfs:label "MaxPowerConsumption"@en .
+
+:expressedInFormat
+      a       owl:ObjectProperty ;
+      rdfs:comment "Link from a value to the data format in which it is expressed."@en ;
+      rdfs:domain :Value ;
+      rdfs:label "expressed in format"@en ;
+      rdfs:range <http://iot.linkeddata.es/def/wot#DataSchema> .
+
+:deviceDescription
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Natural language description of a device."@en ;
+      rdfs:domain :Device ;
+      rdfs:label "device description"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :desctiption .
+
+:PeopleCounter
+      a       owl:Class ;
+      rdfs:comment "A people counter is a device that is used to measure the number of people traversing a certain passage or entrance. (Definition taken from https://en.wikipedia.org/wiki/People_counter)"@en ;
+      rdfs:label "People counter"@en ;
+      rdfs:subClassOf :Sensor ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :monitors ;
+                owl:someValuesFrom :Presence
+              ] .
+
+:ThingEcosystemDescription
+      a       owl:Class ;
+      rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
+      rdfs:label "Thing ecosystem description"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :describes ;
+                owl:someValuesFrom :Ecosystem
+              ] .
+
+:MaxHumidity
+      a       :HumidityAmbientProperty , owl:NamedIndividual ;
+      rdfs:label "MaxHumidity"@en .
+
+:RadiantIntensity
+      a       owl:Class ;
+      rdfs:label "Radiant intensity"@en ;
+      rdfs:subClassOf :LightProperty .
 
 ssn:Property
       a       owl:Class ;
@@ -763,11 +959,6 @@ The conditions specified here are those that affect the measurement properties, 
       rdfs:subClassOf ssn:Property ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:Property ;
-                owl:onProperty ssn:forProperty
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom ssn:Condition ;
                 owl:onProperty ssn:inCondition
               ] ;
@@ -775,6 +966,11 @@ The conditions specified here are those that affect the measurement properties, 
               [ a       owl:Restriction ;
                 owl:allValuesFrom ssn:MeasurementProperty ;
                 owl:onProperty ssn:hasMeasurementProperty
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom ssn:Property ;
+                owl:onProperty ssn:forProperty
               ] ;
       dc:source """Similar idea to MeasurementCapability in MMI Device Ontology
                                   http://marinemetadata.org/community/teams/ontdevices
@@ -789,15 +985,6 @@ http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
       rdfs:label "WaterEnergyMeter"@en ;
       rdfs:subClassOf :Sensor .
 
-:PowerMeter
-      a       owl:Class ;
-      rdfs:label "PowerMeter"@en ;
-      rdfs:subClassOf :Sensor .
-
-:Luminance
-      a       owl:NamedIndividual , :LuminusIntensity ;
-      rdfs:label "Luminance"@en .
-
 :Sensor
       a       owl:Class ;
       rdfs:comment "A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)"@en ;
@@ -809,6 +996,11 @@ http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
                 owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property> ;
                 owl:onProperty :monitors
               ] .
+
+:LightProperty
+      a       owl:Class ;
+      rdfs:label "LightProperty"@en ;
+      rdfs:subClassOf ssn:Property .
 
 ssn:SurvivalRange
       a       owl:Class ;
@@ -830,34 +1022,11 @@ ssn:SurvivalRange
       dc:source """skos:narrowerMatch 'limiting operating condition' [VIM 4.10]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
-:ValvePosition
-      a       :OperationalStatus , owl:NamedIndividual ;
-      rdfs:label "ValvePosition"@en .
-
-:LightProperty
-      a       owl:Class ;
-      rdfs:label "LightProperty"@en ;
-      rdfs:subClassOf ssn:Property .
-
-:involves
-      a       owl:ObjectProperty ;
-      rdfs:isDefinedBy "A link between a neighbourhood and all the agents involved in it."@en ;
-      rdfs:label "involves"@en ;
-      owl:inverseOf :isInvolvedIn .
-
 <https://w3id.org/def/saref4bldg#isContainedIn>
       a       owl:ObjectProperty ;
       rdfs:comment "A relation between an object and the physical space in which it is located."@en ;
       rdfs:isDefinedBy "https://w3id.org/def/saref4bldg#"@en ;
       rdfs:label "is contained in"@en .
-
-ssn:OperatingProperty
-      a       owl:Class ;
-      rdfs:comment "An identifiable characteristic of the environmental and other conditions in which the sensor is intended to operate.  May include power ranges, power sources, standard configurations, attachments and the like." ;
-      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
-      rdfs:label "Operating Property" ;
-      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
-      rdfs:subClassOf ssn:Property .
 
 ssn:MeasurementRange
       a       owl:Class ;
@@ -869,53 +1038,37 @@ ssn:MeasurementRange
       dc:source """skos:exactMatch 'measuring interval/measurement range' [VIM 4.7]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
-:actsOn
-      a       owl:ObjectProperty ;
-      rdfs:comment "A link between an actuator an the entities or properties upon which it can act." ;
-      rdfs:label "acts on"@en ;
-      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)" .
-
-:DoorSensor
+ssn:OperatingProperty
       a       owl:Class ;
-      rdfs:label "DoorSensor"@en ;
-      rdfs:subClassOf :Sensor ;
-      vs:term_status "unstable" .
+      rdfs:comment "An identifiable characteristic of the environmental and other conditions in which the sensor is intended to operate.  May include power ranges, power sources, standard configurations, attachments and the like." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "Operating Property" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
+      rdfs:subClassOf ssn:Property .
 
 :WaterFlowMeter
       a       owl:Class ;
       rdfs:label "WaterFlowMeter"@en ;
       rdfs:subClassOf :Sensor .
 
+:IndoorEnvironmentalQualityScore
+      a       owl:NamedIndividual , :AmbientProperty ;
+      rdfs:label "Indoor environmental quality score"@en , "IEQ score"@en .
+
 :CarbonDioxide
       a       owl:Class ;
       rdfs:label "CarbonDioxide"@en ;
       rdfs:subClassOf ssn:Property .
+
+:AverageSound
+      a       owl:NamedIndividual , :Sound ;
+      rdfs:label "AverageSound"@en .
 
 :desctiption
       a       owl:DatatypeProperty ;
       rdfs:comment "General attribute for descriptions assigned to any type of concept" ;
       rdfs:label "desctiption"@en ;
       rdfs:range xsd:string .
-
-:DimmingLevel
-      a       :OperationalStatus , owl:NamedIndividual ;
-      rdfs:label "DimmingLevel"@en .
-
-:Actuator
-      a       owl:Class ;
-      rdfs:comment "An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)"@en ;
-      rdfs:label "Actuator"@en ;
-      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
-      rdfs:subClassOf :Device ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property> ;
-                owl:onProperty :actsOn
-              ] .
-
-:ChargeStatus
-      a       :OperationalStatus , owl:NamedIndividual ;
-      rdfs:label "ChargeStatus"@en .
 
 :avatar
       a       owl:ObjectProperty ;
@@ -927,9 +1080,6 @@ ssn:MeasurementRange
       a       owl:ObjectProperty ;
       rdfs:comment "A link between a thing and the ecosystems it belongs to."@en ;
       rdfs:label "is component of"@en .
-
-ssn:hasOperatingProperty
-      a       owl:ObjectProperty .
 
 :MeanPowerConsumption
       a       :PowerConsumption , owl:NamedIndividual ;
@@ -949,21 +1099,10 @@ ssn:hasOperatingProperty
       owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
       owl:versionInfo "0.0.6" .
 
-:deviceName
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Name of a device" ;
-      rdfs:domain :Device ;
-      rdfs:label "device name"@en ;
-      rdfs:range xsd:string ;
-      rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> .
-
 :isRelativeTo
       a       owl:ObjectProperty ;
       rdfs:comment "Link from a relative endpoint to the (non relative) endpoint to which it is relative."@en ;
       rdfs:label "is relative to"@en .
-
-dcterms:contributor
-      a       owl:AnnotationProperty .
 
 :Application
       a       owl:Class ;
@@ -971,32 +1110,6 @@ dcterms:contributor
       rdfs:label "Application"@en ;
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
       rdfs:subClassOf :Service .
-
-ssn:Condition
-      a       owl:Class ;
-      rdfs:comment "Used to specify ranges for qualities that act as conditions on a system/sensor's operation.  For example, wind speed of 10-60m/s is expressed as a condition linking a quality, wind speed, a unit of measurement, metres per second, and a set of values, 10-60, and may be used as the condition on a MeasurementProperty, for example, to state that a sensor has a particular accuracy in that condition." ;
-      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
-      rdfs:label "Condition" ;
-      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#ConstraintBlock" ;
-      rdfs:subClassOf ssn:Property .
-
-ssn:isPropertyOf
-      a       owl:ObjectProperty .
-
-:VirtualThing
-      a       owl:Class ;
-      rdfs:comment """A virtual entity is a digital representation of a physical entity, contained within a service. A virtual entity interacts through an endpoint. A virtual entity represents a physical entity.
-
-(Definition taken from 
-ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
-      rdfs:label "Virtual thing"@en ;
-      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
-      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :VirtualThing ;
-                owl:onProperty :contains
-              ] .
 
 ssn:Drift
       a       owl:Class ;
@@ -1011,10 +1124,9 @@ ssn:Drift
 geo:SpatialThing
       a       owl:Class .
 
-:owns
-      a       owl:ObjectProperty ;
-      rdfs:isDefinedBy "A linkd between an agent and the entities, like devices or services, it provides or owns."@en ;
-      rdfs:label "provides"@en , "owns"@en .
+:MaxTemperature
+      a       owl:NamedIndividual , :TemperatureAmbientProperty ;
+      rdfs:label "MaxTemperature"@en .
 
 :LuminusFlux
       a       owl:Class ;
@@ -1037,11 +1149,3 @@ geo:SpatialThing
       a       owl:Class ;
       rdfs:label "Electric vehicle charging point"@en , "Electric vehicle chargeren" ;
       rdfs:subClassOf :Charger .
-
-:OccupancySensor
-      a       owl:Class ;
-      rdfs:label "Occupancy sensor"@en ;
-      rdfs:subClassOf :Sensor .
-
-foaf:depiction
-      a       owl:ObjectProperty .
