@@ -54,13 +54,13 @@ ssn:OperatingRange
       rdfs:subClassOf ssn:Property ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:OperatingProperty ;
-                owl:onProperty ssn:hasOperatingProperty
+                owl:allValuesFrom ssn:Condition ;
+                owl:onProperty ssn:inCondition
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:Condition ;
-                owl:onProperty ssn:inCondition
+                owl:allValuesFrom ssn:OperatingProperty ;
+                owl:onProperty ssn:hasOperatingProperty
               ] ;
       dc:source """skos:broaderMatch 'reference operating condition' [VIM 4.11]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf
@@ -106,6 +106,13 @@ ssn:Resolution
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
       rdfs:subClassOf :PhysicalThing .
 
+<http://iot.linkeddata.es/def/wot#Event>
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :monitors ;
+                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+              ] .
+
 ssn:forProperty
       a       owl:ObjectProperty .
 
@@ -130,8 +137,6 @@ ssn:Frequency
       rdfs:label "Frequency" ;
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
       rdfs:subClassOf ssn:MeasurementProperty .
-
-[]    owl:cardinality "1"^^xsd:nonNegativeInteger .
 
 :AverageSoundDeviation
       a       owl:NamedIndividual , :Sound ;
@@ -182,13 +187,13 @@ ssn:inCondition
       rdfs:label "Thing description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :describes ;
-                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
+                owl:onProperty :describes
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
-                owl:onProperty :describes
+                owl:onProperty :describes ;
+                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
               ] .
 
 :AverageMovemenetShare
@@ -301,13 +306,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , geo:SpatialThing ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :PhysicalThing ;
-                owl:onProperty :contains
+                owl:allValuesFrom geo:SpatialThing ;
+                owl:onProperty geo:location
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom geo:SpatialThing ;
-                owl:onProperty geo:location
+                owl:allValuesFrom :PhysicalThing ;
+                owl:onProperty :contains
               ] .
 
 :Presence
@@ -494,15 +499,15 @@ ssn:SystemLifetime
       rdfs:label "Value"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> ;
+                owl:onProperty :expressedInFormat
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onDataRange xsd:dateTime ;
                 owl:onProperty :timeStamp
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> ;
-                owl:onProperty :expressedInFormat
               ] .
 
 :Motion
@@ -610,6 +615,8 @@ ssn:hasOperatingProperty
 :AverageHumidityDeviation
       a       :HumidityAmbientProperty , owl:NamedIndividual ;
       rdfs:label "Average humidity deviation"@en .
+
+[]    owl:cardinality "1"^^xsd:nonNegativeInteger .
 
 dcterms:contributor
       a       owl:AnnotationProperty .
@@ -959,13 +966,13 @@ The conditions specified here are those that affect the measurement properties, 
       rdfs:subClassOf ssn:Property ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:Condition ;
-                owl:onProperty ssn:inCondition
+                owl:allValuesFrom ssn:MeasurementProperty ;
+                owl:onProperty ssn:hasMeasurementProperty
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:MeasurementProperty ;
-                owl:onProperty ssn:hasMeasurementProperty
+                owl:allValuesFrom ssn:Condition ;
+                owl:onProperty ssn:inCondition
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1011,13 +1018,13 @@ ssn:SurvivalRange
       rdfs:subClassOf ssn:Property ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:SurvivalProperty ;
-                owl:onProperty ssn:hasSurvivalProperty
+                owl:allValuesFrom ssn:Condition ;
+                owl:onProperty ssn:inCondition
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:Condition ;
-                owl:onProperty ssn:inCondition
+                owl:allValuesFrom ssn:SurvivalProperty ;
+                owl:onProperty ssn:hasSurvivalProperty
               ] ;
       dc:source """skos:narrowerMatch 'limiting operating condition' [VIM 4.10]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
