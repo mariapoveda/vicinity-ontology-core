@@ -779,6 +779,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                           ] .
 
 
+###  http://iot.linkeddata.es/def/wot#Event
+<http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :monitors ;
+                                                           owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                         ] .
+
+
 ###  http://iot.linkeddata.es/def/wot#PhysicalThing
 <http://iot.linkeddata.es/def/wot#PhysicalThing> rdf:type owl:Class .
 
