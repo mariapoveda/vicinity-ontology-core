@@ -232,16 +232,74 @@ vs:term_status rdf:type owl:AnnotationProperty .
 ssn:forProperty rdf:type owl:ObjectProperty .
 
 
+###  http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability
+ssn:hasMeasurementCapability rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf ssn:hasProperty ;
+                             rdfs:comment "Relation from a Sensor to a MeasurementCapability describing the measurement properties of the sensor." ;
+                             rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+                             rdfs:label "has measurement  capability" ;
+                             rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+
+
 ###  http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty
-ssn:hasMeasurementProperty rdf:type owl:ObjectProperty .
+ssn:hasMeasurementProperty rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf ssn:hasProperty ;
+                           rdfs:comment "Relation from a MeasurementCapability to a MeasurementProperty.  For example, to an accuracy (see notes at MeasurementCapability)." ;
+                           rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+                           rdfs:label "has measurement property" ;
+                           rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty
-ssn:hasOperatingProperty rdf:type owl:ObjectProperty .
+ssn:hasOperatingProperty rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf ssn:hasProperty ;
+                         rdfs:comment "Relation from an OperatingRange to a Property.  For example, to a battery lifetime." ;
+                         rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+                         rdfs:label "has operating property" ;
+                         rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange
+ssn:hasOperatingRange rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf ssn:hasProperty ;
+                      rdfs:comment "Relation from a System to an OperatingRange describing the normal operating environment of the System." ;
+                      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+                      rdfs:label "has operating range" ;
+                      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#hasProperty
+ssn:hasProperty rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> ;
+                owl:inverseOf ssn:isPropertyOf ;
+                rdfs:comment "A relation between a FeatureOfInterest and a Property of that feature." ;
+                rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+                rdfs:label "has property" ;
+                rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty
-ssn:hasSurvivalProperty rdf:type owl:ObjectProperty .
+ssn:hasSurvivalProperty rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf ssn:hasProperty ;
+                        rdfs:comment "Relation from a SurvivalRange to a Property describing the survial range of a system.  For example, to the temperature extreme that a system can withstand before being considered damaged." ;
+                        rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+                        rdfs:label "has survival property" ;
+                        rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange
+ssn:hasSurvivalRange rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf ssn:hasProperty ;
+                     rdfs:comment "A Relation from a System to a SurvivalRange." ;
+                     rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+                     rdfs:label "has survival range" ;
+                     rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#hasValue
+ssn:hasValue rdf:type owl:ObjectProperty ;
+             rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn"@en ;
+             rdfs:label "has value"@en .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#inCondition
@@ -250,6 +308,21 @@ ssn:inCondition rdf:type owl:ObjectProperty .
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf
 ssn:isPropertyOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation
+ssn:qualityOfObservation rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf ssn:hasProperty ;
+                         dc:source """skos:exactMatch 'resultQuality' [O&M - ISO/DIS 19156] 
+		                    http://portal.opengeospatial.org/files/?artifact_id=41579""" ;
+                         rdfs:comment "Relation linking an Observation to the adjudged quality of the result.  This is of course complimentary to the MeasurementCapability information recorded for the Sensor that made the Observation." ;
+                         rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+                         rdfs:label "quality of observation" ;
+                         rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Observation#Observation" .
+
+
+###  http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality
+<http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
@@ -486,6 +559,12 @@ foaf:depiction rdf:type owl:ObjectProperty .
                                   owl:someValuesFrom :HumidityAmbientProperty
                                 ] ;
                 rdfs:label "Humidity sensor"@en .
+
+
+###  http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor
+:IndoorClimateQualitySensor rdf:type owl:Class ;
+                            rdfs:subClassOf :Sensor ;
+                            rdfs:label "IndoorClimateQualitySensor"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Irradiance
@@ -734,7 +813,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onDataRange xsd:dateTime
                        ] ;
-       rdfs:comment "Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed."@en ;
+       rdfs:comment "Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed. It can be also be used to express operating property or measurement capability values for a given device."@en ;
        rdfs:label "Value"@en .
 
 
@@ -849,7 +928,8 @@ ssn:Drift rdf:type owl:Class ;
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest
-ssn:FeatureOfInterest rdf:type owl:Class .
+ssn:FeatureOfInterest rdf:type owl:Class ;
+                      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#Frequency
