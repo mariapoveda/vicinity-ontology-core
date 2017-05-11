@@ -24,7 +24,7 @@
                                       rdfs:comment "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
                                       dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                       dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
-                                      owl:versionInfo "0.0.6" ;
+                                      owl:versionInfo "0.1.0" ;
                                       dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                       vann:preferredNamespacePrefix "vcnt-core" ;
                                       dc:publisher <http://www.oeg-upm.net/> ;
