@@ -45,6 +45,16 @@ ssn:Selectivity
       rdfs:label "Thermostat"@en ;
       rdfs:subClassOf :Actuator , :Sensor .
 
+ssn:Precision
+      a       owl:Class ;
+      rdfs:comment "The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "Precision" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
+      rdfs:subClassOf ssn:MeasurementProperty ;
+      dc:source """skos:exactMatch 'measurement precision/precision' [VIM 2.15]
+                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
+
 ssn:OperatingRange
       a       owl:Class ;
       rdfs:comment "The environmental conditions and characteristics of a system/sensor's normal operating environment.  Can be used to specify for example the standard environmental conditions in which the sensor is expected to operate (a Condition with no OperatingProperty), or how the environmental and other operating properties relate: i.e., that the maintenance schedule or power requirements differ according to the conditions." ;
@@ -67,6 +77,11 @@ ssn:OperatingRange
 
 The difference is that here we also allow for qualities that aren't VIM influence quantities [VIM 2.52] - for example, a quantity that alters the power requirements, but doesn't affect the measurement properties - conditions specified in MeasurementCapability should be influence quantities.""" .
 
+ssn:hasValue
+      a       owl:ObjectProperty ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn"@en ;
+      rdfs:label "has value"@en .
+
 ssn:MeasurementProperty
       a       owl:Class ;
       rdfs:comment "An identifiable and observable characteristic of a sensor's observations or ability to make observations." ;
@@ -75,15 +90,9 @@ ssn:MeasurementProperty
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
       rdfs:subClassOf ssn:Property .
 
-ssn:Precision
-      a       owl:Class ;
-      rdfs:comment "The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation." ;
-      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
-      rdfs:label "Precision" ;
-      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
-      rdfs:subClassOf ssn:MeasurementProperty ;
-      dc:source """skos:exactMatch 'measurement precision/precision' [VIM 2.15]
-                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
+:AverageMovementTime
+      a       owl:NamedIndividual , :MotionProperty ;
+      rdfs:label "AverageMovementTime"@en .
 
 ssn:Resolution
       a       owl:Class ;
@@ -95,10 +104,6 @@ ssn:Resolution
       dc:source """skos:exactMatch 'resolution' [VIM 4.14]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
 
-:AverageMovementTime
-      a       owl:NamedIndividual , :MotionProperty ;
-      rdfs:label "AverageMovementTime"@en .
-
 :Device
       a       owl:Class ;
       rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
@@ -106,15 +111,15 @@ ssn:Resolution
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
       rdfs:subClassOf :PhysicalThing .
 
+ssn:forProperty
+      a       owl:ObjectProperty .
+
 <http://iot.linkeddata.es/def/wot#Event>
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onProperty :monitors ;
                 owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property>
               ] .
-
-ssn:forProperty
-      a       owl:ObjectProperty .
 
 :HighestHumidityDeviation
       a       :HumidityAmbientProperty , owl:NamedIndividual ;
@@ -175,6 +180,11 @@ ssn:inCondition
                 owl:onProperty :monitors ;
                 owl:someValuesFrom :MotionProperty
               ] .
+
+:IndoorClimateQualitySensor
+      a       owl:Class ;
+      rdfs:label "IndoorClimateQualitySensor"@en ;
+      rdfs:subClassOf :Sensor .
 
 :Sound
       a       owl:Class ;
@@ -237,8 +247,16 @@ ssn:inCondition
                 owl:someValuesFrom :HumidityAmbientProperty
               ] .
 
-ssn:hasMeasurementProperty
+<http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality>
       a       owl:ObjectProperty .
+
+ssn:hasMeasurementProperty
+      a       owl:ObjectProperty ;
+      rdfs:comment "Relation from a MeasurementCapability to a MeasurementProperty.  For example, to an accuracy (see notes at MeasurementCapability)." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "has measurement property" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
+      rdfs:subPropertyOf ssn:hasProperty .
 
 :HumanUser
       a       owl:Class ;
@@ -259,6 +277,12 @@ ssn:SurvivalProperty
       rdfs:label "Survival Property" ;
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
       rdfs:subClassOf ssn:Property .
+
+:hasMinValue
+      a       owl:ObjectProperty ;
+      rdfs:domain rdfs:Resource ;
+      rdfs:label "hasMinValue"@en ;
+      rdfs:subPropertyOf rdf:value .
 
 geo:location
       a       owl:ObjectProperty .
@@ -306,13 +330,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , geo:SpatialThing ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom geo:SpatialThing ;
-                owl:onProperty geo:location
+                owl:allValuesFrom :PhysicalThing ;
+                owl:onProperty :contains
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :PhysicalThing ;
-                owl:onProperty :contains
+                owl:allValuesFrom geo:SpatialThing ;
+                owl:onProperty geo:location
               ] .
 
 :Presence
@@ -473,6 +497,14 @@ ssn:SystemLifetime
       rdfs:label "Radiance"@en ;
       rdfs:subClassOf :LightProperty .
 
+rdf:value
+      a       owl:ObjectProperty ;
+      rdfs:comment "Idiomatic property used for structured values." ;
+      rdfs:domain rdfs:Resource ;
+      rdfs:isDefinedBy rdf: ;
+      rdfs:label "value" ;
+      rdfs:range rdfs:Resource .
+
 :OnOff
       a       :OperationalStatus , owl:NamedIndividual ;
       rdfs:label "OnOff"@en .
@@ -493,9 +525,15 @@ ssn:SystemLifetime
       a       owl:NamedIndividual , :LuminusIntensity ;
       rdfs:label "AverageLightIntensity"@en .
 
+:hasMaxValue
+      a       owl:ObjectProperty ;
+      rdfs:label "hasMaxValue"@en ;
+      rdfs:range rdfs:Resource ;
+      rdfs:subPropertyOf rdf:value .
+
 :Value
       a       owl:Class ;
-      rdfs:comment "Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed."@en ;
+      rdfs:comment "Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed. It can be also be used to express operating property or measurement capability values for a given device."@en ;
       rdfs:label "Value"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -508,6 +546,11 @@ ssn:SystemLifetime
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onDataRange xsd:dateTime ;
                 owl:onProperty :timeStamp
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty rdf:value ;
+                owl:someValuesFrom rdfs:Resource
               ] .
 
 :Motion
@@ -593,12 +636,25 @@ ssn:OperatingPowerRange
                 owl:onProperty :actsOn
               ] .
 
+ssn:hasOperatingRange
+      a       owl:ObjectProperty ;
+      rdfs:comment "Relation from a System to an OperatingRange describing the normal operating environment of the System." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "has operating range" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
+      rdfs:subPropertyOf ssn:hasProperty .
+
 :ChargeStatus
       a       :OperationalStatus , owl:NamedIndividual ;
       rdfs:label "ChargeStatus"@en .
 
 ssn:hasOperatingProperty
-      a       owl:ObjectProperty .
+      a       owl:ObjectProperty ;
+      rdfs:comment "Relation from an OperatingRange to a Property.  For example, to a battery lifetime." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "has operating property" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
+      rdfs:subPropertyOf ssn:hasProperty .
 
 :HighestSoundDeviation
       a       owl:NamedIndividual , :Sound ;
@@ -612,11 +668,18 @@ ssn:hasOperatingProperty
       rdfs:range xsd:string ;
       rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> .
 
+ssn:hasProperty
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation between a FeatureOfInterest and a Property of that feature." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "has property" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" ;
+      rdfs:subPropertyOf <http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> ;
+      owl:inverseOf ssn:isPropertyOf .
+
 :AverageHumidityDeviation
       a       :HumidityAmbientProperty , owl:NamedIndividual ;
       rdfs:label "Average humidity deviation"@en .
-
-[]    owl:cardinality "1"^^xsd:nonNegativeInteger .
 
 dcterms:contributor
       a       owl:AnnotationProperty .
@@ -675,6 +738,14 @@ foaf:depiction
       a       owl:NamedIndividual , :TemperatureAmbientProperty ;
       rdfs:label "Highst temperature deviation"@en .
 
+ssn:hasMeasurementCapability
+      a       owl:ObjectProperty ;
+      rdfs:comment "Relation from a Sensor to a MeasurementCapability describing the measurement properties of the sensor." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "has measurement  capability" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
+      rdfs:subPropertyOf ssn:hasProperty .
+
 :hasOwner
       a       owl:ObjectProperty ;
       rdfs:isDefinedBy "Link between an entity like a service or a device and its owners or providers."@en ;
@@ -713,7 +784,8 @@ foaf:depiction
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
 
 ssn:FeatureOfInterest
-      a       owl:Class .
+      a       owl:Class ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" .
 
 :Irradiance
       a       owl:Class ;
@@ -839,14 +911,14 @@ ssn:Latency
       a       owl:NamedIndividual , :CarbonDioxide ;
       rdfs:label "AverageCO2"@en .
 
+:HighestCO2ConcentrationDeviation
+      a       owl:NamedIndividual , :CarbonDioxide ;
+      rdfs:label "HighestCO2Deviation"@en .
+
 :TemperatureAmbientProperty
       a       owl:Class ;
       rdfs:label "TemperatureAmbientProperty"@en ;
       rdfs:subClassOf :AmbientProperty .
-
-:HighestCO2ConcentrationDeviation
-      a       owl:NamedIndividual , :CarbonDioxide ;
-      rdfs:label "HighestCO2Deviation"@en .
 
 :DigitalUser
       a       owl:Class ;
@@ -874,8 +946,15 @@ ssn:ResponseTime
       a       :HumidityAmbientProperty , owl:NamedIndividual ;
       rdfs:label "RelativeHumidity"@en .
 
+[]    owl:cardinality "1"^^xsd:nonNegativeInteger .
+
 ssn:hasSurvivalProperty
-      a       owl:ObjectProperty .
+      a       owl:ObjectProperty ;
+      rdfs:comment "Relation from a SurvivalRange to a Property describing the survial range of a system.  For example, to the temperature extreme that a system can withstand before being considered damaged." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "has survival property" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
+      rdfs:subPropertyOf ssn:hasProperty .
 
 :OpenClosed
       a       :OperationalStatus , owl:NamedIndividual ;
@@ -1071,6 +1150,14 @@ ssn:OperatingProperty
       a       owl:NamedIndividual , :Sound ;
       rdfs:label "AverageSound"@en .
 
+ssn:hasSurvivalRange
+      a       owl:ObjectProperty ;
+      rdfs:comment "A Relation from a System to a SurvivalRange." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "has survival range" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" ;
+      rdfs:subPropertyOf ssn:hasProperty .
+
 :desctiption
       a       owl:DatatypeProperty ;
       rdfs:comment "General attribute for descriptions assigned to any type of concept" ;
@@ -1082,6 +1169,16 @@ ssn:OperatingProperty
       rdfs:comment "A link from an entity to the image identifying it in a social network or system."@en ;
       rdfs:label "avatar"@en ;
       rdfs:subPropertyOf foaf:depiction .
+
+ssn:qualityOfObservation
+      a       owl:ObjectProperty ;
+      rdfs:comment "Relation linking an Observation to the adjudged quality of the result.  This is of course complimentary to the MeasurementCapability information recorded for the Sensor that made the Observation." ;
+      rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
+      rdfs:label "quality of observation" ;
+      rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Observation#Observation" ;
+      rdfs:subPropertyOf ssn:hasProperty ;
+      dc:source """skos:exactMatch 'resultQuality' [O&M - ISO/DIS 19156] 
+		                    http://portal.opengeospatial.org/files/?artifact_id=41579""" .
 
 :isComponentOf
       a       owl:ObjectProperty ;
