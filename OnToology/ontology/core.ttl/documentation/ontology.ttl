@@ -197,13 +197,13 @@ ssn:inCondition
       rdfs:label "Thing description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
-                owl:onProperty :describes
+                owl:onProperty :describes ;
+                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :describes ;
-                owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> ;
+                owl:onProperty :describes
               ] .
 
 :AverageMovemenetShare
@@ -542,15 +542,15 @@ rdf:value
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:onProperty rdf:value ;
+                owl:someValuesFrom rdfs:Resource
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onDataRange xsd:dateTime ;
                 owl:onProperty :timeStamp
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty rdf:value ;
-                owl:someValuesFrom rdfs:Resource
               ] .
 
 :Motion
@@ -745,6 +745,8 @@ ssn:hasMeasurementCapability
       rdfs:label "has measurement  capability" ;
       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" ;
       rdfs:subPropertyOf ssn:hasProperty .
+
+[]    owl:cardinality "1"^^xsd:nonNegativeInteger .
 
 :hasOwner
       a       owl:ObjectProperty ;
@@ -946,8 +948,6 @@ ssn:ResponseTime
       a       :HumidityAmbientProperty , owl:NamedIndividual ;
       rdfs:label "RelativeHumidity"@en .
 
-[]    owl:cardinality "1"^^xsd:nonNegativeInteger .
-
 ssn:hasSurvivalProperty
       a       owl:ObjectProperty ;
       rdfs:comment "Relation from a SurvivalRange to a Property describing the survial range of a system.  For example, to the temperature extreme that a system can withstand before being considered damaged." ;
@@ -1045,8 +1045,8 @@ The conditions specified here are those that affect the measurement properties, 
       rdfs:subClassOf ssn:Property ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:MeasurementProperty ;
-                owl:onProperty ssn:hasMeasurementProperty
+                owl:allValuesFrom ssn:Property ;
+                owl:onProperty ssn:forProperty
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1055,8 +1055,8 @@ The conditions specified here are those that affect the measurement properties, 
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:Property ;
-                owl:onProperty ssn:forProperty
+                owl:allValuesFrom ssn:MeasurementProperty ;
+                owl:onProperty ssn:hasMeasurementProperty
               ] ;
       dc:source """Similar idea to MeasurementCapability in MMI Device Ontology
                                   http://marinemetadata.org/community/teams/ontdevices
@@ -1097,13 +1097,13 @@ ssn:SurvivalRange
       rdfs:subClassOf ssn:Property ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:Condition ;
-                owl:onProperty ssn:inCondition
+                owl:allValuesFrom ssn:SurvivalProperty ;
+                owl:onProperty ssn:hasSurvivalProperty
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ssn:SurvivalProperty ;
-                owl:onProperty ssn:hasSurvivalProperty
+                owl:allValuesFrom ssn:Condition ;
+                owl:onProperty ssn:inCondition
               ] ;
       dc:source """skos:narrowerMatch 'limiting operating condition' [VIM 4.10]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" .
@@ -1201,7 +1201,7 @@ ssn:qualityOfObservation
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/core" ;
       owl:imports <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
-      owl:versionInfo "0.0.6" .
+      owl:versionInfo "0.1.0" .
 
 :isRelativeTo
       a       owl:ObjectProperty ;
