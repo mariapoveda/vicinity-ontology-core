@@ -67,13 +67,20 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#EVCharger" title="http://iot.linkeddata.es/def/core#EVCharger">Electric vehicle charging point</a>
       </li>
       <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"
+            title="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">
+            <span>feature of interest</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://purl.oclc.org/NET/ssnx/ssn#Frequency" title="http://purl.oclc.org/NET/ssnx/ssn#Frequency">Frequency</a>
       </li>
       <li>
          <a href="#HumanUser" title="http://iot.linkeddata.es/def/core#HumanUser">Human user</a>
       </li>
       <li>
-         <a href="#HumiditySensor" title="http://iot.linkeddata.es/def/core#HumiditySensor">Humidity sensor</a>
+         <a href="#HumiditySensor"
+            title="http://iot.linkeddata.es/def/core#HumiditySensor">Humidity sensor</a>
       </li>
       <li>
          <a href="#HumidityAmbientProperty"
@@ -81,6 +88,10 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#HVACSensor" title="http://iot.linkeddata.es/def/core#HVACSensor">HVAC Sensor</a>
+      </li>
+      <li>
+         <a href="#IndoorClimateQualitySensor"
+            title="http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor">IndoorClimateQualitySensor</a>
       </li>
       <li>
          <a href="#Irradiance" title="http://iot.linkeddata.es/def/core#Irradiance">Irradiance</a>
@@ -98,7 +109,8 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#LightProperty" title="http://iot.linkeddata.es/def/core#LightProperty">LightProperty</a>
       </li>
       <li>
-         <a href="#LuminanceMeter" title="http://iot.linkeddata.es/def/core#LuminanceMeter">Luminance meter</a>
+         <a href="#LuminanceMeter"
+            title="http://iot.linkeddata.es/def/core#LuminanceMeter">Luminance meter</a>
       </li>
       <li>
          <a href="#LuminusFlux" title="http://iot.linkeddata.es/def/core#LuminusFlux">Luminus flux</a>
@@ -124,7 +136,8 @@ This section provides details for each class and property defined by Vicinity co
             title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability">Measurement Capability</a>
       </li>
       <li>
-         <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+         <a href="#MotionProperty"
+            title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
       </li>
       <li>
          <a href="#MotionSensor" title="http://iot.linkeddata.es/def/core#MotionSensor">Motion sensor</a>
@@ -711,6 +724,18 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">
+      <h3>feature of interest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+   </div>
    <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#Frequency">
       <h3>Frequency<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -824,6 +849,21 @@ This section provides details for each class and property defined by Vicinity co
             <a href="#Actuator" title="http://iot.linkeddata.es/def/core#Actuator">Actuator</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IndoorClimateQualitySensor">
+      <h3>IndoorClimateQualitySensor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
          <dd>
             <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
             <sup class="type-c" title="class">c</sup>
@@ -1093,12 +1133,10 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted"
-                  title="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">has measurement property</span>
+            <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#forProperty">for property</span>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"
-               title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty">Measurement  Property</a>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -1109,10 +1147,12 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#forProperty">for property</span>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"
+               title="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">has measurement property</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Property" title="http://purl.oclc.org/NET/ssnx/ssn#Property">Property</a>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"
+               title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty">Measurement  Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1158,7 +1198,8 @@ The conditions specified here are those that affect the measurement properties, 
             <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
-            <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+            <a href="#MotionProperty"
+               title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1294,19 +1335,19 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted"
-                  title="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty">has operating property</span>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"
-               title="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty">Operating Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#inCondition">in condition</span>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://purl.oclc.org/NET/ssnx/ssn#Condition" title="http://purl.oclc.org/NET/ssnx/ssn#Condition">Condition</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty"
+               title="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty">has operating property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"
+               title="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty">Operating Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1386,18 +1427,18 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#contains" title="http://iot.linkeddata.es/def/core#contains">contains</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#PhysicalThing" title="http://iot.linkeddata.es/def/core#PhysicalThing">Physical thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</span>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <span class="dotted"
                   title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">spatial thing</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#contains" title="http://iot.linkeddata.es/def/core#contains">contains</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#PhysicalThing" title="http://iot.linkeddata.es/def/core#PhysicalThing">Physical thing</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1516,8 +1557,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf">is property of</span>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
-            <span class="dotted"
-                  title="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">feature of interest</span>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"
+               title="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">feature of interest</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1532,7 +1573,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty">Measurement  Property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"
                title="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability">Measurement Capability</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MotionProperty"
+               title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"
                title="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty">Operating Property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingRange"
@@ -1723,8 +1765,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <a href="#CO2Sensor" title="http://iot.linkeddata.es/def/core#CO2Sensor">CO2 Sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#DoorSensor" title="http://iot.linkeddata.es/def/core#DoorSensor">DoorSensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HVACSensor" title="http://iot.linkeddata.es/def/core#HVACSensor">HVAC Sensor</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HumiditySensor" title="http://iot.linkeddata.es/def/core#HumiditySensor">Humidity sensor</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#LuminanceMeter" title="http://iot.linkeddata.es/def/core#LuminanceMeter">Luminance meter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HumiditySensor"
+               title="http://iot.linkeddata.es/def/core#HumiditySensor">Humidity sensor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IndoorClimateQualitySensor"
+               title="http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor">IndoorClimateQualitySensor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LuminanceMeter"
+               title="http://iot.linkeddata.es/def/core#LuminanceMeter">Luminance meter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#MotionSensor" title="http://iot.linkeddata.es/def/core#MotionSensor">Motion sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#NoiseSensor" title="http://iot.linkeddata.es/def/core#NoiseSensor">Noise sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#OccupancySensor"
@@ -1867,19 +1913,19 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#inCondition">in condition</span>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Condition" title="http://purl.oclc.org/NET/ssnx/ssn#Condition">Condition</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <span class="dotted"
-                  title="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty">has survival property</span>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty"
+               title="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty">has survival property</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"
                title="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty">Survival Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#inCondition">in condition</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#Condition" title="http://purl.oclc.org/NET/ssnx/ssn#Condition">Condition</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1996,13 +2042,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dd>
             <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describes thing</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
+            <span class="logic">only</span> 
             <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
          </dd>
          <dd>
             <a href="#describes" title="http://iot.linkeddata.es/def/core#describes">describes thing</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
+            <span class="logic">some</span> 
             <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
          </dd>
       </dl>
@@ -2036,7 +2082,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Value</p>
       <div class="comment">
-         <span class="markdown">Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed.</span>
+         <span class="markdown">Class representing values provided by an interaction pattern in a given time stamp. It might also indicated the data format in which the value is expressed. It can be also be used to express operating property or measurement capability values for a given device.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -2169,8 +2215,24 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">has component</a>
       </li>
       <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"
+            title="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability">has measurement  capability</a>
+      </li>
+      <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"
+            title="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">has measurement property</a>
+      </li>
+      <li>
          <a href="#hasNeighbourhood"
             title="http://iot.linkeddata.es/def/core#hasNeighbourhood">has neighbourhood</a>
+      </li>
+      <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty"
+            title="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty">has operating property</a>
+      </li>
+      <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange"
+            title="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange">has operating range</a>
       </li>
       <li>
          <a href="#hasOwner" title="http://iot.linkeddata.es/def/core#hasOwner">has owner</a>
@@ -2179,7 +2241,21 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#hasVendor" title="http://iot.linkeddata.es/def/core#hasVendor">has producer</a>
       </li>
       <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasProperty" title="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">has property</a>
+      </li>
+      <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty"
+            title="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty">has survival property</a>
+      </li>
+      <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange"
+            title="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange">has survival range</a>
+      </li>
+      <li>
          <a href="#hasValue" title="http://iot.linkeddata.es/def/core#hasValue">has value</a>
+      </li>
+      <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasValue" title="http://purl.oclc.org/NET/ssnx/ssn#hasValue">has value</a>
       </li>
       <li>
          <a href="#hasPartnershipWith"
@@ -2222,6 +2298,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </li>
       <li>
          <a href="#owns" title="http://iot.linkeddata.es/def/core#owns">owns</a>
+      </li>
+      <li>
+         <a href="#http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation"
+            title="http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation">quality of observation</a>
       </li>
    </ul>
    <div class="entity" id="actsOn">
@@ -2353,6 +2433,54 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability">
+      <h3>has measurement  capability<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability</p>
+      <div class="comment">
+         <span class="markdown">Relation from a Sensor to a MeasurementCapability describing the measurement properties of the sensor.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasProperty" title="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">
+      <h3>has measurement property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty</p>
+      <div class="comment">
+         <span class="markdown">Relation from a MeasurementCapability to a MeasurementProperty.  For example, to an accuracy (see notes at MeasurementCapability).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasProperty" title="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasNeighbourhood">
       <h3>has neighbourhood<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2392,6 +2520,54 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty">
+      <h3>has operating property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty</p>
+      <div class="comment">
+         <span class="markdown">Relation from an OperatingRange to a Property.  For example, to a battery lifetime.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasProperty" title="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange">
+      <h3>has operating range<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange</p>
+      <div class="comment">
+         <span class="markdown">Relation from a System to an OperatingRange describing the normal operating environment of the System.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasProperty" title="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasOwner">
       <h3>has owner<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2425,6 +2601,102 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dd>http://iot.linkeddata.es/def/core</dd>
       </dl>
    </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">
+      <h3>has property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#hasProperty</p>
+      <div class="comment">
+         <span class="markdown">A relation between a FeatureOfInterest and a Property of that feature.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality">has quality</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"
+                  title="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability">has measurement  capability</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"
+                  title="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty">has measurement property</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty"
+                  title="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty">has operating property</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange"
+                  title="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange">has operating range</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty"
+                  title="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty">has survival property</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange"
+                  title="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange">has survival range</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation"
+                  title="http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation">quality of observation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf">is property of</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty">
+      <h3>has survival property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty</p>
+      <div class="comment">
+         <span class="markdown">Relation from a SurvivalRange to a Property describing the survial range of a system.  For example, to the temperature extreme that a system can withstand before being considered damaged.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasProperty" title="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange">
+      <h3>has survival range<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange</p>
+      <div class="comment">
+         <span class="markdown">A Relation from a System to a SurvivalRange.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasProperty" title="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasValue">
       <h3>has value<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2449,6 +2721,18 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             </dd>
          </dl>
       </div>
+   </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#hasValue">
+      <h3>has value<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#hasValue</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
    </div>
    <div class="entity" id="hasPartnershipWith">
       <h3>hasPartnershipWith<sup class="type-op" title="object property">op</sup>
@@ -2723,6 +3007,30 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasOwner" title="http://iot.linkeddata.es/def/core#hasOwner">has owner</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation">
+      <h3>quality of observation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation</p>
+      <div class="comment">
+         <span class="markdown">Relation linking an Observation to the adjudged quality of the result.  This is of course complimentary to the MeasurementCapability information recorded for the Sensor that made the Observation.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://iot.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.oclc.org/NET/ssnx/ssn#hasProperty" title="http://purl.oclc.org/NET/ssnx/ssn#hasProperty">has property</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -3252,7 +3560,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+            <a href="#MotionProperty"
+               title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3267,7 +3576,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+            <a href="#MotionProperty"
+               title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3736,7 +4046,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#MotionProperty" title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+            <a href="#MotionProperty"
+               title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
