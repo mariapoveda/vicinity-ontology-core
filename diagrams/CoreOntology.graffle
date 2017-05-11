@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-05-11 08:38:32 +0000</string>
+	<string>2017-05-11 08:42:10 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -98692,7 +98692,7 @@ wot:thingName}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{604.55349195825954, 219.75798218191946}, {116.87933356481085, 19.933495020671103}}</string>
+					<string>{{563.67665001007822, 219.75798218191946}, {116.87933356481085, 19.933495020671103}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -98720,7 +98720,7 @@ wot:thingName}</string>
 						<key>ID</key>
 						<integer>35275</integer>
 						<key>Position</key>
-						<real>0.82679462432861328</real>
+						<real>0.64791085851075747</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -99401,7 +99401,7 @@ wot:providesInteractionPattern}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{619.92701745095383, 179.13887326538057}, {86.838729138066128, 16.854378350365323}}</string>
+					<string>{{598.27863260394031, 179.13887326538057}, {86.838729138066128, 16.854378350365323}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -99429,7 +99429,7 @@ wot:providesInteractionPattern}</string>
 						<key>ID</key>
 						<integer>34831</integer>
 						<key>Position</key>
-						<real>0.69896924495697021</real>
+						<real>0.56123199440474547</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
