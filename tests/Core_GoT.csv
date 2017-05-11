@@ -9,7 +9,7 @@ PhysicalEntity,"""Physical Thing""@en",http://iot.linkeddata.es/def/core#Physica
 VirtualEntity,"""Virtual Thing""@en",http://iot.linkeddata.es/def/core#VirtualThing
 Actuator,"""Actuator""@en",http://iot.linkeddata.es/def/core#Actuator
 Sensor,"""Sensor""@en",http://iot.linkeddata.es/def/core#Sensor
-Device,"""Device"""@en",http://iot.linkeddata.es/def/core#Device
+Device,"""Device""@en",http://iot.linkeddata.es/def/core#Device
 Endpoint,"""Endpoint""@en",http://iot.linkeddata.es/def/wot#Link
 Agent,,http://xmlns.com/foaf/0.1/Agent
 Person,,http://xmlns.com/foaf/0.1/Person
