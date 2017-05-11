@@ -107,6 +107,20 @@ vs:term_status rdf:type owl:AnnotationProperty .
               rdfs:label "has component"@en .
 
 
+###  http://iot.linkeddata.es/def/core#hasMaxValue
+:hasMaxValue rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf rdf:value ;
+             rdfs:range rdfs:Resource ;
+             rdfs:label "hasMaxValue"@en .
+
+
+###  http://iot.linkeddata.es/def/core#hasMinValue
+:hasMinValue rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf rdf:value ;
+             rdfs:domain rdfs:Resource ;
+             rdfs:label "hasMinValue"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#hasNeighbourhood
 :hasNeighbourhood rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :isInvolvedIn ;
@@ -323,6 +337,15 @@ ssn:qualityOfObservation rdf:type owl:ObjectProperty ;
 
 ###  http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality
 <http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+rdf:value rdf:type owl:ObjectProperty ;
+          rdfs:domain rdfs:Resource ;
+          rdfs:range rdfs:Resource ;
+          rdfs:comment "Idiomatic property used for structured values." ;
+          rdfs:isDefinedBy rdf: ;
+          rdfs:label "value" .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
@@ -805,6 +828,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/core#Value
 :Value rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty rdf:value ;
+                         owl:someValuesFrom rdfs:Resource
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :expressedInFormat ;
                          owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema>
                        ] ,
