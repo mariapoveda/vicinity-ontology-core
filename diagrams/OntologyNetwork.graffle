@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-05-09 09:24:09 +0000</string>
+	<string>2017-05-11 09:04:32 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -85,7 +85,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {986, 793}}</string>
+				<string>{{0, 0}, {986, 804}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -104,7 +104,7 @@
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{986, 793}</string>
+			<string>{986, 804}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -192,7 +192,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{472.85040087010117, 736.69716655545085}, {97.163588513334503, 14.40000057220459}}</string>
+					<string>{{476.5667979488523, 747.79999971389771}, {97.163588513334503, 14.40000057220459}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -323,7 +323,7 @@
 					<key>Points</key>
 					<array>
 						<string>{658.79859960367662, 727.6311507973262}</string>
-						<string>{330.45841849144199, 743.89716684155314}</string>
+						<string>{330.45841849144199, 755}</string>
 						<string>{223.89842087324359, 731.51998364925407}</string>
 					</array>
 					<key>Style</key>
@@ -9180,7 +9180,7 @@ wot:Thing}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {986, 909.95886889460155}}</string>
+				<string>{{0, 0}, {986, 793}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -9199,7 +9199,7 @@ wot:Thing}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{986, 909.95886889460155}</string>
+			<string>{986, 793}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -18374,7 +18374,7 @@ wot:Thing}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {980, 904.42159383033425}}</string>
+				<string>{{0, 0}, {980, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -18393,7 +18393,7 @@ wot:Thing}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{980, 904.42159383033425}</string>
+			<string>{980, 783}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -26969,7 +26969,7 @@ wot:Thing}</string>
 			<key>UniqueID</key>
 			<integer>18</integer>
 			<key>VPages</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>SmartAlignmentGuidesActive</key>
@@ -26997,7 +26997,7 @@ wot:Thing}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{-285, -321}, {1556, 1436}}</string>
+		<string>{{-285, -316}, {1556, 1436}}</string>
 		<key>Zoom</key>
 		<real>0.5</real>
 		<key>ZoomValues</key>
