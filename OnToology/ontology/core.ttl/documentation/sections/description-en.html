@@ -16,4 +16,39 @@
 
 
 <p>Figure 4 illustrates the ontology elements involved in the definition of the measurement capabilites of a given sensor. (Note: examples of how to use this submodel will be provided soon). </p>
-<center><img src="resources/images/DeviceProperties.png" alt="Submodel used for describing sensor capa¡bilities.">   <figcaption>Figure 4. - Submodel used for describing sensor capabilities.</figcaption></center>
+<center><img src="resources/images/DeviceProperties.png" alt="Submodel used for describing sensor capabilities.">   <figcaption>Figure 4. - Submodel used for describing sensor capabilities.</figcaption></center>
+
+
+<h3><a id="ex1"></a>Instantiating VICINITY core ontology <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+
+<p>This section shows an example of an instantiation of the VICINITY core ontology. Such example aims to illustrate how to describe a given sensor, in this case a thermometer, using the core ontology and the WoT module. The example is graphically represented in Figure 5.</p>
+
+<p>The device information represented in the example is the following:</p>
+
+<p><strong>Name</strong>: Temperature Sensor 01</p>
+<p><strong>Type</strong>: Thermometer</p>
+<p><strong>GUID</strong>: 5072dd0b-c2f0-4744-9dd4-dff344d8e2bb</p>
+<p><strong>Properties</strong>:</p>
+<p>o<strong>Temperature</strong>:</p>
+<ul>
+<li><strong>Name</strong>: Temperature</li>
+<li><strong>Observed Property</strong>: Average temperature</li>
+<li><strong>Datatype</strong>: Double</li>
+<li><strong>Writable</strong>: no</li>
+<li><strong>Units of measure</strong>: &ordm;C</li>
+</ul>
+<p><strong>Events</strong>:</p>
+<p>o<strong>Temperature</strong>:</p>
+<ul>
+<li><strong>Name</strong>: Temperature New Value</li>
+<li><strong>Observed Property</strong>: Average temperature</li>
+</ul>
+<p><strong>Capabilities</strong>:</p>
+<ul>
+<li><strong>Frequency</strong>: 100 seconds</li>
+<li><strong>Resolution</strong>: 0.3 &ordm;C</li>
+<li><strong>Accuracy</strong>: 1 &ordm;C</li>
+<li><strong>Range</strong>: 0 - 40 &ordm;C</li>
+</ul>
+
+<center><img src="resources/images/CERTH_thermometer_02.png" alt="Thermometer description example.">   <figcaption>Figure 5. - Thermometer description example.</figcaption></center>
