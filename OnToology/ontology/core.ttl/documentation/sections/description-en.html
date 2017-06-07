@@ -15,8 +15,19 @@
 
 
 
-<p>Figure 4 illustrates the ontology elements involved in the definition of the measurement capabilites of a given sensor. (Note: examples of how to use this submodel will be provided soon). </p>
-<center><img src="resources/images/DeviceProperties.png" alt="Submodel used for describing sensor capabilities.">   <figcaption>Figure 4. - Submodel used for describing sensor capabilities.</figcaption></center>
+<p>In some cases it will be needed to represent that a sensor or an interaction pattern (property or event) monitors a given property (as defined in SSN ontology) of a particular feature of interest instead of a generic one. This also could be the case for actuators or actions acting on properties of particular features of interest. In order to allow the representation of this information being oble of unequivocally identify to which pair of "property, feature of interest" is being monitored/affected, we need to include a auxiliar class following a n-ary class pattern. In this sense, if a device observe 3 properties about 2 features of interest, we are able to identify which particular properties are observed for each feature of interest. Figure 4 illustrates the model proposed for this n-ary pattern represented by the class core:FeatureProperty. It is worth noting than there have been defined de following property chains: </p>
+
+<ul>
+<li>core:monitorsFeatureProperty, core:aboutProperty &rarr; core:monitors</li>
+<li>core:actsOnFeatureProperty, core:aboutProperty &rarr; core:actsOn</li>
+</ul>
+
+<center><img src="resources/images/NaryProperties.png" alt="N-ary pattern to specify which property is monitored/affected about a specific feature of interest.">   <figcaption>Figure 4. - N-ary pattern to specify which property is monitored/affected about a specific feature of interest.</figcaption></center>
+
+
+
+<p>Figure 5 illustrates the ontology elements involved in the definition of the measurement capabilites of a given sensor. . </p>
+<center><img src="resources/images/DeviceProperties.png" alt="Submodel used for describing sensor capabilities.">   <figcaption>Figure 5. - Submodel used for describing sensor capabilities.</figcaption></center>
 
 
 <h3><a id="ex1"></a>Instantiating VICINITY core ontology <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
