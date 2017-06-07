@@ -25,7 +25,7 @@
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vcnt-core</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://iot.linkeddata.es/def/core</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions.</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1.1</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1.0</owl:versionInfo>
     </owl:Ontology>
     
 
