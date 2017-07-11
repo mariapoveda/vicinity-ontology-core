@@ -820,6 +820,20 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
+###  http://iot.linkeddata.es/def/core#SmartOven
+:SmartOven rdf:type owl:Class ;
+           rdfs:subClassOf :Actuator ,
+                           :Sensor ;
+           rdfs:label "Smart oven"@en .
+
+
+###  http://iot.linkeddata.es/def/core#SmartRefrigerator
+:SmartRefrigerator rdf:type owl:Class ;
+                   rdfs:subClassOf :Actuator ,
+                                   :Sensor ;
+                   rdfs:label "Smart refrigerator"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#Sound
 :Sound rdf:type owl:Class ;
        rdfs:subClassOf ssn:Property ;
@@ -828,8 +842,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 ###  http://iot.linkeddata.es/def/core#TemperatureAmbientProperty
 :TemperatureAmbientProperty rdf:type owl:Class ;
-                            rdfs:subClassOf :AmbientProperty ;
+                            rdfs:subClassOf :TemperatureProperty ;
                             rdfs:label "TemperatureAmbientProperty"@en .
+
+
+###  http://iot.linkeddata.es/def/core#TemperatureProperty
+:TemperatureProperty rdf:type owl:Class ;
+                     rdfs:subClassOf ssn:Property ;
+                     rdfs:label "Temperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Thermometer
@@ -871,6 +891,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                            ] ;
                            rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services" ;
                            rdfs:label "Thing ecosystem description"@en .
+
+
+###  http://iot.linkeddata.es/def/core#TimeProperty
+:TimeProperty rdf:type owl:Class ;
+              rdfs:subClassOf ssn:Property ;
+              rdfs:label "TimeProperty"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Value
@@ -1352,6 +1378,18 @@ saref:Service rdf:type owl:Class ;
                              rdfs:label "AverageTemperatureDeviation"@en .
 
 
+###  http://iot.linkeddata.es/def/core#BakeRemainingTime
+:BakeRemainingTime rdf:type owl:NamedIndividual ,
+                            :TimeProperty ;
+                   rdfs:label "BakeRemainingTime"@en .
+
+
+###  http://iot.linkeddata.es/def/core#BakingStep
+:BakingStep rdf:type owl:NamedIndividual ,
+                     ssn:OperatingProperty ;
+            rdfs:label "BakingStep"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#CO2Concentration
 :CO2Concentration rdf:type owl:NamedIndividual ,
                            :CarbonDioxide ;
@@ -1364,10 +1402,41 @@ saref:Service rdf:type owl:Class ;
               rdfs:label "ChargeStatus"@en .
 
 
+###  http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime
+:CurrentBakingStepRemainingTime rdf:type owl:NamedIndividual ,
+                                         :TimeProperty ;
+                                rdfs:label "CurrentBakingStepRemainingTime"@en .
+
+
+###  http://iot.linkeddata.es/def/core#DeviceLightStatus
+:DeviceLightStatus rdf:type owl:NamedIndividual ,
+                            :OperationalStatus ;
+                   rdfs:label "DeviceLightStatus"@en .
+
+
+###  http://iot.linkeddata.es/def/core#DeviceStatus
+:DeviceStatus rdf:type owl:NamedIndividual ,
+                       :OperationalStatus ;
+              rdfs:label "DeviceStatus"@en .
+
+
+###  http://iot.linkeddata.es/def/core#DeviceTemperature
+:DeviceTemperature rdf:type owl:NamedIndividual ,
+                            :TemperatureAmbientProperty ,
+                            :TemperatureProperty ;
+                   rdfs:label "DeviceTemperature"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#DimmingLevel
 :DimmingLevel rdf:type owl:NamedIndividual ,
                        :OperationalStatus ;
               rdfs:label "DimmingLevel"@en .
+
+
+###  http://iot.linkeddata.es/def/core#ElapsedBakingTime
+:ElapsedBakingTime rdf:type owl:NamedIndividual ,
+                            :TimeProperty ;
+                   rdfs:label "ElapsedBakingTime"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#EntryExit
@@ -1380,6 +1449,36 @@ saref:Service rdf:type owl:Class ;
 :FanSpeed rdf:type owl:NamedIndividual ,
                    :OperationalStatus ;
           rdfs:label "FanSpeed"@en .
+
+
+###  http://iot.linkeddata.es/def/core#HeaterDefaultTemperature
+:HeaterDefaultTemperature rdf:type owl:NamedIndividual ,
+                                   :TemperatureProperty ;
+                          rdfs:label "HeaterDefaultTemperature"@en .
+
+
+###  http://iot.linkeddata.es/def/core#HeaterMaxTemperature
+:HeaterMaxTemperature rdf:type owl:NamedIndividual ,
+                               :TemperatureProperty ;
+                      rdfs:label "HeaterMaxTemperature"@en .
+
+
+###  http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed
+:HeaterMeatProbeAllowed rdf:type owl:NamedIndividual ,
+                                 ssn:OperatingProperty ;
+                        rdfs:label "HeaterMeatProbeAllowed"@en .
+
+
+###  http://iot.linkeddata.es/def/core#HeaterMinTemperature
+:HeaterMinTemperature rdf:type owl:NamedIndividual ,
+                               :TemperatureProperty ;
+                      rdfs:label "HeaterMinTemperature"@en .
+
+
+###  http://iot.linkeddata.es/def/core#HeaterPreheatAllowed
+:HeaterPreheatAllowed rdf:type owl:NamedIndividual ,
+                               ssn:OperatingProperty ;
+                      rdfs:label "HeaterPreheatAllowed"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation
@@ -1467,6 +1566,12 @@ saref:Service rdf:type owl:Class ;
                       rdfs:label "MeanPowerConsumption"@en .
 
 
+###  http://iot.linkeddata.es/def/core#MeatProbeTemperature
+:MeatProbeTemperature rdf:type owl:NamedIndividual ,
+                               :TemperatureProperty ;
+                      rdfs:label "MeatProbeTemperature"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#MinCO2Concentration
 :MinCO2Concentration rdf:type owl:NamedIndividual ,
                               :CarbonDioxide ;
@@ -1544,10 +1649,6 @@ saref:Service rdf:type owl:Class ;
 :ValvePosition rdf:type owl:NamedIndividual ,
                         :OperationalStatus ;
                rdfs:label "ValvePosition"@en .
-
-
-###  http://www.w3.org/ns/org#Head
-<http://www.w3.org/ns/org#Head> rdf:type :OperationalStatus .
 
 
 [ owl:cardinality "1"^^xsd:nonNegativeInteger
