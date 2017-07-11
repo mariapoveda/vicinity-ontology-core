@@ -1278,6 +1278,28 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#SmartOven -->
+
+
+    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#SmartOven">
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Actuator"/>
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
+        <rdfs:label xml:lang="en">Smart oven</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#SmartRefrigerator -->
+
+
+    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#SmartRefrigerator">
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Actuator"/>
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
+        <rdfs:label xml:lang="en">Smart refrigerator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#Sound -->
 
 
@@ -1292,8 +1314,18 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">
-        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#AmbientProperty"/>
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#TemperatureProperty"/>
         <rdfs:label xml:lang="en">TemperatureAmbientProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#TemperatureProperty -->
+
+
+    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#TemperatureProperty">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:label xml:lang="en">Temperature</rdfs:label>
     </owl:Class>
     
 
@@ -1359,6 +1391,16 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A digital representation that encapsulates an ecosystem taht is accessible via Web services</rdfs:comment>
         <rdfs:label xml:lang="en">Thing ecosystem description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#TimeProperty -->
+
+
+    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#TimeProperty">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:label xml:lang="en">TimeProperty</rdfs:label>
     </owl:Class>
     
 
@@ -2088,6 +2130,26 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#BakeRemainingTime -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#BakeRemainingTime">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TimeProperty"/>
+        <rdfs:label xml:lang="en">BakeRemainingTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#BakingStep -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#BakingStep">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"/>
+        <rdfs:label xml:lang="en">BakingStep</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#CO2Concentration -->
 
 
@@ -2108,12 +2170,63 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TimeProperty"/>
+        <rdfs:label xml:lang="en">CurrentBakingStepRemainingTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#DeviceLightStatus -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#DeviceLightStatus">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#OperationalStatus"/>
+        <rdfs:label xml:lang="en">DeviceLightStatus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#DeviceStatus -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#DeviceStatus">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#OperationalStatus"/>
+        <rdfs:label xml:lang="en">DeviceStatus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#DeviceTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#DeviceTemperature">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty"/>
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TemperatureProperty"/>
+        <rdfs:label xml:lang="en">DeviceTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#DimmingLevel -->
 
 
     <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#DimmingLevel">
         <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#OperationalStatus"/>
         <rdfs:label xml:lang="en">DimmingLevel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#ElapsedBakingTime -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#ElapsedBakingTime">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TimeProperty"/>
+        <rdfs:label xml:lang="en">ElapsedBakingTime</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2134,6 +2247,56 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#FanSpeed">
         <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#OperationalStatus"/>
         <rdfs:label xml:lang="en">FanSpeed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#HeaterDefaultTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#HeaterDefaultTemperature">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TemperatureProperty"/>
+        <rdfs:label xml:lang="en">HeaterDefaultTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#HeaterMaxTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#HeaterMaxTemperature">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TemperatureProperty"/>
+        <rdfs:label xml:lang="en">HeaterMaxTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"/>
+        <rdfs:label xml:lang="en">HeaterMeatProbeAllowed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#HeaterMinTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#HeaterMinTemperature">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TemperatureProperty"/>
+        <rdfs:label xml:lang="en">HeaterMinTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#HeaterPreheatAllowed -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#HeaterPreheatAllowed">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"/>
+        <rdfs:label xml:lang="en">HeaterPreheatAllowed</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2279,6 +2442,16 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#MeatProbeTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#MeatProbeTemperature">
+        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#TemperatureProperty"/>
+        <rdfs:label xml:lang="en">MeatProbeTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#MinCO2Concentration -->
 
 
@@ -2407,15 +2580,6 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
         <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#OperationalStatus"/>
         <rdfs:label xml:lang="en">ValvePosition</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/ns/org#Head -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/org#Head">
-        <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#OperationalStatus"/>
-    </rdf:Description>
     <rdf:Description>
         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
     </rdf:Description>
