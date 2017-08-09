@@ -454,6 +454,11 @@ _:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es
 <http://iot.linkeddata.es/def/core#Application> <http://www.w3.org/2000/01/rdf-schema#label> "Application"@en .
 <http://iot.linkeddata.es/def/core#Application> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 # 
+# http://iot.linkeddata.es/def/core#Battery
+<http://iot.linkeddata.es/def/core#Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://iot.linkeddata.es/def/core#Battery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
+<http://iot.linkeddata.es/def/core#Battery> <http://www.w3.org/2000/01/rdf-schema#label> "Battery"@en .
+# 
 # http://iot.linkeddata.es/def/core#CO2Sensor
 <http://iot.linkeddata.es/def/core#CO2Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#CO2Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Sensor> .
@@ -662,7 +667,7 @@ _:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/
 # http://iot.linkeddata.es/def/core#PowerConsumption
 <http://iot.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> .
-<http://iot.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "PowerConsumption"@en .
+<http://iot.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#PowerMeter
 <http://iot.linkeddata.es/def/core#PowerMeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1426,6 +1431,11 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NE
 <http://iot.linkeddata.es/def/core#RelativeHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://iot.linkeddata.es/def/core#RelativeHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> .
 <http://iot.linkeddata.es/def/core#RelativeHumidity> <http://www.w3.org/2000/01/rdf-schema#label> "RelativeHumidity"@en .
+# 
+# http://iot.linkeddata.es/def/core#StoredEnergy
+<http://iot.linkeddata.es/def/core#StoredEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://iot.linkeddata.es/def/core#StoredEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> .
+<http://iot.linkeddata.es/def/core#StoredEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "StoredEnergy"@en .
 # 
 # http://iot.linkeddata.es/def/core#ValvePosition
 <http://iot.linkeddata.es/def/core#ValvePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

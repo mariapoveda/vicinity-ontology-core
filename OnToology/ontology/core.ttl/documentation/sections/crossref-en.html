@@ -20,6 +20,9 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#Application" title="http://iot.linkeddata.es/def/core#Application">Application</a>
       </li>
       <li>
+         <a href="#Battery" title="http://iot.linkeddata.es/def/core#Battery">Battery</a>
+      </li>
+      <li>
          <a href="#http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime"
             title="http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime">Battery Lifetime</a>
       </li>
@@ -180,7 +183,7 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#PowerConsumption"
-            title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+            title="http://iot.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
       </li>
       <li>
          <a href="#PowerMeter" title="http://iot.linkeddata.es/def/core#PowerMeter">PowerMeter</a>
@@ -430,6 +433,21 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Battery">
+      <h3>Battery<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Battery</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime">
       <h3>Battery Lifetime<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -450,6 +468,11 @@ This section provides details for each class and property defined by Vicinity co
             <a href="#http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty"
                title="http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty">Survival Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#StoredEnergy" title="http://iot.linkeddata.es/def/core#StoredEnergy">StoredEnergy</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -623,6 +646,7 @@ This section provides details for each class and property defined by Vicinity co
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Actuator" title="http://iot.linkeddata.es/def/core#Actuator">Actuator</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Battery" title="http://iot.linkeddata.es/def/core#Battery">Battery</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Charger" title="http://iot.linkeddata.es/def/core#Charger">Charger</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Lightbulb" title="http://iot.linkeddata.es/def/core#Lightbulb">Lightbulb</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
@@ -1362,7 +1386,7 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>, <a href="#http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange"
                title="http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange">Operating Power Range</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PowerConsumption"
-               title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+               title="http://iot.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has members</dt>
@@ -1514,7 +1538,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </dl>
    </div>
    <div class="entity" id="PowerConsumption">
-      <h3>PowerConsumption<sup class="type-c" title="class">c</sup>
+      <h3>Power consumption<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -3886,6 +3910,9 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             title="http://iot.linkeddata.es/def/core#RelativeHumidity">RelativeHumidity</a>
       </li>
       <li>
+         <a href="#StoredEnergy" title="http://iot.linkeddata.es/def/core#StoredEnergy">StoredEnergy</a>
+      </li>
+      <li>
          <a href="#ValvePosition" title="http://iot.linkeddata.es/def/core#ValvePosition">ValvePosition</a>
       </li>
    </ul>
@@ -4516,7 +4543,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dt>belongs to</dt>
          <dd>
             <a href="#PowerConsumption"
-               title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+               title="http://iot.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4563,7 +4590,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dt>belongs to</dt>
          <dd>
             <a href="#PowerConsumption"
-               title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+               title="http://iot.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4658,7 +4685,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dt>belongs to</dt>
          <dd>
             <a href="#PowerConsumption"
-               title="http://iot.linkeddata.es/def/core#PowerConsumption">PowerConsumption</a>
+               title="http://iot.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4769,6 +4796,22 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dd>
             <a href="#HumidityAmbientProperty"
                title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StoredEnergy">
+      <h3>StoredEnergy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#StoredEnergy</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime"
+               title="http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime">Battery Lifetime</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

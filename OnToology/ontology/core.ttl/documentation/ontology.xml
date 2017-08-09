@@ -784,6 +784,16 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#Battery -->
+
+
+    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#Battery">
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+        <rdfs:label xml:lang="en">Battery</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#CO2Sensor -->
 
 
@@ -1170,7 +1180,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#PowerConsumption">
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty"/>
-        <rdfs:label xml:lang="en">PowerConsumption</rdfs:label>
+        <rdfs:label xml:lang="en">Power consumption</rdfs:label>
     </owl:Class>
     
 
@@ -2569,6 +2579,16 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
     <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#RelativeHumidity">
         <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#HumidityAmbientProperty"/>
         <rdfs:label xml:lang="en">RelativeHumidity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#StoredEnergy -->
+
+
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#StoredEnergy">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime"/>
+        <rdfs:label xml:lang="en">StoredEnergy</rdfs:label>
     </owl:NamedIndividual>
     
 
