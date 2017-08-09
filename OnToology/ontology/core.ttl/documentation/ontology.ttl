@@ -498,6 +498,12 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                 rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
+###  http://iot.linkeddata.es/def/core#Battery
+<http://iot.linkeddata.es/def/core#Battery> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
+                                            rdfs:label "Battery"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#CO2Sensor
 <http://iot.linkeddata.es/def/core#CO2Sensor> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ,
@@ -740,7 +746,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/core#PowerConsumption
 <http://iot.linkeddata.es/def/core#PowerConsumption> rdf:type owl:Class ;
                                                      rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> ;
-                                                     rdfs:label "PowerConsumption"@en .
+                                                     rdfs:label "Power consumption"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#PowerMeter
@@ -1632,6 +1638,12 @@ rdfs:Resource rdf:type owl:Class .
 <http://iot.linkeddata.es/def/core#RelativeHumidity> rdf:type owl:NamedIndividual ,
                                                               <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> ;
                                                      rdfs:label "RelativeHumidity"@en .
+
+
+###  http://iot.linkeddata.es/def/core#StoredEnergy
+<http://iot.linkeddata.es/def/core#StoredEnergy> rdf:type owl:NamedIndividual ,
+                                                          <http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> ;
+                                                 rdfs:label "StoredEnergy"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#ValvePosition
