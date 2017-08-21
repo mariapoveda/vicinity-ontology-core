@@ -546,7 +546,8 @@ foaf:depiction rdf:type owl:ObjectProperty .
 
 ###  http://iot.linkeddata.es/def/core#Device
 :Device rdf:type owl:Class ;
-        rdfs:subClassOf :PhysicalThing ;
+        rdfs:subClassOf :PhysicalThing ,
+                        ssn:Device ;
         rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
         rdfs:label "Device"@en ;
         rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
@@ -806,6 +807,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/core#Sensor
 :Sensor rdf:type owl:Class ;
         rdfs:subClassOf :Device ,
+                        ssn:SensingDevice ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :monitors ;
                           owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property>
@@ -1036,6 +1038,10 @@ ssn:DetectionLimit rdf:type owl:Class ;
                    rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
 
 
+###  http://purl.oclc.org/NET/ssnx/ssn#Device
+ssn:Device rdf:type owl:Class .
+
+
 ###  http://purl.oclc.org/NET/ssnx/ssn#Drift
 ssn:Drift rdf:type owl:Class ;
           rdfs:subClassOf ssn:MeasurementProperty ;
@@ -1228,6 +1234,10 @@ ssn:Selectivity rdf:type owl:Class ;
                 rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
                 rdfs:label "Selectivity" ;
                 rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
+ssn:SensingDevice rdf:type owl:Class .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#Sensitivity
