@@ -83,7 +83,8 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 
 
 ###  http://iot.linkeddata.es/def/core#contains
-<http://iot.linkeddata.es/def/core#contains> rdf:type owl:ObjectProperty ;
+<http://iot.linkeddata.es/def/core#contains> rdf:type owl:ObjectProperty ,
+                                                      owl:TransitiveProperty ;
                                              rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things."@en ;
                                              rdfs:label "contains"@en ;
                                              rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"^^xsd:string .
@@ -534,7 +535,8 @@ rdf:value rdf:type owl:ObjectProperty ;
 
 ###  http://iot.linkeddata.es/def/core#Device
 <http://iot.linkeddata.es/def/core#Device> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://iot.linkeddata.es/def/core#PhysicalThing> ;
+                                           rdfs:subClassOf <http://iot.linkeddata.es/def/core#PhysicalThing> ,
+                                                           <http://purl.oclc.org/NET/ssnx/ssn#Device> ;
                                            rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
                                            rdfs:label "Device"@en ;
                                            rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
@@ -794,6 +796,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/core#Sensor
 <http://iot.linkeddata.es/def/core#Sensor> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ,
+                                                           <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://iot.linkeddata.es/def/core#monitors> ;
                                                              owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property>
@@ -1024,6 +1027,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                    rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability"^^xsd:string .
 
 
+###  http://purl.oclc.org/NET/ssnx/ssn#Device
+<http://purl.oclc.org/NET/ssnx/ssn#Device> rdf:type owl:Class .
+
+
 ###  http://purl.oclc.org/NET/ssnx/ssn#Drift
 <http://purl.oclc.org/NET/ssnx/ssn#Drift> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> ;
@@ -1216,6 +1223,10 @@ The difference is that here we also allow for qualities that aren't VIM influenc
                                                 rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn"^^xsd:string ;
                                                 rdfs:label "Selectivity"^^xsd:string ;
                                                 rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability"^^xsd:string .
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
+<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> rdf:type owl:Class .
 
 
 ###  http://purl.oclc.org/NET/ssnx/ssn#Sensitivity
