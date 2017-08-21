@@ -145,6 +145,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#contains">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment xml:lang="en">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things.</rdfs:comment>
         <rdfs:label xml:lang="en">contains</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)</rdfs:seeAlso>
@@ -845,6 +846,7 @@
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#Device">
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#PhysicalThing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
         <rdfs:comment xml:lang="en">An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
         <rdfs:label xml:lang="en">Device</rdfs:label>
         <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
@@ -1257,6 +1259,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#Sensor">
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
@@ -1619,6 +1622,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Device -->
+
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    
+
+
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Drift -->
 
 
@@ -1886,6 +1896,13 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selectivity</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability</rdfs:seeAlso>
     </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
+
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
     
 
 
