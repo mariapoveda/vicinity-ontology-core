@@ -1,6 +1,7 @@
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#imports> <http://iot.linkeddata.es/def/wot#> .
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/elements/1.1/title> "Vicinity core model"@en .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/terms/contributor> <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> .
@@ -9,8 +10,8 @@
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core" .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/core" .
-<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represent the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en .
-<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
+<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en .
+<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.2" .
 # 
 # 
 # #################################################################
@@ -55,6 +56,7 @@
 # 
 # http://iot.linkeddata.es/def/core#actsOn
 <http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/actsOnProperty> .
 <http://iot.linkeddata.es/def/core#actsOn> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://iot.linkeddata.es/def/core#actsOnFeatureProperty> .
@@ -80,6 +82,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://iot.linkeddata.es/def/core#contains
 <http://iot.linkeddata.es/def/core#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/core#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <http://iot.linkeddata.es/def/core#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things."@en .
 <http://iot.linkeddata.es/def/core#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
 <http://iot.linkeddata.es/def/core#contains> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
@@ -218,6 +221,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://iot.linkeddata.es/def/core#monitors
 <http://iot.linkeddata.es/def/core#monitors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/core#monitors> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/observes> .
 <http://iot.linkeddata.es/def/core#monitors> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> .
@@ -241,86 +245,6 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#label> "owns"@en .
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#label> "provides"@en .
 # 
-# http://purl.oclc.org/NET/ssnx/ssn#forProperty
-<http://purl.oclc.org/NET/ssnx/ssn#forProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ssnx/ssn#hasProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a Sensor to a MeasurementCapability describing the measurement properties of the sensor." .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement  capability" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ssnx/ssn#hasProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a MeasurementCapability to a MeasurementProperty.  For example, to an accuracy (see notes at MeasurementCapability)." .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement property" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ssnx/ssn#hasProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from an OperatingRange to a Property.  For example, to a battery lifetime." .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has operating property" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ssnx/ssn#hasProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a System to an OperatingRange describing the normal operating environment of the System." .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#label> "has operating range" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#hasProperty
-<http://purl.oclc.org/NET/ssnx/ssn#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a FeatureOfInterest and a Property of that feature." .
-<http://purl.oclc.org/NET/ssnx/ssn#hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ssnx/ssn#hasProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a SurvivalRange to a Property describing the survial range of a system.  For example, to the temperature extreme that a system can withstand before being considered damaged." .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has survival property" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ssnx/ssn#hasProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#comment> "A Relation from a System to a SurvivalRange." .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#label> "has survival range" .
-<http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#hasValue
-<http://purl.oclc.org/NET/ssnx/ssn#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#hasValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn"@en .
-<http://purl.oclc.org/NET/ssnx/ssn#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#inCondition
-<http://purl.oclc.org/NET/ssnx/ssn#inCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf
-<http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation
-<http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ssnx/ssn#hasProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'resultQuality' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" .
-<http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the adjudged quality of the result.  This is of course complimentary to the MeasurementCapability information recorded for the Sensor that made the Observation." .
-<http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#label> "quality of observation" .
-<http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Observation#Observation" .
-# 
 # http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality
 <http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
@@ -334,6 +258,78 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/ssn/hasProperty
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/isPropertyOf> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a FeatureOfInterest and a Property of that feature." .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property" .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" .
+# 
+# http://www.w3.org/ns/ssn/isPropertyOf
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/ssn/systems/hasOperatingProperty
+<http://www.w3.org/ns/ssn/systems/hasOperatingProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from an OperatingRange to a Property.  For example, to a battery lifetime." .
+<http://www.w3.org/ns/ssn/systems/hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has operating property" .
+<http://www.w3.org/ns/ssn/systems/hasOperatingProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/hasOperatingRange
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a System to an OperatingRange describing the normal operating environment of the System." .
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#label> "has operating range" .
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/hasSurvivalProperty
+<http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a SurvivalRange to a Property describing the survial range of a system.  For example, to the temperature extreme that a system can withstand before being considered damaged." .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has survival property" .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/hasSurvivalRange
+<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#comment> "A Relation from a System to a SurvivalRange." .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#label> "has survival range" .
+<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/hasSystemCapability
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a Sensor to a MeasurementCapability describing the measurement properties of the sensor." .
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement  capability" .
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/hasSystemProperty
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a MeasurementCapability to a MeasurementProperty.  For example, to an accuracy (see notes at MeasurementCapability)." .
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement property" .
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/inCondition
+<http://www.w3.org/ns/ssn/systems/inCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/ssn/systems/qualityOfObservation
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'resultQuality' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the adjudged quality of the result.  This is of course complimentary to the MeasurementCapability information recorded for the Sensor that made the Observation." .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#label> "quality of observation" .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Observation#Observation" .
 # 
 # http://xmlns.com/foaf/0.1/depiction
 <http://xmlns.com/foaf/0.1/depiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -424,6 +420,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://iot.linkeddata.es/def/core#Actuator
 <http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
+<http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuator> .
 <http://iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#actsOn> .
@@ -444,7 +441,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es
 # 
 # http://iot.linkeddata.es/def/core#AmbientProperty
 <http://iot.linkeddata.es/def/core#AmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "AmbientProperty"@en .
 # 
 # http://iot.linkeddata.es/def/core#Application
@@ -470,12 +467,12 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.e
 # 
 # http://iot.linkeddata.es/def/core#CarbonDioxide
 <http://iot.linkeddata.es/def/core#CarbonDioxide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#CarbonDioxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#CarbonDioxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#CarbonDioxide> <http://www.w3.org/2000/01/rdf-schema#label> "CarbonDioxide"@en .
 # 
 # http://iot.linkeddata.es/def/core#CarbonMonoxide
 <http://iot.linkeddata.es/def/core#CarbonMonoxide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#CarbonMonoxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#CarbonMonoxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#CarbonMonoxide> <http://www.w3.org/2000/01/rdf-schema#label> "CarbonMonoxide"@en .
 # 
 # http://iot.linkeddata.es/def/core#Charger
@@ -575,7 +572,7 @@ _:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.
 # 
 # http://iot.linkeddata.es/def/core#LightProperty
 <http://iot.linkeddata.es/def/core#LightProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#LightProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#LightProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#LightProperty> <http://www.w3.org/2000/01/rdf-schema#label> "LightProperty"@en .
 # 
 # http://iot.linkeddata.es/def/core#LightSwitch
@@ -605,7 +602,7 @@ _:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.
 # 
 # http://iot.linkeddata.es/def/core#MotionProperty
 <http://iot.linkeddata.es/def/core#MotionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#MotionProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#MotionProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#MotionProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Motion property"@en .
 # 
 # http://iot.linkeddata.es/def/core#MotionSensor
@@ -634,7 +631,7 @@ _:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.
 # 
 # http://iot.linkeddata.es/def/core#OperationalStatus
 <http://iot.linkeddata.es/def/core#OperationalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#OperationalStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#OperationalStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#OperationalStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Operational status"@en .
 # 
 # http://iot.linkeddata.es/def/core#PeopleCounter
@@ -666,7 +663,7 @@ _:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/
 # 
 # http://iot.linkeddata.es/def/core#PowerConsumption
 <http://iot.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> .
+<http://iot.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
 <http://iot.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#PowerMeter
@@ -676,7 +673,7 @@ _:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/
 # 
 # http://iot.linkeddata.es/def/core#Presence
 <http://iot.linkeddata.es/def/core#Presence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#Presence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#Presence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#Presence> <http://www.w3.org/2000/01/rdf-schema#label> "Presence"@en .
 # 
 # http://iot.linkeddata.es/def/core#Radiance
@@ -713,6 +710,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://iot.linkeddata.es/def/core#Sensor
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
+<http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
 <http://iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#monitors> .
@@ -746,7 +744,7 @@ _:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 # 
 # http://iot.linkeddata.es/def/core#Sound
 <http://iot.linkeddata.es/def/core#Sound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#Sound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#Sound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#Sound> <http://www.w3.org/2000/01/rdf-schema#label> "Sound"@en .
 # 
 # http://iot.linkeddata.es/def/core#TemperatureAmbientProperty
@@ -756,7 +754,7 @@ _:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 # 
 # http://iot.linkeddata.es/def/core#TemperatureProperty
 <http://iot.linkeddata.es/def/core#TemperatureProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#TemperatureProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#TemperatureProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#TemperatureProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#Thermometer
@@ -798,7 +796,7 @@ _:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.
 # 
 # http://iot.linkeddata.es/def/core#TimeProperty
 <http://iot.linkeddata.es/def/core#TimeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#TimeProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+<http://iot.linkeddata.es/def/core#TimeProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#TimeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "TimeProperty"@en .
 # 
 # http://iot.linkeddata.es/def/core#Value
@@ -850,7 +848,7 @@ _:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 <http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#actsOn> .
-_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#actsOnFeatureProperty> .
@@ -873,247 +871,15 @@ _:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#monitors> .
-_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> .
 _:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/core#FeatureProperty> .
 # 
-# http://purl.oclc.org/NET/ssnx/ssn#Accuracy
-<http://purl.oclc.org/NET/ssnx/ssn#Accuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Accuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#Accuracy> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measurement accuracy/accuracy' [VIM 2.13] \n\t\t                    http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#Accuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "The closeness of agreement between the value of an observation and the true value of the observed quality." .
-<http://purl.oclc.org/NET/ssnx/ssn#Accuracy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Accuracy> <http://www.w3.org/2000/01/rdf-schema#label> "Accuracy" .
-<http://purl.oclc.org/NET/ssnx/ssn#Accuracy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime
-<http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#comment> "Total useful life of a battery." .
-<http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#label> "Battery Lifetime" .
-<http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Condition
-<http://purl.oclc.org/NET/ssnx/ssn#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Condition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://purl.oclc.org/NET/ssnx/ssn#Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to specify ranges for qualities that act as conditions on a system/sensor's operation.  For example, wind speed of 10-60m/s is expressed as a condition linking a quality, wind speed, a unit of measurement, metres per second, and a set of values, 10-60, and may be used as the condition on a MeasurementProperty, for example, to state that a sensor has a particular accuracy in that condition." .
-<http://purl.oclc.org/NET/ssnx/ssn#Condition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Condition> <http://www.w3.org/2000/01/rdf-schema#label> "Condition" .
-<http://purl.oclc.org/NET/ssnx/ssn#Condition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#ConstraintBlock" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit
-<http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'detection limit' [VIM 4.18] \n                                 http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "An observed value for which the probability of falsely claiming the absence of a component in a material is \u00CE\u00B2, given a probability \u00CE\u00B1 of falsely claiming its presence." .
-<http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#label> "detection limit" .
-<http://purl.oclc.org/NET/ssnx/ssn#DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Drift
-<http://purl.oclc.org/NET/ssnx/ssn#Drift> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Drift> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#Drift> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'instrumental drift' [VIM 4.21]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#Drift> <http://www.w3.org/2000/01/rdf-schema#comment> "A, continuous or incremental, change in the reported values of observations over time for an unchanging quality." .
-<http://purl.oclc.org/NET/ssnx/ssn#Drift> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Drift> <http://www.w3.org/2000/01/rdf-schema#label> "Drift" .
-<http://purl.oclc.org/NET/ssnx/ssn#Drift> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest
-<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Frequency
-<http://purl.oclc.org/NET/ssnx/ssn#Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Frequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#Frequency> <http://www.w3.org/2000/01/rdf-schema#comment> "The smallest possible time between one observation and the next." .
-<http://purl.oclc.org/NET/ssnx/ssn#Frequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Frequency> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency" .
-<http://purl.oclc.org/NET/ssnx/ssn#Frequency> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Latency
-<http://purl.oclc.org/NET/ssnx/ssn#Latency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Latency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#Latency> <http://www.w3.org/2000/01/rdf-schema#comment> "The time between a request for an observation and the sensor providing a result." .
-<http://purl.oclc.org/NET/ssnx/ssn#Latency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Latency> <http://www.w3.org/2000/01/rdf-schema#label> "Latency" .
-<http://purl.oclc.org/NET/ssnx/ssn#Latency> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule
-<http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#comment> "Schedule of maintenance for a system/sensor in the specified conditions." .
-<http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#label> "Maintenance Schedule" .
-<http://purl.oclc.org/NET/ssnx/ssn#MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#forProperty> .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty> .
-_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#inCondition> .
-_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#Condition> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://purl.org/dc/elements/1.1/source> "Similar idea to MeasurementCapability in MMI Device Ontology\n                                  http://marinemetadata.org/community/teams/ontdevices\n\nBut the the two express the relationship between constraints and multiple measurement properties differently.\n\nThe conditions linked to a MeasurementCapability are skos:exactMatch to 'influence quantity' [VIM 2.52]\nhttp://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Collects together measurement properties (accuracy, range, precision, etc) and the environmental conditions in which those properties hold, representing a specification of a sensor's capability in those conditions.\n\nThe conditions specified here are those that affect the measurement properties, while those in OperatingRange represent the sensor's standard operating conditions, including conditions that don't affect the observations." .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement Capability" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable and observable characteristic of a sensor's observations or ability to make observations." .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement  Property" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measuring interval/measurement range' [VIM 4.7]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of values that the sensor can return as the result of an observation under the defined conditions with the defined measurement properties.  (If no conditions are specified or the conditions do not specify a range for the observed qualities, the measurement range is to be taken as the condition for the observed qualities.)" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement  Range" .
-<http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Power range in which system/sensor is expected to operate." .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Power Range" .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable characteristic of the environmental and other conditions in which the sensor is intended to operate.  May include power ranges, power sources, standard configurations, attachments and the like." .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Property" .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#OperatingRange
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty> .
-_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#inCondition> .
-_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#Condition> .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://purl.org/dc/elements/1.1/source> "skos:broaderMatch 'reference operating condition' [VIM 4.11]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf\n\nThe difference is that here we also allow for qualities that aren't VIM influence quantities [VIM 2.52] - for example, a quantity that alters the power requirements, but doesn't affect the measurement properties - conditions specified in MeasurementCapability should be influence quantities." .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The environmental conditions and characteristics of a system/sensor's normal operating environment.  Can be used to specify for example the standard environmental conditions in which the sensor is expected to operate (a Condition with no OperatingProperty), or how the environmental and other operating properties relate: i.e., that the maintenance schedule or power requirements differ according to the conditions." .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Range" .
-<http://purl.oclc.org/NET/ssnx/ssn#OperatingRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Precision
-<http://purl.oclc.org/NET/ssnx/ssn#Precision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Precision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#Precision> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measurement precision/precision' [VIM 2.15]\n                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#Precision> <http://www.w3.org/2000/01/rdf-schema#comment> "The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation." .
-<http://purl.oclc.org/NET/ssnx/ssn#Precision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Precision> <http://www.w3.org/2000/01/rdf-schema#label> "Precision" .
-<http://purl.oclc.org/NET/ssnx/ssn#Precision> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Property
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.loa-cnr.it/ontologies/DUL.owl#Quality> .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf> .
-_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'property' [O&M] \n\t\t                    http://www.opengeospatial.org/standards/om" .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor." .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn#" .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#label> "property (ssn)" .
-<http://purl.oclc.org/NET/ssnx/ssn#Property> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Resolution
-<http://purl.oclc.org/NET/ssnx/ssn#Resolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Resolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#Resolution> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'resolution' [VIM 4.14]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#Resolution> <http://www.w3.org/2000/01/rdf-schema#comment> "The smallest difference in the value of a quality being observed that would result in perceptably different values of observation results." .
-<http://purl.oclc.org/NET/ssnx/ssn#Resolution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Resolution> <http://www.w3.org/2000/01/rdf-schema#label> "Resolution" .
-<http://purl.oclc.org/NET/ssnx/ssn#Resolution> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#ResponseTime
-<http://purl.oclc.org/NET/ssnx/ssn#ResponseTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#ResponseTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#ResponseTime> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'step response time' [VIM 4.23]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#ResponseTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time between a (step) change inthe value of an observed quality and a sensor (possibly with specified error) 'settling' on an observed value." .
-<http://purl.oclc.org/NET/ssnx/ssn#ResponseTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#ResponseTime> <http://www.w3.org/2000/01/rdf-schema#label> "Response time" .
-<http://purl.oclc.org/NET/ssnx/ssn#ResponseTime> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Selectivity
-<http://purl.oclc.org/NET/ssnx/ssn#Selectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Selectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#Selectivity> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'selectivity' [VIM 4.13]\n                                 http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#Selectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Selectivity is a property of a sensor whereby it provides observed values for one or more qualities such that the values of each quality are independent of other qualities in the phenomenon, body, or substance being investigated." .
-<http://purl.oclc.org/NET/ssnx/ssn#Selectivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Selectivity> <http://www.w3.org/2000/01/rdf-schema#label> "Selectivity" .
-<http://purl.oclc.org/NET/ssnx/ssn#Selectivity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#Sensitivity
-<http://purl.oclc.org/NET/ssnx/ssn#Sensitivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensitivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensitivity> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'sensitivity' [VIM 4.12]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensitivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensitivity is the quotient of the change in a result of sensor and the corresponding change in a value of a quality being observed." .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensitivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensitivity> <http://www.w3.org/2000/01/rdf-schema#label> "Sensitivity" .
-<http://purl.oclc.org/NET/ssnx/ssn#Sensitivity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable characteristic that represents the extent of the sensors useful life.  Might include for example total battery life or number of recharges, or, for sensors that are used only a fixed number of times, the number of observations that can be made before the sensing capability is depleted." .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Survival Property" .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#hasSurvivalProperty> .
-_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.oclc.org/NET/ssnx/ssn#inCondition> .
-_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NET/ssnx/ssn#Condition> .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://purl.org/dc/elements/1.1/source> "skos:narrowerMatch 'limiting operating condition' [VIM 4.10]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The conditions a sensor can be exposed to without damage: i.e., the sensor continues to operate as defined using MeasurementCapability.  If, however, the SurvivalRange is exceeded, the sensor is 'damaged' and MeasurementCapability specifications may no longer hold." .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#label> "Survival Range" .
-<http://purl.oclc.org/NET/ssnx/ssn#SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
-# 
-# http://purl.oclc.org/NET/ssnx/ssn#SystemLifetime
-<http://purl.oclc.org/NET/ssnx/ssn#SystemLifetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#SurvivalProperty> .
-<http://purl.oclc.org/NET/ssnx/ssn#SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#comment> "Total useful life of a sensor/system (expressed as total life since manufacture, time in use, number of operations, etc.)." .
-<http://purl.oclc.org/NET/ssnx/ssn#SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
-<http://purl.oclc.org/NET/ssnx/ssn#SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#label> "System Lifetime" .
-<http://purl.oclc.org/NET/ssnx/ssn#SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
+<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # http://www.loa-cnr.it/ontologies/DUL.owl#Quality
 <http://www.loa-cnr.it/ontologies/DUL.owl#Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1123,6 +889,238 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NE
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/ssn/Property
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.loa-cnr.it/ontologies/DUL.owl#Quality> .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/isPropertyOf> .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://www.w3.org/ns/ssn/Property> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'property' [O&M] \n\t\t                    http://www.opengeospatial.org/standards/om" .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor." .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn#" .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#label> "property (ssn)" .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" .
+# 
+# http://www.w3.org/ns/ssn/systems/Accuracy
+<http://www.w3.org/ns/ssn/systems/Accuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Accuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/Accuracy> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measurement accuracy/accuracy' [VIM 2.13] \n\t\t                    http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/Accuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "The closeness of agreement between the value of an observation and the true value of the observed quality." .
+<http://www.w3.org/ns/ssn/systems/Accuracy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Accuracy> <http://www.w3.org/2000/01/rdf-schema#label> "Accuracy" .
+<http://www.w3.org/ns/ssn/systems/Accuracy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/BatteryLifetime
+<http://www.w3.org/ns/ssn/systems/BatteryLifetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SurvivalProperty> .
+<http://www.w3.org/ns/ssn/systems/BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#comment> "Total useful life of a battery." .
+<http://www.w3.org/ns/ssn/systems/BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#label> "Battery Lifetime" .
+<http://www.w3.org/ns/ssn/systems/BatteryLifetime> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/Condition
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to specify ranges for qualities that act as conditions on a system/sensor's operation.  For example, wind speed of 10-60m/s is expressed as a condition linking a quality, wind speed, a unit of measurement, metres per second, and a set of values, 10-60, and may be used as the condition on a MeasurementProperty, for example, to state that a sensor has a particular accuracy in that condition." .
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/2000/01/rdf-schema#label> "Condition" .
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#ConstraintBlock" .
+# 
+# http://www.w3.org/ns/ssn/systems/DetectionLimit
+<http://www.w3.org/ns/ssn/systems/DetectionLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/DetectionLimit> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'detection limit' [VIM 4.18] \n                                 http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "An observed value for which the probability of falsely claiming the absence of a component in a material is \u00CE\u00B2, given a probability \u00CE\u00B1 of falsely claiming its presence." .
+<http://www.w3.org/ns/ssn/systems/DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#label> "detection limit" .
+<http://www.w3.org/ns/ssn/systems/DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/Drift
+<http://www.w3.org/ns/ssn/systems/Drift> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Drift> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/Drift> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'instrumental drift' [VIM 4.21]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/Drift> <http://www.w3.org/2000/01/rdf-schema#comment> "A, continuous or incremental, change in the reported values of observations over time for an unchanging quality." .
+<http://www.w3.org/ns/ssn/systems/Drift> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Drift> <http://www.w3.org/2000/01/rdf-schema#label> "Drift" .
+<http://www.w3.org/ns/ssn/systems/Drift> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/Frequency
+<http://www.w3.org/ns/ssn/systems/Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Frequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/Frequency> <http://www.w3.org/2000/01/rdf-schema#comment> "The smallest possible time between one observation and the next." .
+<http://www.w3.org/ns/ssn/systems/Frequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Frequency> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency" .
+<http://www.w3.org/ns/ssn/systems/Frequency> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/Latency
+<http://www.w3.org/ns/ssn/systems/Latency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Latency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/Latency> <http://www.w3.org/2000/01/rdf-schema#comment> "The time between a request for an observation and the sensor providing a result." .
+<http://www.w3.org/ns/ssn/systems/Latency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Latency> <http://www.w3.org/2000/01/rdf-schema#label> "Latency" .
+<http://www.w3.org/ns/ssn/systems/Latency> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/MaintenanceSchedule
+<http://www.w3.org/ns/ssn/systems/MaintenanceSchedule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
+<http://www.w3.org/ns/ssn/systems/MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#comment> "Schedule of maintenance for a system/sensor in the specified conditions." .
+<http://www.w3.org/ns/ssn/systems/MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#label> "Maintenance Schedule" .
+<http://www.w3.org/ns/ssn/systems/MaintenanceSchedule> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/MeasurementRange
+<http://www.w3.org/ns/ssn/systems/MeasurementRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/MeasurementRange> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measuring interval/measurement range' [VIM 4.7]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of values that the sensor can return as the result of an observation under the defined conditions with the defined measurement properties.  (If no conditions are specified or the conditions do not specify a range for the observed qualities, the measurement range is to be taken as the condition for the observed qualities.)" .
+<http://www.w3.org/ns/ssn/systems/MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement  Range" .
+<http://www.w3.org/ns/ssn/systems/MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/OperatingPowerRange
+<http://www.w3.org/ns/ssn/systems/OperatingPowerRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
+<http://www.w3.org/ns/ssn/systems/OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Power range in which system/sensor is expected to operate." .
+<http://www.w3.org/ns/ssn/systems/OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Power Range" .
+<http://www.w3.org/ns/ssn/systems/OperatingPowerRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Energy#EnergyRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/OperatingProperty
+<http://www.w3.org/ns/ssn/systems/OperatingProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable characteristic of the environmental and other conditions in which the sensor is intended to operate.  May include power ranges, power sources, standard configurations, attachments and the like." .
+<http://www.w3.org/ns/ssn/systems/OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Property" .
+<http://www.w3.org/ns/ssn/systems/OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/OperatingRange
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasOperatingProperty> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://purl.org/dc/elements/1.1/source> "skos:broaderMatch 'reference operating condition' [VIM 4.11]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf\n\nThe difference is that here we also allow for qualities that aren't VIM influence quantities [VIM 2.52] - for example, a quantity that alters the power requirements, but doesn't affect the measurement properties - conditions specified in MeasurementCapability should be influence quantities." .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The environmental conditions and characteristics of a system/sensor's normal operating environment.  Can be used to specify for example the standard environmental conditions in which the sensor is expected to operate (a Condition with no OperatingProperty), or how the environmental and other operating properties relate: i.e., that the maintenance schedule or power requirements differ according to the conditions." .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Range" .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/Precision
+<http://www.w3.org/ns/ssn/systems/Precision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Precision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/Precision> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measurement precision/precision' [VIM 2.15]\n                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/Precision> <http://www.w3.org/2000/01/rdf-schema#comment> "The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation." .
+<http://www.w3.org/ns/ssn/systems/Precision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Precision> <http://www.w3.org/2000/01/rdf-schema#label> "Precision" .
+<http://www.w3.org/ns/ssn/systems/Precision> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/Resolution
+<http://www.w3.org/ns/ssn/systems/Resolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Resolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/Resolution> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'resolution' [VIM 4.14]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/Resolution> <http://www.w3.org/2000/01/rdf-schema#comment> "The smallest difference in the value of a quality being observed that would result in perceptably different values of observation results." .
+<http://www.w3.org/ns/ssn/systems/Resolution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Resolution> <http://www.w3.org/2000/01/rdf-schema#label> "Resolution" .
+<http://www.w3.org/ns/ssn/systems/Resolution> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/ResponseTime
+<http://www.w3.org/ns/ssn/systems/ResponseTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/ResponseTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/ResponseTime> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'step response time' [VIM 4.23]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/ResponseTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time between a (step) change inthe value of an observed quality and a sensor (possibly with specified error) 'settling' on an observed value." .
+<http://www.w3.org/ns/ssn/systems/ResponseTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/ResponseTime> <http://www.w3.org/2000/01/rdf-schema#label> "Response time" .
+<http://www.w3.org/ns/ssn/systems/ResponseTime> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/Selectivity
+<http://www.w3.org/ns/ssn/systems/Selectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Selectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/Selectivity> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'selectivity' [VIM 4.13]\n                                 http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/Selectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Selectivity is a property of a sensor whereby it provides observed values for one or more qualities such that the values of each quality are independent of other qualities in the phenomenon, body, or substance being investigated." .
+<http://www.w3.org/ns/ssn/systems/Selectivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Selectivity> <http://www.w3.org/2000/01/rdf-schema#label> "Selectivity" .
+<http://www.w3.org/ns/ssn/systems/Selectivity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/Sensitivity
+<http://www.w3.org/ns/ssn/systems/Sensitivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Sensitivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/Sensitivity> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'sensitivity' [VIM 4.12]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/Sensitivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensitivity is the quotient of the change in a result of sensor and the corresponding change in a value of a quality being observed." .
+<http://www.w3.org/ns/ssn/systems/Sensitivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/Sensitivity> <http://www.w3.org/2000/01/rdf-schema#label> "Sensitivity" .
+<http://www.w3.org/ns/ssn/systems/Sensitivity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/SurvivalProperty
+<http://www.w3.org/ns/ssn/systems/SurvivalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable characteristic that represents the extent of the sensors useful life.  Might include for example total battery life or number of recharges, or, for sensors that are used only a fixed number of times, the number of observations that can be made before the sensing capability is depleted." .
+<http://www.w3.org/ns/ssn/systems/SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Survival Property" .
+<http://www.w3.org/ns/ssn/systems/SurvivalProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/SurvivalRange
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/SurvivalProperty> .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://purl.org/dc/elements/1.1/source> "skos:narrowerMatch 'limiting operating condition' [VIM 4.10]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The conditions a sensor can be exposed to without damage: i.e., the sensor continues to operate as defined using MeasurementCapability.  If, however, the SurvivalRange is exceeded, the sensor is 'damaged' and MeasurementCapability specifications may no longer hold." .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#label> "Survival Range" .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/SystemCapability
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/forProperty> .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasSystemProperty> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://purl.org/dc/elements/1.1/source> "Similar idea to MeasurementCapability in MMI Device Ontology\n                                  http://marinemetadata.org/community/teams/ontdevices\n\nBut the the two express the relationship between constraints and multiple measurement properties differently.\n\nThe conditions linked to a MeasurementCapability are skos:exactMatch to 'influence quantity' [VIM 2.52]\nhttp://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Collects together measurement properties (accuracy, range, precision, etc) and the environmental conditions in which those properties hold, representing a specification of a sensor's capability in those conditions.\n\nThe conditions specified here are those that affect the measurement properties, while those in OperatingRange represent the sensor's standard operating conditions, including conditions that don't affect the observations." .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement Capability" .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
+# 
+# http://www.w3.org/ns/ssn/systems/SystemLifetime
+<http://www.w3.org/ns/ssn/systems/SystemLifetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SurvivalProperty> .
+<http://www.w3.org/ns/ssn/systems/SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#comment> "Total useful life of a sensor/system (expressed as total life since manufacture, time in use, number of operations, etc.)." .
+<http://www.w3.org/ns/ssn/systems/SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#label> "System Lifetime" .
+<http://www.w3.org/ns/ssn/systems/SystemLifetime> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#OperatingRestriction" .
+# 
+# http://www.w3.org/ns/ssn/systems/SystemProperty
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable and observable characteristic of a sensor's observations or ability to make observations." .
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement  Property" .
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#MeasuringCapability" .
 # 
 # http://xmlns.com/foaf/0.1/Image
 <http://xmlns.com/foaf/0.1/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1216,7 +1214,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NE
 # 
 # http://iot.linkeddata.es/def/core#BakingStep
 <http://iot.linkeddata.es/def/core#BakingStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#BakingStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> .
+<http://iot.linkeddata.es/def/core#BakingStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
 <http://iot.linkeddata.es/def/core#BakingStep> <http://www.w3.org/2000/01/rdf-schema#label> "BakingStep"@en .
 # 
 # http://iot.linkeddata.es/def/core#CO2Concentration
@@ -1282,7 +1280,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NE
 # 
 # http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed
 <http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> .
+<http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
 <http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed> <http://www.w3.org/2000/01/rdf-schema#label> "HeaterMeatProbeAllowed"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterMinTemperature
@@ -1292,7 +1290,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NE
 # 
 # http://iot.linkeddata.es/def/core#HeaterPreheatAllowed
 <http://iot.linkeddata.es/def/core#HeaterPreheatAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#HeaterPreheatAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ssnx/ssn#OperatingProperty> .
+<http://iot.linkeddata.es/def/core#HeaterPreheatAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
 <http://iot.linkeddata.es/def/core#HeaterPreheatAllowed> <http://www.w3.org/2000/01/rdf-schema#label> "HeaterPreheatAllowed"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation
@@ -1434,7 +1432,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.oclc.org/NE
 # 
 # http://iot.linkeddata.es/def/core#StoredEnergy
 <http://iot.linkeddata.es/def/core#StoredEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#StoredEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ssnx/ssn#BatteryLifetime> .
+<http://iot.linkeddata.es/def/core#StoredEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ssn/systems/BatteryLifetime> .
 <http://iot.linkeddata.es/def/core#StoredEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "StoredEnergy"@en .
 # 
 # http://iot.linkeddata.es/def/core#ValvePosition
