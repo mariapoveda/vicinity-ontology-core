@@ -412,17 +412,17 @@ foaf:depiction a owl:ObjectProperty .
 # #################################################################
 # 
 # 
-# http://iot.linkeddata.es/def/core#desctiption
+# http://iot.linkeddata.es/def/core#description
 
-:desctiption a owl:DatatypeProperty ;
+:description a owl:DatatypeProperty ;
 	rdfs:range xsd:string ;
 	rdfs:comment "General attribute for descriptions assigned to any type of concept" ;
-	rdfs:label "desctiption"@en .
+	rdfs:label "description"@en .
 # 
 # http://iot.linkeddata.es/def/core#deviceDescription
 
 :deviceDescription a owl:DatatypeProperty ;
-	rdfs:subPropertyOf :desctiption ;
+	rdfs:subPropertyOf :description ;
 	rdfs:domain :Device ;
 	rdfs:range xsd:string ;
 	rdfs:comment "Natural language description of a device."@en ;
@@ -456,7 +456,7 @@ foaf:depiction a owl:ObjectProperty .
 # http://iot.linkeddata.es/def/core#serviceDescription
 
 :serviceDescription a owl:DatatypeProperty ;
-	rdfs:subPropertyOf :desctiption ;
+	rdfs:subPropertyOf :description ;
 	rdfs:domain :Service ;
 	rdfs:range xsd:string ;
 	rdfs:comment "Natural language description of a service."@en ;
