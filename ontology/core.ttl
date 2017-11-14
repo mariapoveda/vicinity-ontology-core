@@ -565,7 +565,7 @@ _:genid7 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#Device
 
 :Device a owl:Class ;
-	rdfs:subClassOf :PhysicalThing ;
+	rdfs:subClassOf :PhysicalThing , <http://www.w3.org/ns/ssn/System> ;
 	rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
 	rdfs:label "Device"@en ;
 	rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
