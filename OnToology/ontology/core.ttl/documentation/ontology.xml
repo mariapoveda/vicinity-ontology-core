@@ -604,13 +604,13 @@
     
 
 
-    <!-- http://iot.linkeddata.es/def/core#desctiption -->
+    <!-- http://iot.linkeddata.es/def/core#description -->
 
 
-    <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/core#desctiption">
+    <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/core#description">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General attribute for descriptions assigned to any type of concept</rdfs:comment>
-        <rdfs:label xml:lang="en">desctiption</rdfs:label>
+        <rdfs:label xml:lang="en">description</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -619,7 +619,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/core#deviceDescription">
-        <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#desctiption"/>
+        <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#description"/>
         <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Natural language description of a device.</rdfs:comment>
@@ -669,7 +669,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/core#serviceDescription">
-        <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#desctiption"/>
+        <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/core#description"/>
         <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Natural language description of a service.</rdfs:comment>
@@ -834,6 +834,7 @@
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#Device">
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#PhysicalThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:comment xml:lang="en">An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
         <rdfs:label xml:lang="en">Device</rdfs:label>
         <rdfs:seeAlso xml:lang="en">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
@@ -1562,13 +1563,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
-    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Quality -->
-
-
-    <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Quality"/>
-    
-
-
     <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
 
@@ -1587,7 +1581,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>

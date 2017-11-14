@@ -384,16 +384,16 @@ rdf:value rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://iot.linkeddata.es/def/core#desctiption
-<http://iot.linkeddata.es/def/core#desctiption> rdf:type owl:DatatypeProperty ;
+###  http://iot.linkeddata.es/def/core#description
+<http://iot.linkeddata.es/def/core#description> rdf:type owl:DatatypeProperty ;
                                                 rdfs:range xsd:string ;
                                                 rdfs:comment "General attribute for descriptions assigned to any type of concept"^^xsd:string ;
-                                                rdfs:label "desctiption"@en .
+                                                rdfs:label "description"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#deviceDescription
 <http://iot.linkeddata.es/def/core#deviceDescription> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:subPropertyOf <http://iot.linkeddata.es/def/core#desctiption> ;
+                                                      rdfs:subPropertyOf <http://iot.linkeddata.es/def/core#description> ;
                                                       rdfs:domain <http://iot.linkeddata.es/def/core#Device> ;
                                                       rdfs:range xsd:string ;
                                                       rdfs:comment "Natural language description of a device."@en ;
@@ -427,7 +427,7 @@ rdf:value rdf:type owl:ObjectProperty ;
 
 ###  http://iot.linkeddata.es/def/core#serviceDescription
 <http://iot.linkeddata.es/def/core#serviceDescription> rdf:type owl:DatatypeProperty ;
-                                                       rdfs:subPropertyOf <http://iot.linkeddata.es/def/core#desctiption> ;
+                                                       rdfs:subPropertyOf <http://iot.linkeddata.es/def/core#description> ;
                                                        rdfs:domain <http://iot.linkeddata.es/def/core#Service> ;
                                                        rdfs:range xsd:string ;
                                                        rdfs:comment "Natural language description of a service."@en ;
@@ -529,7 +529,8 @@ rdf:value rdf:type owl:ObjectProperty ;
 
 ###  http://iot.linkeddata.es/def/core#Device
 <http://iot.linkeddata.es/def/core#Device> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://iot.linkeddata.es/def/core#PhysicalThing> ;
+                                           rdfs:subClassOf <http://iot.linkeddata.es/def/core#PhysicalThing> ,
+                                                           <http://www.w3.org/ns/ssn/System> ;
                                            rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
                                            rdfs:label "Device"@en ;
                                            rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
@@ -985,10 +986,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                   owl:deprecated "true"^^xsd:boolean .
 
 
-###  http://www.loa-cnr.it/ontologies/DUL.owl#Quality
-<http://www.loa-cnr.it/ontologies/DUL.owl#Quality> rdf:type owl:Class .
-
-
 ###  http://www.w3.org/2000/01/rdf-schema#Resource
 rdfs:Resource rdf:type owl:Class .
 
@@ -999,8 +996,7 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  http://www.w3.org/ns/ssn/Property
 <http://www.w3.org/ns/ssn/Property> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://www.loa-cnr.it/ontologies/DUL.owl#Quality> ,
-                                                    [ rdf:type owl:Restriction ;
+                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                       owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> ;
                                                       owl:someValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>
                                                     ] ;
