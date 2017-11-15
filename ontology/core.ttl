@@ -869,13 +869,11 @@ _:genid22 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#SmartOven
 
 :SmartOven a owl:Class ;
-	rdfs:subClassOf :Actuator , :Device ;
 	rdfs:label "Smart oven"@en .
 # 
 # http://iot.linkeddata.es/def/core#SmartRefrigerator
 
 :SmartRefrigerator a owl:Class ;
-	rdfs:subClassOf :Actuator , :Device ;
 	rdfs:label "Smart refrigerator"@en .
 # 
 # http://iot.linkeddata.es/def/core#Sound
