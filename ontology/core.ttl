@@ -292,10 +292,6 @@ _:genid3 a rdf:List ;
 	rdfs:isDefinedBy "A linkd between an agent and the entities, like devices or services, it provides or owns."@en ;
 	rdfs:label "owns"@en , "provides"@en .
 # 
-# http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality
-
-<http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> a owl:ObjectProperty .
-# 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#value
 
 rdf:value a owl:ObjectProperty ;
@@ -312,7 +308,6 @@ geo:location a owl:ObjectProperty .
 # http://www.w3.org/ns/ssn/hasProperty
 
 <http://www.w3.org/ns/ssn/hasProperty> a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> ;
 	owl:inverseOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
 	rdfs:comment "A relation between a FeatureOfInterest and a Property of that feature." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
