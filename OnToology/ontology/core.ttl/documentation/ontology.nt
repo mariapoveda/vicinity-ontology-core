@@ -11,7 +11,7 @@
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core" .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/core" .
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en .
-<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.2" .
+<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.3" .
 # 
 # 
 # #################################################################
@@ -245,9 +245,6 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#label> "owns"@en .
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#label> "provides"@en .
 # 
-# http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality
-<http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#value
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> .
@@ -261,7 +258,6 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://www.w3.org/ns/ssn/hasProperty
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality> .
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/isPropertyOf> .
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a FeatureOfInterest and a Property of that feature." .
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
@@ -349,15 +345,15 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
-# http://iot.linkeddata.es/def/core#desctiption
-<http://iot.linkeddata.es/def/core#desctiption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://iot.linkeddata.es/def/core#desctiption> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://iot.linkeddata.es/def/core#desctiption> <http://www.w3.org/2000/01/rdf-schema#comment> "General attribute for descriptions assigned to any type of concept" .
-<http://iot.linkeddata.es/def/core#desctiption> <http://www.w3.org/2000/01/rdf-schema#label> "desctiption"@en .
+# http://iot.linkeddata.es/def/core#description
+<http://iot.linkeddata.es/def/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://iot.linkeddata.es/def/core#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/core#description> <http://www.w3.org/2000/01/rdf-schema#comment> "General attribute for descriptions assigned to any type of concept" .
+<http://iot.linkeddata.es/def/core#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
 # 
 # http://iot.linkeddata.es/def/core#deviceDescription
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#desctiption> .
+<http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#description> .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#deviceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural language description of a device."@en .
@@ -387,7 +383,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://iot.linkeddata.es/def/core#serviceDescription
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#desctiption> .
+<http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/core#description> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Service> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural language description of a service."@en .
@@ -439,10 +435,21 @@ _:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es
 <http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent is a person or piece of software involved in a VICINITY neighbourhood."@en .
 <http://iot.linkeddata.es/def/core#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
 # 
+# http://iot.linkeddata.es/def/core#AmbientHumidityProperty
+<http://iot.linkeddata.es/def/core#AmbientHumidityProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://iot.linkeddata.es/def/core#AmbientHumidityProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#AmbientProperty> .
+<http://iot.linkeddata.es/def/core#AmbientHumidityProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient humidity property"@en .
+# 
 # http://iot.linkeddata.es/def/core#AmbientProperty
 <http://iot.linkeddata.es/def/core#AmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "AmbientProperty"@en .
+# 
+# http://iot.linkeddata.es/def/core#AmbientTemperatureProperty
+<http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#AmbientProperty> .
+<http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#TemperatureProperty> .
+<http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient temperature property"@en .
 # 
 # http://iot.linkeddata.es/def/core#Application
 <http://iot.linkeddata.es/def/core#Application> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -483,6 +490,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.e
 # http://iot.linkeddata.es/def/core#Device
 <http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#PhysicalThing> .
+<http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
 <http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en .
 <http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
 <http://iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
@@ -546,18 +554,13 @@ _:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 <http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#label> "Human user"@en .
 <http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 # 
-# http://iot.linkeddata.es/def/core#HumidityAmbientProperty
-<http://iot.linkeddata.es/def/core#HumidityAmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#HumidityAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#AmbientProperty> .
-<http://iot.linkeddata.es/def/core#HumidityAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "HumidityAmbientProperty"@en .
-# 
 # http://iot.linkeddata.es/def/core#HumiditySensor
 <http://iot.linkeddata.es/def/core#HumiditySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#HumiditySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Sensor> .
 <http://iot.linkeddata.es/def/core#HumiditySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#monitors> .
-_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> .
 <http://iot.linkeddata.es/def/core#HumiditySensor> <http://www.w3.org/2000/01/rdf-schema#label> "Humidity sensor"@en .
 # 
 # http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor
@@ -733,24 +736,19 @@ _:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 # http://iot.linkeddata.es/def/core#SmartOven
 <http://iot.linkeddata.es/def/core#SmartOven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#SmartOven> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Actuator> .
-<http://iot.linkeddata.es/def/core#SmartOven> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Sensor> .
+<http://iot.linkeddata.es/def/core#SmartOven> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#SmartOven> <http://www.w3.org/2000/01/rdf-schema#label> "Smart oven"@en .
 # 
 # http://iot.linkeddata.es/def/core#SmartRefrigerator
 <http://iot.linkeddata.es/def/core#SmartRefrigerator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#SmartRefrigerator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Actuator> .
-<http://iot.linkeddata.es/def/core#SmartRefrigerator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Sensor> .
+<http://iot.linkeddata.es/def/core#SmartRefrigerator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#SmartRefrigerator> <http://www.w3.org/2000/01/rdf-schema#label> "Smart refrigerator"@en .
 # 
 # http://iot.linkeddata.es/def/core#Sound
 <http://iot.linkeddata.es/def/core#Sound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#Sound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
 <http://iot.linkeddata.es/def/core#Sound> <http://www.w3.org/2000/01/rdf-schema#label> "Sound"@en .
-# 
-# http://iot.linkeddata.es/def/core#TemperatureAmbientProperty
-<http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#TemperatureProperty> .
-<http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "TemperatureAmbientProperty"@en .
 # 
 # http://iot.linkeddata.es/def/core#TemperatureProperty
 <http://iot.linkeddata.es/def/core#TemperatureProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -763,7 +761,7 @@ _:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 <http://iot.linkeddata.es/def/core#Thermometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#monitors> .
-_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> .
 <http://iot.linkeddata.es/def/core#Thermometer> <http://www.w3.org/2000/01/rdf-schema#label> "Thermometer"@en .
 # 
 # http://iot.linkeddata.es/def/core#Thermostat
@@ -881,9 +879,6 @@ _:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-# http://www.loa-cnr.it/ontologies/DUL.owl#Quality
-<http://www.loa-cnr.it/ontologies/DUL.owl#Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # http://www.w3.org/2000/01/rdf-schema#Resource
 <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
@@ -892,7 +887,6 @@ _:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 # 
 # http://www.w3.org/ns/ssn/Property
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.loa-cnr.it/ontologies/DUL.owl#Quality> .
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/isPropertyOf> .
@@ -1149,7 +1143,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#AmbientTemperature
 <http://iot.linkeddata.es/def/core#AmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#AmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> .
+<http://iot.linkeddata.es/def/core#AmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> .
 <http://iot.linkeddata.es/def/core#AmbientTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "AmbientTemperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageCO2Concentration
@@ -1164,12 +1158,12 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#AverageHumidity
 <http://iot.linkeddata.es/def/core#AverageHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#AverageHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> .
+<http://iot.linkeddata.es/def/core#AverageHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> .
 <http://iot.linkeddata.es/def/core#AverageHumidity> <http://www.w3.org/2000/01/rdf-schema#label> "Average Humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageHumidityDeviation
 <http://iot.linkeddata.es/def/core#AverageHumidityDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#AverageHumidityDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> .
+<http://iot.linkeddata.es/def/core#AverageHumidityDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> .
 <http://iot.linkeddata.es/def/core#AverageHumidityDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "Average humidity deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageLightIntensity
@@ -1199,12 +1193,12 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#AverageTemperature
 <http://iot.linkeddata.es/def/core#AverageTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#AverageTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> .
+<http://iot.linkeddata.es/def/core#AverageTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> .
 <http://iot.linkeddata.es/def/core#AverageTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "AverageTemperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageTemperatureDeviation
 <http://iot.linkeddata.es/def/core#AverageTemperatureDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#AverageTemperatureDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> .
+<http://iot.linkeddata.es/def/core#AverageTemperatureDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> .
 <http://iot.linkeddata.es/def/core#AverageTemperatureDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "AverageTemperatureDeviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#BakeRemainingTime
@@ -1244,7 +1238,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#DeviceTemperature
 <http://iot.linkeddata.es/def/core#DeviceTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#DeviceTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> .
+<http://iot.linkeddata.es/def/core#DeviceTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> .
 <http://iot.linkeddata.es/def/core#DeviceTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#TemperatureProperty> .
 <http://iot.linkeddata.es/def/core#DeviceTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "DeviceTemperature"@en .
 # 
@@ -1300,7 +1294,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#HighestHumidityDeviation
 <http://iot.linkeddata.es/def/core#HighestHumidityDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#HighestHumidityDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> .
+<http://iot.linkeddata.es/def/core#HighestHumidityDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> .
 <http://iot.linkeddata.es/def/core#HighestHumidityDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "Highst humidity deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestSoundDeviation
@@ -1310,7 +1304,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#HighestTemperatureDeviation
 <http://iot.linkeddata.es/def/core#HighestTemperatureDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#HighestTemperatureDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> .
+<http://iot.linkeddata.es/def/core#HighestTemperatureDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> .
 <http://iot.linkeddata.es/def/core#HighestTemperatureDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "Highst temperature deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#IndoorEnvironmentalQualityScore
@@ -1336,7 +1330,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#MaxHumidity
 <http://iot.linkeddata.es/def/core#MaxHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#MaxHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> .
+<http://iot.linkeddata.es/def/core#MaxHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> .
 <http://iot.linkeddata.es/def/core#MaxHumidity> <http://www.w3.org/2000/01/rdf-schema#label> "MaxHumidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxLightIntensity
@@ -1356,7 +1350,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#MaxTemperature
 <http://iot.linkeddata.es/def/core#MaxTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#MaxTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> .
+<http://iot.linkeddata.es/def/core#MaxTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> .
 <http://iot.linkeddata.es/def/core#MaxTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "MaxTemperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#MeanPowerConsumption
@@ -1376,7 +1370,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#MinHumidity
 <http://iot.linkeddata.es/def/core#MinHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#MinHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> .
+<http://iot.linkeddata.es/def/core#MinHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> .
 <http://iot.linkeddata.es/def/core#MinHumidity> <http://www.w3.org/2000/01/rdf-schema#label> "Minimun humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinLightIntensity
@@ -1396,7 +1390,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#MinTemperature
 <http://iot.linkeddata.es/def/core#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#TemperatureAmbientProperty> .
+<http://iot.linkeddata.es/def/core#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> .
 <http://iot.linkeddata.es/def/core#MinTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Minimun temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#Mode
@@ -1427,7 +1421,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#RelativeHumidity
 <http://iot.linkeddata.es/def/core#RelativeHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#RelativeHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumidityAmbientProperty> .
+<http://iot.linkeddata.es/def/core#RelativeHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> .
 <http://iot.linkeddata.es/def/core#RelativeHumidity> <http://www.w3.org/2000/01/rdf-schema#label> "RelativeHumidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#StoredEnergy
