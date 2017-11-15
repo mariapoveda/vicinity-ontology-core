@@ -508,11 +508,23 @@ _:genid6 a owl:Restriction ;
 	rdfs:comment "An agent is a person or piece of software involved in a VICINITY neighbourhood."@en ;
 	rdfs:label "Agent"@en .
 # 
+# http://iot.linkeddata.es/def/core#AmbientHumidityProperty
+
+:AmbientHumidityProperty a owl:Class ;
+	rdfs:subClassOf :AmbientProperty ;
+	rdfs:label "Ambient humidity property"@en .
+# 
 # http://iot.linkeddata.es/def/core#AmbientProperty
 
 :AmbientProperty a owl:Class ;
 	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
 	rdfs:label "AmbientProperty"@en .
+# 
+# http://iot.linkeddata.es/def/core#AmbientTemperatureProperty
+
+:AmbientTemperatureProperty a owl:Class ;
+	rdfs:subClassOf :AmbientProperty , :TemperatureProperty ;
+	rdfs:label "Ambient temperature property"@en .
 # 
 # http://iot.linkeddata.es/def/core#Application
 
@@ -634,12 +646,6 @@ _:genid10 a owl:Restriction ;
 	rdfs:label "Human user"@en ;
 	rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 # 
-# http://iot.linkeddata.es/def/core#HumidityAmbientProperty
-
-:HumidityAmbientProperty a owl:Class ;
-	rdfs:subClassOf :AmbientProperty ;
-	rdfs:label "HumidityAmbientProperty"@en .
-# 
 # http://iot.linkeddata.es/def/core#HumiditySensor
 
 :HumiditySensor a owl:Class ;
@@ -647,7 +653,7 @@ _:genid10 a owl:Restriction ;
 
 _:genid11 a owl:Restriction ;
 	owl:onProperty :monitors ;
-	owl:someValuesFrom :HumidityAmbientProperty .
+	owl:someValuesFrom :AmbientHumidityProperty .
 
 :HumiditySensor rdfs:label "Humidity sensor"@en .
 # 
@@ -878,12 +884,6 @@ _:genid22 a owl:Restriction ;
 	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
 	rdfs:label "Sound"@en .
 # 
-# http://iot.linkeddata.es/def/core#TemperatureAmbientProperty
-
-:TemperatureAmbientProperty a owl:Class ;
-	rdfs:subClassOf :TemperatureProperty ;
-	rdfs:label "TemperatureAmbientProperty"@en .
-# 
 # http://iot.linkeddata.es/def/core#TemperatureProperty
 
 :TemperatureProperty a owl:Class ;
@@ -897,7 +897,7 @@ _:genid22 a owl:Restriction ;
 
 _:genid23 a owl:Restriction ;
 	owl:onProperty :monitors ;
-	owl:someValuesFrom :TemperatureAmbientProperty .
+	owl:someValuesFrom :AmbientTemperatureProperty .
 
 :Thermometer rdfs:label "Thermometer"@en .
 # 
@@ -1378,7 +1378,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#AmbientTemperature
 
-:AmbientTemperature a owl:NamedIndividual , :TemperatureAmbientProperty ;
+:AmbientTemperature a owl:NamedIndividual , :AmbientTemperatureProperty ;
 	rdfs:label "AmbientTemperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageCO2Concentration
@@ -1393,12 +1393,12 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#AverageHumidity
 
-:AverageHumidity a owl:NamedIndividual , :HumidityAmbientProperty ;
+:AverageHumidity a owl:NamedIndividual , :AmbientHumidityProperty ;
 	rdfs:label "Average Humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageHumidityDeviation
 
-:AverageHumidityDeviation a owl:NamedIndividual , :HumidityAmbientProperty ;
+:AverageHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty ;
 	rdfs:label "Average humidity deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageLightIntensity
@@ -1428,12 +1428,12 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#AverageTemperature
 
-:AverageTemperature a owl:NamedIndividual , :TemperatureAmbientProperty ;
+:AverageTemperature a owl:NamedIndividual , :AmbientTemperatureProperty ;
 	rdfs:label "AverageTemperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageTemperatureDeviation
 
-:AverageTemperatureDeviation a owl:NamedIndividual , :TemperatureAmbientProperty ;
+:AverageTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty ;
 	rdfs:label "AverageTemperatureDeviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#BakeRemainingTime
@@ -1473,7 +1473,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#DeviceTemperature
 
-:DeviceTemperature a owl:NamedIndividual , :TemperatureAmbientProperty , :TemperatureProperty ;
+:DeviceTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , :TemperatureProperty ;
 	rdfs:label "DeviceTemperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#DimmingLevel
@@ -1528,7 +1528,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#HighestHumidityDeviation
 
-:HighestHumidityDeviation a owl:NamedIndividual , :HumidityAmbientProperty ;
+:HighestHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty ;
 	rdfs:label "Highst humidity deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestSoundDeviation
@@ -1538,7 +1538,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#HighestTemperatureDeviation
 
-:HighestTemperatureDeviation a owl:NamedIndividual , :TemperatureAmbientProperty ;
+:HighestTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty ;
 	rdfs:label "Highst temperature deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#IndoorEnvironmentalQualityScore
@@ -1563,7 +1563,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#MaxHumidity
 
-:MaxHumidity a owl:NamedIndividual , :HumidityAmbientProperty ;
+:MaxHumidity a owl:NamedIndividual , :AmbientHumidityProperty ;
 	rdfs:label "MaxHumidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxLightIntensity
@@ -1583,7 +1583,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#MaxTemperature
 
-:MaxTemperature a owl:NamedIndividual , :TemperatureAmbientProperty ;
+:MaxTemperature a owl:NamedIndividual , :AmbientTemperatureProperty ;
 	rdfs:label "MaxTemperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#MeanPowerConsumption
@@ -1603,7 +1603,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#MinHumidity
 
-:MinHumidity a owl:NamedIndividual , :HumidityAmbientProperty ;
+:MinHumidity a owl:NamedIndividual , :AmbientHumidityProperty ;
 	rdfs:label "Minimun humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinLightIntensity
@@ -1623,7 +1623,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#MinTemperature
 
-:MinTemperature a owl:NamedIndividual , :TemperatureAmbientProperty ;
+:MinTemperature a owl:NamedIndividual , :AmbientTemperatureProperty ;
 	rdfs:label "Minimun temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#Mode
@@ -1653,7 +1653,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#RelativeHumidity
 
-:RelativeHumidity a owl:NamedIndividual , :HumidityAmbientProperty ;
+:RelativeHumidity a owl:NamedIndividual , :AmbientHumidityProperty ;
 	rdfs:label "RelativeHumidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#StoredEnergy
