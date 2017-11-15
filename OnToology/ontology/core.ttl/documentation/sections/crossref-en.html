@@ -13,6 +13,14 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
       </li>
       <li>
+         <a href="#AmbientHumidityProperty"
+            title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
+      </li>
+      <li>
+         <a href="#AmbientTemperatureProperty"
+            title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
+      </li>
+      <li>
          <a href="#AmbientProperty"
             title="http://iot.linkeddata.es/def/core#AmbientProperty">AmbientProperty</a>
       </li>
@@ -81,10 +89,6 @@ This section provides details for each class and property defined by Vicinity co
       <li>
          <a href="#HumiditySensor"
             title="http://iot.linkeddata.es/def/core#HumiditySensor">Humidity sensor</a>
-      </li>
-      <li>
-         <a href="#HumidityAmbientProperty"
-            title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
       </li>
       <li>
          <a href="#HVACSensor" title="http://iot.linkeddata.es/def/core#HVACSensor">HVAC Sensor</a>
@@ -250,10 +254,6 @@ This section provides details for each class and property defined by Vicinity co
             title="http://iot.linkeddata.es/def/core#TemperatureProperty">Temperature</a>
       </li>
       <li>
-         <a href="#TemperatureAmbientProperty"
-            title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
-      </li>
-      <li>
          <a href="#Thermometer" title="http://iot.linkeddata.es/def/core#Thermometer">Thermometer</a>
       </li>
       <li>
@@ -348,9 +348,6 @@ This section provides details for each class and property defined by Vicinity co
          <dd>
             <a href="#HVACSensor" title="http://iot.linkeddata.es/def/core#HVACSensor">HVAC Sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LightSwitch" title="http://iot.linkeddata.es/def/core#LightSwitch">Light switch</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#SmartOven" title="http://iot.linkeddata.es/def/core#SmartOven">Smart oven</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#SmartRefrigerator"
-               title="http://iot.linkeddata.es/def/core#SmartRefrigerator">Smart refrigerator</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Thermostat" title="http://iot.linkeddata.es/def/core#Thermostat">Thermostat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -385,6 +382,75 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="AmbientHumidityProperty">
+      <h3>Ambient humidity property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#AmbientHumidityProperty</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AmbientProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientProperty">AmbientProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#AverageHumidity"
+               title="http://iot.linkeddata.es/def/core#AverageHumidity">Average Humidity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AverageHumidityDeviation"
+               title="http://iot.linkeddata.es/def/core#AverageHumidityDeviation">Average humidity deviation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighestHumidityDeviation"
+               title="http://iot.linkeddata.es/def/core#HighestHumidityDeviation">Highst humidity deviation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MaxHumidity" title="http://iot.linkeddata.es/def/core#MaxHumidity">MaxHumidity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinHumidity" title="http://iot.linkeddata.es/def/core#MinHumidity">Minimun humidity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#RelativeHumidity"
+               title="http://iot.linkeddata.es/def/core#RelativeHumidity">RelativeHumidity</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AmbientTemperatureProperty">
+      <h3>Ambient temperature property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#AmbientTemperatureProperty</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AmbientProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientProperty">AmbientProperty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#TemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#TemperatureProperty">Temperature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#AmbientTemperature"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperature">AmbientTemperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AverageTemperature"
+               title="http://iot.linkeddata.es/def/core#AverageTemperature">AverageTemperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AverageTemperatureDeviation"
+               title="http://iot.linkeddata.es/def/core#AverageTemperatureDeviation">AverageTemperatureDeviation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DeviceTemperature"
+               title="http://iot.linkeddata.es/def/core#DeviceTemperature">DeviceTemperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighestTemperatureDeviation"
+               title="http://iot.linkeddata.es/def/core#HighestTemperatureDeviation">Highst temperature deviation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MaxTemperature"
+               title="http://iot.linkeddata.es/def/core#MaxTemperature">MaxTemperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinTemperature"
+               title="http://iot.linkeddata.es/def/core#MinTemperature">Minimun temperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="AmbientProperty">
       <h3>AmbientProperty<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -400,8 +466,10 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#HumidityAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <a href="#AmbientHumidityProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has members</dt>
@@ -639,6 +707,9 @@ This section provides details for each class and property defined by Vicinity co
             <a href="#PhysicalThing" title="http://iot.linkeddata.es/def/core#PhysicalThing">Physical thing</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/ssn/System">system</span>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Actuator" title="http://iot.linkeddata.es/def/core#Actuator">Actuator</a>
@@ -859,39 +930,9 @@ This section provides details for each class and property defined by Vicinity co
             <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
-            <a href="#HumidityAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <a href="#AmbientHumidityProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="HumidityAmbientProperty">
-      <h3>HumidityAmbientProperty<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#HumidityAmbientProperty</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#AmbientProperty"
-               title="http://iot.linkeddata.es/def/core#AmbientProperty">AmbientProperty</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#AverageHumidity"
-               title="http://iot.linkeddata.es/def/core#AverageHumidity">Average Humidity</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AverageHumidityDeviation"
-               title="http://iot.linkeddata.es/def/core#AverageHumidityDeviation">Average humidity deviation</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighestHumidityDeviation"
-               title="http://iot.linkeddata.es/def/core#HighestHumidityDeviation">Highst humidity deviation</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MaxHumidity" title="http://iot.linkeddata.es/def/core#MaxHumidity">MaxHumidity</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinHumidity" title="http://iot.linkeddata.es/def/core#MinHumidity">Minimun humidity</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#RelativeHumidity"
-               title="http://iot.linkeddata.es/def/core#RelativeHumidity">RelativeHumidity</a>
-            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -1615,10 +1656,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://www.loa-cnr.it/ontologies/DUL.owl#Quality">quality</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <span class="dotted" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</span>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
@@ -1861,9 +1898,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://iot.linkeddata.es/def/core#OccupancySensor">Occupancy sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PeopleCounter" title="http://iot.linkeddata.es/def/core#PeopleCounter">People counter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PowerMeter" title="http://iot.linkeddata.es/def/core#PowerMeter">PowerMeter</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#SmartOven" title="http://iot.linkeddata.es/def/core#SmartOven">Smart oven</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#SmartRefrigerator"
-               title="http://iot.linkeddata.es/def/core#SmartRefrigerator">Smart refrigerator</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Thermometer" title="http://iot.linkeddata.es/def/core#Thermometer">Thermometer</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Thermostat" title="http://iot.linkeddata.es/def/core#Thermostat">Thermostat</a>
             <sup class="type-c" title="class">c</sup>, <a href="#WaterEnergyMeter"
@@ -1933,17 +1967,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#SmartOven</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Actuator" title="http://iot.linkeddata.es/def/core#Actuator">Actuator</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="SmartRefrigerator">
       <h3>Smart refrigerator<sup class="type-c" title="class">c</sup>
@@ -1952,17 +1975,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#SmartRefrigerator</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Actuator" title="http://iot.linkeddata.es/def/core#Actuator">Actuator</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="Sound">
       <h3>Sound<sup class="type-c" title="class">c</sup>
@@ -2096,8 +2108,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has members</dt>
@@ -2112,40 +2124,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://iot.linkeddata.es/def/core#HeaterMinTemperature">HeaterMinTemperature</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#MeatProbeTemperature"
                title="http://iot.linkeddata.es/def/core#MeatProbeTemperature">MeatProbeTemperature</a>
-            <sup class="type-ni" title="named individual">ni</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="TemperatureAmbientProperty">
-      <h3>TemperatureAmbientProperty<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#TemperatureAmbientProperty</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#TemperatureProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureProperty">Temperature</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#AmbientTemperature"
-               title="http://iot.linkeddata.es/def/core#AmbientTemperature">AmbientTemperature</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AverageTemperature"
-               title="http://iot.linkeddata.es/def/core#AverageTemperature">AverageTemperature</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AverageTemperatureDeviation"
-               title="http://iot.linkeddata.es/def/core#AverageTemperatureDeviation">AverageTemperatureDeviation</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DeviceTemperature"
-               title="http://iot.linkeddata.es/def/core#DeviceTemperature">DeviceTemperature</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighestTemperatureDeviation"
-               title="http://iot.linkeddata.es/def/core#HighestTemperatureDeviation">Highst temperature deviation</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MaxTemperature"
-               title="http://iot.linkeddata.es/def/core#MaxTemperature">MaxTemperature</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinTemperature"
-               title="http://iot.linkeddata.es/def/core#MinTemperature">Minimun temperature</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -2167,8 +2145,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2903,12 +2881,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </dl>
       <div class="description">
          <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality">has quality</span>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
             <dt>has sub-properties</dt>
             <dd>
                <a href="#http://www.w3.org/ns/ssn/systems/hasSystemCapability"
@@ -3437,7 +3409,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
    <h3 id="dataproperties" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#desctiption" title="http://iot.linkeddata.es/def/core#desctiption">desctiption</a>
+         <a href="#description" title="http://iot.linkeddata.es/def/core#description">description</a>
       </li>
       <li>
          <a href="#deviceDescription"
@@ -3463,13 +3435,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#timeStamp" title="http://iot.linkeddata.es/def/core#timeStamp">time stamp</a>
       </li>
    </ul>
-   <div class="entity" id="desctiption">
-      <h3>desctiption<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="description">
+      <h3>description<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#desctiption</p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#description</p>
       <div class="comment">
          <span class="markdown">General attribute for descriptions assigned to any type of concept</span>
       </div>
@@ -3504,7 +3476,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#desctiption" title="http://iot.linkeddata.es/def/core#desctiption">desctiption</a>
+               <a href="#description" title="http://iot.linkeddata.es/def/core#description">description</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
             <dt>has domain</dt>
@@ -3611,7 +3583,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#desctiption" title="http://iot.linkeddata.es/def/core#desctiption">desctiption</a>
+               <a href="#description" title="http://iot.linkeddata.es/def/core#description">description</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
             <dt>has domain</dt>
@@ -3901,8 +3873,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3917,8 +3889,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#HumidityAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <a href="#AmbientHumidityProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3933,8 +3905,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#HumidityAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <a href="#AmbientHumidityProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4057,8 +4029,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4073,8 +4045,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4198,8 +4170,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -4391,8 +4363,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#HumidityAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <a href="#AmbientHumidityProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4407,8 +4379,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4485,8 +4457,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#HumidityAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <a href="#AmbientHumidityProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4548,8 +4520,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4611,8 +4583,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#HumidityAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <a href="#AmbientHumidityProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4627,8 +4599,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#TemperatureAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#TemperatureAmbientProperty">TemperatureAmbientProperty</a>
+            <a href="#AmbientTemperatureProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4769,8 +4741,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#HumidityAmbientProperty"
-               title="http://iot.linkeddata.es/def/core#HumidityAmbientProperty">HumidityAmbientProperty</a>
+            <a href="#AmbientHumidityProperty"
+               title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
