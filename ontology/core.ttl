@@ -8,9 +8,7 @@
 @prefix wot: <http://xmlns.com/wot/0.1/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix saref: <https://w3id.org/saref#> .
@@ -1095,9 +1093,17 @@ rdfs:Resource a owl:Class .
 
 geo:SpatialThing a owl:Class .
 # 
+# http://www.w3.org/ns/sosa/ActuatableProperty
+
+<http://www.w3.org/ns/sosa/ActuatableProperty> rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> .
+# 
 # http://www.w3.org/ns/sosa/Actuator
 
 <http://www.w3.org/ns/sosa/Actuator> rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+
+<http://www.w3.org/ns/sosa/ObservableProperty> rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> .
 # 
 # http://www.w3.org/ns/sosa/Sensor
 
@@ -1471,293 +1477,293 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#AmbientTemperature
 
-:AmbientTemperature a owl:NamedIndividual , :AmbientTemperatureProperty ;
-	rdfs:label "AmbientTemperature"@en .
+:AmbientTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Ambient temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageCO2Concentration
 
-:AverageCO2Concentration a owl:NamedIndividual , :CarbonDioxide ;
-	rdfs:label "AverageCO2"@en .
+:AverageCO2Concentration a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average CO2"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageCO2ConcentrationDeviation
 
-:AverageCO2ConcentrationDeviation a owl:NamedIndividual , :CarbonDioxide ;
-	rdfs:label "AverageCO2Deviation"@en .
+:AverageCO2ConcentrationDeviation a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average CO2 deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageHumidity
 
-:AverageHumidity a owl:NamedIndividual , :AmbientHumidityProperty ;
-	rdfs:label "Average Humidity"@en .
+:AverageHumidity a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageHumidityDeviation
 
-:AverageHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty ;
+:AverageHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Average humidity deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageLightIntensity
 
-:AverageLightIntensity a owl:NamedIndividual , :LuminusIntensity ;
-	rdfs:label "AverageLightIntensity"@en .
+:AverageLightIntensity a owl:NamedIndividual , :LuminusIntensity , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average light intensity"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageMovemenetShare
 
-:AverageMovemenetShare a owl:NamedIndividual , :MotionProperty ;
-	rdfs:label "AverageMovemenetShare"@en .
+:AverageMovemenetShare a owl:NamedIndividual , :MotionProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average movemenet share"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageMovementTime
 
-:AverageMovementTime a owl:NamedIndividual , :MotionProperty ;
-	rdfs:label "AverageMovementTime"@en .
+:AverageMovementTime a owl:NamedIndividual , :MotionProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average movement time"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageSound
 
-:AverageSound a owl:NamedIndividual , :Sound ;
-	rdfs:label "AverageSound"@en .
+:AverageSound a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average sound"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageSoundDeviation
 
-:AverageSoundDeviation a owl:NamedIndividual , :Sound ;
+:AverageSoundDeviation a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Average sound deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageTemperature
 
-:AverageTemperature a owl:NamedIndividual , :AmbientTemperatureProperty ;
-	rdfs:label "AverageTemperature"@en .
+:AverageTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageTemperatureDeviation
 
-:AverageTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty ;
-	rdfs:label "AverageTemperatureDeviation"@en .
+:AverageTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Average temperature deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#BakeRemainingTime
 
-:BakeRemainingTime a owl:NamedIndividual , :TimeProperty ;
-	rdfs:label "BakeRemainingTime"@en .
+:BakeRemainingTime a owl:NamedIndividual , :TimeProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Bake remaining time"@en .
 # 
 # http://iot.linkeddata.es/def/core#BakingStep
 
-:BakingStep a owl:NamedIndividual , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
-	rdfs:label "BakingStep"@en .
+:BakingStep a owl:NamedIndividual , <http://www.w3.org/ns/sosa/ObservableProperty> , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+	rdfs:label "Baking step"@en .
 # 
 # http://iot.linkeddata.es/def/core#CO2Concentration
 
-:CO2Concentration a owl:NamedIndividual , :CarbonDioxide ;
-	rdfs:label "CO2Concentration"@en .
+:CO2Concentration a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "CO2 concentration"@en .
 # 
 # http://iot.linkeddata.es/def/core#ChargeStatus
 
-:ChargeStatus a owl:NamedIndividual , :OperationalStatus ;
-	rdfs:label "ChargeStatus"@en .
+:ChargeStatus a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Charge status"@en .
 # 
 # http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime
 
-:CurrentBakingStepRemainingTime a owl:NamedIndividual , :TimeProperty ;
-	rdfs:label "CurrentBakingStepRemainingTime"@en .
+:CurrentBakingStepRemainingTime a owl:NamedIndividual , :TimeProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Current baking step remaining time"@en .
 # 
 # http://iot.linkeddata.es/def/core#DeviceLightStatus
 
-:DeviceLightStatus a owl:NamedIndividual , :OperationalStatus ;
-	rdfs:label "DeviceLightStatus"@en .
+:DeviceLightStatus a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Device light status"@en .
 # 
 # http://iot.linkeddata.es/def/core#DeviceStatus
 
-:DeviceStatus a owl:NamedIndividual , :OperationalStatus ;
-	rdfs:label "DeviceStatus"@en .
+:DeviceStatus a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Device status"@en .
 # 
 # http://iot.linkeddata.es/def/core#DeviceTemperature
 
-:DeviceTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , :TemperatureProperty ;
-	rdfs:label "DeviceTemperature"@en .
+:DeviceTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , :TemperatureProperty , <http://www.w3.org/ns/sosa/ActuatableProperty> , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Device temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#DimmingLevel
 
-:DimmingLevel a owl:NamedIndividual , :OperationalStatus ;
-	rdfs:label "DimmingLevel"@en .
+:DimmingLevel a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Dimming level"@en .
 # 
 # http://iot.linkeddata.es/def/core#ElapsedBakingTime
 
-:ElapsedBakingTime a owl:NamedIndividual , :TimeProperty ;
-	rdfs:label "ElapsedBakingTime"@en .
+:ElapsedBakingTime a owl:NamedIndividual , :TimeProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Elapsed baking time"@en .
 # 
 # http://iot.linkeddata.es/def/core#EntryExit
 
-:EntryExit a owl:NamedIndividual , :Presence ;
-	rdfs:label "EntryExit"@en .
+:EntryExit a owl:NamedIndividual , :Presence , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Entry exit"@en .
 # 
 # http://iot.linkeddata.es/def/core#FanSpeed
 
-:FanSpeed a owl:NamedIndividual , :OperationalStatus ;
+:FanSpeed a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "FanSpeed"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterDefaultTemperature
 
-:HeaterDefaultTemperature a owl:NamedIndividual , :TemperatureProperty ;
-	rdfs:label "HeaterDefaultTemperature"@en .
+:HeaterDefaultTemperature a owl:NamedIndividual , :TemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Heater default temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterMaxTemperature
 
-:HeaterMaxTemperature a owl:NamedIndividual , :TemperatureProperty ;
-	rdfs:label "HeaterMaxTemperature"@en .
+:HeaterMaxTemperature a owl:NamedIndividual , :TemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Heater maximum temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed
 
-:HeaterMeatProbeAllowed a owl:NamedIndividual , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
-	rdfs:label "HeaterMeatProbeAllowed"@en .
+:HeaterMeatProbeAllowed a owl:NamedIndividual , <http://www.w3.org/ns/sosa/ObservableProperty> , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+	rdfs:label "Heater meat probe allowed"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterMinTemperature
 
-:HeaterMinTemperature a owl:NamedIndividual , :TemperatureProperty ;
-	rdfs:label "HeaterMinTemperature"@en .
+:HeaterMinTemperature a owl:NamedIndividual , :TemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Heater minimum temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterPreheatAllowed
 
-:HeaterPreheatAllowed a owl:NamedIndividual , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
-	rdfs:label "HeaterPreheatAllowed"@en .
+:HeaterPreheatAllowed a owl:NamedIndividual , <http://www.w3.org/ns/sosa/ObservableProperty> , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+	rdfs:label "Heater preheat allowed"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation
 
-:HighestCO2ConcentrationDeviation a owl:NamedIndividual , :CarbonDioxide ;
-	rdfs:label "HighestCO2Deviation"@en .
+:HighestCO2ConcentrationDeviation a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Highest CO2 deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestHumidityDeviation
 
-:HighestHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty ;
+:HighestHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Highst humidity deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestSoundDeviation
 
-:HighestSoundDeviation a owl:NamedIndividual , :Sound ;
-	rdfs:label "HighestSoundDeviation"@en .
+:HighestSoundDeviation a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Highest sound deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestTemperatureDeviation
 
-:HighestTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty ;
+:HighestTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Highst temperature deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#IndoorEnvironmentalQualityScore
 
-:IndoorEnvironmentalQualityScore a owl:NamedIndividual , :AmbientProperty ;
+:IndoorEnvironmentalQualityScore a owl:NamedIndividual , :AmbientProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "IEQ score"@en , "Indoor environmental quality score"@en .
 # 
 # http://iot.linkeddata.es/def/core#LightColor
 
-:LightColor a owl:NamedIndividual , :LightProperty ;
+:LightColor a owl:NamedIndividual , :LightProperty , <http://www.w3.org/ns/sosa/ActuatableProperty> , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Light color"@en .
 # 
 # http://iot.linkeddata.es/def/core#Luminance
 
-:Luminance a owl:NamedIndividual , :LuminusIntensity ;
+:Luminance a owl:NamedIndividual , :LuminusIntensity , <http://www.w3.org/ns/sosa/ActuatableProperty> , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Luminance"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxCO2Concentration
 
-:MaxCO2Concentration a owl:NamedIndividual , :CarbonDioxide ;
-	rdfs:label "MaxCO2"@en .
+:MaxCO2Concentration a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Maximum CO2"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxHumidity
 
-:MaxHumidity a owl:NamedIndividual , :AmbientHumidityProperty ;
-	rdfs:label "MaxHumidity"@en .
+:MaxHumidity a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Maximum humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxLightIntensity
 
-:MaxLightIntensity a owl:NamedIndividual , :LuminusIntensity ;
-	rdfs:label "MaxLightIntensity"@en .
+:MaxLightIntensity a owl:NamedIndividual , :LuminusIntensity , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Maximum light intensity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxPowerConsumption
 
-:MaxPowerConsumption a owl:NamedIndividual , :PowerConsumption ;
-	rdfs:label "MaxPowerConsumption"@en .
+:MaxPowerConsumption a owl:NamedIndividual , :PowerConsumption , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Maximum power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxSound
 
-:MaxSound a owl:NamedIndividual , :Sound ;
-	rdfs:label "MaxSound"@en .
+:MaxSound a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Maximum sound"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxTemperature
 
-:MaxTemperature a owl:NamedIndividual , :AmbientTemperatureProperty ;
-	rdfs:label "MaxTemperature"@en .
+:MaxTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Maximum temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#MeanPowerConsumption
 
-:MeanPowerConsumption a owl:NamedIndividual , :PowerConsumption ;
-	rdfs:label "MeanPowerConsumption"@en .
+:MeanPowerConsumption a owl:NamedIndividual , :PowerConsumption , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Mean power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#MeatProbeTemperature
 
-:MeatProbeTemperature a owl:NamedIndividual , :TemperatureProperty ;
-	rdfs:label "MeatProbeTemperature"@en .
+:MeatProbeTemperature a owl:NamedIndividual , :TemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Meat probe temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinCO2Concentration
 
-:MinCO2Concentration a owl:NamedIndividual , :CarbonDioxide ;
-	rdfs:label "MinCO2"@en .
+:MinCO2Concentration a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Minimum CO2"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinHumidity
 
-:MinHumidity a owl:NamedIndividual , :AmbientHumidityProperty ;
+:MinHumidity a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Minimun humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinLightIntensity
 
-:MinLightIntensity a owl:NamedIndividual , :LuminusIntensity ;
-	rdfs:label "MinLightIntensity"@en .
+:MinLightIntensity a owl:NamedIndividual , :LuminusIntensity , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Minimu light intensity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinPowerConsumption
 
-:MinPowerConsumption a owl:NamedIndividual , :PowerConsumption ;
-	rdfs:label "MinPowerConsumption"@en .
+:MinPowerConsumption a owl:NamedIndividual , :PowerConsumption , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Minimum power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinSound
 
-:MinSound a owl:NamedIndividual , :Sound ;
-	rdfs:label "MinSound"@en .
+:MinSound a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Minimum sound"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinTemperature
 
-:MinTemperature a owl:NamedIndividual , :AmbientTemperatureProperty ;
-	rdfs:label "Minimun temperature"@en .
+:MinTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Minimum temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#Mode
 
-:Mode a owl:NamedIndividual , :OperationalStatus ;
+:Mode a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Mode"@en .
 # 
 # http://iot.linkeddata.es/def/core#Motion
 
-:Motion a owl:NamedIndividual , :MotionProperty ;
+:Motion a owl:NamedIndividual , :MotionProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Motion"@en .
 # 
 # http://iot.linkeddata.es/def/core#NoiseLevel
 
-:NoiseLevel a owl:NamedIndividual , :Sound ;
+:NoiseLevel a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
 	rdfs:label "Noise level"@en , "Sound level"@en .
 # 
 # http://iot.linkeddata.es/def/core#OnOff
 
-:OnOff a owl:NamedIndividual , :OperationalStatus ;
-	rdfs:label "OnOff"@en .
+:OnOff a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "On Off"@en .
 # 
 # http://iot.linkeddata.es/def/core#OpenClosed
 
-:OpenClosed a owl:NamedIndividual , :OperationalStatus ;
-	rdfs:label "OpenClosed"@en .
+:OpenClosed a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Open Closed"@en .
 # 
 # http://iot.linkeddata.es/def/core#RelativeHumidity
 
-:RelativeHumidity a owl:NamedIndividual , :AmbientHumidityProperty ;
-	rdfs:label "RelativeHumidity"@en .
+:RelativeHumidity a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Relative humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#StoredEnergy
 
-:StoredEnergy a owl:NamedIndividual , <http://www.w3.org/ns/ssn/systems/BatteryLifetime> ;
-	rdfs:label "StoredEnergy"@en .
+:StoredEnergy a owl:NamedIndividual , <http://www.w3.org/ns/sosa/ObservableProperty> , <http://www.w3.org/ns/ssn/systems/BatteryLifetime> ;
+	rdfs:label "Stored energy"@en .
 # 
 # http://iot.linkeddata.es/def/core#ValvePosition
 
-:ValvePosition a owl:NamedIndividual , :OperationalStatus ;
-	rdfs:label "ValvePosition"@en .
+:ValvePosition a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+	rdfs:label "Valve position"@en .
 # 
 
 _:genid53 owl:cardinality "1"^^xsd:nonNegativeInteger .
