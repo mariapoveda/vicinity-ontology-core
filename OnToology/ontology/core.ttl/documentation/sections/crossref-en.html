@@ -41,13 +41,17 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#CarbonDioxide" title="http://iot.linkeddata.es/def/core#CarbonDioxide">CarbonDioxide</a>
       </li>
       <li>
-         <a href="#CarbonMonoxide" title="http://iot.linkeddata.es/def/core#CarbonMonoxide">CarbonMonoxide</a>
+         <a href="#CarbonMonoxide"
+            title="http://iot.linkeddata.es/def/core#CarbonMonoxide">CarbonMonoxide</a>
       </li>
       <li>
          <a href="#Charger" title="http://iot.linkeddata.es/def/core#Charger">Charger</a>
       </li>
       <li>
          <a href="#CO2Sensor" title="http://iot.linkeddata.es/def/core#CO2Sensor">CO2 Sensor</a>
+      </li>
+      <li>
+         <a href="#ComposedThing" title="http://iot.linkeddata.es/def/core#ComposedThing">Composed thing</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition">Condition</a>
@@ -213,11 +217,6 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#http://www.w3.org/ns/ssn/systems/Selectivity" title="http://www.w3.org/ns/ssn/systems/Selectivity">Selectivity</a>
       </li>
       <li>
-         <a href="#http://purl.oclc.org/NET/ssnx/ssn#SensingDevice" title="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">
-            <span>sensing device</span>
-         </a>
-      </li>
-      <li>
          <a href="#http://www.w3.org/ns/ssn/systems/Sensitivity" title="http://www.w3.org/ns/ssn/systems/Sensitivity">Sensitivity</a>
       </li>
       <li>
@@ -245,6 +244,9 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#http://www.w3.org/ns/ssn/systems/SurvivalRange" title="http://www.w3.org/ns/ssn/systems/SurvivalRange">Survival Range</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/ssn/systems/SystemLifetime" title="http://www.w3.org/ns/ssn/systems/SystemLifetime">System Lifetime</a>
@@ -647,6 +649,30 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="ComposedThing">
+      <h3>Composed thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#ComposedThing</p>
+      <div class="comment">
+         <span class="markdown">This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://www.w3.org/ns/ssn/systems/Condition">
       <h3>Condition<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -708,7 +734,8 @@ This section provides details for each class and property defined by Vicinity co
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted" title="http://www.w3.org/ns/ssn/System">system</span>
+            <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
@@ -1230,7 +1257,8 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted" title="http://www.w3.org/ns/ssn/forProperty">for property</span> 
+            <span class="dotted" title="http://www.w3.org/ns/ssn/forProperty">for property</span>
+            <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a>
             <sup class="type-c" title="class">c</sup>
@@ -1534,11 +1562,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#contains" title="http://iot.linkeddata.es/def/core#contains">contains</a>
+            <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#PhysicalThing" title="http://iot.linkeddata.es/def/core#PhysicalThing">Physical thing</a>
-            <sup class="type-c" title="class">c</sup>
+            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
          </dd>
          <dd>
             <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</span>
@@ -1646,19 +1673,31 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/ssn/Property</p>
       <div class="comment">
-         <span class="markdown">A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest</span>
+         <span class="markdown">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a>
+         </dd>
          <dd>http://iot.linkeddata.es/def/core</dd>
          <dd>http://iot.linkeddata.es/def/core</dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</span>
+            <a href="#http://www.w3.org/ns/ssn/isPropertyOf" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</span>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/ssn/isPropertyOf" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</span>
          </dd>
          <dt>has sub-classes</dt>
@@ -1666,7 +1705,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <a href="#AmbientProperty"
                title="http://iot.linkeddata.es/def/core#AmbientProperty">AmbientProperty</a>
             <sup class="type-c" title="class">c</sup>, <a href="#CarbonDioxide" title="http://iot.linkeddata.es/def/core#CarbonDioxide">CarbonDioxide</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#CarbonMonoxide" title="http://iot.linkeddata.es/def/core#CarbonMonoxide">CarbonMonoxide</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CarbonMonoxide"
+               title="http://iot.linkeddata.es/def/core#CarbonMonoxide">CarbonMonoxide</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition">Condition</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LightProperty" title="http://iot.linkeddata.es/def/core#LightProperty">LightProperty</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/ssn/systems/SystemProperty" title="http://www.w3.org/ns/ssn/systems/SystemProperty">Measurement  Property</a>
@@ -1811,18 +1851,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <a href="#http://www.w3.org/ns/ssn/systems/SystemProperty" title="http://www.w3.org/ns/ssn/systems/SystemProperty">Measurement  Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">
-      <h3>sensing device<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.oclc.org/NET/ssnx/ssn#SensingDevice</p>
-      <dl>
-         <dt>Is deprecated</dt>
-         <dd>true</dd>
       </dl>
    </div>
    <div class="entity" id="http://www.w3.org/ns/ssn/systems/Sensitivity">
@@ -2070,6 +2098,67 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://www.w3.org/ns/ssn/System">
+      <h3>System<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/ssn/System</p>
+      <div class="comment">
+         <span class="markdown">System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</span> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/Platform">platform</span>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/ssn/hasDeployment">has deployment</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/ns/ssn/Deployment">deployment</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/ssn/hasSubSystem">has sub system</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/ssn/implements">implements</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/Procedure">procedure</span>
+         </dd>
+         <dd>
+            <span class="logic">inverse</span> 
+            <span class="dotted" title="http://www.w3.org/ns/ssn/hasSubSystem">has sub system</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://www.w3.org/ns/ssn/systems/SystemLifetime">
       <h3>System Lifetime<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -2305,7 +2394,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
          </dd>
          <dd>
-            <a href="#contains" title="http://iot.linkeddata.es/def/core#contains">contains</a>
+            <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#VirtualThing" title="http://iot.linkeddata.es/def/core#VirtualThing">Virtual thing</a>
@@ -2315,6 +2404,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dd>
             <a href="#Service" title="http://iot.linkeddata.es/def/core#Service">Service</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#exposes" title="http://iot.linkeddata.es/def/core#exposes">A property representing the Thing (Virtual or Physical) that a service exposes.</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -2371,6 +2465,9 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#exposes" title="http://iot.linkeddata.es/def/core#exposes">A property representing the Thing (Virtual or Physical) that a service exposes.</a>
+      </li>
+      <li>
          <a href="#aboutFeatureOfInterest"
             title="http://iot.linkeddata.es/def/core#aboutFeatureOfInterest">about feature of interest</a>
       </li>
@@ -2386,9 +2483,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </li>
       <li>
          <a href="#avatar" title="http://iot.linkeddata.es/def/core#avatar">avatar</a>
-      </li>
-      <li>
-         <a href="#contains" title="http://iot.linkeddata.es/def/core#contains">contains</a>
       </li>
       <li>
          <a href="#describesEcosystem"
@@ -2464,6 +2558,9 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">is component of</a>
       </li>
       <li>
+         <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/saref4bldg#isContainedIn" title="https://w3id.org/def/saref4bldg#isContainedIn">is contained in</a>
       </li>
       <li>
@@ -2479,6 +2576,9 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <li>
          <a href="#isNeighbourhoodOf"
             title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">is neighbourhood of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/ssn/isPropertyOf" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
       </li>
       <li>
          <a href="#isRelativeTo" title="http://iot.linkeddata.es/def/core#isRelativeTo">is relative to</a>
@@ -2504,6 +2604,27 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#value" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">value</a>
       </li>
    </ul>
+   <div class="entity" id="exposes">
+      <h3>A property representing the Thing (Virtual or Physical) that a service exposes.<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#exposes</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VirtualThing" title="http://iot.linkeddata.es/def/core#VirtualThing">Virtual thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="aboutFeatureOfInterest">
       <h3>about feature of interest<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2593,17 +2714,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
-      </div>
-   </div>
-   <div class="entity" id="contains">
-      <h3>contains<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#contains</p>
-      <div class="comment">
-         <span class="markdown">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things.</span>
       </div>
    </div>
    <div class="entity" id="describesEcosystem">
@@ -2873,10 +2983,16 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/ssn/hasProperty</p>
       <div class="comment">
-         <span class="markdown">A relation between a FeatureOfInterest and a Property of that feature.</span>
+         <span class="markdown">Relation between an entity and a Property of that entity.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">Relation between an entity and a Property of that entity.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a>
+         </dd>
          <dd>http://iot.linkeddata.es/def/core</dd>
       </dl>
       <div class="description">
@@ -2901,7 +3017,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</span>
+               <a href="#http://www.w3.org/ns/ssn/isPropertyOf" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -3109,6 +3225,17 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
+   <div class="entity" id="isComposedBy">
+      <h3>is composed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isComposedBy</p>
+      <div class="comment">
+         <span class="markdown">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things.</span>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/def/saref4bldg#isContainedIn">
       <h3>is contained in<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3232,6 +3359,35 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <dd>
                <a href="#hasNeighbourhood"
                   title="http://iot.linkeddata.es/def/core#hasNeighbourhood">has neighbourhood</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/ssn/isPropertyOf">
+      <h3>is property of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/ssn/isPropertyOf</p>
+      <div class="comment">
+         <span class="markdown">Relation between a Property and the entity it belongs to.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">Relation between a Property and the entity it belongs to.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>

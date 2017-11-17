@@ -9,7 +9,7 @@
 <http://iot.linkeddata.es/def/core#> rdf:type owl:Ontology ;
                                       owl:imports <http://iot.linkeddata.es/def/wot#> ,
                                                   <http://www.w3.org/ns/org#> ,
-                                                  <http://www.w3.org/ns/ssn/> ;
+                                                  <http://www.w3.org/ns/sosa/> ;
                                       <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> ;
                                       <http://purl.org/dc/elements/1.1/title> "Vicinity core model"@en ;
                                       <http://purl.org/dc/terms/contributor> <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
@@ -84,14 +84,6 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                            rdfs:label "avatar"@en .
 
 
-###  http://iot.linkeddata.es/def/core#contains
-<http://iot.linkeddata.es/def/core#contains> rdf:type owl:ObjectProperty ,
-                                                      owl:TransitiveProperty ;
-                                             rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things."@en ;
-                                             rdfs:label "contains"@en ;
-                                             rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"^^xsd:string .
-
-
 ###  http://iot.linkeddata.es/def/core#describes
 <http://iot.linkeddata.es/def/core#describes> rdf:type owl:ObjectProperty ;
                                               owl:inverseOf <http://iot.linkeddata.es/def/core#isDescribedBy> ;
@@ -106,6 +98,14 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                        rdfs:comment "Link between a thing ecosystem description and the ecosystem being described."@en ;
                                                        rdfs:label "describes ecosystem"@en ;
                                                        owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://iot.linkeddata.es/def/core#exposes
+<http://iot.linkeddata.es/def/core#exposes> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://iot.linkeddata.es/def/core#VirtualThing> ;
+                                            rdfs:range <http://iot.linkeddata.es/def/wot#Thing> ;
+                                            rdfs:label "A property representing the Thing (Virtual or Physical) that a service exposes."@en ,
+                                                       "exposes"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#expressedInFormat
@@ -200,6 +200,13 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                   rdfs:label "is component of"@en .
 
 
+###  http://iot.linkeddata.es/def/core#isComposedBy
+<http://iot.linkeddata.es/def/core#isComposedBy> rdf:type owl:ObjectProperty ,
+                                                          owl:TransitiveProperty ;
+                                                 rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things."@en ;
+                                                 rdfs:label "is composed by"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#isDescribedBy
 <http://iot.linkeddata.es/def/core#isDescribedBy> rdf:type owl:ObjectProperty ;
                                                   rdfs:comment "Relation from a thing to its thing descriptions"@en ;
@@ -282,17 +289,41 @@ rdf:value rdf:type owl:ObjectProperty ;
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty .
 
 
+###  http://www.w3.org/ns/ssn/forProperty
+<http://www.w3.org/ns/ssn/forProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/ssn/hasDeployment
+<http://www.w3.org/ns/ssn/hasDeployment> rdf:type owl:ObjectProperty .
+
+
 ###  http://www.w3.org/ns/ssn/hasProperty
 <http://www.w3.org/ns/ssn/hasProperty> rdf:type owl:ObjectProperty ;
                                        owl:inverseOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-                                       rdfs:comment "A relation between a FeatureOfInterest and a Property of that feature."^^xsd:string ;
-                                       rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn"^^xsd:string ;
-                                       rdfs:label "has property"^^xsd:string ;
-                                       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton"^^xsd:string .
+                                       rdfs:comment "Relation between an entity and a Property of that entity."@en ,
+                                                    "A relation between a FeatureOfInterest and a Property of that feature."^^xsd:string ;
+                                       rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ,
+                                                        "http://purl.oclc.org/NET/ssnx/ssn"^^xsd:string ;
+                                       rdfs:label "has property"@en ,
+                                                  "has property"^^xsd:string ;
+                                       rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton"^^xsd:string ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Relation between an entity and a Property of that entity."@en .
+
+
+###  http://www.w3.org/ns/ssn/hasSubSystem
+<http://www.w3.org/ns/ssn/hasSubSystem> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/ssn/implements
+<http://www.w3.org/ns/ssn/implements> rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/ssn/isPropertyOf
-<http://www.w3.org/ns/ssn/isPropertyOf> rdf:type owl:ObjectProperty .
+<http://www.w3.org/ns/ssn/isPropertyOf> rdf:type owl:ObjectProperty ;
+                                        rdfs:comment "Relation between a Property and the entity it belongs to."@en ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
+                                        rdfs:label "is property of"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Property and the entity it belongs to."@en .
 
 
 ###  http://www.w3.org/ns/ssn/systems/hasOperatingProperty
@@ -535,6 +566,17 @@ rdf:value rdf:type owl:ObjectProperty ;
                                             rdfs:label "Charger"@en .
 
 
+###  http://iot.linkeddata.es/def/core#ComposedThing
+<http://iot.linkeddata.es/def/core#ComposedThing> rdf:type owl:Class ;
+                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://iot.linkeddata.es/def/core#isComposedBy> ;
+                                                                        owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
+                                                                      ] ;
+                                                  rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ;
+                                                  rdfs:comment "This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things."@en ;
+                                                  rdfs:label "Composed thing"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#Device
 <http://iot.linkeddata.es/def/core#Device> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://iot.linkeddata.es/def/core#PhysicalThing> ,
@@ -725,8 +767,8 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                   rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ,
                                                                   <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
                                                                   [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://iot.linkeddata.es/def/core#contains> ;
-                                                                    owl:allValuesFrom <http://iot.linkeddata.es/def/core#PhysicalThing>
+                                                                    owl:onProperty <http://iot.linkeddata.es/def/core#isComposedBy> ;
+                                                                    owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
                                                                   ] ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
@@ -906,7 +948,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 <http://iot.linkeddata.es/def/core#VirtualThing> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ,
                                                                  [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://iot.linkeddata.es/def/core#contains> ;
+                                                                   owl:onProperty <http://iot.linkeddata.es/def/core#isComposedBy> ;
                                                                    owl:allValuesFrom <http://iot.linkeddata.es/def/core#VirtualThing>
                                                                  ] ;
                                                  rdfs:comment """A virtual entity is a digital representation of a physical entity, contained within a service. A virtual entity interacts through an endpoint. A virtual entity represents a physical entity.
@@ -973,11 +1015,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                             ] .
 
 
-###  http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> rdf:type owl:Class ;
-                                                  owl:deprecated "true"^^xsd:boolean .
-
-
 ###  http://www.w3.org/2000/01/rdf-schema#Resource
 rdfs:Resource rdf:type owl:Class .
 
@@ -986,21 +1023,70 @@ rdfs:Resource rdf:type owl:Class .
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class .
 
 
+###  http://www.w3.org/ns/sosa/Actuator
+<http://www.w3.org/ns/sosa/Actuator> rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+
+
+###  http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+
+
+###  http://www.w3.org/ns/ssn/Deployment
+<http://www.w3.org/ns/ssn/Deployment> rdf:type owl:Class .
+
+
 ###  http://www.w3.org/ns/ssn/Property
 <http://www.w3.org/ns/ssn/Property> rdf:type owl:Class ;
                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                       owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> ;
                                                       owl:someValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> ;
+                                                      owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>
                                                     ] ;
                                     <http://purl.org/dc/elements/1.1/source> """skos:exactMatch 'property' [O&M] 
 		                    http://www.opengeospatial.org/standards/om"""^^xsd:string ;
-                                    rdfs:comment "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en ,
+                                    rdfs:comment "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en ,
+                                                 "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en ,
                                                  "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor."^^xsd:string ;
-                                    rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn"^^xsd:string ,
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ,
+                                                     "http://purl.oclc.org/NET/ssnx/ssn"^^xsd:string ,
                                                      "http://purl.oclc.org/NET/ssnx/ssn#"^^xsd:string ;
-                                    rdfs:label "Property"^^xsd:string ,
+                                    rdfs:label "Property"@en ,
+                                               "Property"^^xsd:string ,
                                                "property (ssn)"^^xsd:string ;
-                                    rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton"^^xsd:string .
+                                    rdfs:seeAlso "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton"^^xsd:string ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en .
+
+
+###  http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> rdf:type owl:Class ;
+                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/sosa/isHostedBy> ;
+                                                    owl:allValuesFrom <http://www.w3.org/ns/sosa/Platform>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/ssn/hasDeployment> ;
+                                                    owl:allValuesFrom <http://www.w3.org/ns/ssn/Deployment>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/ssn/hasSubSystem> ;
+                                                    owl:allValuesFrom <http://www.w3.org/ns/ssn/System>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
+                                                    owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty [ owl:inverseOf <http://www.w3.org/ns/ssn/hasSubSystem>
+                                                                   ] ;
+                                                    owl:allValuesFrom <http://www.w3.org/ns/ssn/System>
+                                                  ] ;
+                                  rdfs:comment "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en ;
+                                  rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
+                                  rdfs:label "System"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems."@en .
 
 
 ###  http://www.w3.org/ns/ssn/systems/Accuracy
