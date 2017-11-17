@@ -41,13 +41,17 @@ This ontology has the following classes and properties.</span>
       <a href="#CarbonDioxide" title="http://iot.linkeddata.es/def/core#CarbonDioxide">CarbonDioxide</a>
    </li>
    <li>
-      <a href="#CarbonMonoxide" title="http://iot.linkeddata.es/def/core#CarbonMonoxide">CarbonMonoxide</a>
+      <a href="#CarbonMonoxide"
+         title="http://iot.linkeddata.es/def/core#CarbonMonoxide">CarbonMonoxide</a>
    </li>
    <li>
       <a href="#Charger" title="http://iot.linkeddata.es/def/core#Charger">Charger</a>
    </li>
    <li>
       <a href="#CO2Sensor" title="http://iot.linkeddata.es/def/core#CO2Sensor">CO2 Sensor</a>
+   </li>
+   <li>
+      <a href="#ComposedThing" title="http://iot.linkeddata.es/def/core#ComposedThing">Composed thing</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition">Condition</a>
@@ -213,11 +217,6 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/ns/ssn/systems/Selectivity" title="http://www.w3.org/ns/ssn/systems/Selectivity">Selectivity</a>
    </li>
    <li>
-      <a href="#http://purl.oclc.org/NET/ssnx/ssn#SensingDevice" title="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">
-         <span>sensing device</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://www.w3.org/ns/ssn/systems/Sensitivity" title="http://www.w3.org/ns/ssn/systems/Sensitivity">Sensitivity</a>
    </li>
    <li>
@@ -245,6 +244,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/ssn/systems/SurvivalRange" title="http://www.w3.org/ns/ssn/systems/SurvivalRange">Survival Range</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/ssn/systems/SystemLifetime" title="http://www.w3.org/ns/ssn/systems/SystemLifetime">System Lifetime</a>
@@ -289,6 +291,9 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
+      <a href="#exposes" title="http://iot.linkeddata.es/def/core#exposes">A property representing the Thing (Virtual or Physical) that a service exposes.</a>
+   </li>
+   <li>
       <a href="#aboutFeatureOfInterest"
          title="http://iot.linkeddata.es/def/core#aboutFeatureOfInterest">about feature of interest</a>
    </li>
@@ -304,9 +309,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#avatar" title="http://iot.linkeddata.es/def/core#avatar">avatar</a>
-   </li>
-   <li>
-      <a href="#contains" title="http://iot.linkeddata.es/def/core#contains">contains</a>
    </li>
    <li>
       <a href="#describesEcosystem"
@@ -382,6 +384,9 @@ This ontology has the following classes and properties.</span>
       <a href="#isComponentOf" title="http://iot.linkeddata.es/def/core#isComponentOf">is component of</a>
    </li>
    <li>
+      <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/def/saref4bldg#isContainedIn" title="https://w3id.org/def/saref4bldg#isContainedIn">is contained in</a>
    </li>
    <li>
@@ -397,6 +402,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#isNeighbourhoodOf"
          title="http://iot.linkeddata.es/def/core#isNeighbourhoodOf">is neighbourhood of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/isPropertyOf" title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
    </li>
    <li>
       <a href="#isRelativeTo" title="http://iot.linkeddata.es/def/core#isRelativeTo">is relative to</a>
@@ -451,120 +459,120 @@ This ontology has the following classes and properties.</span>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
       <a href="#AmbientTemperature"
-         title="http://iot.linkeddata.es/def/core#AmbientTemperature">AmbientTemperature</a>
+         title="http://iot.linkeddata.es/def/core#AmbientTemperature">Ambient temperature</a>
+   </li>
+   <li>
+      <a href="#AverageCO2Concentration"
+         title="http://iot.linkeddata.es/def/core#AverageCO2Concentration">Average CO2</a>
+   </li>
+   <li>
+      <a href="#AverageCO2ConcentrationDeviation"
+         title="http://iot.linkeddata.es/def/core#AverageCO2ConcentrationDeviation">Average CO2 deviation</a>
    </li>
    <li>
       <a href="#AverageHumidity"
-         title="http://iot.linkeddata.es/def/core#AverageHumidity">Average Humidity</a>
+         title="http://iot.linkeddata.es/def/core#AverageHumidity">Average humidity</a>
    </li>
    <li>
       <a href="#AverageHumidityDeviation"
          title="http://iot.linkeddata.es/def/core#AverageHumidityDeviation">Average humidity deviation</a>
    </li>
    <li>
+      <a href="#AverageLightIntensity"
+         title="http://iot.linkeddata.es/def/core#AverageLightIntensity">Average light intensity</a>
+   </li>
+   <li>
+      <a href="#AverageMovemenetShare"
+         title="http://iot.linkeddata.es/def/core#AverageMovemenetShare">Average movemenet share</a>
+   </li>
+   <li>
+      <a href="#AverageMovementTime"
+         title="http://iot.linkeddata.es/def/core#AverageMovementTime">Average movement time</a>
+   </li>
+   <li>
+      <a href="#AverageSound" title="http://iot.linkeddata.es/def/core#AverageSound">Average sound</a>
+   </li>
+   <li>
       <a href="#AverageSoundDeviation"
          title="http://iot.linkeddata.es/def/core#AverageSoundDeviation">Average sound deviation</a>
    </li>
    <li>
-      <a href="#AverageCO2Concentration"
-         title="http://iot.linkeddata.es/def/core#AverageCO2Concentration">AverageCO2</a>
-   </li>
-   <li>
-      <a href="#AverageCO2ConcentrationDeviation"
-         title="http://iot.linkeddata.es/def/core#AverageCO2ConcentrationDeviation">AverageCO2Deviation</a>
-   </li>
-   <li>
-      <a href="#AverageLightIntensity"
-         title="http://iot.linkeddata.es/def/core#AverageLightIntensity">AverageLightIntensity</a>
-   </li>
-   <li>
-      <a href="#AverageMovemenetShare"
-         title="http://iot.linkeddata.es/def/core#AverageMovemenetShare">AverageMovemenetShare</a>
-   </li>
-   <li>
-      <a href="#AverageMovementTime"
-         title="http://iot.linkeddata.es/def/core#AverageMovementTime">AverageMovementTime</a>
-   </li>
-   <li>
-      <a href="#AverageSound" title="http://iot.linkeddata.es/def/core#AverageSound">AverageSound</a>
-   </li>
-   <li>
       <a href="#AverageTemperature"
-         title="http://iot.linkeddata.es/def/core#AverageTemperature">AverageTemperature</a>
+         title="http://iot.linkeddata.es/def/core#AverageTemperature">Average temperature</a>
    </li>
    <li>
       <a href="#AverageTemperatureDeviation"
-         title="http://iot.linkeddata.es/def/core#AverageTemperatureDeviation">AverageTemperatureDeviation</a>
+         title="http://iot.linkeddata.es/def/core#AverageTemperatureDeviation">Average temperature deviation</a>
    </li>
    <li>
       <a href="#BakeRemainingTime"
-         title="http://iot.linkeddata.es/def/core#BakeRemainingTime">BakeRemainingTime</a>
+         title="http://iot.linkeddata.es/def/core#BakeRemainingTime">Bake remaining time</a>
    </li>
    <li>
-      <a href="#BakingStep" title="http://iot.linkeddata.es/def/core#BakingStep">BakingStep</a>
+      <a href="#BakingStep" title="http://iot.linkeddata.es/def/core#BakingStep">Baking step</a>
    </li>
    <li>
-      <a href="#ChargeStatus" title="http://iot.linkeddata.es/def/core#ChargeStatus">ChargeStatus</a>
+      <a href="#ChargeStatus" title="http://iot.linkeddata.es/def/core#ChargeStatus">Charge status</a>
    </li>
    <li>
       <a href="#CO2Concentration"
-         title="http://iot.linkeddata.es/def/core#CO2Concentration">CO2Concentration</a>
+         title="http://iot.linkeddata.es/def/core#CO2Concentration">CO2 concentration</a>
    </li>
    <li>
       <a href="#CurrentBakingStepRemainingTime"
-         title="http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime">CurrentBakingStepRemainingTime</a>
+         title="http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime">Current baking step remaining time</a>
    </li>
    <li>
       <a href="#DeviceLightStatus"
-         title="http://iot.linkeddata.es/def/core#DeviceLightStatus">DeviceLightStatus</a>
+         title="http://iot.linkeddata.es/def/core#DeviceLightStatus">Device light status</a>
    </li>
    <li>
-      <a href="#DeviceStatus" title="http://iot.linkeddata.es/def/core#DeviceStatus">DeviceStatus</a>
+      <a href="#DeviceStatus" title="http://iot.linkeddata.es/def/core#DeviceStatus">Device status</a>
    </li>
    <li>
       <a href="#DeviceTemperature"
-         title="http://iot.linkeddata.es/def/core#DeviceTemperature">DeviceTemperature</a>
+         title="http://iot.linkeddata.es/def/core#DeviceTemperature">Device temperature</a>
    </li>
    <li>
-      <a href="#DimmingLevel" title="http://iot.linkeddata.es/def/core#DimmingLevel">DimmingLevel</a>
+      <a href="#DimmingLevel" title="http://iot.linkeddata.es/def/core#DimmingLevel">Dimming level</a>
    </li>
    <li>
       <a href="#ElapsedBakingTime"
-         title="http://iot.linkeddata.es/def/core#ElapsedBakingTime">ElapsedBakingTime</a>
+         title="http://iot.linkeddata.es/def/core#ElapsedBakingTime">Elapsed baking time</a>
    </li>
    <li>
-      <a href="#EntryExit" title="http://iot.linkeddata.es/def/core#EntryExit">EntryExit</a>
+      <a href="#EntryExit" title="http://iot.linkeddata.es/def/core#EntryExit">Entry exit</a>
    </li>
    <li>
       <a href="#FanSpeed" title="http://iot.linkeddata.es/def/core#FanSpeed">FanSpeed</a>
    </li>
    <li>
       <a href="#HeaterDefaultTemperature"
-         title="http://iot.linkeddata.es/def/core#HeaterDefaultTemperature">HeaterDefaultTemperature</a>
+         title="http://iot.linkeddata.es/def/core#HeaterDefaultTemperature">Heater default temperature</a>
    </li>
    <li>
       <a href="#HeaterMaxTemperature"
-         title="http://iot.linkeddata.es/def/core#HeaterMaxTemperature">HeaterMaxTemperature</a>
+         title="http://iot.linkeddata.es/def/core#HeaterMaxTemperature">Heater maximum temperature</a>
    </li>
    <li>
       <a href="#HeaterMeatProbeAllowed"
-         title="http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed">HeaterMeatProbeAllowed</a>
+         title="http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed">Heater meat probe allowed</a>
    </li>
    <li>
       <a href="#HeaterMinTemperature"
-         title="http://iot.linkeddata.es/def/core#HeaterMinTemperature">HeaterMinTemperature</a>
+         title="http://iot.linkeddata.es/def/core#HeaterMinTemperature">Heater minimum temperature</a>
    </li>
    <li>
       <a href="#HeaterPreheatAllowed"
-         title="http://iot.linkeddata.es/def/core#HeaterPreheatAllowed">HeaterPreheatAllowed</a>
+         title="http://iot.linkeddata.es/def/core#HeaterPreheatAllowed">Heater preheat allowed</a>
    </li>
    <li>
       <a href="#HighestCO2ConcentrationDeviation"
-         title="http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation">HighestCO2Deviation</a>
+         title="http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation">Highest CO2 deviation</a>
    </li>
    <li>
       <a href="#HighestSoundDeviation"
-         title="http://iot.linkeddata.es/def/core#HighestSoundDeviation">HighestSoundDeviation</a>
+         title="http://iot.linkeddata.es/def/core#HighestSoundDeviation">Highest sound deviation</a>
    </li>
    <li>
       <a href="#HighestHumidityDeviation"
@@ -586,55 +594,55 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#MaxCO2Concentration"
-         title="http://iot.linkeddata.es/def/core#MaxCO2Concentration">MaxCO2</a>
+         title="http://iot.linkeddata.es/def/core#MaxCO2Concentration">Maximum CO2</a>
    </li>
    <li>
-      <a href="#MaxHumidity" title="http://iot.linkeddata.es/def/core#MaxHumidity">MaxHumidity</a>
+      <a href="#MaxHumidity" title="http://iot.linkeddata.es/def/core#MaxHumidity">Maximum humidity</a>
    </li>
    <li>
       <a href="#MaxLightIntensity"
-         title="http://iot.linkeddata.es/def/core#MaxLightIntensity">MaxLightIntensity</a>
+         title="http://iot.linkeddata.es/def/core#MaxLightIntensity">Maximum light intensity</a>
    </li>
    <li>
       <a href="#MaxPowerConsumption"
-         title="http://iot.linkeddata.es/def/core#MaxPowerConsumption">MaxPowerConsumption</a>
+         title="http://iot.linkeddata.es/def/core#MaxPowerConsumption">Maximum power consumption</a>
    </li>
    <li>
-      <a href="#MaxSound" title="http://iot.linkeddata.es/def/core#MaxSound">MaxSound</a>
+      <a href="#MaxSound" title="http://iot.linkeddata.es/def/core#MaxSound">Maximum sound</a>
    </li>
    <li>
       <a href="#MaxTemperature"
-         title="http://iot.linkeddata.es/def/core#MaxTemperature">MaxTemperature</a>
+         title="http://iot.linkeddata.es/def/core#MaxTemperature">Maximum temperature</a>
    </li>
    <li>
       <a href="#MeanPowerConsumption"
-         title="http://iot.linkeddata.es/def/core#MeanPowerConsumption">MeanPowerConsumption</a>
+         title="http://iot.linkeddata.es/def/core#MeanPowerConsumption">Mean power consumption</a>
    </li>
    <li>
       <a href="#MeatProbeTemperature"
-         title="http://iot.linkeddata.es/def/core#MeatProbeTemperature">MeatProbeTemperature</a>
-   </li>
-   <li>
-      <a href="#MinCO2Concentration"
-         title="http://iot.linkeddata.es/def/core#MinCO2Concentration">MinCO2</a>
-   </li>
-   <li>
-      <a href="#MinHumidity" title="http://iot.linkeddata.es/def/core#MinHumidity">Minimun humidity</a>
-   </li>
-   <li>
-      <a href="#MinTemperature"
-         title="http://iot.linkeddata.es/def/core#MinTemperature">Minimun temperature</a>
+         title="http://iot.linkeddata.es/def/core#MeatProbeTemperature">Meat probe temperature</a>
    </li>
    <li>
       <a href="#MinLightIntensity"
-         title="http://iot.linkeddata.es/def/core#MinLightIntensity">MinLightIntensity</a>
+         title="http://iot.linkeddata.es/def/core#MinLightIntensity">Minimu light intensity</a>
+   </li>
+   <li>
+      <a href="#MinCO2Concentration"
+         title="http://iot.linkeddata.es/def/core#MinCO2Concentration">Minimum CO2</a>
    </li>
    <li>
       <a href="#MinPowerConsumption"
-         title="http://iot.linkeddata.es/def/core#MinPowerConsumption">MinPowerConsumption</a>
+         title="http://iot.linkeddata.es/def/core#MinPowerConsumption">Minimum power consumption</a>
    </li>
    <li>
-      <a href="#MinSound" title="http://iot.linkeddata.es/def/core#MinSound">MinSound</a>
+      <a href="#MinSound" title="http://iot.linkeddata.es/def/core#MinSound">Minimum sound</a>
+   </li>
+   <li>
+      <a href="#MinTemperature"
+         title="http://iot.linkeddata.es/def/core#MinTemperature">Minimum temperature</a>
+   </li>
+   <li>
+      <a href="#MinHumidity" title="http://iot.linkeddata.es/def/core#MinHumidity">Minimun humidity</a>
    </li>
    <li>
       <a href="#Mode" title="http://iot.linkeddata.es/def/core#Mode">Mode</a>
@@ -646,19 +654,19 @@ This ontology has the following classes and properties.</span>
       <a href="#NoiseLevel" title="http://iot.linkeddata.es/def/core#NoiseLevel">Noise level</a>
    </li>
    <li>
-      <a href="#OnOff" title="http://iot.linkeddata.es/def/core#OnOff">OnOff</a>
+      <a href="#OnOff" title="http://iot.linkeddata.es/def/core#OnOff">On Off</a>
    </li>
    <li>
-      <a href="#OpenClosed" title="http://iot.linkeddata.es/def/core#OpenClosed">OpenClosed</a>
+      <a href="#OpenClosed" title="http://iot.linkeddata.es/def/core#OpenClosed">Open Closed</a>
    </li>
    <li>
       <a href="#RelativeHumidity"
-         title="http://iot.linkeddata.es/def/core#RelativeHumidity">RelativeHumidity</a>
+         title="http://iot.linkeddata.es/def/core#RelativeHumidity">Relative humidity</a>
    </li>
    <li>
-      <a href="#StoredEnergy" title="http://iot.linkeddata.es/def/core#StoredEnergy">StoredEnergy</a>
+      <a href="#StoredEnergy" title="http://iot.linkeddata.es/def/core#StoredEnergy">Stored energy</a>
    </li>
    <li>
-      <a href="#ValvePosition" title="http://iot.linkeddata.es/def/core#ValvePosition">ValvePosition</a>
+      <a href="#ValvePosition" title="http://iot.linkeddata.es/def/core#ValvePosition">Valve position</a>
    </li>
 </ul>
