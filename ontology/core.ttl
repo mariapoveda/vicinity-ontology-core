@@ -106,13 +106,6 @@ _:genid1 a rdf:List ;
 	rdfs:comment "A link from an entity to the image identifying it in a social network or system."@en ;
 	rdfs:label "avatar"@en .
 # 
-# http://iot.linkeddata.es/def/core#contains
-
-:contains a owl:ObjectProperty , owl:TransitiveProperty ;
-	rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things."@en ;
-	rdfs:label "contains"@en ;
-	rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
-# 
 # http://iot.linkeddata.es/def/core#describes
 
 :describes a owl:ObjectProperty ;
@@ -128,6 +121,13 @@ _:genid1 a rdf:List ;
 	rdfs:comment "Link between a thing ecosystem description and the ecosystem being described."@en ;
 	rdfs:label "describes ecosystem"@en ;
 	owl:deprecated "true"^^xsd:boolean .
+# 
+# http://iot.linkeddata.es/def/core#exposes
+
+:exposes a owl:ObjectProperty ;
+	rdfs:domain :VirtualThing ;
+	rdfs:range <http://iot.linkeddata.es/def/wot#Thing> ;
+	rdfs:label "A property representing the Thing (Virtual or Physical) that a service exposes."@en , "exposes"@en .
 # 
 # http://iot.linkeddata.es/def/core#expressedInFormat
 
@@ -217,6 +217,12 @@ _:genid1 a rdf:List ;
 :isComponentOf a owl:ObjectProperty ;
 	rdfs:comment "A link between a thing and the ecosystems it belongs to."@en ;
 	rdfs:label "is component of"@en .
+# 
+# http://iot.linkeddata.es/def/core#isComposedBy
+
+:isComposedBy a owl:ObjectProperty , owl:TransitiveProperty ;
+	rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things."@en ;
+	rdfs:label "is composed by"@en .
 # 
 # http://iot.linkeddata.es/def/core#isDescribedBy
 
@@ -590,6 +596,19 @@ _:genid7 a owl:Restriction ;
 	rdfs:subClassOf :Device ;
 	rdfs:label "Charger"@en .
 # 
+# http://iot.linkeddata.es/def/core#ComposedThing
+
+:ComposedThing a owl:Class ;
+	owl:equivalentClass _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty :isComposedBy ;
+	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing> .
+
+:ComposedThing rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ;
+	rdfs:comment "This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things."@en ;
+	rdfs:label "Composed thing"@en .
+# 
 # http://iot.linkeddata.es/def/core#Device
 
 :Device a owl:Class ;
@@ -601,9 +620,9 @@ _:genid7 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#DigitalUser
 
 :DigitalUser a owl:Class ;
-	rdfs:subClassOf foaf:Agent , _:genid8 .
+	rdfs:subClassOf foaf:Agent , _:genid9 .
 
-_:genid8 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty :interactsUsing ;
 	owl:allValuesFrom :Service .
 
@@ -633,9 +652,9 @@ _:genid8 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#Ecosystem
 
 :Ecosystem a owl:Class ;
-	rdfs:subClassOf _:genid9 .
+	rdfs:subClassOf _:genid10 .
 
-_:genid9 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty :isDescribedBy ;
 	owl:someValuesFrom :ThingEcosystemDescription .
 
@@ -657,9 +676,9 @@ _:genid9 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#HumanUser
 
 :HumanUser a owl:Class ;
-	rdfs:subClassOf foaf:Person , _:genid10 .
+	rdfs:subClassOf foaf:Person , _:genid11 .
 
-_:genid10 a owl:Restriction ;
+_:genid11 a owl:Restriction ;
 	owl:onProperty :interactsUsing ;
 	owl:allValuesFrom :Application .
 
@@ -670,9 +689,9 @@ _:genid10 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#HumiditySensor
 
 :HumiditySensor a owl:Class ;
-	rdfs:subClassOf :Sensor , _:genid11 .
+	rdfs:subClassOf :Sensor , _:genid12 .
 
-_:genid11 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty :monitors ;
 	owl:someValuesFrom :AmbientHumidityProperty .
 
@@ -735,9 +754,9 @@ _:genid11 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#MotionSensor
 
 :MotionSensor a owl:Class ;
-	rdfs:subClassOf :Sensor , _:genid12 .
+	rdfs:subClassOf :Sensor , _:genid13 .
 
-_:genid12 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty :monitors ;
 	owl:someValuesFrom :MotionProperty .
 
@@ -770,9 +789,9 @@ _:genid12 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#PeopleCounter
 
 :PeopleCounter a owl:Class ;
-	rdfs:subClassOf :Sensor , _:genid13 .
+	rdfs:subClassOf :Sensor , _:genid14 .
 
-_:genid13 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty :monitors ;
 	owl:someValuesFrom :Presence .
 
@@ -782,15 +801,15 @@ _:genid13 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#PhysicalThing
 
 :PhysicalThing a owl:Class ;
-	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , geo:SpatialThing , _:genid14 .
-
-_:genid14 a owl:Restriction ;
-	owl:onProperty :contains ;
-	owl:allValuesFrom :PhysicalThing .
-
-:PhysicalThing rdfs:subClassOf _:genid15 .
+	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , geo:SpatialThing , _:genid15 .
 
 _:genid15 a owl:Restriction ;
+	owl:onProperty :isComposedBy ;
+	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> .
+
+:PhysicalThing rdfs:subClassOf _:genid16 .
+
+_:genid16 a owl:Restriction ;
 	owl:onProperty geo:location ;
 	owl:allValuesFrom geo:SpatialThing .
 
@@ -834,28 +853,28 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 # http://iot.linkeddata.es/def/core#RelativeEndpoint
 
 :RelativeEndpoint a owl:Class ;
-	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Link> , _:genid16 .
+	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Link> , _:genid17 .
 
-_:genid16 a owl:Restriction ;
+_:genid17 a owl:Restriction ;
 	owl:onProperty :isRelativeTo ;
 	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass _:genid17 .
+	owl:onClass _:genid18 .
 
-_:genid17 owl:intersectionOf _:genid20 .
+_:genid18 owl:intersectionOf _:genid21 .
 
-_:genid20 a rdf:List ;
+_:genid21 a rdf:List ;
 	rdf:first <http://iot.linkeddata.es/def/wot#Link> ;
-	rdf:rest _:genid18 .
+	rdf:rest _:genid19 .
 
-_:genid18 a rdf:List ;
-	rdf:first _:genid19 .
+_:genid19 a rdf:List ;
+	rdf:first _:genid20 .
 
-_:genid19 a owl:Class ;
+_:genid20 a owl:Class ;
 	owl:complementOf :RelativeEndpoint .
 
-_:genid18 rdf:rest rdf:nil .
+_:genid19 rdf:rest rdf:nil .
 
-_:genid17 a owl:Class .
+_:genid18 a owl:Class .
 
 :RelativeEndpoint rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
 	rdfs:label "Relative endpoint"@en .
@@ -863,15 +882,15 @@ _:genid17 a owl:Class .
 # http://iot.linkeddata.es/def/core#Sensor
 
 :Sensor a owl:Class ;
-	rdfs:subClassOf :Device , <http://www.w3.org/ns/sosa/Sensor> , _:genid21 .
+	rdfs:subClassOf :Device , <http://www.w3.org/ns/sosa/Sensor> , _:genid22 .
 
-_:genid21 a owl:Restriction ;
+_:genid22 a owl:Restriction ;
 	owl:onProperty :monitors ;
 	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
 
-:Sensor rdfs:subClassOf _:genid22 .
+:Sensor rdfs:subClassOf _:genid23 .
 
-_:genid22 a owl:Restriction ;
+_:genid23 a owl:Restriction ;
 	owl:onProperty :monitorsFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 
@@ -912,9 +931,9 @@ _:genid22 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#Thermometer
 
 :Thermometer a owl:Class ;
-	rdfs:subClassOf :Sensor , _:genid23 .
+	rdfs:subClassOf :Sensor , _:genid24 .
 
-_:genid23 a owl:Restriction ;
+_:genid24 a owl:Restriction ;
 	owl:onProperty :monitors ;
 	owl:someValuesFrom :AmbientTemperatureProperty .
 
@@ -929,15 +948,15 @@ _:genid23 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#ThingDescription
 
 :ThingDescription a owl:Class ;
-	rdfs:subClassOf _:genid24 .
+	rdfs:subClassOf _:genid25 .
 
-_:genid24 a owl:Restriction ;
+_:genid25 a owl:Restriction ;
 	owl:onProperty :describes ;
 	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing> .
 
-:ThingDescription rdfs:subClassOf _:genid25 .
+:ThingDescription rdfs:subClassOf _:genid26 .
 
-_:genid25 a owl:Restriction ;
+_:genid26 a owl:Restriction ;
 	owl:onProperty :describes ;
 	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> .
 
@@ -947,9 +966,9 @@ _:genid25 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#ThingEcosystemDescription
 
 :ThingEcosystemDescription a owl:Class ;
-	rdfs:subClassOf _:genid26 .
+	rdfs:subClassOf _:genid27 .
 
-_:genid26 a owl:Restriction ;
+_:genid27 a owl:Restriction ;
 	owl:onProperty :describes ;
 	owl:someValuesFrom :Ecosystem .
 
@@ -965,21 +984,21 @@ _:genid26 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#Value
 
 :Value a owl:Class ;
-	rdfs:subClassOf _:genid27 .
-
-_:genid27 a owl:Restriction ;
-	owl:onProperty rdf:value ;
-	owl:someValuesFrom rdfs:Resource .
-
-:Value rdfs:subClassOf _:genid28 .
+	rdfs:subClassOf _:genid28 .
 
 _:genid28 a owl:Restriction ;
-	owl:onProperty :expressedInFormat ;
-	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> .
+	owl:onProperty rdf:value ;
+	owl:someValuesFrom rdfs:Resource .
 
 :Value rdfs:subClassOf _:genid29 .
 
 _:genid29 a owl:Restriction ;
+	owl:onProperty :expressedInFormat ;
+	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> .
+
+:Value rdfs:subClassOf _:genid30 .
+
+_:genid30 a owl:Restriction ;
 	owl:onProperty :timeStamp ;
 	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:dateTime .
@@ -990,10 +1009,10 @@ _:genid29 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#VirtualThing
 
 :VirtualThing a owl:Class ;
-	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , _:genid30 .
+	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , _:genid31 .
 
-_:genid30 a owl:Restriction ;
-	owl:onProperty :contains ;
+_:genid31 a owl:Restriction ;
+	owl:onProperty :isComposedBy ;
 	owl:allValuesFrom :VirtualThing .
 
 :VirtualThing rdfs:comment """A virtual entity is a digital representation of a physical entity, contained within a service. A virtual entity interacts through an endpoint. A virtual entity represents a physical entity.
@@ -1024,29 +1043,29 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 # 
 # http://iot.linkeddata.es/def/wot#Action
 
-<http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf _:genid31 .
-
-_:genid31 a owl:Restriction ;
-	owl:onProperty :actsOn ;
-	owl:someValuesFrom <http://www.w3.org/ns/ssn/Property> .
-
 <http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf _:genid32 .
 
 _:genid32 a owl:Restriction ;
+	owl:onProperty :actsOn ;
+	owl:someValuesFrom <http://www.w3.org/ns/ssn/Property> .
+
+<http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf _:genid33 .
+
+_:genid33 a owl:Restriction ;
 	owl:onProperty :actsOnFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 # 
 # http://iot.linkeddata.es/def/wot#Event
 
-<http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf _:genid33 .
-
-_:genid33 a owl:Restriction ;
-	owl:onProperty :monitors ;
-	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
-
 <http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf _:genid34 .
 
 _:genid34 a owl:Restriction ;
+	owl:onProperty :monitors ;
+	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
+
+<http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf _:genid35 .
+
+_:genid35 a owl:Restriction ;
 	owl:onProperty :monitorsFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 # 
@@ -1056,15 +1075,15 @@ _:genid34 a owl:Restriction ;
 # 
 # http://iot.linkeddata.es/def/wot#Property
 
-<http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf _:genid35 .
-
-_:genid35 a owl:Restriction ;
-	owl:onProperty :monitors ;
-	owl:someValuesFrom <http://www.w3.org/ns/ssn/Property> .
-
 <http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf _:genid36 .
 
 _:genid36 a owl:Restriction ;
+	owl:onProperty :monitors ;
+	owl:someValuesFrom <http://www.w3.org/ns/ssn/Property> .
+
+<http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf _:genid37 .
+
+_:genid37 a owl:Restriction ;
 	owl:onProperty :monitorsFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 # 
@@ -1091,15 +1110,15 @@ geo:SpatialThing a owl:Class .
 # http://www.w3.org/ns/ssn/Property
 
 <http://www.w3.org/ns/ssn/Property> a owl:Class ;
-	rdfs:subClassOf _:genid37 .
+	rdfs:subClassOf _:genid38 .
 
-_:genid37 a owl:Restriction ;
+_:genid38 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> ;
 	owl:someValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 
-<http://www.w3.org/ns/ssn/Property> rdfs:subClassOf _:genid38 .
+<http://www.w3.org/ns/ssn/Property> rdfs:subClassOf _:genid39 .
 
-_:genid38 a owl:Restriction ;
+_:genid39 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> ;
 	owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 
@@ -1114,38 +1133,38 @@ _:genid38 a owl:Restriction ;
 # http://www.w3.org/ns/ssn/System
 
 <http://www.w3.org/ns/ssn/System> a owl:Class ;
-	rdfs:subClassOf _:genid39 .
-
-_:genid39 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/sosa/isHostedBy> ;
-	owl:allValuesFrom <http://www.w3.org/ns/sosa/Platform> .
-
-<http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid40 .
+	rdfs:subClassOf _:genid40 .
 
 _:genid40 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/hasDeployment> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/Deployment> .
+	owl:onProperty <http://www.w3.org/ns/sosa/isHostedBy> ;
+	owl:allValuesFrom <http://www.w3.org/ns/sosa/Platform> .
 
 <http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid41 .
 
 _:genid41 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/hasSubSystem> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
+	owl:onProperty <http://www.w3.org/ns/ssn/hasDeployment> ;
+	owl:allValuesFrom <http://www.w3.org/ns/ssn/Deployment> .
 
 <http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid42 .
 
 _:genid42 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
-	owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure> .
+	owl:onProperty <http://www.w3.org/ns/ssn/hasSubSystem> ;
+	owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 
 <http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid43 .
 
 _:genid43 a owl:Restriction ;
-	owl:onProperty _:genid44 .
+	owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
+	owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure> .
 
-_:genid44 owl:inverseOf <http://www.w3.org/ns/ssn/hasSubSystem> .
+<http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid44 .
 
-_:genid43 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
+_:genid44 a owl:Restriction ;
+	owl:onProperty _:genid45 .
+
+_:genid45 owl:inverseOf <http://www.w3.org/ns/ssn/hasSubSystem> .
+
+_:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 
 <http://www.w3.org/ns/ssn/System> rdfs:comment "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
@@ -1262,15 +1281,15 @@ _:genid43 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # http://www.w3.org/ns/ssn/systems/OperatingRange
 
 <http://www.w3.org/ns/ssn/systems/OperatingRange> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid45 .
+	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid46 .
 
-_:genid45 a owl:Restriction ;
+_:genid46 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/systems/hasOperatingProperty> ;
 	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
 
-<http://www.w3.org/ns/ssn/systems/OperatingRange> rdfs:subClassOf _:genid46 .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> rdfs:subClassOf _:genid47 .
 
-_:genid46 a owl:Restriction ;
+_:genid47 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/systems/inCondition> ;
 	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/Condition> .
 
@@ -1350,15 +1369,15 @@ The difference is that here we also allow for qualities that aren't VIM influenc
 # http://www.w3.org/ns/ssn/systems/SurvivalRange
 
 <http://www.w3.org/ns/ssn/systems/SurvivalRange> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid47 .
+	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid48 .
 
-_:genid47 a owl:Restriction ;
+_:genid48 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> ;
 	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/SurvivalProperty> .
 
-<http://www.w3.org/ns/ssn/systems/SurvivalRange> rdfs:subClassOf _:genid48 .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> rdfs:subClassOf _:genid49 .
 
-_:genid48 a owl:Restriction ;
+_:genid49 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/systems/inCondition> ;
 	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/Condition> .
 
@@ -1372,21 +1391,21 @@ _:genid48 a owl:Restriction ;
 # http://www.w3.org/ns/ssn/systems/SystemCapability
 
 <http://www.w3.org/ns/ssn/systems/SystemCapability> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid49 .
-
-_:genid49 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/forProperty> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/Property> .
-
-<http://www.w3.org/ns/ssn/systems/SystemCapability> rdfs:subClassOf _:genid50 .
+	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid50 .
 
 _:genid50 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/systems/hasSystemProperty> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+	owl:onProperty <http://www.w3.org/ns/ssn/forProperty> ;
+	owl:allValuesFrom <http://www.w3.org/ns/ssn/Property> .
 
 <http://www.w3.org/ns/ssn/systems/SystemCapability> rdfs:subClassOf _:genid51 .
 
 _:genid51 a owl:Restriction ;
+	owl:onProperty <http://www.w3.org/ns/ssn/systems/hasSystemProperty> ;
+	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+
+<http://www.w3.org/ns/ssn/systems/SystemCapability> rdfs:subClassOf _:genid52 .
+
+_:genid52 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/systems/inCondition> ;
 	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/Condition> .
 
@@ -1741,5 +1760,5 @@ saref:Service a owl:Class ;
 	rdfs:label "ValvePosition"@en .
 # 
 
-_:genid52 owl:cardinality "1"^^xsd:nonNegativeInteger .
+_:genid53 owl:cardinality "1"^^xsd:nonNegativeInteger .
 # Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
