@@ -1,7 +1,7 @@
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#imports> <http://iot.linkeddata.es/def/wot#> .
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
-<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
+<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/elements/1.1/title> "Vicinity core model"@en .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/dc/terms/contributor> <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> .
@@ -256,16 +256,36 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# http://www.w3.org/ns/ssn/forProperty
+<http://www.w3.org/ns/ssn/forProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/ssn/hasDeployment
+<http://www.w3.org/ns/ssn/hasDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://www.w3.org/ns/ssn/hasProperty
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/isPropertyOf> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an entity and a Property of that entity."@en .
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a FeatureOfInterest and a Property of that feature." .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property" .
 <http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2004/02/skos/core#definition> "Relation between an entity and a Property of that entity."@en .
+# 
+# http://www.w3.org/ns/ssn/hasSubSystem
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/ssn/implements
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://www.w3.org/ns/ssn/isPropertyOf
 <http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Property and the entity it belongs to."@en .
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is property of"@en .
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Property and the entity it belongs to."@en .
 # 
 # http://www.w3.org/ns/ssn/systems/hasOperatingProperty
 <http://www.w3.org/ns/ssn/systems/hasOperatingProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -871,15 +891,20 @@ _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> .
 _:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/core#FeatureProperty> .
 # 
-# http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
 # http://www.w3.org/2000/01/rdf-schema#Resource
 <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Actuator
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+# 
+# http://www.w3.org/ns/ssn/Deployment
+<http://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/ns/ssn/Property
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -887,14 +912,50 @@ _:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/isPropertyOf> .
 _:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/isPropertyOf> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 <http://www.w3.org/ns/ssn/Property> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'property' [O&M] \n\t\t                    http://www.opengeospatial.org/standards/om" .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en .
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en .
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor." .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn#" .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#label> "property (ssn)" .
 <http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2004/02/skos/core#definition> "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en .
+# 
+# http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isHostedBy> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Platform> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasDeployment> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Deployment> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasSubSystem> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implements> .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Procedure> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasSubSystem> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2004/02/skos/core#definition> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems."@en .
 # 
 # http://www.w3.org/ns/ssn/systems/Accuracy
 <http://www.w3.org/ns/ssn/systems/Accuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -991,14 +1052,14 @@ _:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/s
 # http://www.w3.org/ns/ssn/systems/OperatingRange
 <http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
-<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasOperatingProperty> .
-_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
-<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
-_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasOperatingProperty> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
 <http://www.w3.org/ns/ssn/systems/OperatingRange> <http://purl.org/dc/elements/1.1/source> "skos:broaderMatch 'reference operating condition' [VIM 4.11]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf\n\nThe difference is that here we also allow for qualities that aren't VIM influence quantities [VIM 2.52] - for example, a quantity that alters the power requirements, but doesn't affect the measurement properties - conditions specified in MeasurementCapability should be influence quantities." .
 <http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The environmental conditions and characteristics of a system/sensor's normal operating environment.  Can be used to specify for example the standard environmental conditions in which the sensor is expected to operate (a Condition with no OperatingProperty), or how the environmental and other operating properties relate: i.e., that the maintenance schedule or power requirements differ according to the conditions." .
 <http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
@@ -1061,14 +1122,14 @@ _:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # http://www.w3.org/ns/ssn/systems/SurvivalRange
 <http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
-<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> .
-_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/SurvivalProperty> .
-<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
-_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/SurvivalProperty> .
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
 <http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://purl.org/dc/elements/1.1/source> "skos:narrowerMatch 'limiting operating condition' [VIM 4.10]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
 <http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The conditions a sensor can be exposed to without damage: i.e., the sensor continues to operate as defined using MeasurementCapability.  If, however, the SurvivalRange is exceeded, the sensor is 'damaged' and MeasurementCapability specifications may no longer hold." .
 <http://www.w3.org/ns/ssn/systems/SurvivalRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
@@ -1078,18 +1139,18 @@ _:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # http://www.w3.org/ns/ssn/systems/SystemCapability
 <http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
-<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/forProperty> .
-_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Property> .
-<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasSystemProperty> .
-_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
-<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
-_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/forProperty> .
+_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/hasSystemProperty> .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/systems/inCondition> .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/systems/Condition> .
 <http://www.w3.org/ns/ssn/systems/SystemCapability> <http://purl.org/dc/elements/1.1/source> "Similar idea to MeasurementCapability in MMI Device Ontology\n                                  http://marinemetadata.org/community/teams/ontdevices\n\nBut the the two express the relationship between constraints and multiple measurement properties differently.\n\nThe conditions linked to a MeasurementCapability are skos:exactMatch to 'influence quantity' [VIM 2.52]\nhttp://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" .
 <http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Collects together measurement properties (accuracy, range, precision, etc) and the environmental conditions in which those properties hold, representing a specification of a sensor's capability in those conditions.\n\nThe conditions specified here are those that affect the measurement properties, while those in OperatingRange represent the sensor's standard operating conditions, including conditions that don't affect the observations." .
 <http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" .
@@ -1430,5 +1491,5 @@ _:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 <http://iot.linkeddata.es/def/core#ValvePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#OperationalStatus> .
 <http://iot.linkeddata.es/def/core#ValvePosition> <http://www.w3.org/2000/01/rdf-schema#label> "ValvePosition"@en .
 # 
-_:genid45 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
