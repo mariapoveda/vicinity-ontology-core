@@ -17,7 +17,7 @@
     <owl:Ontology rdf:about="http://iot.linkeddata.es/def/core#">
         <owl:imports rdf:resource="http://iot.linkeddata.es/def/wot#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
         <dc:title xml:lang="en">Vicinity core model</dc:title>
         <terms:contributor rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
@@ -144,18 +144,6 @@
     
 
 
-    <!-- http://iot.linkeddata.es/def/core#contains -->
-
-
-    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#contains">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial things.</rdfs:comment>
-        <rdfs:label xml:lang="en">contains</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)</rdfs:seeAlso>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://iot.linkeddata.es/def/core#describes -->
 
 
@@ -176,6 +164,18 @@
         <rdfs:comment xml:lang="en">Link between a thing ecosystem description and the ecosystem being described.</rdfs:comment>
         <rdfs:label xml:lang="en">describes ecosystem</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#exposes -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#exposes">
+        <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#VirtualThing"/>
+        <rdfs:range rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+        <rdfs:label xml:lang="en">A property representing the Thing (Virtual or Physical) that a service exposes.</rdfs:label>
+        <rdfs:label xml:lang="en">exposes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -320,6 +320,17 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#isComposedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#isComposedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things.</rdfs:comment>
+        <rdfs:label xml:lang="en">is composed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#isDescribedBy -->
 
 
@@ -446,23 +457,60 @@
     
 
 
+    <!-- http://www.w3.org/ns/ssn/forProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasDeployment -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasDeployment"/>
+    
+
+
     <!-- http://www.w3.org/ns/ssn/hasProperty -->
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty">
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
+        <rdfs:comment xml:lang="en">Relation between an entity and a Property of that entity.</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between a FeatureOfInterest and a Property of that feature.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has property</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Relation between an entity and a Property of that entity.</skos:definition>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasSubSystem -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasSubSystem"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/implements -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/implements"/>
     
 
 
     <!-- http://www.w3.org/ns/ssn/isPropertyOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isPropertyOf"/>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isPropertyOf">
+        <rdfs:comment xml:lang="en">Relation between a Property and the entity it belongs to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <rdfs:label xml:lang="en">is property of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Property and the entity it belongs to.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
@@ -842,6 +890,23 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#ComposedThing -->
+
+
+    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#ComposedThing">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#isComposedBy"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+        <rdfs:comment xml:lang="en">This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things.</rdfs:comment>
+        <rdfs:label xml:lang="en">Composed thing</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#Device -->
 
 
@@ -1147,8 +1212,8 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#contains"/>
-                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#PhysicalThing"/>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#isComposedBy"/>
+                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1431,7 +1496,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#contains"/>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#isComposedBy"/>
                 <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#VirtualThing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1543,15 +1608,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
-
-
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
 
@@ -1566,6 +1622,31 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
+    <!-- http://www.w3.org/ns/sosa/Actuator -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Deployment -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Deployment"/>
+    
+
+
     <!-- http://www.w3.org/ns/ssn/Property -->
 
 
@@ -1576,15 +1657,71 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skos:exactMatch &apos;property&apos; [O&amp;M] 
 		                    http://www.opengeospatial.org/standards/om</dc:source>
+        <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</rdfs:comment>
         <rdfs:comment xml:lang="en">A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL&apos;s Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.oclc.org/NET/ssnx/ssn#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property (ssn)</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton</rdfs:seeAlso>
+        <skos:definition xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isHostedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasDeployment"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/implements"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <rdfs:label xml:lang="en">System</rdfs:label>
+        <skos:definition xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</skos:definition>
     </owl:Class>
     
 
