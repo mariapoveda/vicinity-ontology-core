@@ -5,78 +5,99 @@
 @prefix dc:    <http://purl.org/dc/terms/>
 @prefix  :     <http://vicinity.iot.linkeddata.es/vicinity/tests/testsuite-core.ttl> 
 : rdf:type mf:Manifest;
-	mf:name "Test suite  for Vicinity core model v0.0.6"; 
+	mf:name "Test suite  for Vicinity core model v0.1.0"; 
 	mf:entries (
-		:class-test1
-		:class-test2
-		:class-test3
-		:class-test4
-		:class-test5
-		:class-test6
-		:class-test7
-		:class-test8
-		:class-test9
-		:class-test10
-		:class-test11
-		:class-test12
-		:objproperty-test1
-		:objproperty-test2
-		:objproperty-test3
-		:objproperty-test4
-		:objproperty-test5
-		:objproperty-test6
-		:objproperty-test7
-		:objproperty-test8
-		:objproperty-test9
-		:objproperty-test10
-		:objproperty-test11
-		:objproperty-test12
-		:objproperty-test13
-		:objproperty-test14
-		:objproperty-test15
-		:objproperty-test16
-		:objproperty-test17
-		:objproperty-test18
-		:objproperty-test19
-		:objproperty-test20
-		:objproperty-test21
-		:objproperty-test22
-		:objproperty-test23
-		:objproperty-test24
-		:objproperty-test25
-		:objproperty-test26
-		:objproperty-test27
-		:objproperty-test28
-		:objproperty-test29
-		:objproperty-test30
-		:objproperty-test31
-		:objproperty-test32
-		:objproperty-test33
-		:objproperty-test34
-		:objproperty-test35
-		:objproperty-test36
-		:datatype-test1
-		:datatype-test2
-		:datatype-test3
-		:datatype-test4
-		:datatype-test5
-		:datatype-test6
-		:datatype-test7
+		:Test-case1
+		:Test-case2
+		:Test-case3
+		:Test-case4
+		:Test-case5
+		:Test-case6
+		:Test-case7
+		:Test-case8
+		:Test-case9
+		:Test-case10
+		:Test-case11
+		:Test-case12
+		:Test-case13
+		:Test-case14
+		:Test-case15
+		:Test-case16
+		:Test-case17
+		:Test-case18
+		:Test-case19
+		:Test-case20
+		:Test-case21
+		:Test-case22
+		:Test-case23
+		:Test-case24
+		:Test-case25
+		:Test-case26
+		:Test-case27
+		:Test-case28
+		:Test-case29
+		:Test-case30
+		:Test-case31
+		:Test-case32
+		:Test-case33
+		:Test-case34
+		:Test-case35
+		:Test-case36
+		:Test-case37
+		:Test-case38
+		:Test-case39
+		:Test-case40
+		:Test-case41
+		:Test-case42
+		:Test-case43
+		:Test-case44
+		:Test-case45
+		:Test-case46
+		:Test-case47
+		:Test-case48
+		:Test-case49
+		:Test-case50
+		:Test-case51
+		:Test-case52
+		:Test-case53
+		:Test-case54
+		:Test-case55
+		:Test-case56
+		:Test-case57
+		:Test-case58
+		:Test-case59
+		:Test-case60
+		:Test-case61
+		:Test-case62
+		:Test-case63
+		:Test-case64
+		:Test-case65
+		:Test-case66
 	) .
-#
-#
-# #################################################################
-# #
-# #    Tests about classes
-# #
-# #################################################################
-#
-#
 
-:TCC1 a mf:QueryEvaluationTest;
-	dc:identifier "platform80";
+:Test-case1 a mf:QueryEvaluationTest;
+	dc:identifier "platform1";
 	mf:name "Test case 1- Class";
-	dc:description "Related to requirement platform80 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Organization])
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+
+
+
+:Test-case2 a mf:QueryEvaluationTest;
+	dc:identifier "platform2";
+	mf:name "Test case 2- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -90,109 +111,1443 @@
 	mf:result "true".		
 
 
-
-
-:TCC2 a mf:QueryEvaluationTest;
-	dc:identifier "platform81";
-	mf:name "Test case 2- Class";
-	dc:description "Related to requirement platform81 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+:Test-case3 a mf:QueryEvaluationTest;
+	dc:identifier "platform4";
+	mf:name "Test case 3- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
+					Class([Organization]),
+ 					ObjectProperty([hasPartnershipWith]),
+ 					Symmetric([hasPartnershipWith])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+ 				[:testRange1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] <http://www.w3.org/2002/07/owl#differentFrom> [:testRange1] .
+ 				[:domain1] [hasPartnershipWith] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".	
+
+
+:Test-case4 a mf:QueryEvaluationTest;
+	dc:identifier "platform5";
+	mf:name "Test case 4- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+					Class([Organization]),
+ 					ObjectProperty([hasPartnershipWith])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+ 				[:testRange1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] <http://www.w3.org/2002/07/owl#differentFrom> [:testRange1] .
+ 				[:domain1] [hasPartnershipWith] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".	
+
+
+:Test-case5 a mf:QueryEvaluationTest;
+	dc:identifier "platform8";
+	mf:name "Test case 5-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=5";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasPartnershipWith]),
+ 					Class([Organization]),
+ 					Class([Organization])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasPartnershipWith] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case6 a mf:QueryEvaluationTest;
+	dc:identifier "platform9";
+	mf:name "Test case 6-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=4";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasPartnershipWith]),
+ 					Class([Organization]),
+ 					Class([Organization])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasPartnershipWith] [:testRange1].
+ 				[:testRange2]   a [Organization] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasPartnershipWith] [:testRange2].
+ 				[:testRange1] owl:differentFrom [:testRange1] .
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case7 a mf:QueryEvaluationTest;
+	dc:identifier "platform11";
+	mf:name "Test case 7-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange2]  a [Organization] .
+ 				[:domain1] [hasOwner] [:testRange1].
+
+  
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case8 a mf:QueryEvaluationTest;
+	dc:identifier "platform21";
+	mf:name "Test case 8-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([owns]),
+ 					Class([Device]),
  					Class([Agent])
 				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Agent] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Device] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [owns] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case9 a mf:QueryEvaluationTest;
+	dc:identifier "platform22";
+	mf:name "Test case 9-Datatype Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=7";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Property([serialNumber]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [serialNumber] "testRange1". 
+ 
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case10 a mf:QueryEvaluationTest;
+	dc:identifier "platform23";
+	mf:name "Test case 10-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([avatar]),
+ 					Class([Image]),	
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Image] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [avatar] [:testRange1].
+ 				[:testRange2]   a [Agent] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange2].
+  
+				"""
+			];
+
+	mf:result "true".	
+
+
+
+
+:Test-case11 a mf:QueryEvaluationTest;
+	dc:identifier "platform33";
+	mf:name "Test case 11-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([avatar]),
+ 					Class([Image]),
+ 					Class([Device]),
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Property([deviceName]),
+ 					Property([deviceDescription]),
+ 					Property([serialNumber])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Image] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [avatar] [:testRange1].
+ 				[:testRange2]   a [Agent] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange2].
+ 				[:domain1] [deviceName] "testRange1". 
+ 				[:domain1] [deviceDescription] "testRange2". 
+ 				[:domain1] [serialNumber] "testRange3".
+  
+  
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case12 a mf:QueryEvaluationTest;
+	dc:identifier "platform35";
+	mf:name "Test case 12-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([monitors]),
+ 					Class([Property]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Property] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
+  
 				"""
 			];
 
 	mf:result "true".		
 
 
-
-
-:TCC3 a mf:QueryEvaluationTest;
-	dc:identifier "platform82";
-	mf:name "Test case 3- Class";
-	dc:description "Related to requirement platform82 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+:Test-case13 a mf:QueryEvaluationTest;
+	dc:identifier "platform37";
+	mf:name "Test case 13- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
  					Class([Device]),
- 					SubClassOf([Device],[PhysicalThing])  
+ 					SubClassOf([Device],[SpatialThing])
 				} 
 				"""
 			];
 
 	mf:result "true".		
 
+:Test-case14 a mf:QueryEvaluationTest;
+	dc:identifier "platform41";
+	mf:name "Test case 14-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case15 a mf:QueryEvaluationTest;
+	dc:identifier "platform42";
+	mf:name "Test case 15-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=4";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Device]),
+ 					Class([Service])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+ 				[:domain1] a [Service] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".	
 
 
+:Test-case16 a mf:QueryEvaluationTest;
+	dc:identifier "platform43";
+	mf:name "Test case 16-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=7";
+	mf:action[qt:query """
 
-:TCC4 a mf:QueryEvaluationTest;
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasPartnershipWith]),
+ 					Class([Organization]),
+ 					Class([Organization])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasPartnershipWith] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case17 a mf:QueryEvaluationTest;
+	dc:identifier "platform44";
+	mf:name "Test case 17- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					SubClassOf([DigitalUser],[foafAgent]),
+ 					SubClassOf([HumanUser],[foafPerson])
+
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case18 a mf:QueryEvaluationTest;
+	dc:identifier "platform46";
+	mf:name "Test case 18-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=6";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([owns]),
+ 					Class([Service]),
+ 					Class([Agent])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Agent] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Service] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [owns] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case19 a mf:QueryEvaluationTest;
+	dc:identifier "platform52";
+	mf:name "Test case 19-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=6";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Service]),
+ 					Property([serviceName]),
+ 					Property([serviceDescription]),
+ 					ObjectProperty([avatar]),
+ 					Class([Image])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Service] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+ 				[:domain1] [serviceName] "name". 
+ 				[:domain1] [serviceDescription] "desc". 
+ 				[:testRange2]   a [Image] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [avatar] [:testRange2].
+  
+  
+				"""
+			];
+
+	mf:result "true".	
+
+
+:Test-case20 a mf:QueryEvaluationTest;
+	dc:identifier "platform57";
+	mf:name "Test case 20-Datatype Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Property([serviceName]),
+ 					Class([Service])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Service] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [serviceName] "testRange1". 
+ 
+				"""
+			];
+
+	mf:result "true".
+
+:Test-case21 a mf:QueryEvaluationTest;
+	dc:identifier "platform79";
+	mf:name "Test case 21-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=7";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([owns]),
+ 					Class([Device]),
+ 					Class([Agent])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Agent] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Device] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [owns] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case22 a mf:QueryEvaluationTest;
+	dc:identifier "platform80";
+	mf:name "Test case 22- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Device]),
+ 					Property([deviceName])
+ 				
+
+				} 
+				""";
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [deviceName] "testRange1".
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case23 a mf:QueryEvaluationTest;
+	dc:identifier "platform81";
+	mf:name "Test case 23-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=8";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Device]),
+ 					Class([Agent])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Agent] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Device] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case24 a mf:QueryEvaluationTest;
+	dc:identifier "platform82";
+	mf:name "Test case 24- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Device]),
+ 					SubClassOf([Device],[PhysicalThing])
+				} 
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case25 a mf:QueryEvaluationTest;
 	dc:identifier "platform83";
-	mf:name "Test case 4- Class";
-	dc:description "Related to requirement platform83 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 25- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
  					Class([Service]),
- 					SubClassOf([Service],[VirtualThing])  
+ 					SubClassOf([Service],[VirtualThing])
 				} 
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case26 a mf:QueryEvaluationTest;
+	dc:identifier "platform85";
+	mf:name "Test case 26-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Device])
+ 				
+
+				} 
+				""";
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+				"""
+			];
+
+	mf:result "true".	
+
+
+:Test-case27 a mf:QueryEvaluationTest;
+	dc:identifier "platform86";
+	mf:name "Test case 27-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Service]),
+ 					Class([Agent])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Agent] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Service] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case29 a mf:QueryEvaluationTest;
+	dc:identifier "platform87";
+	mf:name "Test case 29-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Device]),
+ 					ObjectProperty([avatar]),
+ 					Class([Image]),
+ 					Property([deviceName]),
+ 					Property([deviceDescription]),
+ 					Property([serialNumber])
+
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+
+ 				[:testRange2]   a [Image] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [avatar] [:testRange2].
+ 				[:domain1] [deviceName] "testRange3".
+ 				[:domain1] [deviceDescription] "testRange4".
+ 				[:domain1] [serialNumber] "testRange5".
+
+  
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case30 a mf:QueryEvaluationTest;
+	dc:identifier "platform88";
+	mf:name "Test case 30-Datatype Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=0";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Property([deviceName]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [deviceName] "testRange1". 
+ 
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case31 a mf:QueryEvaluationTest;
+	dc:identifier "platform89";
+	mf:name "Test case 31-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([avatar]),
+ 					Class([Image]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Image] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [avatar] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case32 a mf:QueryEvaluationTest;
+	dc:identifier "platform90";
+	mf:name "Test case 32- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Sensor]),
+ 					Class([Actuator]),
+ 					SubClassOf([Sensor],[Device]),
+ 					SubClassOf([Actuator],[Device])
+				} 
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case33 a mf:QueryEvaluationTest;
+	dc:identifier "platform91";
+	mf:name "Test case 33-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasvendor]),
+ 					Class([Agent]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasvendor] [:testRange1].
+  
 				"""
 			];
 
 	mf:result "true".		
 
 
-
-
-:TCC5 a mf:QueryEvaluationTest;
-	dc:identifier "platform103";
-	mf:name "Test case 5- Class";
-	dc:description "Related to requirement platform103 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+:Test-case34 a mf:QueryEvaluationTest;
+	dc:identifier "platform92";
+	mf:name "Test case 34-Datatype Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
+ 					Property([serialNumber]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [serialNumber] "testRange1". 
+ 
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case35 a mf:QueryEvaluationTest;
+	dc:identifier "platform94";
+	mf:name "Test case 35-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+:Test-case36 a mf:QueryEvaluationTest;
+	dc:identifier "platform95";
+	mf:name "Test case 36-Datatype Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Property([serviceName]),
+ 					Class([Device])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [serviceName] "testRange1". 
+ 
+				"""
+			];
+
+	mf:result "true".	
+
+
+:Test-case37 a mf:QueryEvaluationTest;
+	dc:identifier "platform96";
+	mf:name "Test case 37-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([avatar]),
+ 					Class([Image]),
+ 					Class([Service])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Service] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Image] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [avatar] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case38 a mf:QueryEvaluationTest;
+	dc:identifier "platform97";
+	mf:name "Test case 38-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Service])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Service] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Service] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".
+
+:Test-case39 a mf:QueryEvaluationTest;
+	dc:identifier "platform98";
+	mf:name "Test case 39-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasprovider]),
+ 					Class([Agent]),
+ 					Class([Service])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Service] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasprovider] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+:Test-case40 a mf:QueryEvaluationTest;
+	dc:identifier "platform99";
+	mf:name "Test case 40-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasOwner]),
+ 					Class([Agent]),
+ 					Class([Service]),
+ 					Property([serviceDescription])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Service] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Agent] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasOwner] [:testRange1].
+ 				[:domain1] [serviceDescription] "desc". 
+ 
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+:Test-case41 a mf:QueryEvaluationTest;
+	dc:identifier "platform101";
+	mf:name "Test case 41-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasPartnershipWith]),
+ 					Class([Organization]),
+ 					Class([Organization])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasPartnershipWith] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case42 a mf:QueryEvaluationTest;
+	dc:identifier "platform102";
+	mf:name "Test case 42-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([hasPartnershipWith]),
+ 					Class([Organization]),
+ 					Class([Organization]),
+ 					Symmetric([hasPartnershipWith])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasPartnershipWith] [:testRange1].
+  
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case43 a mf:QueryEvaluationTest;
+	dc:identifier "platform103";
+	mf:name "Test case 43- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([involves]),
+ 					Class([Organization]),
  					Class([Neighbourhood])
 				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Neighbourhood] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [involves] [:testRange1].
+  
 				"""
 			];
 
-	mf:result "true".		
+	mf:result "true".	
 
-
-
-
-:TCC6 a mf:QueryEvaluationTest;
-	dc:identifier "platform112";
-	mf:name "Test case 6- Class";
-	dc:description "Related to requirement platform112 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+:Test-case44 a mf:QueryEvaluationTest;
+	dc:identifier "platform104";
+	mf:name "Test case 44-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class([Buildingspace])
+ 					Class([DigitalUser]),
+ 					Class([HumanUser])
 				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [DigitalUser] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasMember] [:testRange1].
+ 				[:testRange2]   a [HumanUser] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasMember] [:testRange2].
+  
+				"""
+			];
+
+	mf:result "true".
+
+
+:Test-case45 a mf:QueryEvaluationTest;
+	dc:identifier "platform105";
+	mf:name "Test case 45-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Membership]),
+ 					Class([foafAgent]),
+ 					Class([Role]),
+ 					Class([Organization]),
+ 					ObjectProperty([role]),
+ 					ObjectProperty([hasMembership])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [foafAgent] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Membership] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [hasMembership] [:testRange1].
+ 				[:testRange2]   a [Role] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1] [role] [:testRange2].
+  
+				"""
+			];
+
+	mf:result "true".
+
+
+
+
+
+:Test-case46 a mf:QueryEvaluationTest;
+	dc:identifier "platform106";
+	mf:name "Test case 46-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([DigitalUser]),
+ 					Class([HumanUser])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Organization] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [DigitalUser] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [isMemberOf] [:testRange1].
+ 				[:testRange2]   a [HumanUser] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [isMemberOf] [:testRange2].
+  
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case47 a mf:QueryEvaluationTest;
+	dc:identifier "platform107";
+	mf:name "Test case 47-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Organization]),
+ 					Symmetric([hasPartnershipWith])
+				} 
+				"""		
+			];
+
+	mf:result "true".
+
+:Test-case48 a mf:QueryEvaluationTest;
+	dc:identifier "platform108";
+	mf:name "Test case 48-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Organization]),
+ 					Class([Membership]),
+ 					Class([Role]),
+ 					ObjectProperty([role]),
+ 					ObjectProperty([organization])
+
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [Membership] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Organization] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [organization] [:testRange1].
+ 				[:testRange2]   a [Role] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [role] [:testRange2].
+ 				[:testRange3]   a [Role] .
+				[:testRange3]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+				[:domain1] [role] [:testRange3].
+  
+				"""
+			];
+
+
+	mf:result "true".
+
+
+
+:Test-case49 a mf:QueryEvaluationTest;
+	dc:identifier "platform112";
+	mf:name "Test case 49- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([BuildingSpace])
+				} 
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case50 a mf:QueryEvaluationTest;
+	dc:identifier "platform113";
+	mf:name "Test case 50-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([location]),
+ 					Class([SpatialThing])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a <http://www.w3.org/2002/07/owl#Thing> .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [SpatialThing] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [location] [:testRange1].
+  
 				"""
 			];
 
 	mf:result "true".		
 
 
+:Test-case50 a mf:QueryEvaluationTest;
+	dc:identifier "platform114";
+	mf:name "Test case 50-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([monitors]),
+ 					Class([Device]),
+ 					Class([Temperature])
+ 				
+
+				} 
+				""";
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Temperature] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
+				"""
+			];
+
+	mf:result "true".
+
+:Test-case51 a mf:QueryEvaluationTest;
+	dc:identifier "platform115";
+	mf:name "Test case 49-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([monitors]),
+ 					Class([Device]),
+ 					Individual([CO2Level])
+ 				
+
+				} 
+				""";
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [CO2Level] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
+				"""
+			];
+
+	mf:result "true".
+
+:Test-case52 a mf:QueryEvaluationTest;
+	dc:identifier "platform116";
+	mf:name "Test case52-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([monitors]),
+ 					Class([Device]),
+ 					Individual([Noise])
+				} 
+				""";
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Noise] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
+				"""
+			];
+
+	mf:result "true".
+
+:Test-case53 a mf:QueryEvaluationTest;
+	dc:identifier "platform117";
+	mf:name "Test case 53-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([monitors]),
+ 					Class([Device]),
+ 					Class([HumidityProperty])
+ 				
+
+				} 
+				""";
+			qt:data """
+			
+				[:domain1] a [Device] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [HumidityProperty] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
+				"""
+			];
+
+	mf:result "true".	
 
 
-:TCC7 a mf:QueryEvaluationTest;
+:Test-case54 a mf:QueryEvaluationTest;
 	dc:identifier "platform155";
-	mf:name "Test case 7- Class";
-	dc:description "Related to requirement platform152 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 54- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -203,103 +1558,72 @@
 				"""
 			];
 
-	mf:result "true".		
+	mf:result "true".	
 
 
 
-
-:TCC8 a mf:QueryEvaluationTest;
-	dc:identifier "platform166";
-	mf:name "Test case 8- Class";
-	dc:description "Related to requirement platform166 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+:Test-case55 a mf:QueryEvaluationTest;
+	dc:identifier "platform156";
+	mf:name "Test case 55-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class([Thermometer]),
- 					Class([HumiditySensor]),
- 					Class([LuxMeter]),
- 					Class([NoiseSensor]),
- 					Class([MotionSensor]),
- 					Class([CO2sensor]),
- 					Class([WaterFlowMeter]),
- 					Class([WaterEnergyMeters]),
- 					Class([Powermeter]),
- 					Class([EVCharger]),
- 					SubClassOf([Thermometer],[Sensor])  ,
- 					SubClassOf([HumiditySensor],[Sensor])  ,
- 					SubClassOf([LuxMeter],[Sensor])  ,
- 					SubClassOf([NoiseSensor],[Sensor])  ,
- 					SubClassOf([MotionSensor],[Sensor])  ,
- 					SubClassOf([CO2sensor],[Sensor])  ,
- 					SubClassOf([WaterFlowMeter],[Sensor])  ,
- 					SubClassOf([WaterEnergyMeters],[Sensor])  ,
- 					SubClassOf([Powermeter],[Sensor])  ,
- 					SubClassOf([EVCharger],[Charger])  
+ 					ObjectProperty([describes]),
+ 					Class([Thing]),
+ 					Class([ThingDescription])
 				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [ThingDescription] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Thing] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [describes] [:testRange1].
+  
 				"""
 			];
 
-	mf:result "true".		
+	mf:result "true".	
 
 
-
-
-:TCC9 a mf:QueryEvaluationTest;
-	dc:identifier "platform167";
-	mf:name "Test case 9- Class";
-	dc:description "Related to requirement platform167 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+:Test-case55 a mf:QueryEvaluationTest;
+	dc:identifier "platform157";
+	mf:name "Test case 55-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class([Thermometer]),
- 					Class([HumiditySensor]),
- 					Class([MotionSensor]),
- 					Class([EBikeCharger]),
- 					Class([Lightbulb]),
- 					Class([DoorSensor]),
- 					Class([WindowSensor]),
- 					Class([Thermostat]),
- 					SubClassOf([Thermometer],[Sensor])  ,
- 					SubClassOf([HumiditySensor],[Sensor])  ,
- 					SubClassOf([MotionSensor],[Sensor])  ,
- 					SubClassOf([EBikeCharger],[Charger])  ,
- 					SubClassOf([DoorSensor],[Sensor])  ,
- 					SubClassOf([WindowSensor],[Sensor])  ,
- 					SubClassOf([Thermostat],[Sensor])  
+ 					ObjectProperty([isRelativeTo]),
+ 					Class([Link]),
+ 					Class([RelativeEndpoint])
 				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [RelativeEndpoint] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Link] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [isRelativeTo] [:testRange1].
+  
 				"""
 			];
 
-	mf:result "true".		
-
-:TCC10 a mf:QueryEvaluationTest;
-	dc:identifier "platform90";
-	mf:name "Test case 10- Class";
-	dc:description "Related to requirement platform90 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Sensor]),
- 					Class([Actuator]),
- 					SubClassOf([Sensor],[Device])  ,
- 					SubClassOf([Actuator],[Device])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
+	mf:result "true".	
 
 
-:TCC11 a mf:QueryEvaluationTest;
+:Test-case56 a mf:QueryEvaluationTest;
 	dc:identifier "platform158";
-	mf:name "Test case 11- Class";
-	dc:description "Related to requirement platform158 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 56- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -307,601 +1631,161 @@
 				ASK {
  					Class([PeopleCounter]),
  					Class([HumiditySensor]),
- 					Class([LightSwitch]),
+ 					Class([HVACSensor]),
  					Class([MotionSensor]),
  					Class([Thermometer]),
- 					Class([CO2sensor]),
- 					Class([HVACSensor])
- 					
+ 					Class([LightSwitch]),
+ 					Class([CO2Sensor]), 	
+ 					SubClassOf([PeopleCounter],[Device]),
+ 					SubClassOf([HumiditySensor],[Device]),
+ 					SubClassOf([HVACSensor],[Device]),
+ 					SubClassOf([MotionSensor],[Device]),
+ 					SubClassOf([Thermometer],[Device]),
+ 					SubClassOf([LightSwitch],[Device]),
+ 					SubClassOf([CO2Sensor],[Device])
 				} 
 				"""
 			];
 
-	mf:result "true".
+	mf:result "true".	
 
 
-:TCC12 a mf:QueryEvaluationTest;
-	dc:identifier "platform100";
-	mf:name "Test case 12- Class";
-	dc:description "Related to requirement platform100 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Application]),
- 					SubClassOf([Application],[Service])
- 				
- 					
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-#
-#
-# #################################################################
-# #
-# #    Tests about object properties
-# #
-# #################################################################
-#
-#
-
-:TCP1 a mf:QueryEvaluationTest;
-	dc:identifier "platform81";
-	mf:name "Test case 1-Object Properties";
-	dc:description "Related to requirement platform81 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=0";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([hasowner])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Agent] .
-				[hasowner] a  [ObjectProperty].
- 				[:range1]   a [Device] .
-				[:domain1] [hasowner] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP2 a mf:QueryEvaluationTest;
-	dc:identifier "platform84";
-	mf:name "Test case 2-Object Properties";
-	dc:description "Related to requirement platform84 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([location])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[location] a  [ObjectProperty].
- 				[:range1]   a [spatialThing] .
-				[:domain1] [location] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP3 a mf:QueryEvaluationTest;
-	dc:identifier "platform86";
-	mf:name "Test case 3-Object Properties";
-	dc:description "Related to requirement platform86 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([hasowner])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Agent] .
-				[hasowner] a  [ObjectProperty].
- 				[:range1]   a [Service] .
-				[:domain1] [hasowner] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP4 a mf:QueryEvaluationTest;
-	dc:identifier "platform89";
-	mf:name "Test case 4-Object Properties";
-	dc:description "Related to requirement platform89 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([avatar])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[avatar] a  [ObjectProperty].
- 				[:range1]   a [http://www.w3.org/2002/07/owl#Thing] .
-				[:domain1] [avatar] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP5 a mf:QueryEvaluationTest;
-	dc:identifier "platform91";
-	mf:name "Test case 5-Object Properties";
-	dc:description "Related to requirement platform91 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([hasvendor])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[hasvendor] a  [ObjectProperty].
- 				[:range1]   a [http://www.w3.org/2002/07/owl#Thing] .
-				[:domain1] [hasvendor] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP6 a mf:QueryEvaluationTest;
-	dc:identifier "platform94";
-	mf:name "Test case 6-Object Properties";
-	dc:description "Related to requirement platform94 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([hasowner])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[hasowner] a  [ObjectProperty].
- 				[:range1]   a [http://www.w3.org/2002/07/owl#Thing] .
-				[:domain1] [hasowner] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP7 a mf:QueryEvaluationTest;
-	dc:identifier "platform96";
-	mf:name "Test case 7-Object Properties";
-	dc:description "Related to requirement platform96 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([avatar])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[avatar] a  [ObjectProperty].
- 				[:range1]   a [http://www.w3.org/2002/07/owl#Thing] .
-				[:domain1] [avatar] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP8 a mf:QueryEvaluationTest;
-	dc:identifier "platform98";
-	mf:name "Test case 8-Object Properties";
-	dc:description "Related to requirement platform98 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([hasprovider])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[hasprovider] a  [ObjectProperty].
- 				[:range1]   a [http://www.w3.org/2002/07/owl#Thing] .
-				[:domain1] [hasprovider] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP9 a mf:QueryEvaluationTest;
-	dc:identifier "platform99";
-	mf:name "Test case 9-Object Properties";
-	dc:description "Related to requirement platform99 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([hasowner])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[hasowner] a  [ObjectProperty].
- 				[:range1]   a [http://www.w3.org/2002/07/owl#Thing] .
-				[:domain1] [hasowner] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP10 a mf:QueryEvaluationTest;
-	dc:identifier "platform101";
-	mf:name "Test case 10-Object Properties";
-	dc:description "Related to requirement platform101 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([hasPartnershipWith])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Organization] .
-				[hasPartnershipWith] a  [ObjectProperty].
- 				[:range1]   a [Organization] .
-				[:domain1] [hasPartnershipWith] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP11 a mf:QueryEvaluationTest;
-	dc:identifier "platform102";
-	mf:name "Test case 11-Object Properties";
-	dc:description "Related to requirement platform102 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([hasPartnershipWith])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Organization] .
-				[hasPartnershipWith] a  [ObjectProperty].
- 				[:range1]   a [Organization] .
-				[:domain1] [hasPartnershipWith] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP12 a mf:QueryEvaluationTest;
-	dc:identifier "platform103";
-	mf:name "Test case 12-Object Properties";
-	dc:description "Related to requirement platform103 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([involves])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Neighbourhood] .
-				[involves] a  [ObjectProperty].
- 				[:range1]   a [Organization] .
-				[:domain1] [involves] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP13 a mf:QueryEvaluationTest;
-	dc:identifier "platform113";
-	mf:name "Test case 13-Object Properties";
-	dc:description "Related to requirement platform113 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([location])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [http://www.w3.org/2002/07/owl#Thing] .
-				[location] a  [ObjectProperty].
- 				[:range1]   a [spatialThing] .
-				[:domain1] [location] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP14 a mf:QueryEvaluationTest;
-	dc:identifier "platform156";
-	mf:name "Test case 14-Object Properties";
-	dc:description "Related to requirement platform156 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([describes])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [ThingDescription] .
-				[describes] a  [ObjectProperty].
- 				[:range1]   a [Thing] .
-				[:domain1] [describes] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP15 a mf:QueryEvaluationTest;
-	dc:identifier "platform157";
-	mf:name "Test case 15-Object Properties";
-	dc:description "Related to requirement platform157 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([isRelativeTo])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [RelativeEndpoint] .
-				[isRelativeTo] a  [ObjectProperty].
- 				[:range1]   a [Link] .
-				[:domain1] [isRelativeTo] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP16 a mf:QueryEvaluationTest;
+:Test-case57 a mf:QueryEvaluationTest;
 	dc:identifier "platform160";
-	mf:name "Test case 16-Object Properties";
-	dc:description "Related to requirement platform160 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 57-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([monitors])
+ 					ObjectProperty([monitors]),
+ 					Class([HumidityProperty]),
+ 					Class([HumiditySensor])
 				} 
 				""";
 
 			qt:data """
 			
 				[:domain1] a [HumiditySensor] .
-				[monitors] a  [ObjectProperty].
- 				[:range1]   a [HumidityProperty] .
-				[:domain1] [monitors] [:range1].
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [HumidityProperty] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
   
 				"""
 			];
 
-	mf:result "true".		
+	mf:result "true".	
 
 
-
-
-:TCP17 a mf:QueryEvaluationTest;
+:Test-case58 a mf:QueryEvaluationTest;
 	dc:identifier "platform161";
-	mf:name "Test case 17-Object Properties";
-	dc:description "Related to requirement platform161 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 58-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([actsOn])
+ 					ObjectProperty([actsOn]),
+ 					Class([PowerConsumption]),
+ 					Class([LightSwitch])
 				} 
 				""";
 
 			qt:data """
 			
 				[:domain1] a [LightSwitch] .
-				[actsOn] a  [ObjectProperty].
- 				[:range1]   a [PowerConsumption] .
-				[:domain1] [actsOn] [:range1].
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [PowerConsumption] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [actsOn] [:testRange1].
   
 				"""
 			];
 
 	mf:result "true".		
 
-
-
-
-:TCP18 a mf:QueryEvaluationTest;
+:Test-case59 a mf:QueryEvaluationTest;
 	dc:identifier "platform162";
-	mf:name "Test case 18-Object Properties";
-	dc:description "Related to requirement platform162 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 59-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([monitors])
+ 					ObjectProperty([monitors]),
+ 					Individual([Motion]),
+ 					Class([MotionSensor])
 				} 
 				""";
 
 			qt:data """
 			
 				[:domain1] a [MotionSensor] .
-				[monitors] a  [ObjectProperty].
- 				[:range1]   a [Motion] .
-				[:domain1] [monitors] [:range1].
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Motion] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
   
 				"""
 			];
 
-	mf:result "true".		
+	mf:result "true".	
 
 
-
-
-:TCP19 a mf:QueryEvaluationTest;
+:Test-case60 a mf:QueryEvaluationTest;
 	dc:identifier "platform163";
-	mf:name "Test case 19-Object Properties";
-	dc:description "Related to requirement platform163 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 60-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([monitors])
+ 					ObjectProperty([monitors]),
+ 					Class([Temperature]),
+ 					Class([Thermometer])
 				} 
 				""";
 
 			qt:data """
 			
 				[:domain1] a [Thermometer] .
-				[monitors] a  [ObjectProperty].
- 				[:range1]   a [Temperature] .
-				[:domain1] [monitors] [:range1].
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Temperature] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
   
 				"""
 			];
 
-	mf:result "true".		
+	mf:result "true".	
 
-
-
-
-:TCP20 a mf:QueryEvaluationTest;
+:Test-case61 a mf:QueryEvaluationTest;
 	dc:identifier "platform164";
-	mf:name "Test case 20-Object Properties";
-	dc:description "Related to requirement platform164 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 61-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([monitors])
+ 					ObjectProperty([monitors]),
+ 					Individual([CO2Level]),
+ 					Class([CO2Sensor])
 				} 
 				""";
 
 			qt:data """
 			
-				[:domain1] a [CO2sensor] .
-				[monitors] a  [ObjectProperty].
- 				[:range1]   a [CO2Level] .
-				[:domain1] [monitors] [:range1].
+				[:domain1] a [CO2Sensor] .
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [CO2Level] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
   
 				"""
 			];
@@ -911,56 +1795,128 @@
 
 
 
-:TCP21 a mf:QueryEvaluationTest;
+:Test-case62 a mf:QueryEvaluationTest;
 	dc:identifier "platform165";
-	mf:name "Test case 21-Object Properties";
-	dc:description "Related to requirement platform165 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 62-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([actsOn])
+ 					ObjectProperty([actsOn]),
+ 					Class([OperationalStatus]),
+ 					Class([Temperature]),
+ 					Class([HVACSensor])
 				} 
 				""";
 
 			qt:data """
 			
 				[:domain1] a [HVACSensor] .
-				[actsOn] a  [ObjectProperty].
- 				[:range1]   a [OperationalStatus] .
-				[:domain1] [actsOn] [:range1].
- 				[actsOn] a  [ObjectProperty].
- 				[:range1]   a [Temperature] .
-				[:domain1] [actsOn] [:range1].
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [OperationalStatus] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [actsOn] [:testRange1].
+ 				[:testRange2]   a [Temperature] .
+				[:testRange2]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange2].
   
 				"""
 			];
 
 	mf:result "true".		
 
-
-
-
-:TCP22 a mf:QueryEvaluationTest;
-	dc:identifier "platform168";
-	mf:name "Test case 22-Object Properties";
-	dc:description "Related to requirement platform168 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+:Test-case63 a mf:QueryEvaluationTest;
+	dc:identifier "platform166";
+	mf:name "Test case 63- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([monitors])
+ 					Class([Device]),
+ 					Class([Thermometer]),
+ 					SubClassOf([Thermometer],[Device]),
+ 					Class([HumiditySensor]),
+ 					SubClassOf([HumiditySensor],[Device]),
+ 					Class([LuxMeter]),
+ 					SubClassOf([LuxMeter],[Device]),
+ 					Class([NoiseSensor]),
+ 					SubClassOf([NoiseSensor],[Device]),
+ 					Class([MotionSensor]),
+ 					SubClassOf([MotionSensor],[Device]),
+ 					Class([CO2sensor]),
+ 					SubClassOf([CO2sensor],[Device]),
+ 					Class([WaterFlowMeter]),
+ 					SubClassOf([WaterFlowMeter],[Device]),
+ 					Class([WaterEnergyMeters]),
+ 					SubClassOf([WaterEnergyMeters],[Device]),
+ 					Class([Powermeter]),
+ 					SubClassOf([Powermeter],[Device]),
+ 					Class([EVCharger]),
+ 					SubClassOf([EVCharger],[Device])
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
+:Test-case64 a mf:QueryEvaluationTest;
+	dc:identifier "platform167";
+	mf:name "Test case 64- Class";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Device]),
+ 					Class([Thermometer]),
+ 					SubClassOf([Thermometer],[Device]),
+ 					Class([HumiditySensor]),
+ 					SubClassOf([HumiditySensor],[Device]),
+ 					Class([MotionSensor]),
+ 					SubClassOf([MotionSensor],[Device]),
+ 					Class([EBikeCharger]),
+ 					SubClassOf([EBikeCharger],[Device]),
+ 					Class([Lightbulb]),
+ 					SubClassOf([Lightbulb],[Device]),
+ 					Class([DoorSensor]),
+ 					SubClassOf([DoorSensor],[Device]),
+ 					Class([WindowSensor]),
+ 					SubClassOf([WindowSensor],[Device]),
+ 					Class([Thermostat]),
+ 					SubClassOf([Thermostat],[Device])
+				} 
+				"""
+			];
+
+	mf:result "true".	
+
+:Test-case65 a mf:QueryEvaluationTest;
+	dc:identifier "platform168";
+	mf:name "Test case 65-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([monitors]),
+ 					Individual([StateOfCharge]),
+ 					Class([EBikeCharger])
 				} 
 				""";
 
 			qt:data """
 			
 				[:domain1] a [EBikeCharger] .
-				[monitors] a  [ObjectProperty].
- 				[:range1]   a [StateOfCharge] .
-				[:domain1] [monitors] [:range1].
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [StateOfCharge] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
   
 				"""
 			];
@@ -970,529 +1926,75 @@
 
 
 
-:TCP23 a mf:QueryEvaluationTest;
+:Test-case66 a mf:QueryEvaluationTest;
 	dc:identifier "platform169";
-	mf:name "Test case 23-Object Properties";
-	dc:description "Related to requirement platform169 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 66-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([monitors])
+ 					ObjectProperty([monitors]),
+ 					Individual([Color]),
+ 					Individual([On/off]),
+ 					Individual([Dimming]),
+ 					Class([Lightbulb])
 				} 
 				""";
 
 			qt:data """
 			
 				[:domain1] a [Lightbulb] .
-				[monitors] a  [ObjectProperty].
- 				[:range1]   a [Color] .
-				[:domain1] [monitors] [:range1].
- 				[monitors] a  [ObjectProperty].
- 				[:range1]   a [On/off] .
-				[:domain1] [monitors] [:range1].
- 				[monitors] a  [ObjectProperty].
- 				[:range1]   a [Dimming] .
-				[:domain1] [monitors] [:range1].
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Color] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
+ 				[:testRange1]   a [On/off] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
+ 				[:testRange1]   a [Dimming] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [monitors] [:testRange1].
   
 				"""
 			];
 
-	mf:result "true".		
+	mf:result "true".	
 
 
-
-
-:TCP24 a mf:QueryEvaluationTest;
+:Test-case67 a mf:QueryEvaluationTest;
 	dc:identifier "platform172";
-	mf:name "Test case 24-Object Properties";
-	dc:description "Related to requirement platform172 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
+	mf:name "Test case 67-Object Properties";
+	rdfs:seeAlso "https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
 	mf:action[qt:query """
 
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty([actsOn])
+ 					ObjectProperty([actsOn]),
+ 					Class([Temperature]),
+ 					Individual([PositionValve]),
+ 					Individual([Mode]),
+ 					Class([Thermostat])
 				} 
 				""";
 
 			qt:data """
 			
 				[:domain1] a [Thermostat] .
-				[actsOn] a  [ObjectProperty].
- 				[:range1]   a [Temperature] .
-				[:domain1] [actsOn] [:range1].
- 				[actsOn] a  [ObjectProperty].
- 				[:range1]   a [PositionValve] .
-				[:domain1] [actsOn] [:range1].
- 				[actsOn] a  [ObjectProperty].
- 				[:range1]   a [Mode] .
-				[:domain1] [actsOn] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".	
-
-:TCP25 a mf:QueryEvaluationTest;
-	dc:identifier "platform85";
-	mf:name "Test case 25-Object Properties";
-	dc:description "Related to requirement platform85 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([Device]),
- 					ObjectProperty([owns])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [coreAgent] .
-				[owns] a  [ObjectProperty].
- 				[:range1]   a [Device] .
-				[:domain1] [owns] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".	
-
-:TCP26 a mf:QueryEvaluationTest;
-	dc:identifier "platform97";
-	mf:name "Test case 26-Object Properties";
-	dc:description "Related to requirement platform97 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([Service]),
- 					ObjectProperty([owns])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [coreAgent] .
-				[owns] a  [ObjectProperty].
- 				[:range1]   a [Service] .
-				[:domain1] [owns] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".	
-
-
-
-:TCP27 a mf:QueryEvaluationTest;
-	dc:identifier "platform104";
-	mf:name "Test case 27-Object Properties";
-	dc:description "Related to requirement platform104 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([HumanUser]),
-					Class([DigitalUser]),
-					Class([Organization])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [HumanUser] .
-				[:domain2] a [DigitalUser] .
-				[isMemberOf] a  [ObjectProperty].
- 				[:range1]   a [Organization] .
-				[:domain1] [isMemberOf] [:range1].
-				[:domain2] [isMemberOf] [:range1].
+				[:domain1] a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:testRange1]   a [Temperature] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [actsOn] [:testRange1].
+ 				[:testRange1]   a [PositionValve] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [actsOn] [:testRange1].
+ 				[:testRange1]   a [Mode] .
+				[:testRange1]  a  <http://www.w3.org/2002/07/owl#NamedIndividual>.
+ 				[:domain1] [actsOn] [:testRange1].
   
 				"""
 			];
 
 	mf:result "true".		
-
-:TCP28 a mf:QueryEvaluationTest;
-	dc:identifier "platform105";
-	mf:name "Test case 28-Object Properties";
-	dc:description "Related to requirement platform105 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([HumanUser]),
-					Class([DigitalUser]),
-					Class([Organization])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [HumanUser] .
-				[:domain2] a [DigitalUser] .
-				[isMemberOf] a  [ObjectProperty].
- 				[:range1]   a [MemberShip] .
-				[:domain1] [hasMemberShip] [:range1].
-				[:domain2] [hasMemberShip] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".
-
-:TCP29 a mf:QueryEvaluationTest;
-	dc:identifier "platform106";
-	mf:name "Test case 29-Object Properties";
-	dc:description "Related to requirement platform106 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([HumanUser]),
-					Class([DigitalUser]),
-					Class([Organization])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [HumanUser] .
-				[:domain2] a [DigitalUser] .
-				[isMemberOf] a  [ObjectProperty].
- 				[:range1]   a [Organization] .
-				[:domain1] [isMemberOf] [:range1].
-				[:domain2] [isMemberOf] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".	
-
-
-:TCP30 a mf:QueryEvaluationTest;
-	dc:identifier "platform107";
-	mf:name "Test case 30-Object Properties";
-	dc:description "Related to requirement platform107 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([Organization]),
- 					ObjectProperty([hasPartnership]),
- 					Symmetric([hasPartnership])
-
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Organization] .
- 				[:range1]   a [Organization] .
-				[:domain1] [hasPartnership] [:range1].
-				
-  
-				"""
-			];
-
-	mf:result "true".
-
-
-:TCP31 a mf:QueryEvaluationTest;
-	dc:identifier "platform108";
-	mf:name "Test case 31-Object Properties";
-	dc:description "Related to requirement platform108 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([HumanUser]),
-					Class([DigitalUser])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [HumanUser] .
-				[:domain2] a [DigitalUser] .
-				[isMemberOf] a  [ObjectProperty].
- 				[:range1]   a [MemberShip] .
-				[:domain2] [hasMemberShip] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".
-
-
-:TCP32 a mf:QueryEvaluationTest;
-	dc:identifier "platform114";
-	mf:name "Test case 32-Object Properties";
-	dc:description "Related to requirement platform114 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([Thermometer]),
-					Class([Temperature]),
- 					ObjectProperty([monitors])
-				} 
-				""";
-
-			qt:data """
-				[:domain1] a [Thermometer] .
-				[:range1] a [Temperature] .
-				[monitors] a  [ObjectProperty].
-				[:domain1] [monitors] [:range1].
-				"""
-			];
-
-	mf:result "true".
-
-:TCP33 a mf:QueryEvaluationTest;
-	dc:identifier "platform115";
-	mf:name "Test case 33-Object Properties";
-	dc:description "Related to requirement platform115 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([CO2sensor]),
-					Class([CO2Level]),
- 					ObjectProperty([monitors])
-				} 
-				""";
-
-			qt:data """
-				[:domain1] a [CO2sensor] .
-				[:range1] a [CO2Level] .
-				[monitors] a  [ObjectProperty].
-				[:domain1] [monitors] [:range1].
-				"""
-			];
-
-	mf:result "true".
-
-:TCP34 a mf:QueryEvaluationTest;
-	dc:identifier "platform116";
-	mf:name "Test case 34-Object Properties";
-	dc:description "Related to requirement platform116 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([NoiseSensor]),
-					Class([Sound]),
- 					ObjectProperty([monitors])
-				} 
-				""";
-
-			qt:data """
-				[:domain1] a [NoiseSensor] .
-				[:range1] a [Sound] .
-				[monitors] a  [ObjectProperty].
-				[:domain1] [monitors] [:range1].
-				"""
-			];
-
-	mf:result "true".
-
-
-:TCP35 a mf:QueryEvaluationTest;
-	dc:identifier "platform117";
-	mf:name "Test case 35-Object Properties";
-	dc:description "Related to requirement platform117 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([HumiditySensor]),
-					Class([HumidityProperty]),
- 					ObjectProperty([monitors])
-				} 
-				""";
-
-			qt:data """
-				[:domain1] a [HumiditySensor] .
-				[:range1] a [HumidityProperty] .
-				[monitors] a  [ObjectProperty].
-				[:domain1] [monitors] [:range1].
-				"""
-			];
-
-	mf:result "true".	
-
-
-:TCP36 a mf:QueryEvaluationTest;
-	dc:identifier "platform159";
-	mf:name "Test case 35-Object Properties";
-	dc:description "Related to requirement platform117 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([PeopleCounter]),
-					Class([Presence]),
- 					ObjectProperty([monitors])
-				} 
-				""";
-
-			qt:data """
-				[:domain1] a [PeopleCounter] .
-				[:range1] a [Presence] .
-				[monitors] a  [ObjectProperty].
-				[:domain1] [monitors] [:range1].
-				"""
-			];
-
-	mf:result "true".	
-
-
-
-
-#
-#
-# #################################################################
-# #
-# #    Tests about datatype properties
-# #
-# #################################################################
-#
-#
-
-:TCDP1 a mf:QueryEvaluationTest;
-	dc:identifier "platform88";
-	mf:name "Test case 1-Datatype Properties";
-	dc:description "Related to requirement platform88 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=0";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[:domain1] [deviceName] "name" . 
- 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCDP2 a mf:QueryEvaluationTest;
-	dc:identifier "platform92";
-	mf:name "Test case 2-Datatype Properties";
-	dc:description "Related to requirement platform92 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[:domain1] [serialNumber] "number" . 
- 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCDP3 a mf:QueryEvaluationTest;
-	dc:identifier "platform95";
-	mf:name "Test case 3-Datatype Properties";
-	dc:description "Related to requirement platform95 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[:domain1] [serviceName] "name" . 
- 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCDP4 a mf:QueryEvaluationTest;
-	dc:identifier "platform99";
-	mf:name "Test case 4-Datatype Properties";
-	dc:description "Related to requirement platform99 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[:domain1] [servicedescription] "desc" . 
- 
-				"""
-			];
-
-	mf:result "true".
-
-
-
-
-
-
-:TCDP5 a mf:QueryEvaluationTest;
-	dc:identifier "platform127";
-	mf:name "Test case 5-Datatype Properties";
-	dc:description "Related to requirement platform127 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [PhysicalThing] .
-				[:domain1] [baseURI] "uri" . 
- 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCDP6 a mf:QueryEvaluationTest;
-	dc:identifier "platform133";
-	mf:name "Test case 6-Datatype Properties";
-	dc:description "Related to requirement platform133 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [Thing] .
-				[:domain1] [baseURI] "uri" . 
- 
-				"""
-			];
-
-	mf:result "true".		
-
-
-:TCDP7 a mf:QueryEvaluationTest;
-	dc:identifier "platform87";
-	mf:name "Test case 7-Datatype Properties";
-	dc:description "Related to requirement platform87 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[:domain1] [servicedescription] "desc" . 
- 
-				"""
-			];
-
-	mf:result "true".	
