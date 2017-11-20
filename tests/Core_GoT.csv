@@ -1,118 +1,93 @@
 key,label,uri
-:,,http://iot.linkeddata.es/def/core
-DigitalUser,"""Digital User""@en",http://iot.linkeddata.es/def/core#DigitalUser
-HumanUser,"""Human User""@en",http://iot.linkeddata.es/def/core#HumanUser
-Service,"""Service""@en",http://iot.linkeddata.es/def/core#Service
-Application,"""Application""@en",http://iot.linkeddata.es/def/core#Application
-Entity,"""Thing""@en",http://iot.linkeddata.es/def/wot#Thing
-PhysicalEntity,"""Physical Thing""@en",http://iot.linkeddata.es/def/core#PhysicalThing
-VirtualEntity,"""Virtual Thing""@en",http://iot.linkeddata.es/def/core#VirtualThing
-Actuator,"""Actuator""@en",http://iot.linkeddata.es/def/core#Actuator
-Sensor,"""Sensor""@en",http://iot.linkeddata.es/def/core#Sensor
-Device,"""Device""@en",http://iot.linkeddata.es/def/core#Device
-Endpoint,"""Endpoint""@en",http://iot.linkeddata.es/def/wot#Link
-Agent,,http://xmlns.com/foaf/0.1/Agent
-Person,,http://xmlns.com/foaf/0.1/Person
-interactsusing,"""interacts using""@en",http://iot.linkeddata.es/def/core#interactsUsing
-uses,"""uses""@en",http://iot.linkeddata.es/def/core#uses
-monitors,"""monitors""@en",http://iot.linkeddata.es/def/core#monitors
-actsOn,"""actsOn""@en",http://iot.linkeddata.es/def/core#actsOn
-represent,"""represent""@en",http://iot.linkeddata.es/def/core#represents
-areConnected,"""areConnected""@en",http://iot.linkeddata.es/def/core#areConnected
-connects,"""connects""@en",http://iot.linkeddata.es/def/core#exposes
-isaccessiblethrough,"""is accessible through""@en",http://iot.linkeddata.es/def/wot#isAccessibleThrough
-interactsthrough,"""interacts through""@en",http://iot.linkeddata.es/def/core#interactsUsing
-exposes,"""exposes""@en",http://iot.linkeddata.es/def/core#exposes
-contains,"""contains""@en",http://iot.linkeddata.es/def/core#contains
-ObjectProperty,,http://www.w3.org/2002/07/owl#ObjectProperty
-:,,http://iot.linkeddata.es/def/core#
-avatar,"""avatar""@en",http://iot.linkeddata.es/def/core#avatar
-describesEcosystem,"""describesEcosystem""@en",http://iot.linkeddata.es/def/core#describesEcosystem
-hasComponent,"""hasComponent""@en",http://iot.linkeddata.es/def/core#hasComponent
-hasNeighbourhood,"""hasNeighbourhood""@en",http://iot.linkeddata.es/def/core#hasNeighbourhood
-hasowner,"""has owner""@en",http://iot.linkeddata.es/def/core#hasOwner
-hasprovider,"""has provider""@en",http://iot.linkeddata.es/def/core#hasOwner
-hasPartnershipWith,"""hasPartnershipWith""@en",http://iot.linkeddata.es/def/core#hasPartnershipWith
-hasproducer,"""has producer""@en",http://iot.linkeddata.es/def/core#hasVendor
-hasvendor,"""has vendor""@en",http://iot.linkeddata.es/def/core#hasVendor
-involves,"""involves""@en",http://iot.linkeddata.es/def/core#involves
-isComponentOf,"""isComponentOf""@en",http://iot.linkeddata.es/def/core#isComponentOf
-isEcosystemDescribedBy,"""isEcosystemDescribedBy""@en",http://iot.linkeddata.es/def/core#isEcosystemDescribedBy
-isInvolvedIn,"""isInvolvedIn""@en",http://iot.linkeddata.es/def/core#isInvolvedIn
-isNeighbourhoodOf,"""isNeighbourhoodOf""@en",http://iot.linkeddata.es/def/core#isNeighbourhoodOf
-owns,"""owns""@en",http://iot.linkeddata.es/def/core#owns
-provides,"""provides""@en",http://iot.linkeddata.es/def/core#owns
+avatar,,http://iot.linkeddata.es/def/core#avatar
+describes,,http://iot.linkeddata.es/def/core#describes
+hasOwner,,http://iot.linkeddata.es/def/core#hasOwner
+hasprovider,,http://iot.linkeddata.es/def/core#hasOwner
+hasPartnershipWith,,http://iot.linkeddata.es/def/core#hasPartnershipWith
+hasproducer,,http://iot.linkeddata.es/def/core#hasVendor
+hasvendor,,http://iot.linkeddata.es/def/core#hasVendor
+involves,,http://iot.linkeddata.es/def/core#involves
+isInvolvedIn,,http://iot.linkeddata.es/def/core#isInvolvedIn
+owns,,http://iot.linkeddata.es/def/core#owns
+provides,,http://iot.linkeddata.es/def/core#owns
 location,,http://www.w3.org/2003/01/geo/wgs84_pos#location
 isContainedIn,,https://w3id.org/def/saref4bldg#isContainedIn
-desctiption,"""desctiption""@en",http://iot.linkeddata.es/def/core#desctiption
-deviceDescription,"""deviceDescription""@en",http://iot.linkeddata.es/def/core#deviceDescription
-deviceName,"""deviceName""@en",http://iot.linkeddata.es/def/core#deviceName
-name,"""name""@en",http://iot.linkeddata.es/def/core#name
-serialNumber,"""serialNumber""@en",http://iot.linkeddata.es/def/core#serialNumber
-servicedescription,"""service description""@en",http://iot.linkeddata.es/def/core#serviceDescription
-serviceName,"""serviceName""@en",http://iot.linkeddata.es/def/core#serviceName
-Agent,"""Agent""@en",http://iot.linkeddata.es/def/core#Agent
-Device,"""Device""@en",http://iot.linkeddata.es/def/core#Device
-Ecosystem,"""Ecosystem""@en",http://iot.linkeddata.es/def/core#Ecosystem
-Neighbourhood,"""Neighbourhood""@en",http://iot.linkeddata.es/def/core#Neighbourhood
-Thingecosystemdescription,"""Thing ecosystem description""@en",http://iot.linkeddata.es/def/core#ThingEcosystemDescription
-Thermometer,"""Thermometer""@en",http://iot.linkeddata.es/def/core#Thermometer
-HumiditySensor,"""Humidity sensor""@en",http://iot.linkeddata.es/def/core#HumiditySensor
-LuxMeter,"""Luminance meter""@en",http://iot.linkeddata.es/def/core#LuminanceMeter
-NoiseSensor,"""Noise sensor""@en",http://iot.linkeddata.es/def/core#NoiseSensor
-MotionSensor,"""Motion sensor""@en",http://iot.linkeddata.es/def/core#MotionSensor
-CO2sensor,"""CO2 Sensor""@en",http://iot.linkeddata.es/def/core#CO2Sensor
-WaterFlowMeter,"""WaterFlowMeter""@en",http://iot.linkeddata.es/def/core#WaterFlowMeter
-WaterEnergyMeters,"""WaterEnergyMeter""@en",http://iot.linkeddata.es/def/core#WaterEnergyMeter
-Powermeter,"""PowerMeter""@en",http://iot.linkeddata.es/def/core#PowerMeter
-EVCharger,"""Electric vehicle charging point""@en",http://iot.linkeddata.es/def/core#EVCharger
-EBikeCharger,"""eBikeCharger""@en",http://iot.linkeddata.es/def/core#EBikeCharger
-Lightbulb,"""Lightbulb""@en",http://iot.linkeddata.es/def/core#Lightbulb
-DoorSensor,"""DoorSensor""@en",http://iot.linkeddata.es/def/core#DoorSensor
-WindowSensor,"""WindowSensor""@en",http://iot.linkeddata.es/def/core#WindowSensor
-Thermostat,"""Thermostat""@en",http://iot.linkeddata.es/def/core#Thermostat
-HumidityProperty,"""HumidityAmbientProperty""@en",http://iot.linkeddata.es/def/core#HumidityAmbientProperty
-PowerConsumption,"""PowerConsumption""@en",http://iot.linkeddata.es/def/core#PowerConsumption
-Motion,"""Motion property""@en",http://iot.linkeddata.es/def/core#Motion
-Temperature,"""TemperatureAmbientProperty""@en",http://iot.linkeddata.es/def/core#Temperature
-CO2Level,"""CarbonDioxide""@en",http://iot.linkeddata.es/def/core#CarbonDioxide
-OperationalStatus, "Operational status""@en",http://iot.linkeddata.es/def/core#OperationalStatus
-StateOfCharge,"""ChargeStatus""@en",http://iot.linkeddata.es/def/core#ChargeStatus
-Color,"""LightColor""@en",http://iot.linkeddata.es/def/core#LightColor
-On/off,"""OnOff""@en",http://iot.linkeddata.es/def/core#OnOff
-Dimming,"""DimmingLevel""@en",http://iot.linkeddata.es/def/core#DimmingLevel
-Temperature,"""TemperatureAmbientProperty""@en",http://iot.linkeddata.es/def/core#TemperatureAmbientProperty
-PositionValve,"""ValvePosition""@en",http://iot.linkeddata.es/def/core#ValvePosition
-Mode,"""Mode""@en",http://iot.linkeddata.es/def/core#Mode
-spatialThing,,http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+desctiption,,http://iot.linkeddata.es/def/core#desctiption
+deviceDescription,,http://iot.linkeddata.es/def/core#deviceDescription
+deviceName,,http://iot.linkeddata.es/def/core#deviceName
+serialNumber,,http://iot.linkeddata.es/def/core#serialNumber
+serviceDescription,,http://iot.linkeddata.es/def/core#serviceDescription
+serviceName,,http://iot.linkeddata.es/def/core#serviceName
+Agent,,http://iot.linkeddata.es/def/core#Agent
+Device,,http://iot.linkeddata.es/def/core#Device
+Neighbourhood,,http://iot.linkeddata.es/def/core#Neighbourhood
+Service,,http://iot.linkeddata.es/def/core#Service
+Thermometer,,http://iot.linkeddata.es/def/core#Thermometer
+HumiditySensor,,http://iot.linkeddata.es/def/core#HumiditySensor
+LuxMeter,,http://iot.linkeddata.es/def/core#LuminanceMeter
+NoiseSensor,,http://iot.linkeddata.es/def/core#NoiseSensor
+MotionSensor,,http://iot.linkeddata.es/def/core#MotionSensor
+CO2sensor,,http://iot.linkeddata.es/def/core#CO2Sensor
+WaterFlowMeter,,http://iot.linkeddata.es/def/core#WaterFlowMeter
+WaterEnergyMeters,,http://iot.linkeddata.es/def/core#WaterEnergyMeter
+Powermeter,,http://iot.linkeddata.es/def/core#PowerMeter
+EVCharger,,http://iot.linkeddata.es/def/core#EVCharger
+EBikeCharger,,http://iot.linkeddata.es/def/core#EBikeCharger
+Lightbulb,,http://iot.linkeddata.es/def/core#Lightbulb
+DoorSensor,,http://iot.linkeddata.es/def/core#DoorSensor
+WindowSensor,,http://iot.linkeddata.es/def/core#WindowSensor
+Thermostat,,http://iot.linkeddata.es/def/core#Thermostat
+PowerConsumption,,http://iot.linkeddata.es/def/core#PowerConsumption
+Motion,,http://iot.linkeddata.es/def/core#Motion
+CO2Level,,http://iot.linkeddata.es/def/core#CO2Concentration
+OperationalStatus,,http://iot.linkeddata.es/def/core#OperationalStatus
+StateOfCharge,,http://iot.linkeddata.es/def/core#ChargeStatus
+Color,,http://iot.linkeddata.es/def/core#LightColor
+On/off,,http://iot.linkeddata.es/def/core#OnOff
+Dimming,,http://iot.linkeddata.es/def/core#DimmingLevel
+Temperature,,http://iot.linkeddata.es/def/core#TemperatureAmbientProperty
+PositionValve,,http://iot.linkeddata.es/def/core#ValvePosition
+Mode,,http://iot.linkeddata.es/def/core#Mode
+SpatialThing,,http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 owlThing,,http://www.w3.org/2002/07/owl#Thing
 Organization,,http://www.w3.org/ns/org#Organization
-ThingDescription,"""Thing description""@en",http://iot.linkeddata.es/def/core#ThingDescription
-isRelativeTo,"""is relative to""@en",http://iot.linkeddata.es/def/core#isRelativeTo
-RelativeEndpoint,"""Relative endpoint""@en",http://iot.linkeddata.es/def/core#RelativeEndpoint
-interactsUsing,"""interacts using""@en",http://iot.linkeddata.es/def/core#interactsUsing
-isDescribedBy,"""is described by""@en",http://iot.linkeddata.es/def/core#isDescribedBy
-VirtualThing,"""Virtual thing""@en",http://iot.linkeddata.es/def/core#VirtualThing
-Thing,"""Thing""@en",http://iot.linkeddata.es/def/wot#Thing
-PhysicalThing,"""Physical thing"@en ,http://iot.linkeddata.es/def/core#PhysicalThing
-monitors,"""monitors""@en",http://iot.linkeddata.es/def/core#monitors
-ObjectProperty,,http://www.w3.org/2002/07/owl#ObjectProperty
-Charger,Charger"@en ,http://iot.linkeddata.es/def/core#Charger
-actsOn,"""acts on""@en",http://iot.linkeddata.es/def/core#actsOn
+ThingDescription,,http://iot.linkeddata.es/def/core#ThingDescription
+isRelativeTo,,http://iot.linkeddata.es/def/core#isRelativeTo
+RelativeEndpoint,,http://iot.linkeddata.es/def/core#RelativeEndpoint
+interactsUsing,,http://iot.linkeddata.es/def/core#interactsUsing
+isDescribedBy,,http://iot.linkeddata.es/def/core#isDescribedBy
+VirtualThing,,http://iot.linkeddata.es/def/core#VirtualThing
+Thing,,http://iot.linkeddata.es/def/wot#Thing
+PhysicalThing,,http://iot.linkeddata.es/def/core#PhysicalThing
+monitors,,http://iot.linkeddata.es/def/core#monitors
+Sensor,,http://iot.linkeddata.es/def/core#Sensor
+Actuator,,http://iot.linkeddata.es/def/core#Actuator
+Charger,,http://iot.linkeddata.es/def/core#Charger
+actsOn,,http://iot.linkeddata.es/def/core#actsOn
 Link,,http://iot.linkeddata.es/def/wot#Link
 baseURI,,http://iot.linkeddata.es/def/wot#baseURI
 HVACSensor,,http://iot.linkeddata.es/def/core#HVACSensor
+Image,,http://xmlns.com/foaf/0.1/Image
+Property,,http://purl.oclc.org/NET/ssnx/ssn#Property
 LightSwitch,,http://iot.linkeddata.es/def/core#LightSwitch
-Buildingspace,,https://w3id.org/def/saref4bldg#BuildingSpace
-describes,,http://iot.linkeddata.es/def/core#describes
-coreAgent,,http://iot.linkeddata.es/def/core#Agent
-owns,,http://iot.linkeddata.es/def/core#owns
-isMemberOf,,http://www.w3.org/ns/org#isMemberOf
+foafAgent,,http://xmlns.com/foaf/0.1/Agent
+foafPerson,,http://xmlns.com/foaf/0.1/Person
+BuildingSpace,,https://w3id.org/def/saref4bldg#BuildingSpace
 HumanUser,,http://iot.linkeddata.es/def/core#HumanUser
 DigitalUser,,http://iot.linkeddata.es/def/core#DigitalUser
-hasMemberShip,,http://www.w3.org/ns/org#hasMembership
-MemberShip,,http://www.w3.org/ns/org#Membership
-hasPartnership,,http://iot.linkeddata.es/def/core#hasPartnershipWith
-Sound,,http://iot.linkeddata.es/def/core#Sound
+HumiditySensor,,http://iot.linkeddata.es/def/core#HumiditySensor
+HumidityAmbientProperty,,http://iot.linkeddata.es/def/core#HumidityAmbientProperty
+CO2Sensor,,http://iot.linkeddata.es/def/core#CO2Sensor
+CarbonDioxide,,http://iot.linkeddata.es/def/core#CarbonDioxide
+hasMember,,http://www.w3.org/ns/org#hasMember
+role,,http://www.w3.org/ns/org#role
+Membership,,http://www.w3.org/ns/org#Membership
+Role,,http://www.w3.org/ns/org#Role
 PeopleCounter,,http://iot.linkeddata.es/def/core#PeopleCounter
-Presence,,http://iot.linkeddata.es/def/core#Presence
+Noise,,http://iot.linkeddata.es/def/core#NoiseLevel
+Application,,http://iot.linkeddata.es/def/core#Application
+contains,,http://iot.linkeddata.es/def/core#contains
+isMemberOf,,http://www.w3.org/ns/org#isMemberOf
+isaccessiblethrough,,http://iot.linkeddata.es/def/wot#isAccessibleThrough
+thingName,,http://iot.linkeddata.es/def/wot#thingName
+hasMembership,,http://www.w3.org/ns/org#hasMembership
