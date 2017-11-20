@@ -5,18 +5,18 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
-@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix wot: <http://xmlns.com/wot/0.1/> .
-@prefix om18: <http://www.wurvoc.org/vocabularies/om-1.8/>.
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix om18: <http://www.wurvoc.org/vocabularies/om-1.8/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix saref: <https://w3id.org/saref#> .
 @prefix s4bldg: <https://w3id.org/def/saref4bldg#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 
 <http://iot.linkeddata.es/def/core#> a owl:Ontology ;
 	owl:imports <http://www.w3.org/ns/sosa/> , <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
@@ -79,7 +79,7 @@ vs:term_status a owl:AnnotationProperty .
 # http://iot.linkeddata.es/def/core#actsOn
 
 :actsOn a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/sosa/actsOnProperty> ;
+	rdfs:subPropertyOf sosa:actsOnProperty ;
 	owl:propertyChainAxiom _:genid2 .
 
 _:genid2 a rdf:List ;
@@ -223,6 +223,7 @@ _:genid1 a rdf:List ;
 # http://iot.linkeddata.es/def/core#isComposedBy
 
 :isComposedBy a owl:ObjectProperty , owl:TransitiveProperty ;
+	rdfs:domain :ComposedThing ;
 	rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things."@en ;
 	rdfs:label "is composed by"@en .
 # 
@@ -272,7 +273,7 @@ _:genid1 a rdf:List ;
 # http://iot.linkeddata.es/def/core#monitors
 
 :monitors a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/sosa/observes> ;
+	rdfs:subPropertyOf sosa:observes ;
 	owl:propertyChainAxiom _:genid4 .
 
 _:genid4 a rdf:List ;
@@ -315,16 +316,16 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/forProperty
 
-<http://www.w3.org/ns/ssn/forProperty> a owl:ObjectProperty .
+ssn:forProperty a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/hasDeployment
 
-<http://www.w3.org/ns/ssn/hasDeployment> a owl:ObjectProperty .
+ssn:hasDeployment a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/hasProperty
 
-<http://www.w3.org/ns/ssn/hasProperty> a owl:ObjectProperty ;
-	owl:inverseOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
+ssn:hasProperty a owl:ObjectProperty ;
+	owl:inverseOf ssn:isPropertyOf ;
 	rdfs:comment "A relation between a FeatureOfInterest and a Property of that feature." , "Relation between an entity and a Property of that entity."@en ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> , "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "has property" , "has property"@en ;
@@ -333,15 +334,15 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/hasSubSystem
 
-<http://www.w3.org/ns/ssn/hasSubSystem> a owl:ObjectProperty .
+ssn:hasSubSystem a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/implements
 
-<http://www.w3.org/ns/ssn/implements> a owl:ObjectProperty .
+ssn:implements a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/isPropertyOf
 
-<http://www.w3.org/ns/ssn/isPropertyOf> a owl:ObjectProperty ;
+ssn:isPropertyOf a owl:ObjectProperty ;
 	rdfs:comment "Relation between a Property and the entity it belongs to."@en ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
 	rdfs:label "is property of"@en ;
@@ -349,8 +350,8 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/systems/hasOperatingProperty
 
-<http://www.w3.org/ns/ssn/systems/hasOperatingProperty> a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+ssn-system:hasOperatingProperty a owl:ObjectProperty ;
+	rdfs:subPropertyOf ssn:hasProperty ;
 	rdfs:comment "Relation from an OperatingRange to a Property.  For example, to a battery lifetime." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "has operating property" ;
@@ -358,8 +359,8 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/systems/hasOperatingRange
 
-<http://www.w3.org/ns/ssn/systems/hasOperatingRange> a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+ssn-system:hasOperatingRange a owl:ObjectProperty ;
+	rdfs:subPropertyOf ssn:hasProperty ;
 	rdfs:comment "Relation from a System to an OperatingRange describing the normal operating environment of the System." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "has operating range" ;
@@ -367,8 +368,8 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/systems/hasSurvivalProperty
 
-<http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+ssn-system:hasSurvivalProperty a owl:ObjectProperty ;
+	rdfs:subPropertyOf ssn:hasProperty ;
 	rdfs:comment "Relation from a SurvivalRange to a Property describing the survial range of a system.  For example, to the temperature extreme that a system can withstand before being considered damaged." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "has survival property" ;
@@ -376,8 +377,8 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/systems/hasSurvivalRange
 
-<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+ssn-system:hasSurvivalRange a owl:ObjectProperty ;
+	rdfs:subPropertyOf ssn:hasProperty ;
 	rdfs:comment "A Relation from a System to a SurvivalRange." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "has survival range" ;
@@ -385,8 +386,8 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/systems/hasSystemCapability
 
-<http://www.w3.org/ns/ssn/systems/hasSystemCapability> a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+ssn-system:hasSystemCapability a owl:ObjectProperty ;
+	rdfs:subPropertyOf ssn:hasProperty ;
 	rdfs:comment "Relation from a Sensor to a MeasurementCapability describing the measurement properties of the sensor." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "has measurement  capability" ;
@@ -394,8 +395,8 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/systems/hasSystemProperty
 
-<http://www.w3.org/ns/ssn/systems/hasSystemProperty> a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+ssn-system:hasSystemProperty a owl:ObjectProperty ;
+	rdfs:subPropertyOf ssn:hasProperty ;
 	rdfs:comment "Relation from a MeasurementCapability to a MeasurementProperty.  For example, to an accuracy (see notes at MeasurementCapability)." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "has measurement property" ;
@@ -403,12 +404,12 @@ geo:location a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/systems/inCondition
 
-<http://www.w3.org/ns/ssn/systems/inCondition> a owl:ObjectProperty .
+ssn-system:inCondition a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/ssn/systems/qualityOfObservation
 
-<http://www.w3.org/ns/ssn/systems/qualityOfObservation> a owl:ObjectProperty ;
-	rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+ssn-system:qualityOfObservation a owl:ObjectProperty ;
+	rdfs:subPropertyOf ssn:hasProperty ;
 	dc:source """skos:exactMatch 'resultQuality' [O&M - ISO/DIS 19156] 
 		                    http://portal.opengeospatial.org/files/?artifact_id=41579""" ;
 	rdfs:comment "Relation linking an Observation to the adjudged quality of the result.  This is of course complimentary to the MeasurementCapability information recorded for the Sensor that made the Observation." ;
@@ -422,7 +423,7 @@ foaf:depiction a owl:ObjectProperty .
 # 
 # https://w3id.org/def/saref4bldg#isContainedIn
 
-<https://w3id.org/def/saref4bldg#isContainedIn> a owl:ObjectProperty ;
+s4bldg:isContainedIn a owl:ObjectProperty ;
 	rdfs:comment "A relation between an object and the physical space in which it is located."@en ;
 	rdfs:isDefinedBy "https://w3id.org/def/saref4bldg#"@en ;
 	rdfs:label "is contained in"@en .
@@ -514,11 +515,11 @@ foaf:depiction a owl:ObjectProperty .
 # http://iot.linkeddata.es/def/core#Actuator
 
 :Actuator a owl:Class ;
-	rdfs:subClassOf :Device , <http://www.w3.org/ns/sosa/Actuator> , _:genid5 .
+	rdfs:subClassOf :Device , sosa:Actuator , _:genid5 .
 
 _:genid5 a owl:Restriction ;
 	owl:onProperty :actsOn ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/Property> .
+	owl:allValuesFrom ssn:Property .
 
 :Actuator rdfs:subClassOf _:genid6 .
 
@@ -546,7 +547,7 @@ _:genid6 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#AmbientProperty
 
 :AmbientProperty a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "AmbientProperty"@en .
 # 
 # http://iot.linkeddata.es/def/core#AmbientTemperatureProperty
@@ -583,13 +584,13 @@ _:genid7 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#CarbonDioxide
 
 :CarbonDioxide a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "CarbonDioxide"@en .
 # 
 # http://iot.linkeddata.es/def/core#CarbonMonoxide
 
 :CarbonMonoxide a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "CarbonMonoxide"@en .
 # 
 # http://iot.linkeddata.es/def/core#Charger
@@ -614,7 +615,7 @@ _:genid8 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#Device
 
 :Device a owl:Class ;
-	rdfs:subClassOf :PhysicalThing , <http://www.w3.org/ns/ssn/System> ;
+	rdfs:subClassOf :PhysicalThing , ssn:System ;
 	rdfs:comment "An IoT device is a digital entity which bridges between real-world physical entities and the other digital entities of an IoT system. IoT device interacts one or more networks through which interactions are made with other entities. IoT device exposes one or more endpoints by which interactions are made. (definition taken from ISO/IEC 11404:2007)"@en ;
 	rdfs:label "Device"@en ;
 	rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
@@ -714,7 +715,7 @@ _:genid12 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#LightProperty
 
 :LightProperty a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "LightProperty"@en .
 # 
 # http://iot.linkeddata.es/def/core#LightSwitch
@@ -750,7 +751,7 @@ _:genid12 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#MotionProperty
 
 :MotionProperty a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "Motion property"@en .
 # 
 # http://iot.linkeddata.es/def/core#MotionSensor
@@ -785,7 +786,7 @@ _:genid13 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#OperationalStatus
 
 :OperationalStatus a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "Operational status"@en .
 # 
 # http://iot.linkeddata.es/def/core#PeopleCounter
@@ -806,12 +807,6 @@ _:genid14 a owl:Restriction ;
 	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , geo:SpatialThing , _:genid15 .
 
 _:genid15 a owl:Restriction ;
-	owl:onProperty :isComposedBy ;
-	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> .
-
-:PhysicalThing rdfs:subClassOf _:genid16 .
-
-_:genid16 a owl:Restriction ;
 	owl:onProperty geo:location ;
 	owl:allValuesFrom geo:SpatialThing .
 
@@ -825,7 +820,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 # http://iot.linkeddata.es/def/core#PowerConsumption
 
 :PowerConsumption a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+	rdfs:subClassOf ssn-system:OperatingProperty ;
 	rdfs:label "Power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#PowerMeter
@@ -837,7 +832,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 # http://iot.linkeddata.es/def/core#Presence
 
 :Presence a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "Presence"@en .
 # 
 # http://iot.linkeddata.es/def/core#Radiance
@@ -855,28 +850,28 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 # http://iot.linkeddata.es/def/core#RelativeEndpoint
 
 :RelativeEndpoint a owl:Class ;
-	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Link> , _:genid17 .
+	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Link> , _:genid16 .
 
-_:genid17 a owl:Restriction ;
+_:genid16 a owl:Restriction ;
 	owl:onProperty :isRelativeTo ;
 	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass _:genid18 .
+	owl:onClass _:genid17 .
 
-_:genid18 owl:intersectionOf _:genid21 .
+_:genid17 owl:intersectionOf _:genid20 .
 
-_:genid21 a rdf:List ;
+_:genid20 a rdf:List ;
 	rdf:first <http://iot.linkeddata.es/def/wot#Link> ;
-	rdf:rest _:genid19 .
+	rdf:rest _:genid18 .
 
-_:genid19 a rdf:List ;
-	rdf:first _:genid20 .
+_:genid18 a rdf:List ;
+	rdf:first _:genid19 .
 
-_:genid20 a owl:Class ;
+_:genid19 a owl:Class ;
 	owl:complementOf :RelativeEndpoint .
 
-_:genid19 rdf:rest rdf:nil .
+_:genid18 rdf:rest rdf:nil .
 
-_:genid18 a owl:Class .
+_:genid17 a owl:Class .
 
 :RelativeEndpoint rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
 	rdfs:label "Relative endpoint"@en .
@@ -884,15 +879,15 @@ _:genid18 a owl:Class .
 # http://iot.linkeddata.es/def/core#Sensor
 
 :Sensor a owl:Class ;
-	rdfs:subClassOf :Device , <http://www.w3.org/ns/sosa/Sensor> , _:genid22 .
+	rdfs:subClassOf :Device , sosa:Sensor , _:genid21 .
+
+_:genid21 a owl:Restriction ;
+	owl:onProperty :monitors ;
+	owl:allValuesFrom ssn:Property .
+
+:Sensor rdfs:subClassOf _:genid22 .
 
 _:genid22 a owl:Restriction ;
-	owl:onProperty :monitors ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/Property> .
-
-:Sensor rdfs:subClassOf _:genid23 .
-
-_:genid23 a owl:Restriction ;
 	owl:onProperty :monitorsFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 
@@ -921,21 +916,21 @@ _:genid23 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#Sound
 
 :Sound a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "Sound"@en .
 # 
 # http://iot.linkeddata.es/def/core#TemperatureProperty
 
 :TemperatureProperty a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "Temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#Thermometer
 
 :Thermometer a owl:Class ;
-	rdfs:subClassOf :Sensor , _:genid24 .
+	rdfs:subClassOf :Sensor , _:genid23 .
 
-_:genid24 a owl:Restriction ;
+_:genid23 a owl:Restriction ;
 	owl:onProperty :monitors ;
 	owl:someValuesFrom :AmbientTemperatureProperty .
 
@@ -950,15 +945,15 @@ _:genid24 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#ThingDescription
 
 :ThingDescription a owl:Class ;
-	rdfs:subClassOf _:genid25 .
+	rdfs:subClassOf _:genid24 .
 
-_:genid25 a owl:Restriction ;
+_:genid24 a owl:Restriction ;
 	owl:onProperty :describes ;
 	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing> .
 
-:ThingDescription rdfs:subClassOf _:genid26 .
+:ThingDescription rdfs:subClassOf _:genid25 .
 
-_:genid26 a owl:Restriction ;
+_:genid25 a owl:Restriction ;
 	owl:onProperty :describes ;
 	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing> .
 
@@ -968,9 +963,9 @@ _:genid26 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#ThingEcosystemDescription
 
 :ThingEcosystemDescription a owl:Class ;
-	rdfs:subClassOf _:genid27 .
+	rdfs:subClassOf _:genid26 .
 
-_:genid27 a owl:Restriction ;
+_:genid26 a owl:Restriction ;
 	owl:onProperty :describes ;
 	owl:someValuesFrom :Ecosystem .
 
@@ -980,27 +975,27 @@ _:genid27 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#TimeProperty
 
 :TimeProperty a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:label "TimeProperty"@en .
 # 
 # http://iot.linkeddata.es/def/core#Value
 
 :Value a owl:Class ;
-	rdfs:subClassOf _:genid28 .
+	rdfs:subClassOf _:genid27 .
 
-_:genid28 a owl:Restriction ;
+_:genid27 a owl:Restriction ;
 	owl:onProperty rdf:value ;
 	owl:someValuesFrom rdfs:Resource .
+
+:Value rdfs:subClassOf _:genid28 .
+
+_:genid28 a owl:Restriction ;
+	owl:onProperty :expressedInFormat ;
+	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> .
 
 :Value rdfs:subClassOf _:genid29 .
 
 _:genid29 a owl:Restriction ;
-	owl:onProperty :expressedInFormat ;
-	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema> .
-
-:Value rdfs:subClassOf _:genid30 .
-
-_:genid30 a owl:Restriction ;
 	owl:onProperty :timeStamp ;
 	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:dateTime .
@@ -1011,9 +1006,9 @@ _:genid30 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#VirtualThing
 
 :VirtualThing a owl:Class ;
-	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , _:genid31 .
+	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , _:genid30 .
 
-_:genid31 a owl:Restriction ;
+_:genid30 a owl:Restriction ;
 	owl:onProperty :isComposedBy ;
 	owl:allValuesFrom :VirtualThing .
 
@@ -1045,47 +1040,43 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 # 
 # http://iot.linkeddata.es/def/wot#Action
 
+<http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf _:genid31 .
+
+_:genid31 a owl:Restriction ;
+	owl:onProperty :actsOn ;
+	owl:someValuesFrom ssn:Property .
+
 <http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf _:genid32 .
 
 _:genid32 a owl:Restriction ;
-	owl:onProperty :actsOn ;
-	owl:someValuesFrom <http://www.w3.org/ns/ssn/Property> .
-
-<http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf _:genid33 .
-
-_:genid33 a owl:Restriction ;
 	owl:onProperty :actsOnFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 # 
 # http://iot.linkeddata.es/def/wot#Event
 
+<http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf _:genid33 .
+
+_:genid33 a owl:Restriction ;
+	owl:onProperty :monitors ;
+	owl:someValuesFrom ssn:Property .
+
 <http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf _:genid34 .
 
 _:genid34 a owl:Restriction ;
-	owl:onProperty :monitors ;
-	owl:someValuesFrom <http://www.w3.org/ns/ssn/Property> .
-
-<http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf _:genid35 .
-
-_:genid35 a owl:Restriction ;
 	owl:onProperty :monitorsFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 # 
-# http://iot.linkeddata.es/def/wot#PhysicalThing
-
-<http://iot.linkeddata.es/def/wot#PhysicalThing> a owl:Class .
-# 
 # http://iot.linkeddata.es/def/wot#Property
+
+<http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf _:genid35 .
+
+_:genid35 a owl:Restriction ;
+	owl:onProperty :monitors ;
+	owl:someValuesFrom ssn:Property .
 
 <http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf _:genid36 .
 
 _:genid36 a owl:Restriction ;
-	owl:onProperty :monitors ;
-	owl:someValuesFrom <http://www.w3.org/ns/ssn/Property> .
-
-<http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf _:genid37 .
-
-_:genid37 a owl:Restriction ;
 	owl:onProperty :monitorsFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 # 
@@ -1099,40 +1090,40 @@ geo:SpatialThing a owl:Class .
 # 
 # http://www.w3.org/ns/sosa/ActuatableProperty
 
-<http://www.w3.org/ns/sosa/ActuatableProperty> rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> .
+sosa:ActuatableProperty rdfs:subClassOf ssn:Property .
 # 
 # http://www.w3.org/ns/sosa/Actuator
 
-<http://www.w3.org/ns/sosa/Actuator> rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+sosa:Actuator rdfs:subClassOf ssn:System .
 # 
 # http://www.w3.org/ns/sosa/ObservableProperty
 
-<http://www.w3.org/ns/sosa/ObservableProperty> rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> .
+sosa:ObservableProperty rdfs:subClassOf ssn:Property .
 # 
 # http://www.w3.org/ns/sosa/Sensor
 
-<http://www.w3.org/ns/sosa/Sensor> rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+sosa:Sensor rdfs:subClassOf ssn:System .
 # 
 # http://www.w3.org/ns/ssn/Deployment
 
-<http://www.w3.org/ns/ssn/Deployment> a owl:Class .
+ssn:Deployment a owl:Class .
 # 
 # http://www.w3.org/ns/ssn/Property
 
-<http://www.w3.org/ns/ssn/Property> a owl:Class ;
-	rdfs:subClassOf _:genid38 .
+ssn:Property a owl:Class ;
+	rdfs:subClassOf _:genid37 .
+
+_:genid37 a owl:Restriction ;
+	owl:onProperty ssn:isPropertyOf ;
+	owl:someValuesFrom sosa:FeatureOfInterest .
+
+ssn:Property rdfs:subClassOf _:genid38 .
 
 _:genid38 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> ;
-	owl:someValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+	owl:onProperty ssn:isPropertyOf ;
+	owl:allValuesFrom sosa:FeatureOfInterest .
 
-<http://www.w3.org/ns/ssn/Property> rdfs:subClassOf _:genid39 .
-
-_:genid39 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/isPropertyOf> ;
-	owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-
-<http://www.w3.org/ns/ssn/Property> dc:source """skos:exactMatch 'property' [O&M] 
+ssn:Property dc:source """skos:exactMatch 'property' [O&M] 
 		                    http://www.opengeospatial.org/standards/om""" ;
 	rdfs:comment "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en , "A ssn:Property is something that is a DUL:Quality and has a ssn:isPropertyOf property who may be a ssn:FeatureOfInterest"@en , "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor." ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> , "http://purl.oclc.org/NET/ssnx/ssn" , "http://purl.oclc.org/NET/ssnx/ssn#" ;
@@ -1142,49 +1133,49 @@ _:genid39 a owl:Restriction ;
 # 
 # http://www.w3.org/ns/ssn/System
 
-<http://www.w3.org/ns/ssn/System> a owl:Class ;
-	rdfs:subClassOf _:genid40 .
+ssn:System a owl:Class ;
+	rdfs:subClassOf _:genid39 .
+
+_:genid39 a owl:Restriction ;
+	owl:onProperty sosa:isHostedBy ;
+	owl:allValuesFrom sosa:Platform .
+
+ssn:System rdfs:subClassOf _:genid40 .
 
 _:genid40 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/sosa/isHostedBy> ;
-	owl:allValuesFrom <http://www.w3.org/ns/sosa/Platform> .
+	owl:onProperty ssn:hasDeployment ;
+	owl:allValuesFrom ssn:Deployment .
 
-<http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid41 .
+ssn:System rdfs:subClassOf _:genid41 .
 
 _:genid41 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/hasDeployment> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/Deployment> .
+	owl:onProperty ssn:hasSubSystem ;
+	owl:allValuesFrom ssn:System .
 
-<http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid42 .
+ssn:System rdfs:subClassOf _:genid42 .
 
 _:genid42 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/hasSubSystem> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
+	owl:onProperty ssn:implements ;
+	owl:allValuesFrom sosa:Procedure .
 
-<http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid43 .
+ssn:System rdfs:subClassOf _:genid43 .
 
 _:genid43 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
-	owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure> .
+	owl:onProperty _:genid44 .
 
-<http://www.w3.org/ns/ssn/System> rdfs:subClassOf _:genid44 .
+_:genid44 owl:inverseOf ssn:hasSubSystem .
 
-_:genid44 a owl:Restriction ;
-	owl:onProperty _:genid45 .
+_:genid43 owl:allValuesFrom ssn:System .
 
-_:genid45 owl:inverseOf <http://www.w3.org/ns/ssn/hasSubSystem> .
-
-_:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
-
-<http://www.w3.org/ns/ssn/System> rdfs:comment "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en ;
+ssn:System rdfs:comment "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
 	rdfs:label "System"@en ;
 	<http://www.w3.org/2004/02/skos/core#definition> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems."@en .
 # 
 # http://www.w3.org/ns/ssn/systems/Accuracy
 
-<http://www.w3.org/ns/ssn/systems/Accuracy> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:Accuracy a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'measurement accuracy/accuracy' [VIM 2.13] 
 		                    http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "The closeness of agreement between the value of an observation and the true value of the observed quality." ;
@@ -1194,8 +1185,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/BatteryLifetime
 
-<http://www.w3.org/ns/ssn/systems/BatteryLifetime> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SurvivalProperty> ;
+ssn-system:BatteryLifetime a owl:Class ;
+	rdfs:subClassOf ssn-system:SurvivalProperty ;
 	rdfs:comment "Total useful life of a battery." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Battery Lifetime" ;
@@ -1203,8 +1194,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/Condition
 
-<http://www.w3.org/ns/ssn/systems/Condition> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+ssn-system:Condition a owl:Class ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:comment "Used to specify ranges for qualities that act as conditions on a system/sensor's operation.  For example, wind speed of 10-60m/s is expressed as a condition linking a quality, wind speed, a unit of measurement, metres per second, and a set of values, 10-60, and may be used as the condition on a MeasurementProperty, for example, to state that a sensor has a particular accuracy in that condition." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Condition" ;
@@ -1212,8 +1203,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/DetectionLimit
 
-<http://www.w3.org/ns/ssn/systems/DetectionLimit> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:DetectionLimit a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'detection limit' [VIM 4.18] 
                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "An observed value for which the probability of falsely claiming the absence of a component in a material is Î², given a probability Î± of falsely claiming its presence." ;
@@ -1223,8 +1214,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/Drift
 
-<http://www.w3.org/ns/ssn/systems/Drift> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:Drift a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'instrumental drift' [VIM 4.21]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "A, continuous or incremental, change in the reported values of observations over time for an unchanging quality." ;
@@ -1234,8 +1225,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/Frequency
 
-<http://www.w3.org/ns/ssn/systems/Frequency> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:Frequency a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	rdfs:comment "The smallest possible time between one observation and the next." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Frequency" ;
@@ -1243,8 +1234,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/Latency
 
-<http://www.w3.org/ns/ssn/systems/Latency> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:Latency a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	rdfs:comment "The time between a request for an observation and the sensor providing a result." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Latency" ;
@@ -1252,8 +1243,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/MaintenanceSchedule
 
-<http://www.w3.org/ns/ssn/systems/MaintenanceSchedule> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+ssn-system:MaintenanceSchedule a owl:Class ;
+	rdfs:subClassOf ssn-system:OperatingProperty ;
 	rdfs:comment "Schedule of maintenance for a system/sensor in the specified conditions." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Maintenance Schedule" ;
@@ -1261,8 +1252,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/MeasurementRange
 
-<http://www.w3.org/ns/ssn/systems/MeasurementRange> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:MeasurementRange a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'measuring interval/measurement range' [VIM 4.7]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "The set of values that the sensor can return as the result of an observation under the defined conditions with the defined measurement properties.  (If no conditions are specified or the conditions do not specify a range for the observed qualities, the measurement range is to be taken as the condition for the observed qualities.)" ;
@@ -1272,8 +1263,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/OperatingPowerRange
 
-<http://www.w3.org/ns/ssn/systems/OperatingPowerRange> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+ssn-system:OperatingPowerRange a owl:Class ;
+	rdfs:subClassOf ssn-system:OperatingProperty ;
 	rdfs:comment "Power range in which system/sensor is expected to operate." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Operating Power Range" ;
@@ -1281,8 +1272,8 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/OperatingProperty
 
-<http://www.w3.org/ns/ssn/systems/OperatingProperty> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+ssn-system:OperatingProperty a owl:Class ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:comment "An identifiable characteristic of the environmental and other conditions in which the sensor is intended to operate.  May include power ranges, power sources, standard configurations, attachments and the like." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Operating Property" ;
@@ -1290,20 +1281,20 @@ _:genid44 owl:allValuesFrom <http://www.w3.org/ns/ssn/System> .
 # 
 # http://www.w3.org/ns/ssn/systems/OperatingRange
 
-<http://www.w3.org/ns/ssn/systems/OperatingRange> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid46 .
+ssn-system:OperatingRange a owl:Class ;
+	rdfs:subClassOf ssn:Property , _:genid45 .
+
+_:genid45 a owl:Restriction ;
+	owl:onProperty ssn-system:hasOperatingProperty ;
+	owl:allValuesFrom ssn-system:OperatingProperty .
+
+ssn-system:OperatingRange rdfs:subClassOf _:genid46 .
 
 _:genid46 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/systems/hasOperatingProperty> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
+	owl:onProperty ssn-system:inCondition ;
+	owl:allValuesFrom ssn-system:Condition .
 
-<http://www.w3.org/ns/ssn/systems/OperatingRange> rdfs:subClassOf _:genid47 .
-
-_:genid47 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/systems/inCondition> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/Condition> .
-
-<http://www.w3.org/ns/ssn/systems/OperatingRange> dc:source """skos:broaderMatch 'reference operating condition' [VIM 4.11]
+ssn-system:OperatingRange dc:source """skos:broaderMatch 'reference operating condition' [VIM 4.11]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf
 
 The difference is that here we also allow for qualities that aren't VIM influence quantities [VIM 2.52] - for example, a quantity that alters the power requirements, but doesn't affect the measurement properties - conditions specified in MeasurementCapability should be influence quantities.""" ;
@@ -1314,8 +1305,8 @@ The difference is that here we also allow for qualities that aren't VIM influenc
 # 
 # http://www.w3.org/ns/ssn/systems/Precision
 
-<http://www.w3.org/ns/ssn/systems/Precision> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:Precision a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'measurement precision/precision' [VIM 2.15]
                                    http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation." ;
@@ -1325,8 +1316,8 @@ The difference is that here we also allow for qualities that aren't VIM influenc
 # 
 # http://www.w3.org/ns/ssn/systems/Resolution
 
-<http://www.w3.org/ns/ssn/systems/Resolution> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:Resolution a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'resolution' [VIM 4.14]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "The smallest difference in the value of a quality being observed that would result in perceptably different values of observation results." ;
@@ -1336,8 +1327,8 @@ The difference is that here we also allow for qualities that aren't VIM influenc
 # 
 # http://www.w3.org/ns/ssn/systems/ResponseTime
 
-<http://www.w3.org/ns/ssn/systems/ResponseTime> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:ResponseTime a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'step response time' [VIM 4.23]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "The time between a (step) change inthe value of an observed quality and a sensor (possibly with specified error) 'settling' on an observed value." ;
@@ -1347,8 +1338,8 @@ The difference is that here we also allow for qualities that aren't VIM influenc
 # 
 # http://www.w3.org/ns/ssn/systems/Selectivity
 
-<http://www.w3.org/ns/ssn/systems/Selectivity> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:Selectivity a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'selectivity' [VIM 4.13]
                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "Selectivity is a property of a sensor whereby it provides observed values for one or more qualities such that the values of each quality are independent of other qualities in the phenomenon, body, or substance being investigated." ;
@@ -1358,8 +1349,8 @@ The difference is that here we also allow for qualities that aren't VIM influenc
 # 
 # http://www.w3.org/ns/ssn/systems/Sensitivity
 
-<http://www.w3.org/ns/ssn/systems/Sensitivity> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SystemProperty> ;
+ssn-system:Sensitivity a owl:Class ;
+	rdfs:subClassOf ssn-system:SystemProperty ;
 	dc:source """skos:exactMatch 'sensitivity' [VIM 4.12]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "Sensitivity is the quotient of the change in a result of sensor and the corresponding change in a value of a quality being observed." ;
@@ -1369,8 +1360,8 @@ The difference is that here we also allow for qualities that aren't VIM influenc
 # 
 # http://www.w3.org/ns/ssn/systems/SurvivalProperty
 
-<http://www.w3.org/ns/ssn/systems/SurvivalProperty> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+ssn-system:SurvivalProperty a owl:Class ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:comment "An identifiable characteristic that represents the extent of the sensors useful life.  Might include for example total battery life or number of recharges, or, for sensors that are used only a fixed number of times, the number of observations that can be made before the sensing capability is depleted." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Survival Property" ;
@@ -1378,20 +1369,20 @@ The difference is that here we also allow for qualities that aren't VIM influenc
 # 
 # http://www.w3.org/ns/ssn/systems/SurvivalRange
 
-<http://www.w3.org/ns/ssn/systems/SurvivalRange> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid48 .
+ssn-system:SurvivalRange a owl:Class ;
+	rdfs:subClassOf ssn:Property , _:genid47 .
+
+_:genid47 a owl:Restriction ;
+	owl:onProperty ssn-system:hasSurvivalProperty ;
+	owl:allValuesFrom ssn-system:SurvivalProperty .
+
+ssn-system:SurvivalRange rdfs:subClassOf _:genid48 .
 
 _:genid48 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/systems/hasSurvivalProperty> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/SurvivalProperty> .
+	owl:onProperty ssn-system:inCondition ;
+	owl:allValuesFrom ssn-system:Condition .
 
-<http://www.w3.org/ns/ssn/systems/SurvivalRange> rdfs:subClassOf _:genid49 .
-
-_:genid49 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/systems/inCondition> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/Condition> .
-
-<http://www.w3.org/ns/ssn/systems/SurvivalRange> dc:source """skos:narrowerMatch 'limiting operating condition' [VIM 4.10]
+ssn-system:SurvivalRange dc:source """skos:narrowerMatch 'limiting operating condition' [VIM 4.10]
                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf""" ;
 	rdfs:comment "The conditions a sensor can be exposed to without damage: i.e., the sensor continues to operate as defined using MeasurementCapability.  If, however, the SurvivalRange is exceeded, the sensor is 'damaged' and MeasurementCapability specifications may no longer hold." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
@@ -1400,26 +1391,26 @@ _:genid49 a owl:Restriction ;
 # 
 # http://www.w3.org/ns/ssn/systems/SystemCapability
 
-<http://www.w3.org/ns/ssn/systems/SystemCapability> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> , _:genid50 .
+ssn-system:SystemCapability a owl:Class ;
+	rdfs:subClassOf ssn:Property , _:genid49 .
+
+_:genid49 a owl:Restriction ;
+	owl:onProperty ssn:forProperty ;
+	owl:allValuesFrom ssn:Property .
+
+ssn-system:SystemCapability rdfs:subClassOf _:genid50 .
 
 _:genid50 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/forProperty> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/Property> .
+	owl:onProperty ssn-system:hasSystemProperty ;
+	owl:allValuesFrom ssn-system:SystemProperty .
 
-<http://www.w3.org/ns/ssn/systems/SystemCapability> rdfs:subClassOf _:genid51 .
+ssn-system:SystemCapability rdfs:subClassOf _:genid51 .
 
 _:genid51 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/systems/hasSystemProperty> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+	owl:onProperty ssn-system:inCondition ;
+	owl:allValuesFrom ssn-system:Condition .
 
-<http://www.w3.org/ns/ssn/systems/SystemCapability> rdfs:subClassOf _:genid52 .
-
-_:genid52 a owl:Restriction ;
-	owl:onProperty <http://www.w3.org/ns/ssn/systems/inCondition> ;
-	owl:allValuesFrom <http://www.w3.org/ns/ssn/systems/Condition> .
-
-<http://www.w3.org/ns/ssn/systems/SystemCapability> dc:source """Similar idea to MeasurementCapability in MMI Device Ontology
+ssn-system:SystemCapability dc:source """Similar idea to MeasurementCapability in MMI Device Ontology
                                   http://marinemetadata.org/community/teams/ontdevices
 
 But the the two express the relationship between constraints and multiple measurement properties differently.
@@ -1435,8 +1426,8 @@ The conditions specified here are those that affect the measurement properties, 
 # 
 # http://www.w3.org/ns/ssn/systems/SystemLifetime
 
-<http://www.w3.org/ns/ssn/systems/SystemLifetime> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/SurvivalProperty> ;
+ssn-system:SystemLifetime a owl:Class ;
+	rdfs:subClassOf ssn-system:SurvivalProperty ;
 	rdfs:comment "Total useful life of a sensor/system (expressed as total life since manufacture, time in use, number of operations, etc.)." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "System Lifetime" ;
@@ -1444,8 +1435,8 @@ The conditions specified here are those that affect the measurement properties, 
 # 
 # http://www.w3.org/ns/ssn/systems/SystemProperty
 
-<http://www.w3.org/ns/ssn/systems/SystemProperty> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+ssn-system:SystemProperty a owl:Class ;
+	rdfs:subClassOf ssn:Property ;
 	rdfs:comment "An identifiable and observable characteristic of a sensor's observations or ability to make observations." ;
 	rdfs:isDefinedBy "http://purl.oclc.org/NET/ssnx/ssn" ;
 	rdfs:label "Measurement  Property" ;
@@ -1457,7 +1448,7 @@ foaf:Image a owl:Class .
 # 
 # https://w3id.org/def/saref4bldg#BuildingSpace
 
-<https://w3id.org/def/saref4bldg#BuildingSpace> a owl:Class ;
+s4bldg:BuildingSpace a owl:Class ;
 	rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
 	rdfs:isDefinedBy <https://w3id.org/def/saref4bldg#> ;
 	rdfs:label "Building space"@en .
@@ -1481,294 +1472,294 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#AmbientTemperature
 
-:AmbientTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AmbientTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Ambient temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageCO2Concentration
 
-:AverageCO2Concentration a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageCO2Concentration a owl:NamedIndividual , :CarbonDioxide , sosa:ObservableProperty ;
 	rdfs:label "Average CO2"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageCO2ConcentrationDeviation
 
-:AverageCO2ConcentrationDeviation a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageCO2ConcentrationDeviation a owl:NamedIndividual , :CarbonDioxide , sosa:ObservableProperty ;
 	rdfs:label "Average CO2 deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageHumidity
 
-:AverageHumidity a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageHumidity a owl:NamedIndividual , :AmbientHumidityProperty , sosa:ObservableProperty ;
 	rdfs:label "Average humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageHumidityDeviation
 
-:AverageHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty , sosa:ObservableProperty ;
 	rdfs:label "Average humidity deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageLightIntensity
 
-:AverageLightIntensity a owl:NamedIndividual , :LuminusIntensity , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageLightIntensity a owl:NamedIndividual , :LuminusIntensity , sosa:ObservableProperty ;
 	rdfs:label "Average light intensity"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageMovemenetShare
 
-:AverageMovemenetShare a owl:NamedIndividual , :MotionProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageMovemenetShare a owl:NamedIndividual , :MotionProperty , sosa:ObservableProperty ;
 	rdfs:label "Average movemenet share"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageMovementTime
 
-:AverageMovementTime a owl:NamedIndividual , :MotionProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageMovementTime a owl:NamedIndividual , :MotionProperty , sosa:ObservableProperty ;
 	rdfs:label "Average movement time"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageSound
 
-:AverageSound a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageSound a owl:NamedIndividual , :Sound , sosa:ObservableProperty ;
 	rdfs:label "Average sound"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageSoundDeviation
 
-:AverageSoundDeviation a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageSoundDeviation a owl:NamedIndividual , :Sound , sosa:ObservableProperty ;
 	rdfs:label "Average sound deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageTemperature
 
-:AverageTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Average temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#AverageTemperatureDeviation
 
-:AverageTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:AverageTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Average temperature deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#BakeRemainingTime
 
-:BakeRemainingTime a owl:NamedIndividual , :TimeProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:BakeRemainingTime a owl:NamedIndividual , :TimeProperty , sosa:ObservableProperty ;
 	rdfs:label "Bake remaining time"@en .
 # 
 # http://iot.linkeddata.es/def/core#BakingStep
 
-:BakingStep a owl:NamedIndividual , <http://www.w3.org/ns/sosa/ObservableProperty> , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+:BakingStep a owl:NamedIndividual , sosa:ObservableProperty , ssn-system:OperatingProperty ;
 	rdfs:label "Baking step"@en .
 # 
 # http://iot.linkeddata.es/def/core#CO2Concentration
 
-:CO2Concentration a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:CO2Concentration a owl:NamedIndividual , :CarbonDioxide , sosa:ObservableProperty ;
 	rdfs:label "CO2 concentration"@en .
 # 
 # http://iot.linkeddata.es/def/core#ChargeStatus
 
-:ChargeStatus a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:ChargeStatus a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "Charge status"@en .
 # 
 # http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime
 
-:CurrentBakingStepRemainingTime a owl:NamedIndividual , :TimeProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:CurrentBakingStepRemainingTime a owl:NamedIndividual , :TimeProperty , sosa:ObservableProperty ;
 	rdfs:label "Current baking step remaining time"@en .
 # 
 # http://iot.linkeddata.es/def/core#DeviceLightStatus
 
-:DeviceLightStatus a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:DeviceLightStatus a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "Device light status"@en .
 # 
 # http://iot.linkeddata.es/def/core#DeviceStatus
 
-:DeviceStatus a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:DeviceStatus a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "Device status"@en .
 # 
 # http://iot.linkeddata.es/def/core#DeviceTemperature
 
-:DeviceTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , :TemperatureProperty , <http://www.w3.org/ns/sosa/ActuatableProperty> , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:DeviceTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , :TemperatureProperty , sosa:ActuatableProperty , sosa:ObservableProperty ;
 	rdfs:label "Device temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#DimmingLevel
 
-:DimmingLevel a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:DimmingLevel a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "Dimming level"@en .
 # 
 # http://iot.linkeddata.es/def/core#ElapsedBakingTime
 
-:ElapsedBakingTime a owl:NamedIndividual , :TimeProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:ElapsedBakingTime a owl:NamedIndividual , :TimeProperty , sosa:ObservableProperty ;
 	rdfs:label "Elapsed baking time"@en .
 # 
 # http://iot.linkeddata.es/def/core#EntryExit
 
-:EntryExit a owl:NamedIndividual , :Presence , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:EntryExit a owl:NamedIndividual , :Presence , sosa:ObservableProperty ;
 	rdfs:label "Entry exit"@en .
 # 
 # http://iot.linkeddata.es/def/core#FanSpeed
 
-:FanSpeed a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:FanSpeed a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "FanSpeed"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterDefaultTemperature
 
-:HeaterDefaultTemperature a owl:NamedIndividual , :TemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:HeaterDefaultTemperature a owl:NamedIndividual , :TemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Heater default temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterMaxTemperature
 
-:HeaterMaxTemperature a owl:NamedIndividual , :TemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:HeaterMaxTemperature a owl:NamedIndividual , :TemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Heater maximum temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterMeatProbeAllowed
 
-:HeaterMeatProbeAllowed a owl:NamedIndividual , <http://www.w3.org/ns/sosa/ObservableProperty> , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+:HeaterMeatProbeAllowed a owl:NamedIndividual , sosa:ObservableProperty , ssn-system:OperatingProperty ;
 	rdfs:label "Heater meat probe allowed"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterMinTemperature
 
-:HeaterMinTemperature a owl:NamedIndividual , :TemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:HeaterMinTemperature a owl:NamedIndividual , :TemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Heater minimum temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterPreheatAllowed
 
-:HeaterPreheatAllowed a owl:NamedIndividual , <http://www.w3.org/ns/sosa/ObservableProperty> , <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
+:HeaterPreheatAllowed a owl:NamedIndividual , sosa:ObservableProperty , ssn-system:OperatingProperty ;
 	rdfs:label "Heater preheat allowed"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation
 
-:HighestCO2ConcentrationDeviation a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:HighestCO2ConcentrationDeviation a owl:NamedIndividual , :CarbonDioxide , sosa:ObservableProperty ;
 	rdfs:label "Highest CO2 deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestHumidityDeviation
 
-:HighestHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:HighestHumidityDeviation a owl:NamedIndividual , :AmbientHumidityProperty , sosa:ObservableProperty ;
 	rdfs:label "Highst humidity deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestSoundDeviation
 
-:HighestSoundDeviation a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:HighestSoundDeviation a owl:NamedIndividual , :Sound , sosa:ObservableProperty ;
 	rdfs:label "Highest sound deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#HighestTemperatureDeviation
 
-:HighestTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:HighestTemperatureDeviation a owl:NamedIndividual , :AmbientTemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Highst temperature deviation"@en .
 # 
 # http://iot.linkeddata.es/def/core#IndoorEnvironmentalQualityScore
 
-:IndoorEnvironmentalQualityScore a owl:NamedIndividual , :AmbientProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:IndoorEnvironmentalQualityScore a owl:NamedIndividual , :AmbientProperty , sosa:ObservableProperty ;
 	rdfs:label "IEQ score"@en , "Indoor environmental quality score"@en .
 # 
 # http://iot.linkeddata.es/def/core#LightColor
 
-:LightColor a owl:NamedIndividual , :LightProperty , <http://www.w3.org/ns/sosa/ActuatableProperty> , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:LightColor a owl:NamedIndividual , :LightProperty , sosa:ActuatableProperty , sosa:ObservableProperty ;
 	rdfs:label "Light color"@en .
 # 
 # http://iot.linkeddata.es/def/core#Luminance
 
-:Luminance a owl:NamedIndividual , :LuminusIntensity , <http://www.w3.org/ns/sosa/ActuatableProperty> , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:Luminance a owl:NamedIndividual , :LuminusIntensity , sosa:ActuatableProperty , sosa:ObservableProperty ;
 	rdfs:label "Luminance"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxCO2Concentration
 
-:MaxCO2Concentration a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MaxCO2Concentration a owl:NamedIndividual , :CarbonDioxide , sosa:ObservableProperty ;
 	rdfs:label "Maximum CO2"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxHumidity
 
-:MaxHumidity a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MaxHumidity a owl:NamedIndividual , :AmbientHumidityProperty , sosa:ObservableProperty ;
 	rdfs:label "Maximum humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxLightIntensity
 
-:MaxLightIntensity a owl:NamedIndividual , :LuminusIntensity , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MaxLightIntensity a owl:NamedIndividual , :LuminusIntensity , sosa:ObservableProperty ;
 	rdfs:label "Maximum light intensity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxPowerConsumption
 
-:MaxPowerConsumption a owl:NamedIndividual , :PowerConsumption , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MaxPowerConsumption a owl:NamedIndividual , :PowerConsumption , sosa:ObservableProperty ;
 	rdfs:label "Maximum power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxSound
 
-:MaxSound a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MaxSound a owl:NamedIndividual , :Sound , sosa:ObservableProperty ;
 	rdfs:label "Maximum sound"@en .
 # 
 # http://iot.linkeddata.es/def/core#MaxTemperature
 
-:MaxTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MaxTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Maximum temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#MeanPowerConsumption
 
-:MeanPowerConsumption a owl:NamedIndividual , :PowerConsumption , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MeanPowerConsumption a owl:NamedIndividual , :PowerConsumption , sosa:ObservableProperty ;
 	rdfs:label "Mean power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#MeatProbeTemperature
 
-:MeatProbeTemperature a owl:NamedIndividual , :TemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MeatProbeTemperature a owl:NamedIndividual , :TemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Meat probe temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinCO2Concentration
 
-:MinCO2Concentration a owl:NamedIndividual , :CarbonDioxide , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MinCO2Concentration a owl:NamedIndividual , :CarbonDioxide , sosa:ObservableProperty ;
 	rdfs:label "Minimum CO2"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinHumidity
 
-:MinHumidity a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MinHumidity a owl:NamedIndividual , :AmbientHumidityProperty , sosa:ObservableProperty ;
 	rdfs:label "Minimun humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinLightIntensity
 
-:MinLightIntensity a owl:NamedIndividual , :LuminusIntensity , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MinLightIntensity a owl:NamedIndividual , :LuminusIntensity , sosa:ObservableProperty ;
 	rdfs:label "Minimu light intensity"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinPowerConsumption
 
-:MinPowerConsumption a owl:NamedIndividual , :PowerConsumption , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MinPowerConsumption a owl:NamedIndividual , :PowerConsumption , sosa:ObservableProperty ;
 	rdfs:label "Minimum power consumption"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinSound
 
-:MinSound a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MinSound a owl:NamedIndividual , :Sound , sosa:ObservableProperty ;
 	rdfs:label "Minimum sound"@en .
 # 
 # http://iot.linkeddata.es/def/core#MinTemperature
 
-:MinTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:MinTemperature a owl:NamedIndividual , :AmbientTemperatureProperty , sosa:ObservableProperty ;
 	rdfs:label "Minimum temperature"@en .
 # 
 # http://iot.linkeddata.es/def/core#Mode
 
-:Mode a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:Mode a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "Mode"@en .
 # 
 # http://iot.linkeddata.es/def/core#Motion
 
-:Motion a owl:NamedIndividual , :MotionProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:Motion a owl:NamedIndividual , :MotionProperty , sosa:ObservableProperty ;
 	rdfs:label "Motion"@en .
 # 
 # http://iot.linkeddata.es/def/core#NoiseLevel
 
-:NoiseLevel a owl:NamedIndividual , :Sound , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:NoiseLevel a owl:NamedIndividual , :Sound , sosa:ObservableProperty ;
 	rdfs:label "Noise level"@en , "Sound level"@en .
 # 
 # http://iot.linkeddata.es/def/core#OnOff
 
-:OnOff a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:OnOff a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "On Off"@en .
 # 
 # http://iot.linkeddata.es/def/core#OpenClosed
 
-:OpenClosed a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:OpenClosed a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "Open Closed"@en .
 # 
 # http://iot.linkeddata.es/def/core#RelativeHumidity
 
-:RelativeHumidity a owl:NamedIndividual , :AmbientHumidityProperty , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:RelativeHumidity a owl:NamedIndividual , :AmbientHumidityProperty , sosa:ObservableProperty ;
 	rdfs:label "Relative humidity"@en .
 # 
 # http://iot.linkeddata.es/def/core#StoredEnergy
 
-:StoredEnergy a owl:NamedIndividual , <http://www.w3.org/ns/sosa/ObservableProperty> , <http://www.w3.org/ns/ssn/systems/BatteryLifetime> ;
+:StoredEnergy a owl:NamedIndividual , sosa:ObservableProperty , ssn-system:BatteryLifetime ;
 	rdfs:label "Stored energy"@en .
 # 
 # http://iot.linkeddata.es/def/core#ValvePosition
 
-:ValvePosition a owl:NamedIndividual , :OperationalStatus , <http://www.w3.org/ns/sosa/ObservableProperty> ;
+:ValvePosition a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "Valve position"@en .
 # 
 
-_:genid53 owl:cardinality "1"^^xsd:nonNegativeInteger .
+_:genid52 owl:cardinality "1"^^xsd:nonNegativeInteger .
 # Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
