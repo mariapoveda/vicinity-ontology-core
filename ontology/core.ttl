@@ -514,7 +514,7 @@ foaf:depiction a owl:ObjectProperty .
 
 _:genid5 a owl:Restriction ;
 	owl:onProperty :actsOn ;
-	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
+	owl:allValuesFrom <http://www.w3.org/ns/ssn/Property> .
 
 :Actuator rdfs:subClassOf _:genid6 .
 
@@ -884,7 +884,7 @@ _:genid18 a owl:Class .
 
 _:genid22 a owl:Restriction ;
 	owl:onProperty :monitors ;
-	owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
+	owl:allValuesFrom <http://www.w3.org/ns/ssn/Property> .
 
 :Sensor rdfs:subClassOf _:genid23 .
 
@@ -1059,7 +1059,7 @@ _:genid33 a owl:Restriction ;
 
 _:genid34 a owl:Restriction ;
 	owl:onProperty :monitors ;
-	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
+	owl:someValuesFrom <http://www.w3.org/ns/ssn/Property> .
 
 <http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf _:genid35 .
 
