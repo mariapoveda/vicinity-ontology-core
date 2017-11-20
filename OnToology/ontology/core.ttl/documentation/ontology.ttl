@@ -487,7 +487,7 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                              <http://www.w3.org/ns/sosa/Actuator> ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://iot.linkeddata.es/def/core#actsOn> ;
-                                                               owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                               owl:allValuesFrom <http://www.w3.org/ns/ssn/Property>
                                                              ] ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://iot.linkeddata.es/def/core#actsOnFeatureProperty> ;
@@ -837,7 +837,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                            <http://www.w3.org/ns/sosa/Sensor> ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://iot.linkeddata.es/def/core#monitors> ;
-                                                             owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                             owl:allValuesFrom <http://www.w3.org/ns/ssn/Property>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> ;
@@ -992,7 +992,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/wot#Event
 <http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://iot.linkeddata.es/def/core#monitors> ;
-                                                           owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                           owl:someValuesFrom <http://www.w3.org/ns/ssn/Property>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> ;
