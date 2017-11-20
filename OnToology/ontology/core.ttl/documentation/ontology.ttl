@@ -203,6 +203,7 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 ###  http://iot.linkeddata.es/def/core#isComposedBy
 <http://iot.linkeddata.es/def/core#isComposedBy> rdf:type owl:ObjectProperty ,
                                                           owl:TransitiveProperty ;
+                                                 rdfs:domain <http://iot.linkeddata.es/def/core#ComposedThing> ;
                                                  rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things."@en ;
                                                  rdfs:label "is composed by"@en .
 
@@ -487,7 +488,7 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                              <http://www.w3.org/ns/sosa/Actuator> ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://iot.linkeddata.es/def/core#actsOn> ;
-                                                               owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                               owl:allValuesFrom <http://www.w3.org/ns/ssn/Property>
                                                              ] ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://iot.linkeddata.es/def/core#actsOnFeatureProperty> ;
@@ -767,10 +768,6 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                   rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ,
                                                                   <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
                                                                   [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://iot.linkeddata.es/def/core#isComposedBy> ;
-                                                                    owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Thing>
-                                                                  ] ,
-                                                                  [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
                                                                     owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
                                                                   ] ;
@@ -837,7 +834,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                            <http://www.w3.org/ns/sosa/Sensor> ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://iot.linkeddata.es/def/core#monitors> ;
-                                                             owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                             owl:allValuesFrom <http://www.w3.org/ns/ssn/Property>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> ;
@@ -992,16 +989,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/wot#Event
 <http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://iot.linkeddata.es/def/core#monitors> ;
-                                                           owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                           owl:someValuesFrom <http://www.w3.org/ns/ssn/Property>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> ;
                                                            owl:allValuesFrom <http://iot.linkeddata.es/def/core#FeatureProperty>
                                                          ] .
-
-
-###  http://iot.linkeddata.es/def/wot#PhysicalThing
-<http://iot.linkeddata.es/def/wot#PhysicalThing> rdf:type owl:Class .
 
 
 ###  http://iot.linkeddata.es/def/wot#Property
