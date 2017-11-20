@@ -1,4 +1,5 @@
 key,label,uri
+:,,http://iot.linkeddata.es/def/core
 avatar,,http://iot.linkeddata.es/def/core#avatar
 describes,,http://iot.linkeddata.es/def/core#describes
 hasOwner,,http://iot.linkeddata.es/def/core#hasOwner
