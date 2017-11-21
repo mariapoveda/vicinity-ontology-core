@@ -106,22 +106,6 @@
     
 
 
-    <!-- http://iot.linkeddata.es/def/core#actsOn -->
-
-
-    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#actsOn">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#actsOnFeatureProperty"/>
-            <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#aboutProperty"/>
-        </owl:propertyChainAxiom>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A link between an actuator an the entities or properties upon which it can act.</rdfs:comment>
-        <rdfs:label xml:lang="en">acts on</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://iot.linkeddata.es/def/core#actsOnFeatureProperty -->
 
 
@@ -325,6 +309,7 @@
 
     <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#isComposedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#ComposedThing"/>
         <rdfs:comment xml:lang="en">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things.</rdfs:comment>
         <rdfs:label xml:lang="en">is composed by</rdfs:label>
     </owl:ObjectProperty>
@@ -399,22 +384,6 @@
     
 
 
-    <!-- http://iot.linkeddata.es/def/core#monitors -->
-
-
-    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#monitors">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/observes"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#monitorsFeatureProperty"/>
-            <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#aboutProperty"/>
-        </owl:propertyChainAxiom>
-        <rdfs:isDefinedBy xml:lang="en">A link between a sensor an the entities or properties it can monitor.</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">monitors</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)</rdfs:seeAlso>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://iot.linkeddata.es/def/core#monitorsFeatureProperty -->
 
 
@@ -457,10 +426,27 @@
     
 
 
+    <!-- http://www.w3.org/ns/sosa/observes -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observes">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#monitorsFeatureProperty"/>
+            <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#aboutProperty"/>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+    
+
+
     <!-- http://www.w3.org/ns/ssn/forProperty -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#actsOnFeatureProperty"/>
+            <rdf:Description rdf:about="http://iot.linkeddata.es/def/core#aboutProperty"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
     
 
 
@@ -763,14 +749,14 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#actsOn"/>
-                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#actsOnFeatureProperty"/>
+                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#FeatureProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#actsOnFeatureProperty"/>
-                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#FeatureProperty"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
+                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An actuator is a device that accepts digital inputs and which acts on (changes) one or more properties of a physical entity on the basis of those inputs. An actuator is a specialization of an IoT device. An actuator acts on a physical entity. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
@@ -851,7 +837,7 @@
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
                 <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#CarbonDioxide"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1032,7 +1018,7 @@
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
                 <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#AmbientHumidityProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1138,7 +1124,7 @@
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
                 <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#MotionProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1194,7 +1180,7 @@
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
                 <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Presence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1210,12 +1196,6 @@
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#PhysicalThing">
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#isComposedBy"/>
-                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
@@ -1318,14 +1298,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
-                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitorsFeatureProperty"/>
+                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#FeatureProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitorsFeatureProperty"/>
-                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#FeatureProperty"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+                <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A sensor is a device that detects and responds to some type of input from the physical environment and outputs digital data that can be transmitted over a network. A sensor is a specialization of an IoT device. A sensor monitors a physical entity. The output digital data may only be distantly related to the input from the physical environment and may be output with a significant time delay, depending on processing of the data within the device, for example, the recognition of the identity of a person from a surveillance camera device. (definition taken from ISO/IEC 11404:2007)</rdfs:comment>
@@ -1351,6 +1331,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#SmartOven">
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
         <rdfs:label xml:lang="en">Smart oven</rdfs:label>
     </owl:Class>
     
@@ -1360,6 +1341,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#SmartRefrigerator">
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
         <rdfs:label xml:lang="en">Smart refrigerator</rdfs:label>
     </owl:Class>
     
@@ -1392,7 +1374,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
         <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
                 <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1547,8 +1529,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Action">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#actsOn"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1567,7 +1549,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Event">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
                 <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1581,21 +1563,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
-    <!-- http://iot.linkeddata.es/def/wot#PhysicalThing -->
-
-
-    <owl:Class rdf:about="http://iot.linkeddata.es/def/wot#PhysicalThing"/>
-    
-
-
     <!-- http://iot.linkeddata.es/def/wot#Property -->
 
 
     <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Property">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#monitors"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
