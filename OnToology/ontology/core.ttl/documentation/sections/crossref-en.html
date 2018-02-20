@@ -7,6 +7,10 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#http://www.w3.org/ns/ssn/systems/Accuracy" title="http://www.w3.org/ns/ssn/systems/Accuracy">Accuracy</a>
       </li>
       <li>
+         <a href="#ActivityTracker"
+            title="http://iot.linkeddata.es/def/core#ActivityTracker">Activity tracker</a>
+      </li>
+      <li>
          <a href="#Actuator" title="http://iot.linkeddata.es/def/core#Actuator">Actuator</a>
       </li>
       <li>
@@ -33,6 +37,10 @@ This section provides details for each class and property defined by Vicinity co
       <li>
          <a href="#http://www.w3.org/ns/ssn/systems/BatteryLifetime"
             title="http://www.w3.org/ns/ssn/systems/BatteryLifetime">Battery Lifetime</a>
+      </li>
+      <li>
+         <a href="#BloodPressureMonitor"
+            title="http://iot.linkeddata.es/def/core#BloodPressureMonitor">Blood pressure monitor</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/saref4bldg#BuildingSpace" title="https://w3id.org/def/saref4bldg#BuildingSpace">Building space</a>
@@ -88,6 +96,11 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#http://www.w3.org/ns/ssn/systems/Frequency" title="http://www.w3.org/ns/ssn/systems/Frequency">Frequency</a>
       </li>
       <li>
+         <a href="#HumanProperty" title="http://iot.linkeddata.es/def/core#HumanProperty">
+            <span>human property</span>
+         </a>
+      </li>
+      <li>
          <a href="#HumanUser" title="http://iot.linkeddata.es/def/core#HumanUser">Human user</a>
       </li>
       <li>
@@ -99,7 +112,7 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#IndoorClimateQualitySensor"
-            title="http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor">IndoorClimateQualitySensor</a>
+            title="http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor">Indoor climate quality sensor</a>
       </li>
       <li>
          <a href="#Irradiance" title="http://iot.linkeddata.es/def/core#Irradiance">Irradiance</a>
@@ -175,6 +188,9 @@ This section provides details for each class and property defined by Vicinity co
             title="http://iot.linkeddata.es/def/core#OperationalStatus">Operational status</a>
       </li>
       <li>
+         <a href="#PanicButton" title="http://iot.linkeddata.es/def/core#PanicButton">Panic button</a>
+      </li>
+      <li>
          <a href="#PeopleCounter" title="http://iot.linkeddata.es/def/core#PeopleCounter">People counter</a>
       </li>
       <li>
@@ -192,6 +208,9 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#Presence" title="http://iot.linkeddata.es/def/core#Presence">Presence</a>
+      </li>
+      <li>
+         <a href="#PressureMat" title="http://iot.linkeddata.es/def/core#PressureMat">Pressure mat</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a>
@@ -287,6 +306,9 @@ This section provides details for each class and property defined by Vicinity co
             title="http://iot.linkeddata.es/def/core#WaterFlowMeter">WaterFlowMeter</a>
       </li>
       <li>
+         <a href="#WeightScale" title="http://iot.linkeddata.es/def/core#WeightScale">Weight scale</a>
+      </li>
+      <li>
          <a href="#WindowSensor" title="http://iot.linkeddata.es/def/core#WindowSensor">WindowSensor</a>
       </li>
    </ul>
@@ -312,6 +334,21 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="ActivityTracker">
+      <h3>Activity tracker<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#ActivityTracker</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Actuator">
       <h3>Actuator<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -332,12 +369,6 @@ This section provides details for each class and property defined by Vicinity co
             <span class="dotted" title="http://www.w3.org/ns/sosa/Actuator">actuator</span>
          </dd>
          <dd>
-            <a href="#actsOn" title="http://iot.linkeddata.es/def/core#actsOn">acts on</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Property">property</span>
-         </dd>
-         <dd>
             <a href="#actsOnFeatureProperty"
                title="http://iot.linkeddata.es/def/core#actsOnFeatureProperty">acts on feature property</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -345,6 +376,12 @@ This section provides details for each class and property defined by Vicinity co
             <a href="#FeatureProperty"
                title="http://iot.linkeddata.es/def/core#FeatureProperty">Feature property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/ssn/forProperty" title="http://www.w3.org/ns/ssn/forProperty">for property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Property">property</span>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
@@ -543,6 +580,21 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="BloodPressureMonitor">
+      <h3>Blood pressure monitor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#BloodPressureMonitor</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/def/saref4bldg#BuildingSpace">
       <h3>Building space<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -641,8 +693,7 @@ This section provides details for each class and property defined by Vicinity co
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
-            <sup class="type-op" title="object property">op</sup> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/observes">observes</span> 
             <span class="logic">some</span> 
             <a href="#CarbonDioxide" title="http://iot.linkeddata.es/def/core#CarbonDioxide">CarbonDioxide</a>
             <sup class="type-c" title="class">c</sup>
@@ -670,6 +721,11 @@ This section provides details for each class and property defined by Vicinity co
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -743,7 +799,11 @@ This section provides details for each class and property defined by Vicinity co
             <sup class="type-c" title="class">c</sup>, <a href="#Battery" title="http://iot.linkeddata.es/def/core#Battery">Battery</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Charger" title="http://iot.linkeddata.es/def/core#Charger">Charger</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Lightbulb" title="http://iot.linkeddata.es/def/core#Lightbulb">Lightbulb</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PanicButton" title="http://iot.linkeddata.es/def/core#PanicButton">Panic button</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SmartOven" title="http://iot.linkeddata.es/def/core#SmartOven">Smart oven</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SmartRefrigerator"
+               title="http://iot.linkeddata.es/def/core#SmartRefrigerator">Smart refrigerator</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -916,6 +976,34 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="HumanProperty">
+      <h3>human property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#HumanProperty</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#CaloriesBurned"
+               title="http://iot.linkeddata.es/def/core#CaloriesBurned">Calories burned</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DiastolicBloodPressure"
+               title="http://iot.linkeddata.es/def/core#DiastolicBloodPressure">Diastolic blood pressure</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HeartRate" title="http://iot.linkeddata.es/def/core#HeartRate">Heart rate</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Sleep" title="http://iot.linkeddata.es/def/core#Sleep">Sleep</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SystolicBloodPressure"
+               title="http://iot.linkeddata.es/def/core#SystolicBloodPressure">Systolic blood pressure</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Weight" title="http://iot.linkeddata.es/def/core#Weight">Weight</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="HumanUser">
       <h3>Human user<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -954,8 +1042,7 @@ This section provides details for each class and property defined by Vicinity co
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
-            <sup class="type-op" title="object property">op</sup> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/observes">observes</span> 
             <span class="logic">some</span> 
             <a href="#AmbientHumidityProperty"
                title="http://iot.linkeddata.es/def/core#AmbientHumidityProperty">Ambient humidity property</a>
@@ -983,7 +1070,7 @@ This section provides details for each class and property defined by Vicinity co
       </dl>
    </div>
    <div class="entity" id="IndoorClimateQualitySensor">
-      <h3>IndoorClimateQualitySensor<sup class="type-c" title="class">c</sup>
+      <h3>Indoor climate quality sensor<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -1257,7 +1344,7 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted" title="http://www.w3.org/ns/ssn/forProperty">for property</span>
+            <a href="#http://www.w3.org/ns/ssn/forProperty" title="http://www.w3.org/ns/ssn/forProperty">for property</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a>
@@ -1300,6 +1387,9 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#AverageMovementTime"
                title="http://iot.linkeddata.es/def/core#AverageMovementTime">Average movement time</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#Motion" title="http://iot.linkeddata.es/def/core#Motion">Motion</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Steps" title="http://iot.linkeddata.es/def/core#Steps">Steps</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DistanceWallked"
+               title="http://iot.linkeddata.es/def/core#DistanceWallked">distance wallked</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -1318,8 +1408,7 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
-            <sup class="type-op" title="object property">op</sup> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/observes">observes</span> 
             <span class="logic">some</span> 
             <a href="#MotionProperty"
                title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
@@ -1513,6 +1602,21 @@ The conditions specified here are those that affect the measurement properties, 
          </dd>
       </dl>
    </div>
+   <div class="entity" id="PanicButton">
+      <h3>Panic button<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#PanicButton</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="PeopleCounter">
       <h3>People counter<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1530,8 +1634,7 @@ The conditions specified here are those that affect the measurement properties, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
-            <sup class="type-op" title="object property">op</sup> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/observes">observes</span> 
             <span class="logic">some</span> 
             <a href="#Presence" title="http://iot.linkeddata.es/def/core#Presence">Presence</a>
             <sup class="type-c" title="class">c</sup>
@@ -1560,12 +1663,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <span class="dotted"
                   title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">spatial thing</span>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
          </dd>
          <dd>
             <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</span>
@@ -1665,6 +1762,21 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
       </dl>
    </div>
+   <div class="entity" id="PressureMat">
+      <h3>Pressure mat<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#PressureMat</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://www.w3.org/ns/ssn/Property">
       <h3>Property<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1727,6 +1839,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <sup class="type-c" title="class">c</sup>, <a href="#TemperatureProperty"
                title="http://iot.linkeddata.es/def/core#TemperatureProperty">Temperature</a>
             <sup class="type-c" title="class">c</sup>, <a href="#TimeProperty" title="http://iot.linkeddata.es/def/core#TimeProperty">TimeProperty</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HumanProperty" title="http://iot.linkeddata.es/def/core#HumanProperty">human property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1895,12 +2008,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <span class="dotted" title="http://www.w3.org/ns/sosa/Sensor">sensor</span>
          </dd>
          <dd>
-            <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Property">property</span>
-         </dd>
-         <dd>
             <a href="#monitorsFeatureProperty"
                title="http://iot.linkeddata.es/def/core#monitorsFeatureProperty">monitors feature property</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -1909,15 +2016,24 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://iot.linkeddata.es/def/core#FeatureProperty">Feature property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/sosa/observes">observes</span> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Property">property</span>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#CO2Sensor" title="http://iot.linkeddata.es/def/core#CO2Sensor">CO2 Sensor</a>
+            <a href="#ActivityTracker"
+               title="http://iot.linkeddata.es/def/core#ActivityTracker">Activity tracker</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#BloodPressureMonitor"
+               title="http://iot.linkeddata.es/def/core#BloodPressureMonitor">Blood pressure monitor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CO2Sensor" title="http://iot.linkeddata.es/def/core#CO2Sensor">CO2 Sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#DoorSensor" title="http://iot.linkeddata.es/def/core#DoorSensor">DoorSensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HVACSensor" title="http://iot.linkeddata.es/def/core#HVACSensor">HVAC Sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HumiditySensor"
                title="http://iot.linkeddata.es/def/core#HumiditySensor">Humidity sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#IndoorClimateQualitySensor"
-               title="http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor">IndoorClimateQualitySensor</a>
+               title="http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor">Indoor climate quality sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LuminanceMeter"
                title="http://iot.linkeddata.es/def/core#LuminanceMeter">Luminance meter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#MotionSensor" title="http://iot.linkeddata.es/def/core#MotionSensor">Motion sensor</a>
@@ -1926,12 +2042,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://iot.linkeddata.es/def/core#OccupancySensor">Occupancy sensor</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PeopleCounter" title="http://iot.linkeddata.es/def/core#PeopleCounter">People counter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PowerMeter" title="http://iot.linkeddata.es/def/core#PowerMeter">PowerMeter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PressureMat" title="http://iot.linkeddata.es/def/core#PressureMat">Pressure mat</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Thermometer" title="http://iot.linkeddata.es/def/core#Thermometer">Thermometer</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Thermostat" title="http://iot.linkeddata.es/def/core#Thermostat">Thermostat</a>
             <sup class="type-c" title="class">c</sup>, <a href="#WaterEnergyMeter"
                title="http://iot.linkeddata.es/def/core#WaterEnergyMeter">WaterEnergyMeter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#WaterFlowMeter"
                title="http://iot.linkeddata.es/def/core#WaterFlowMeter">WaterFlowMeter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WeightScale" title="http://iot.linkeddata.es/def/core#WeightScale">Weight scale</a>
             <sup class="type-c" title="class">c</sup>, <a href="#WindowSensor" title="http://iot.linkeddata.es/def/core#WindowSensor">WindowSensor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -1963,6 +2081,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <a href="#serviceDescription"
                title="http://iot.linkeddata.es/def/core#serviceDescription">service description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">service name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceVersion" title="http://iot.linkeddata.es/def/core#serviceVersion">service version</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
@@ -1995,6 +2114,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#SmartOven</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="SmartRefrigerator">
       <h3>Smart refrigerator<sup class="type-c" title="class">c</sup>
@@ -2003,6 +2129,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#SmartRefrigerator</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Sound">
       <h3>Sound<sup class="type-c" title="class">c</sup>
@@ -2231,8 +2364,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
-            <sup class="type-op" title="object property">op</sup> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/observes">observes</span> 
             <span class="logic">some</span> 
             <a href="#AmbientTemperatureProperty"
                title="http://iot.linkeddata.es/def/core#AmbientTemperatureProperty">Ambient temperature property</a>
@@ -2442,6 +2574,21 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
       </dl>
    </div>
+   <div class="entity" id="WeightScale">
+      <h3>Weight scale<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#WeightScale</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Sensor" title="http://iot.linkeddata.es/def/core#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="WindowSensor">
       <h3>WindowSensor<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -2475,9 +2622,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#aboutProperty" title="http://iot.linkeddata.es/def/core#aboutProperty">about property</a>
       </li>
       <li>
-         <a href="#actsOn" title="http://iot.linkeddata.es/def/core#actsOn">acts on</a>
-      </li>
-      <li>
          <a href="#actsOnFeatureProperty"
             title="http://iot.linkeddata.es/def/core#actsOnFeatureProperty">acts on feature property</a>
       </li>
@@ -2494,6 +2638,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <li>
          <a href="#expressedInFormat"
             title="http://iot.linkeddata.es/def/core#expressedInFormat">expressed in format</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/ssn/forProperty" title="http://www.w3.org/ns/ssn/forProperty">
+            <span>for property</span>
+         </a>
       </li>
       <li>
          <a href="#hasComponent" title="http://iot.linkeddata.es/def/core#hasComponent">has component</a>
@@ -2587,9 +2736,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#literalValue" title="http://iot.linkeddata.es/def/core#literalValue">literal value</a>
       </li>
       <li>
-         <a href="#monitors" title="http://iot.linkeddata.es/def/core#monitors">monitors</a>
-      </li>
-      <li>
          <a href="#monitorsFeatureProperty"
             title="http://iot.linkeddata.es/def/core#monitorsFeatureProperty">monitors feature property</a>
       </li>
@@ -2645,34 +2791,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#aboutProperty</p>
       <div class="comment">
          <span class="markdown">Auxiliary property created for the n-ary class core:FeatureProperty to link instances of such class to the (ssn) proeprty it is about.</span>
-      </div>
-   </div>
-   <div class="entity" id="actsOn">
-      <h3>acts on<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#actsOn</p>
-      <div class="comment">
-         <span class="markdown">A link between an actuator an the entities or properties upon which it can act.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/ns/sosa/actsOnProperty">acts on property</span>
-            </dd>
-            <dt>has sub-property chains</dt>
-            <dd>
-               <a href="#actsOnFeatureProperty"
-                  title="http://iot.linkeddata.es/def/core#actsOnFeatureProperty">acts on feature property</a>
-               <sup class="type-op" title="object property">op</sup> 
-               <span class="logic">o</span> 
-               <a href="#aboutProperty" title="http://iot.linkeddata.es/def/core#aboutProperty">about property</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
       </div>
    </div>
    <div class="entity" id="actsOnFeatureProperty">
@@ -2783,6 +2901,27 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://iot.linkeddata.es/def/wot#DataSchema">data schema</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/ssn/forProperty">
+      <h3>for property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/ssn/forProperty</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#actsOnFeatureProperty"
+                  title="http://iot.linkeddata.es/def/core#actsOnFeatureProperty">acts on feature property</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#aboutProperty" title="http://iot.linkeddata.es/def/core#aboutProperty">about property</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -3235,6 +3374,17 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <div class="comment">
          <span class="markdown">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things.</span>
       </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ComposedThing" title="http://iot.linkeddata.es/def/core#ComposedThing">Composed thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="https://w3id.org/def/saref4bldg#isContainedIn">
       <h3>is contained in<sup class="type-op" title="object property">op</sup>
@@ -3429,35 +3579,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
-   <div class="entity" id="monitors">
-      <h3>monitors<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#monitors</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>http://iot.linkeddata.es/def/core</dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/ns/sosa/observes">observes</span>
-            </dd>
-            <dt>has sub-property chains</dt>
-            <dd>
-               <a href="#monitorsFeatureProperty"
-                  title="http://iot.linkeddata.es/def/core#monitorsFeatureProperty">monitors feature property</a>
-               <sup class="type-op" title="object property">op</sup> 
-               <span class="logic">o</span> 
-               <a href="#aboutProperty" title="http://iot.linkeddata.es/def/core#aboutProperty">about property</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="monitorsFeatureProperty">
       <h3>monitors feature property<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3586,6 +3707,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </li>
       <li>
          <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">service name</a>
+      </li>
+      <li>
+         <a href="#serviceVersion" title="http://iot.linkeddata.es/def/core#serviceVersion">
+            <span>service version</span>
+         </a>
       </li>
       <li>
          <a href="#timeStamp" title="http://iot.linkeddata.es/def/core#timeStamp">time stamp</a>
@@ -3782,6 +3908,30 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
+   <div class="entity" id="serviceVersion">
+      <h3>service version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#serviceVersion</p>
+      <div class="comment">
+         <span class="markdown">service version</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Service" title="http://iot.linkeddata.es/def/core#Service">Service</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="timeStamp">
       <h3>time stamp<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -3861,6 +4011,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#BakingStep" title="http://iot.linkeddata.es/def/core#BakingStep">Baking step</a>
       </li>
       <li>
+         <a href="#CaloriesBurned"
+            title="http://iot.linkeddata.es/def/core#CaloriesBurned">Calories burned</a>
+      </li>
+      <li>
          <a href="#ChargeStatus" title="http://iot.linkeddata.es/def/core#ChargeStatus">Charge status</a>
       </li>
       <li>
@@ -3883,7 +4037,17 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             title="http://iot.linkeddata.es/def/core#DeviceTemperature">Device temperature</a>
       </li>
       <li>
+         <a href="#DiastolicBloodPressure"
+            title="http://iot.linkeddata.es/def/core#DiastolicBloodPressure">Diastolic blood pressure</a>
+      </li>
+      <li>
          <a href="#DimmingLevel" title="http://iot.linkeddata.es/def/core#DimmingLevel">Dimming level</a>
+      </li>
+      <li>
+         <a href="#DistanceWallked"
+            title="http://iot.linkeddata.es/def/core#DistanceWallked">
+            <span>distance wallked</span>
+         </a>
       </li>
       <li>
          <a href="#ElapsedBakingTime"
@@ -3894,6 +4058,9 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </li>
       <li>
          <a href="#FanSpeed" title="http://iot.linkeddata.es/def/core#FanSpeed">FanSpeed</a>
+      </li>
+      <li>
+         <a href="#HeartRate" title="http://iot.linkeddata.es/def/core#HeartRate">Heart rate</a>
       </li>
       <li>
          <a href="#HeaterDefaultTemperature"
@@ -4013,10 +4180,23 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             title="http://iot.linkeddata.es/def/core#RelativeHumidity">Relative humidity</a>
       </li>
       <li>
+         <a href="#Sleep" title="http://iot.linkeddata.es/def/core#Sleep">Sleep</a>
+      </li>
+      <li>
+         <a href="#Steps" title="http://iot.linkeddata.es/def/core#Steps">Steps</a>
+      </li>
+      <li>
          <a href="#StoredEnergy" title="http://iot.linkeddata.es/def/core#StoredEnergy">Stored energy</a>
       </li>
       <li>
+         <a href="#SystolicBloodPressure"
+            title="http://iot.linkeddata.es/def/core#SystolicBloodPressure">Systolic blood pressure</a>
+      </li>
+      <li>
          <a href="#ValvePosition" title="http://iot.linkeddata.es/def/core#ValvePosition">Valve position</a>
+      </li>
+      <li>
+         <a href="#Weight" title="http://iot.linkeddata.es/def/core#Weight">Weight</a>
       </li>
    </ul>
    <div class="entity" id="AmbientTemperature">
@@ -4280,6 +4460,21 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
       </dl>
    </div>
+   <div class="entity" id="CaloriesBurned">
+      <h3>Calories burned<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#CaloriesBurned</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HumanProperty" title="http://iot.linkeddata.es/def/core#HumanProperty">human property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ChargeStatus">
       <h3>Charge status<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -4400,6 +4595,21 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
       </dl>
    </div>
+   <div class="entity" id="DiastolicBloodPressure">
+      <h3>Diastolic blood pressure<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DiastolicBloodPressure</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HumanProperty" title="http://iot.linkeddata.es/def/core#HumanProperty">human property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="DimmingLevel">
       <h3>Dimming level<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -4416,6 +4626,22 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
          <dd>
             <span class="dotted" title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DistanceWallked">
+      <h3>distance wallked<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#DistanceWallked</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#MotionProperty"
+               title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -4471,6 +4697,21 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
          <dd>
             <span class="dotted" title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HeartRate">
+      <h3>Heart rate<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#HeartRate</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HumanProperty" title="http://iot.linkeddata.es/def/core#HumanProperty">human property</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -5080,6 +5321,37 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Sleep">
+      <h3>Sleep<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Sleep</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HumanProperty" title="http://iot.linkeddata.es/def/core#HumanProperty">human property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Steps">
+      <h3>Steps<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Steps</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#MotionProperty"
+               title="http://iot.linkeddata.es/def/core#MotionProperty">Motion property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="StoredEnergy">
       <h3>Stored energy<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -5095,6 +5367,21 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dd>
             <a href="#http://www.w3.org/ns/ssn/systems/BatteryLifetime"
                title="http://www.w3.org/ns/ssn/systems/BatteryLifetime">Battery Lifetime</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SystolicBloodPressure">
+      <h3>Systolic blood pressure<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#SystolicBloodPressure</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HumanProperty" title="http://iot.linkeddata.es/def/core#HumanProperty">human property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -5115,6 +5402,21 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
          <dd>
             <span class="dotted" title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Weight">
+      <h3>Weight<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Weight</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HumanProperty" title="http://iot.linkeddata.es/def/core#HumanProperty">human property</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
