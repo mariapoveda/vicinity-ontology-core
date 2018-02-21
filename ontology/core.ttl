@@ -23,8 +23,8 @@
 	dcterms:creator <http://purl.org/net/mpoveda> ;
 	rdfs:comment "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+	owl:versionInfo "0.2.0" ;
 	dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
-	owl:versionInfo "0.1.4" ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	vann:preferredNamespacePrefix "vcnt-core" ;
 	dc:publisher <http://www.oeg-upm.net/> ;
@@ -680,10 +680,11 @@ _:genid10 a owl:Restriction ;
 	rdfs:subClassOf :Actuator , :Sensor ;
 	rdfs:label "HVAC Sensor"@en .
 # 
-# http://iot.linkeddata.es/def/core#HumanProperty
+# http://iot.linkeddata.es/def/core#HealthProperty
 
-:HumanProperty a owl:Class ;
-	rdfs:subClassOf ssn:Property .
+:HealthProperty a owl:Class ;
+	rdfs:subClassOf ssn:Property ;
+	rdfs:label "Helth property"@en .
 # 
 # http://iot.linkeddata.es/def/core#HumanUser
 
@@ -1576,7 +1577,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#CaloriesBurned
 
-:CaloriesBurned a owl:NamedIndividual , :HumanProperty ;
+:CaloriesBurned a owl:NamedIndividual , :HealthProperty ;
 	rdfs:label "Calories burned"@en .
 # 
 # http://iot.linkeddata.es/def/core#ChargeStatus
@@ -1606,7 +1607,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#DiastolicBloodPressure
 
-:DiastolicBloodPressure a owl:NamedIndividual , :HumanProperty ;
+:DiastolicBloodPressure a owl:NamedIndividual , :HealthProperty ;
 	rdfs:label "Diastolic blood pressure"@en .
 # 
 # http://iot.linkeddata.es/def/core#DimmingLevel
@@ -1635,7 +1636,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#HeartRate
 
-:HeartRate a owl:NamedIndividual , :HumanProperty ;
+:HeartRate a owl:NamedIndividual , :HealthProperty ;
 	rdfs:label "Heart rate"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterDefaultTemperature
@@ -1800,7 +1801,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#Sleep
 
-:Sleep a owl:NamedIndividual , :HumanProperty ;
+:Sleep a owl:NamedIndividual , :HealthProperty ;
 	rdfs:label "Sleep"@en .
 # 
 # http://iot.linkeddata.es/def/core#Steps
@@ -1815,7 +1816,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#SystolicBloodPressure
 
-:SystolicBloodPressure a owl:NamedIndividual , :HumanProperty ;
+:SystolicBloodPressure a owl:NamedIndividual , :HealthProperty ;
 	rdfs:label "Systolic blood pressure"@en .
 # 
 # http://iot.linkeddata.es/def/core#ValvePosition
@@ -1825,7 +1826,7 @@ saref:Service a owl:Class ;
 # 
 # http://iot.linkeddata.es/def/core#Weight
 
-:Weight a owl:NamedIndividual , :HumanProperty ;
+:Weight a owl:NamedIndividual , :HealthProperty ;
 	rdfs:label "Weight"@en .
 # 
 
