@@ -19,7 +19,7 @@
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core"^^xsd:string ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/core"^^xsd:string ;
                                       rdfs:comment "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
-                                      owl:versionInfo "0.1.4"^^xsd:string .
+                                      owl:versionInfo "0.2.0"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -648,9 +648,10 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                rdfs:label "HVAC Sensor"@en .
 
 
-###  http://iot.linkeddata.es/def/core#HumanProperty
-<http://iot.linkeddata.es/def/core#HumanProperty> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> .
+###  http://iot.linkeddata.es/def/core#HealthProperty
+<http://iot.linkeddata.es/def/core#HealthProperty> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                                   rdfs:label "Helth property"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#HumanUser
@@ -1510,7 +1511,7 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#CaloriesBurned
 <http://iot.linkeddata.es/def/core#CaloriesBurned> rdf:type owl:NamedIndividual ,
-                                                            <http://iot.linkeddata.es/def/core#HumanProperty> ;
+                                                            <http://iot.linkeddata.es/def/core#HealthProperty> ;
                                                    rdfs:label "Calories burned"@en .
 
 
@@ -1553,7 +1554,7 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#DiastolicBloodPressure
 <http://iot.linkeddata.es/def/core#DiastolicBloodPressure> rdf:type owl:NamedIndividual ,
-                                                                    <http://iot.linkeddata.es/def/core#HumanProperty> ;
+                                                                    <http://iot.linkeddata.es/def/core#HealthProperty> ;
                                                            rdfs:label "Diastolic blood pressure"@en .
 
 
@@ -1592,7 +1593,7 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#HeartRate
 <http://iot.linkeddata.es/def/core#HeartRate> rdf:type owl:NamedIndividual ,
-                                                       <http://iot.linkeddata.es/def/core#HumanProperty> ;
+                                                       <http://iot.linkeddata.es/def/core#HealthProperty> ;
                                               rdfs:label "Heart rate"@en .
 
 
@@ -1826,7 +1827,7 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#Sleep
 <http://iot.linkeddata.es/def/core#Sleep> rdf:type owl:NamedIndividual ,
-                                                   <http://iot.linkeddata.es/def/core#HumanProperty> ;
+                                                   <http://iot.linkeddata.es/def/core#HealthProperty> ;
                                           rdfs:label "Sleep"@en .
 
 
@@ -1845,7 +1846,7 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#SystolicBloodPressure
 <http://iot.linkeddata.es/def/core#SystolicBloodPressure> rdf:type owl:NamedIndividual ,
-                                                                   <http://iot.linkeddata.es/def/core#HumanProperty> ;
+                                                                   <http://iot.linkeddata.es/def/core#HealthProperty> ;
                                                           rdfs:label "Systolic blood pressure"@en .
 
 
@@ -1858,7 +1859,7 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#Weight
 <http://iot.linkeddata.es/def/core#Weight> rdf:type owl:NamedIndividual ,
-                                                    <http://iot.linkeddata.es/def/core#HumanProperty> ;
+                                                    <http://iot.linkeddata.es/def/core#HealthProperty> ;
                                            rdfs:label "Weight"@en .
 
 

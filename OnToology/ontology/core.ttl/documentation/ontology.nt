@@ -11,7 +11,7 @@
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core" .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/core" .
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en .
-<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.4" .
+<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" .
 # 
 # 
 # #################################################################
@@ -584,9 +584,10 @@ _:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.
 <http://iot.linkeddata.es/def/core#HVACSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Sensor> .
 <http://iot.linkeddata.es/def/core#HVACSensor> <http://www.w3.org/2000/01/rdf-schema#label> "HVAC Sensor"@en .
 # 
-# http://iot.linkeddata.es/def/core#HumanProperty
-<http://iot.linkeddata.es/def/core#HumanProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#HumanProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+# http://iot.linkeddata.es/def/core#HealthProperty
+<http://iot.linkeddata.es/def/core#HealthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://iot.linkeddata.es/def/core#HealthProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://iot.linkeddata.es/def/core#HealthProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Helth property"@en .
 # 
 # http://iot.linkeddata.es/def/core#HumanUser
 <http://iot.linkeddata.es/def/core#HumanUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1331,7 +1332,7 @@ _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#CaloriesBurned
 <http://iot.linkeddata.es/def/core#CaloriesBurned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#CaloriesBurned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumanProperty> .
+<http://iot.linkeddata.es/def/core#CaloriesBurned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HealthProperty> .
 <http://iot.linkeddata.es/def/core#CaloriesBurned> <http://www.w3.org/2000/01/rdf-schema#label> "Calories burned"@en .
 # 
 # http://iot.linkeddata.es/def/core#ChargeStatus
@@ -1368,7 +1369,7 @@ _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#DiastolicBloodPressure
 <http://iot.linkeddata.es/def/core#DiastolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#DiastolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumanProperty> .
+<http://iot.linkeddata.es/def/core#DiastolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HealthProperty> .
 <http://iot.linkeddata.es/def/core#DiastolicBloodPressure> <http://www.w3.org/2000/01/rdf-schema#label> "Diastolic blood pressure"@en .
 # 
 # http://iot.linkeddata.es/def/core#DimmingLevel
@@ -1401,7 +1402,7 @@ _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#HeartRate
 <http://iot.linkeddata.es/def/core#HeartRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#HeartRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumanProperty> .
+<http://iot.linkeddata.es/def/core#HeartRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HealthProperty> .
 <http://iot.linkeddata.es/def/core#HeartRate> <http://www.w3.org/2000/01/rdf-schema#label> "Heart rate"@en .
 # 
 # http://iot.linkeddata.es/def/core#HeaterDefaultTemperature
@@ -1602,7 +1603,7 @@ _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#Sleep
 <http://iot.linkeddata.es/def/core#Sleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#Sleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumanProperty> .
+<http://iot.linkeddata.es/def/core#Sleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HealthProperty> .
 <http://iot.linkeddata.es/def/core#Sleep> <http://www.w3.org/2000/01/rdf-schema#label> "Sleep"@en .
 # 
 # http://iot.linkeddata.es/def/core#Steps
@@ -1618,7 +1619,7 @@ _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#SystolicBloodPressure
 <http://iot.linkeddata.es/def/core#SystolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#SystolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumanProperty> .
+<http://iot.linkeddata.es/def/core#SystolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HealthProperty> .
 <http://iot.linkeddata.es/def/core#SystolicBloodPressure> <http://www.w3.org/2000/01/rdf-schema#label> "Systolic blood pressure"@en .
 # 
 # http://iot.linkeddata.es/def/core#ValvePosition
@@ -1629,7 +1630,7 @@ _:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ss
 # 
 # http://iot.linkeddata.es/def/core#Weight
 <http://iot.linkeddata.es/def/core#Weight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://iot.linkeddata.es/def/core#Weight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HumanProperty> .
+<http://iot.linkeddata.es/def/core#Weight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iot.linkeddata.es/def/core#HealthProperty> .
 <http://iot.linkeddata.es/def/core#Weight> <http://www.w3.org/2000/01/rdf-schema#label> "Weight"@en .
 # 
 _:genid52 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
