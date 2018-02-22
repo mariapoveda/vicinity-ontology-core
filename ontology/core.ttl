@@ -1621,9 +1621,10 @@ saref:Service a owl:Class ;
 :DimmingLevel a owl:NamedIndividual , :OperationalStatus , sosa:ObservableProperty ;
 	rdfs:label "Dimming level"@en .
 # 
-# http://iot.linkeddata.es/def/core#DistanceWallked
+# http://iot.linkeddata.es/def/core#DistanceWalked
 
-:DistanceWallked a owl:NamedIndividual , :MotionProperty .
+:DistanceWalked a owl:NamedIndividual , :MotionProperty ;
+	rdfs:label "Distance walked"@en .
 # 
 # http://iot.linkeddata.es/def/core#ElapsedBakingTime
 
