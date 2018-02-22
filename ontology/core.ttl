@@ -568,6 +568,12 @@ _:genid6 a owl:Restriction ;
 	rdfs:subClassOf :Device ;
 	rdfs:label "Battery"@en .
 # 
+# http://iot.linkeddata.es/def/core#BeaconReader
+
+:BeaconReader a owl:Class ;
+	rdfs:subClassOf :Device ;
+	rdfs:label "Beacon reader"@en .
+# 
 # http://iot.linkeddata.es/def/core#BloodPressureMonitor
 
 :BloodPressureMonitor a owl:Class ;

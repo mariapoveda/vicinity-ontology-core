@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-10-27 10:14:22 +0000</string>
+	<string>2018-02-21 11:15:17 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -377,7 +377,7 @@
 					<key>Points</key>
 					<array>
 						<string>{714.75807710935271, 726.35220643289438}</string>
-						<string>{825.01178382683054, 726.35220471832179}</string>
+						<string>{825.01178382683065, 726.35220471832179}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -418,7 +418,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{825.01178382683065, 707.17503674739453}, {123.42576067618029, 23.012603759765625}}</string>
+					<string>{{825.01178382683065, 707.17503674739453}, {134.0281947369549, 23.012603759765625}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -499,7 +499,7 @@
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-ssn:FeatureOfInterest}</string>
+sosa:FeatureOfInterest}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -37172,7 +37172,7 @@ wot:Thing}</string>
 		<key>FitInWindow</key>
 		<true/>
 		<key>Frame</key>
-		<string>{{269, -896}, {1325, 863}}</string>
+		<string>{{52, -896}, {1325, 863}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>ShowRuler</key>
