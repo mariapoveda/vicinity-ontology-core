@@ -851,6 +851,16 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#BeaconReader -->
+
+
+    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#BeaconReader">
+        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+        <rdfs:label xml:lang="en">Beacon reader</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#BloodPressureMonitor -->
 
 
