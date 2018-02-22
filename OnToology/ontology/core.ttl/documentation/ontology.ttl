@@ -539,6 +539,12 @@ rdf:value rdf:type owl:ObjectProperty ;
                                             rdfs:label "Battery"@en .
 
 
+###  http://iot.linkeddata.es/def/core#BeaconReader
+<http://iot.linkeddata.es/def/core#BeaconReader> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
+                                                 rdfs:label "Beacon reader"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#BloodPressureMonitor
 <http://iot.linkeddata.es/def/core#BloodPressureMonitor> rdf:type owl:Class ;
                                                          rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;

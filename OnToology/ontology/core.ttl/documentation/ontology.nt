@@ -489,6 +489,11 @@ _:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es
 <http://iot.linkeddata.es/def/core#Battery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
 <http://iot.linkeddata.es/def/core#Battery> <http://www.w3.org/2000/01/rdf-schema#label> "Battery"@en .
 # 
+# http://iot.linkeddata.es/def/core#BeaconReader
+<http://iot.linkeddata.es/def/core#BeaconReader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://iot.linkeddata.es/def/core#BeaconReader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Device> .
+<http://iot.linkeddata.es/def/core#BeaconReader> <http://www.w3.org/2000/01/rdf-schema#label> "Beacon reader"@en .
+# 
 # http://iot.linkeddata.es/def/core#BloodPressureMonitor
 <http://iot.linkeddata.es/def/core#BloodPressureMonitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#BloodPressureMonitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/core#Sensor> .
