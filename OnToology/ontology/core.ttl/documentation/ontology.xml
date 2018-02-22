@@ -2456,11 +2456,12 @@ The conditions specified here are those that affect the measurement properties, 
     
 
 
-    <!-- http://iot.linkeddata.es/def/core#DistanceWallked -->
+    <!-- http://iot.linkeddata.es/def/core#DistanceWalked -->
 
 
-    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#DistanceWallked">
+    <owl:NamedIndividual rdf:about="http://iot.linkeddata.es/def/core#DistanceWalked">
         <rdf:type rdf:resource="http://iot.linkeddata.es/def/core#MotionProperty"/>
+        <rdfs:label xml:lang="en">Distance walked</rdfs:label>
     </owl:NamedIndividual>
     
 
