@@ -476,12 +476,6 @@ rdf:value rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
-###  http://iot.linkeddata.es/def/core#ActivityTracker
-<http://iot.linkeddata.es/def/core#ActivityTracker> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                    rdfs:label "Activity tracker"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#Actuator
 <http://iot.linkeddata.es/def/core#Actuator> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ,
@@ -506,77 +500,12 @@ rdf:value rdf:type owl:ObjectProperty ;
                                           rdfs:label "Agent"@en .
 
 
-###  http://iot.linkeddata.es/def/core#AmbientHumidityProperty
-<http://iot.linkeddata.es/def/core#AmbientHumidityProperty> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <http://iot.linkeddata.es/def/core#AmbientProperty> ;
-                                                            rdfs:label "Ambient humidity property"@en .
-
-
-###  http://iot.linkeddata.es/def/core#AmbientProperty
-<http://iot.linkeddata.es/def/core#AmbientProperty> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                    rdfs:label "AmbientProperty"@en .
-
-
-###  http://iot.linkeddata.es/def/core#AmbientTemperatureProperty
-<http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <http://iot.linkeddata.es/def/core#AmbientProperty> ,
-                                                                               <http://iot.linkeddata.es/def/core#TemperatureProperty> ;
-                                                               rdfs:label "Ambient temperature property"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#Application
 <http://iot.linkeddata.es/def/core#Application> rdf:type owl:Class ;
                                                 rdfs:subClassOf <http://iot.linkeddata.es/def/core#Service> ;
                                                 rdfs:comment "An application is a software entity or system that offers a collection of functions with which a user can perform a task or achieve a business objective. An application typically uses services. The functions of an application may be presented as services. (definition taken from ISO/IEC 11404:2007)"@en ;
                                                 rdfs:label "Application"@en ;
                                                 rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Battery
-<http://iot.linkeddata.es/def/core#Battery> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
-                                            rdfs:label "Battery"@en .
-
-
-###  http://iot.linkeddata.es/def/core#BeaconReader
-<http://iot.linkeddata.es/def/core#BeaconReader> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
-                                                 rdfs:label "Beacon reader"@en .
-
-
-###  http://iot.linkeddata.es/def/core#BloodPressureMonitor
-<http://iot.linkeddata.es/def/core#BloodPressureMonitor> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                         rdfs:label "Blood pressure monitor"@en .
-
-
-###  http://iot.linkeddata.es/def/core#CO2Sensor
-<http://iot.linkeddata.es/def/core#CO2Sensor> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://www.w3.org/ns/sosa/observes> ;
-                                                                owl:someValuesFrom <http://iot.linkeddata.es/def/core#CarbonDioxide>
-                                                              ] ;
-                                              rdfs:label "CO2 Sensor"@en .
-
-
-###  http://iot.linkeddata.es/def/core#CarbonDioxide
-<http://iot.linkeddata.es/def/core#CarbonDioxide> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                  rdfs:label "CarbonDioxide"@en .
-
-
-###  http://iot.linkeddata.es/def/core#CarbonMonoxide
-<http://iot.linkeddata.es/def/core#CarbonMonoxide> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                   rdfs:label "CarbonMonoxide"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Charger
-<http://iot.linkeddata.es/def/core#Charger> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
-                                            rdfs:label "Charger"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#ComposedThing
@@ -611,22 +540,13 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                 rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
-###  http://iot.linkeddata.es/def/core#DoorSensor
-<http://iot.linkeddata.es/def/core#DoorSensor> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                               rdfs:label "DoorSensor"@en ;
-                                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"^^xsd:string .
-
-
 ###  http://iot.linkeddata.es/def/core#EBikeCharger
 <http://iot.linkeddata.es/def/core#EBikeCharger> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://iot.linkeddata.es/def/core#Charger> ;
                                                  rdfs:label "eBikeCharger"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#EVCharger
 <http://iot.linkeddata.es/def/core#EVCharger> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://iot.linkeddata.es/def/core#Charger> ;
                                               rdfs:label "Electric vehicle charging point"@en ,
                                                          "Electric vehicle chargeren"^^xsd:string .
 
@@ -647,19 +567,6 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                     rdfs:label "Feature property"@en .
 
 
-###  http://iot.linkeddata.es/def/core#HVACSensor
-<http://iot.linkeddata.es/def/core#HVACSensor> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://iot.linkeddata.es/def/core#Actuator> ,
-                                                               <http://iot.linkeddata.es/def/core#Sensor> ;
-                                               rdfs:label "HVAC Sensor"@en .
-
-
-###  http://iot.linkeddata.es/def/core#HealthProperty
-<http://iot.linkeddata.es/def/core#HealthProperty> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                   rdfs:label "Helth property"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#HumanUser
 <http://iot.linkeddata.es/def/core#HumanUser> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ,
@@ -672,119 +579,10 @@ rdf:value rdf:type owl:ObjectProperty ;
                                               rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
-###  http://iot.linkeddata.es/def/core#HumiditySensor
-<http://iot.linkeddata.es/def/core#HumiditySensor> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observes> ;
-                                                                     owl:someValuesFrom <http://iot.linkeddata.es/def/core#AmbientHumidityProperty>
-                                                                   ] ;
-                                                   rdfs:label "Humidity sensor"@en .
-
-
-###  http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor
-<http://iot.linkeddata.es/def/core#IndoorClimateQualitySensor> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                               rdfs:label "Indoor climate quality sensor"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Irradiance
-<http://iot.linkeddata.es/def/core#Irradiance> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://iot.linkeddata.es/def/core#LightProperty> ;
-                                               rdfs:label "Irradiance"@en .
-
-
-###  http://iot.linkeddata.es/def/core#LightProperty
-<http://iot.linkeddata.es/def/core#LightProperty> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                  rdfs:label "LightProperty"@en .
-
-
-###  http://iot.linkeddata.es/def/core#LightSwitch
-<http://iot.linkeddata.es/def/core#LightSwitch> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://iot.linkeddata.es/def/core#Actuator> ;
-                                                rdfs:label "Light switch"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Lightbulb
-<http://iot.linkeddata.es/def/core#Lightbulb> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
-                                              rdfs:label "Lightbulb"@en .
-
-
-###  http://iot.linkeddata.es/def/core#LuminanceMeter
-<http://iot.linkeddata.es/def/core#LuminanceMeter> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                   rdfs:label "Luminance meter"@en .
-
-
-###  http://iot.linkeddata.es/def/core#LuminusFlux
-<http://iot.linkeddata.es/def/core#LuminusFlux> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://iot.linkeddata.es/def/core#LightProperty> ;
-                                                rdfs:label "Luminus flux"@en .
-
-
-###  http://iot.linkeddata.es/def/core#LuminusIntensity
-<http://iot.linkeddata.es/def/core#LuminusIntensity> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://iot.linkeddata.es/def/core#LightProperty> ;
-                                                     rdfs:label "LuminusIntensity"@en .
-
-
-###  http://iot.linkeddata.es/def/core#MotionProperty
-<http://iot.linkeddata.es/def/core#MotionProperty> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                   rdfs:label "Motion property"@en .
-
-
-###  http://iot.linkeddata.es/def/core#MotionSensor
-<http://iot.linkeddata.es/def/core#MotionSensor> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observes> ;
-                                                                   owl:someValuesFrom <http://iot.linkeddata.es/def/core#MotionProperty>
-                                                                 ] ;
-                                                 rdfs:label "Motion sensor"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#Neighbourhood
 <http://iot.linkeddata.es/def/core#Neighbourhood> rdf:type owl:Class ;
                                                   rdfs:comment "A set of IoT infrastructures and value-added services integrated through a network of VICINITY Nodes, where the infrastructures can share the access to their IoT objects without losing the control over them."@en ;
                                                   rdfs:label "Neighbourhood"@en .
-
-
-###  http://iot.linkeddata.es/def/core#NoiseSensor
-<http://iot.linkeddata.es/def/core#NoiseSensor> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                rdfs:label "Noise sensor"@en .
-
-
-###  http://iot.linkeddata.es/def/core#OccupancySensor
-<http://iot.linkeddata.es/def/core#OccupancySensor> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                    rdfs:label "Occupancy sensor"@en .
-
-
-###  http://iot.linkeddata.es/def/core#OperationalStatus
-<http://iot.linkeddata.es/def/core#OperationalStatus> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                      rdfs:label "Operational status"@en .
-
-
-###  http://iot.linkeddata.es/def/core#PanicButton
-<http://iot.linkeddata.es/def/core#PanicButton> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
-                                                rdfs:label "Panic button"@en .
-
-
-###  http://iot.linkeddata.es/def/core#PeopleCounter
-<http://iot.linkeddata.es/def/core#PeopleCounter> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observes> ;
-                                                                    owl:someValuesFrom <http://iot.linkeddata.es/def/core#Presence>
-                                                                  ] ;
-                                                  rdfs:comment "A people counter is a device that is used to measure the number of people traversing a certain passage or entrance. (Definition taken from https://en.wikipedia.org/wiki/People_counter)"@en ;
-                                                  rdfs:label "People counter"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#PhysicalThing
@@ -802,42 +600,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                                "Any entity that has a proper space region."@en ;
                                                   rdfs:label "Physical thing"@en ;
                                                   rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
-
-
-###  http://iot.linkeddata.es/def/core#PowerConsumption
-<http://iot.linkeddata.es/def/core#PowerConsumption> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/OperatingProperty> ;
-                                                     rdfs:label "Power consumption"@en .
-
-
-###  http://iot.linkeddata.es/def/core#PowerMeter
-<http://iot.linkeddata.es/def/core#PowerMeter> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                               rdfs:label "PowerMeter"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Presence
-<http://iot.linkeddata.es/def/core#Presence> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                             rdfs:label "Presence"@en .
-
-
-###  http://iot.linkeddata.es/def/core#PressureMat
-<http://iot.linkeddata.es/def/core#PressureMat> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                rdfs:label "Pressure mat"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Radiance
-<http://iot.linkeddata.es/def/core#Radiance> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://iot.linkeddata.es/def/core#LightProperty> ;
-                                             rdfs:label "Radiance"@en .
-
-
-###  http://iot.linkeddata.es/def/core#RadiantIntensity
-<http://iot.linkeddata.es/def/core#RadiantIntensity> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://iot.linkeddata.es/def/core#LightProperty> ;
-                                                     rdfs:label "Radiant intensity"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#RelativeEndpoint
@@ -883,47 +645,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                             rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
-###  http://iot.linkeddata.es/def/core#SmartOven
-<http://iot.linkeddata.es/def/core#SmartOven> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
-                                              rdfs:label "Smart oven"@en .
-
-
-###  http://iot.linkeddata.es/def/core#SmartRefrigerator
-<http://iot.linkeddata.es/def/core#SmartRefrigerator> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <http://iot.linkeddata.es/def/core#Device> ;
-                                                      rdfs:label "Smart refrigerator"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Sound
-<http://iot.linkeddata.es/def/core#Sound> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                          rdfs:label "Sound"@en .
-
-
-###  http://iot.linkeddata.es/def/core#TemperatureProperty
-<http://iot.linkeddata.es/def/core#TemperatureProperty> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                        rdfs:label "Temperature"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Thermometer
-<http://iot.linkeddata.es/def/core#Thermometer> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observes> ;
-                                                                  owl:someValuesFrom <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty>
-                                                                ] ;
-                                                rdfs:label "Thermometer"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Thermostat
-<http://iot.linkeddata.es/def/core#Thermostat> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://iot.linkeddata.es/def/core#Actuator> ,
-                                                               <http://iot.linkeddata.es/def/core#Sensor> ;
-                                               rdfs:label "Thermostat"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#ThingDescription
 <http://iot.linkeddata.es/def/core#ThingDescription> rdf:type owl:Class ;
                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -946,12 +667,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                                               ] ;
                                                               rdfs:comment "A digital representation that encapsulates an ecosystem taht is accessible via Web services"^^xsd:string ;
                                                               rdfs:label "Thing ecosystem description"@en .
-
-
-###  http://iot.linkeddata.es/def/core#TimeProperty
-<http://iot.linkeddata.es/def/core#TimeProperty> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
-                                                 rdfs:label "TimeProperty"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Value
@@ -986,31 +701,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
                                                  rdfs:label "Virtual thing"@en ;
                                                  rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
-
-
-###  http://iot.linkeddata.es/def/core#WaterEnergyMeter
-<http://iot.linkeddata.es/def/core#WaterEnergyMeter> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                     rdfs:label "WaterEnergyMeter"@en .
-
-
-###  http://iot.linkeddata.es/def/core#WaterFlowMeter
-<http://iot.linkeddata.es/def/core#WaterFlowMeter> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                   rdfs:label "WaterFlowMeter"@en .
-
-
-###  http://iot.linkeddata.es/def/core#WeightScale
-<http://iot.linkeddata.es/def/core#WeightScale> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                rdfs:label "Weight scale"@en .
-
-
-###  http://iot.linkeddata.es/def/core#WindowSensor
-<http://iot.linkeddata.es/def/core#WindowSensor> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://iot.linkeddata.es/def/core#Sensor> ;
-                                                 rdfs:label "WindowSensor"@en ;
-                                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"^^xsd:string .
 
 
 ###  http://iot.linkeddata.es/def/wot#Action
@@ -1412,91 +1102,78 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#AmbientTemperature
 <http://iot.linkeddata.es/def/core#AmbientTemperature> rdf:type owl:NamedIndividual ,
-                                                                <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> ,
                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                        rdfs:label "Ambient temperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageCO2Concentration
 <http://iot.linkeddata.es/def/core#AverageCO2Concentration> rdf:type owl:NamedIndividual ,
-                                                                     <http://iot.linkeddata.es/def/core#CarbonDioxide> ,
                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                             rdfs:label "Average CO2"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageCO2ConcentrationDeviation
 <http://iot.linkeddata.es/def/core#AverageCO2ConcentrationDeviation> rdf:type owl:NamedIndividual ,
-                                                                              <http://iot.linkeddata.es/def/core#CarbonDioxide> ,
                                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                                      rdfs:label "Average CO2 deviation"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageHumidity
 <http://iot.linkeddata.es/def/core#AverageHumidity> rdf:type owl:NamedIndividual ,
-                                                             <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> ,
                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                     rdfs:label "Average humidity"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageHumidityDeviation
 <http://iot.linkeddata.es/def/core#AverageHumidityDeviation> rdf:type owl:NamedIndividual ,
-                                                                      <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                              rdfs:label "Average humidity deviation"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageLightIntensity
 <http://iot.linkeddata.es/def/core#AverageLightIntensity> rdf:type owl:NamedIndividual ,
-                                                                   <http://iot.linkeddata.es/def/core#LuminusIntensity> ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                           rdfs:label "Average light intensity"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageMovemenetShare
 <http://iot.linkeddata.es/def/core#AverageMovemenetShare> rdf:type owl:NamedIndividual ,
-                                                                   <http://iot.linkeddata.es/def/core#MotionProperty> ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                           rdfs:label "Average movemenet share"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageMovementTime
 <http://iot.linkeddata.es/def/core#AverageMovementTime> rdf:type owl:NamedIndividual ,
-                                                                 <http://iot.linkeddata.es/def/core#MotionProperty> ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                         rdfs:label "Average movement time"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageSound
 <http://iot.linkeddata.es/def/core#AverageSound> rdf:type owl:NamedIndividual ,
-                                                          <http://iot.linkeddata.es/def/core#Sound> ,
                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                  rdfs:label "Average sound"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageSoundDeviation
 <http://iot.linkeddata.es/def/core#AverageSoundDeviation> rdf:type owl:NamedIndividual ,
-                                                                   <http://iot.linkeddata.es/def/core#Sound> ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                           rdfs:label "Average sound deviation"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageTemperature
 <http://iot.linkeddata.es/def/core#AverageTemperature> rdf:type owl:NamedIndividual ,
-                                                                <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> ,
                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                        rdfs:label "Average temperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#AverageTemperatureDeviation
 <http://iot.linkeddata.es/def/core#AverageTemperatureDeviation> rdf:type owl:NamedIndividual ,
-                                                                         <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                                 rdfs:label "Average temperature deviation"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#BakeRemainingTime
 <http://iot.linkeddata.es/def/core#BakeRemainingTime> rdf:type owl:NamedIndividual ,
-                                                               <http://iot.linkeddata.es/def/core#TimeProperty> ,
                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                       rdfs:label "Bake remaining time"@en .
 
@@ -1510,110 +1187,73 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#CO2Concentration
 <http://iot.linkeddata.es/def/core#CO2Concentration> rdf:type owl:NamedIndividual ,
-                                                              <http://iot.linkeddata.es/def/core#CarbonDioxide> ,
                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                      rdfs:label "CO2 concentration"@en .
 
 
-###  http://iot.linkeddata.es/def/core#CaloriesBurned
-<http://iot.linkeddata.es/def/core#CaloriesBurned> rdf:type owl:NamedIndividual ,
-                                                            <http://iot.linkeddata.es/def/core#HealthProperty> ;
-                                                   rdfs:label "Calories burned"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#ChargeStatus
 <http://iot.linkeddata.es/def/core#ChargeStatus> rdf:type owl:NamedIndividual ,
-                                                          <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                  rdfs:label "Charge status"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime
 <http://iot.linkeddata.es/def/core#CurrentBakingStepRemainingTime> rdf:type owl:NamedIndividual ,
-                                                                            <http://iot.linkeddata.es/def/core#TimeProperty> ,
                                                                             <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                                    rdfs:label "Current baking step remaining time"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#DeviceLightStatus
 <http://iot.linkeddata.es/def/core#DeviceLightStatus> rdf:type owl:NamedIndividual ,
-                                                               <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                       rdfs:label "Device light status"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#DeviceStatus
 <http://iot.linkeddata.es/def/core#DeviceStatus> rdf:type owl:NamedIndividual ,
-                                                          <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                  rdfs:label "Device status"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#DeviceTemperature
 <http://iot.linkeddata.es/def/core#DeviceTemperature> rdf:type owl:NamedIndividual ,
-                                                               <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> ,
-                                                               <http://iot.linkeddata.es/def/core#TemperatureProperty> ,
                                                                <http://www.w3.org/ns/sosa/ActuatableProperty> ,
                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                       rdfs:label "Device temperature"@en .
 
 
-###  http://iot.linkeddata.es/def/core#DiastolicBloodPressure
-<http://iot.linkeddata.es/def/core#DiastolicBloodPressure> rdf:type owl:NamedIndividual ,
-                                                                    <http://iot.linkeddata.es/def/core#HealthProperty> ;
-                                                           rdfs:label "Diastolic blood pressure"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#DimmingLevel
 <http://iot.linkeddata.es/def/core#DimmingLevel> rdf:type owl:NamedIndividual ,
-                                                          <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                  rdfs:label "Dimming level"@en .
 
 
-###  http://iot.linkeddata.es/def/core#DistanceWalked
-<http://iot.linkeddata.es/def/core#DistanceWalked> rdf:type owl:NamedIndividual ,
-                                                            <http://iot.linkeddata.es/def/core#MotionProperty> ;
-                                                   rdfs:label "Distance walked"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#ElapsedBakingTime
 <http://iot.linkeddata.es/def/core#ElapsedBakingTime> rdf:type owl:NamedIndividual ,
-                                                               <http://iot.linkeddata.es/def/core#TimeProperty> ,
                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                       rdfs:label "Elapsed baking time"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#EntryExit
 <http://iot.linkeddata.es/def/core#EntryExit> rdf:type owl:NamedIndividual ,
-                                                       <http://iot.linkeddata.es/def/core#Presence> ,
                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                               rdfs:label "Entry exit"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#FanSpeed
 <http://iot.linkeddata.es/def/core#FanSpeed> rdf:type owl:NamedIndividual ,
-                                                      <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                              rdfs:label "FanSpeed"@en .
 
 
-###  http://iot.linkeddata.es/def/core#HeartRate
-<http://iot.linkeddata.es/def/core#HeartRate> rdf:type owl:NamedIndividual ,
-                                                       <http://iot.linkeddata.es/def/core#HealthProperty> ;
-                                              rdfs:label "Heart rate"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#HeaterDefaultTemperature
 <http://iot.linkeddata.es/def/core#HeaterDefaultTemperature> rdf:type owl:NamedIndividual ,
-                                                                      <http://iot.linkeddata.es/def/core#TemperatureProperty> ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                              rdfs:label "Heater default temperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#HeaterMaxTemperature
 <http://iot.linkeddata.es/def/core#HeaterMaxTemperature> rdf:type owl:NamedIndividual ,
-                                                                  <http://iot.linkeddata.es/def/core#TemperatureProperty> ,
                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                          rdfs:label "Heater maximum temperature"@en .
 
@@ -1627,7 +1267,6 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#HeaterMinTemperature
 <http://iot.linkeddata.es/def/core#HeaterMinTemperature> rdf:type owl:NamedIndividual ,
-                                                                  <http://iot.linkeddata.es/def/core#TemperatureProperty> ,
                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                          rdfs:label "Heater minimum temperature"@en .
 
@@ -1641,35 +1280,30 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation
 <http://iot.linkeddata.es/def/core#HighestCO2ConcentrationDeviation> rdf:type owl:NamedIndividual ,
-                                                                              <http://iot.linkeddata.es/def/core#CarbonDioxide> ,
                                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                                      rdfs:label "Highest CO2 deviation"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#HighestHumidityDeviation
 <http://iot.linkeddata.es/def/core#HighestHumidityDeviation> rdf:type owl:NamedIndividual ,
-                                                                      <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                              rdfs:label "Highst humidity deviation"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#HighestSoundDeviation
 <http://iot.linkeddata.es/def/core#HighestSoundDeviation> rdf:type owl:NamedIndividual ,
-                                                                   <http://iot.linkeddata.es/def/core#Sound> ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                           rdfs:label "Highest sound deviation"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#HighestTemperatureDeviation
 <http://iot.linkeddata.es/def/core#HighestTemperatureDeviation> rdf:type owl:NamedIndividual ,
-                                                                         <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                                 rdfs:label "Highst temperature deviation"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#IndoorEnvironmentalQualityScore
 <http://iot.linkeddata.es/def/core#IndoorEnvironmentalQualityScore> rdf:type owl:NamedIndividual ,
-                                                                             <http://iot.linkeddata.es/def/core#AmbientProperty> ,
                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                                     rdfs:label "IEQ score"@en ,
                                                                                "Indoor environmental quality score"@en .
@@ -1677,7 +1311,6 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#LightColor
 <http://iot.linkeddata.es/def/core#LightColor> rdf:type owl:NamedIndividual ,
-                                                        <http://iot.linkeddata.es/def/core#LightProperty> ,
                                                         <http://www.w3.org/ns/sosa/ActuatableProperty> ,
                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                rdfs:label "Light color"@en .
@@ -1685,7 +1318,6 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#Luminance
 <http://iot.linkeddata.es/def/core#Luminance> rdf:type owl:NamedIndividual ,
-                                                       <http://iot.linkeddata.es/def/core#LuminusIntensity> ,
                                                        <http://www.w3.org/ns/sosa/ActuatableProperty> ,
                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                               rdfs:label "Luminance"@en .
@@ -1693,119 +1325,102 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#MaxCO2Concentration
 <http://iot.linkeddata.es/def/core#MaxCO2Concentration> rdf:type owl:NamedIndividual ,
-                                                                 <http://iot.linkeddata.es/def/core#CarbonDioxide> ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                         rdfs:label "Maximum CO2"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MaxHumidity
 <http://iot.linkeddata.es/def/core#MaxHumidity> rdf:type owl:NamedIndividual ,
-                                                         <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> ,
                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                 rdfs:label "Maximum humidity"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MaxLightIntensity
 <http://iot.linkeddata.es/def/core#MaxLightIntensity> rdf:type owl:NamedIndividual ,
-                                                               <http://iot.linkeddata.es/def/core#LuminusIntensity> ,
                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                       rdfs:label "Maximum light intensity"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MaxPowerConsumption
 <http://iot.linkeddata.es/def/core#MaxPowerConsumption> rdf:type owl:NamedIndividual ,
-                                                                 <http://iot.linkeddata.es/def/core#PowerConsumption> ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                         rdfs:label "Maximum power consumption"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MaxSound
 <http://iot.linkeddata.es/def/core#MaxSound> rdf:type owl:NamedIndividual ,
-                                                      <http://iot.linkeddata.es/def/core#Sound> ,
                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                              rdfs:label "Maximum sound"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MaxTemperature
 <http://iot.linkeddata.es/def/core#MaxTemperature> rdf:type owl:NamedIndividual ,
-                                                            <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> ,
                                                             <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                    rdfs:label "Maximum temperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MeanPowerConsumption
 <http://iot.linkeddata.es/def/core#MeanPowerConsumption> rdf:type owl:NamedIndividual ,
-                                                                  <http://iot.linkeddata.es/def/core#PowerConsumption> ,
                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                          rdfs:label "Mean power consumption"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MeatProbeTemperature
 <http://iot.linkeddata.es/def/core#MeatProbeTemperature> rdf:type owl:NamedIndividual ,
-                                                                  <http://iot.linkeddata.es/def/core#TemperatureProperty> ,
                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                          rdfs:label "Meat probe temperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MinCO2Concentration
 <http://iot.linkeddata.es/def/core#MinCO2Concentration> rdf:type owl:NamedIndividual ,
-                                                                 <http://iot.linkeddata.es/def/core#CarbonDioxide> ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                         rdfs:label "Minimum CO2"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MinHumidity
 <http://iot.linkeddata.es/def/core#MinHumidity> rdf:type owl:NamedIndividual ,
-                                                         <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> ,
                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                 rdfs:label "Minimun humidity"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MinLightIntensity
 <http://iot.linkeddata.es/def/core#MinLightIntensity> rdf:type owl:NamedIndividual ,
-                                                               <http://iot.linkeddata.es/def/core#LuminusIntensity> ,
                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                       rdfs:label "Minimu light intensity"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MinPowerConsumption
 <http://iot.linkeddata.es/def/core#MinPowerConsumption> rdf:type owl:NamedIndividual ,
-                                                                 <http://iot.linkeddata.es/def/core#PowerConsumption> ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                         rdfs:label "Minimum power consumption"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MinSound
 <http://iot.linkeddata.es/def/core#MinSound> rdf:type owl:NamedIndividual ,
-                                                      <http://iot.linkeddata.es/def/core#Sound> ,
                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                              rdfs:label "Minimum sound"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#MinTemperature
 <http://iot.linkeddata.es/def/core#MinTemperature> rdf:type owl:NamedIndividual ,
-                                                            <http://iot.linkeddata.es/def/core#AmbientTemperatureProperty> ,
                                                             <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                    rdfs:label "Minimum temperature"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Mode
 <http://iot.linkeddata.es/def/core#Mode> rdf:type owl:NamedIndividual ,
-                                                  <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                          rdfs:label "Mode"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Motion
 <http://iot.linkeddata.es/def/core#Motion> rdf:type owl:NamedIndividual ,
-                                                    <http://iot.linkeddata.es/def/core#MotionProperty> ,
                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                            rdfs:label "Motion"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#NoiseLevel
 <http://iot.linkeddata.es/def/core#NoiseLevel> rdf:type owl:NamedIndividual ,
-                                                        <http://iot.linkeddata.es/def/core#Sound> ,
                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                rdfs:label "Noise level"@en ,
                                                           "Sound level"@en .
@@ -1813,35 +1428,20 @@ The conditions specified here are those that affect the measurement properties, 
 
 ###  http://iot.linkeddata.es/def/core#OnOff
 <http://iot.linkeddata.es/def/core#OnOff> rdf:type owl:NamedIndividual ,
-                                                   <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                           rdfs:label "On Off"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#OpenClosed
 <http://iot.linkeddata.es/def/core#OpenClosed> rdf:type owl:NamedIndividual ,
-                                                        <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                rdfs:label "Open Closed"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#RelativeHumidity
 <http://iot.linkeddata.es/def/core#RelativeHumidity> rdf:type owl:NamedIndividual ,
-                                                              <http://iot.linkeddata.es/def/core#AmbientHumidityProperty> ,
                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                      rdfs:label "Relative humidity"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Sleep
-<http://iot.linkeddata.es/def/core#Sleep> rdf:type owl:NamedIndividual ,
-                                                   <http://iot.linkeddata.es/def/core#HealthProperty> ;
-                                          rdfs:label "Sleep"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Steps
-<http://iot.linkeddata.es/def/core#Steps> rdf:type owl:NamedIndividual ,
-                                                   <http://iot.linkeddata.es/def/core#MotionProperty> ;
-                                          rdfs:label "Steps"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#StoredEnergy
@@ -1851,23 +1451,10 @@ The conditions specified here are those that affect the measurement properties, 
                                                  rdfs:label "Stored energy"@en .
 
 
-###  http://iot.linkeddata.es/def/core#SystolicBloodPressure
-<http://iot.linkeddata.es/def/core#SystolicBloodPressure> rdf:type owl:NamedIndividual ,
-                                                                   <http://iot.linkeddata.es/def/core#HealthProperty> ;
-                                                          rdfs:label "Systolic blood pressure"@en .
-
-
 ###  http://iot.linkeddata.es/def/core#ValvePosition
 <http://iot.linkeddata.es/def/core#ValvePosition> rdf:type owl:NamedIndividual ,
-                                                           <http://iot.linkeddata.es/def/core#OperationalStatus> ,
                                                            <http://www.w3.org/ns/sosa/ObservableProperty> ;
                                                   rdfs:label "Valve position"@en .
-
-
-###  http://iot.linkeddata.es/def/core#Weight
-<http://iot.linkeddata.es/def/core#Weight> rdf:type owl:NamedIndividual ,
-                                                    <http://iot.linkeddata.es/def/core#HealthProperty> ;
-                                           rdfs:label "Weight"@en .
 
 
 [ owl:cardinality "1"^^xsd:nonNegativeInteger
