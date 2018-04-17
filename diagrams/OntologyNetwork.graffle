@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2018-02-21 11:15:17 +0000</string>
+	<string>2018-03-06 10:35:13 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -637,11 +637,11 @@ sosa:FeatureOfInterest}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -1565,11 +1565,11 @@ om:Unit_of_measure}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -2347,11 +2347,11 @@ ssn:Property}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -2447,11 +2447,11 @@ core:HumanUser}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -2791,11 +2791,11 @@ sosa:Sensor}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -2891,11 +2891,11 @@ core:Application}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -6706,11 +6706,11 @@ wot:CommunicationProtocol}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -7798,11 +7798,11 @@ foaf:Image}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -7898,11 +7898,11 @@ core:Neighbourhood}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -7998,11 +7998,11 @@ core:Service}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -8234,11 +8234,11 @@ core:Device}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -8776,11 +8776,11 @@ org:Organization}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -9012,11 +9012,11 @@ core:Agent}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -9112,11 +9112,11 @@ corePhysicalThing}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -9212,11 +9212,11 @@ core:Ecosystem}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.360349</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752907</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.970638</string>
+								<string>0.980392</string>
 							</dict>
 						</dict>
 						<key>shadow</key>
@@ -9422,11 +9422,11 @@ wot:Thing}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.0745098</string>
+								<string>0.467051</string>
 								<key>g</key>
-								<string>0.752941</string>
+								<string>0.745719</string>
 								<key>r</key>
-								<string>0.972549</string>
+								<string>0.980392</string>
 							</dict>
 							<key>CornerRadius</key>
 							<real>1</real>
@@ -37172,7 +37172,7 @@ wot:Thing}</string>
 		<key>FitInWindow</key>
 		<true/>
 		<key>Frame</key>
-		<string>{{52, -896}, {1325, 863}}</string>
+		<string>{{115, 14}, {1325, 863}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>ShowRuler</key>
