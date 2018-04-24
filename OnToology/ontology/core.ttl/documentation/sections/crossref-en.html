@@ -2040,14 +2040,16 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/core#hasValue</p>
       <div class="comment">
-         <span class="markdown">Indicates a value provided by an interaction pattern. In case one ore more values are indicated the order will be defined by the time stamp attributes.</span>
+         <span class="markdown">Indicates a value provided by an interaction pattern or a Thing. In case one ore more values are indicated the order will be defined by the time stamp attributes.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <span class="dotted"
-                     title="http://iot.linkeddata.es/def/wot#InteractionPattern">interaction pattern</span>
+                     title="http://iot.linkeddata.es/def/wot#InteractionPattern">interaction pattern</span> 
+               <span class="logic">or</span> 
+               <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
             </dd>
             <dt>has range</dt>
             <dd>

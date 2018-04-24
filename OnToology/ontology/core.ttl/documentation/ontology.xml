@@ -253,9 +253,16 @@
 
 
     <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#hasValue">
-        <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
+                    <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://iot.linkeddata.es/def/core#Value"/>
-        <rdfs:comment xml:lang="en">Indicates a value provided by an interaction pattern. In case one ore more values are indicated the order will be defined by the time stamp attributes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a value provided by an interaction pattern or a Thing. In case one ore more values are indicated the order will be defined by the time stamp attributes.</rdfs:comment>
         <rdfs:label xml:lang="en">has value</rdfs:label>
     </owl:ObjectProperty>
     
