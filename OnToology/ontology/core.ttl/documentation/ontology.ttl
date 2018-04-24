@@ -156,9 +156,13 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/core#hasValue
 <http://iot.linkeddata.es/def/core#hasValue> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://iot.linkeddata.es/def/wot#InteractionPattern> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://iot.linkeddata.es/def/wot#InteractionPattern>
+                                                                         <http://iot.linkeddata.es/def/wot#Thing>
+                                                                       )
+                                                         ] ;
                                              rdfs:range <http://iot.linkeddata.es/def/core#Value> ;
-                                             rdfs:comment "Indicates a value provided by an interaction pattern. In case one ore more values are indicated the order will be defined by the time stamp attributes."@en ;
+                                             rdfs:comment "Indicates a value provided by an interaction pattern or a Thing. In case one ore more values are indicated the order will be defined by the time stamp attributes."@en ;
                                              rdfs:label "has value"@en .
 
 
