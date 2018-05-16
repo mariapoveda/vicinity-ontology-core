@@ -517,15 +517,6 @@ _:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 <http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#label> "Digital user"@en .
 <http://iot.linkeddata.es/def/core#DigitalUser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 # 
-# http://iot.linkeddata.es/def/core#EBikeCharger
-<http://iot.linkeddata.es/def/core#EBikeCharger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#EBikeCharger> <http://www.w3.org/2000/01/rdf-schema#label> "eBikeCharger"@en .
-# 
-# http://iot.linkeddata.es/def/core#EVCharger
-<http://iot.linkeddata.es/def/core#EVCharger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#EVCharger> <http://www.w3.org/2000/01/rdf-schema#label> "Electric vehicle charging point"@en .
-<http://iot.linkeddata.es/def/core#EVCharger> <http://www.w3.org/2000/01/rdf-schema#label> "Electric vehicle chargeren" .
-# 
 # http://iot.linkeddata.es/def/core#Ecosystem
 <http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/core#Ecosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .

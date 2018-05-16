@@ -882,25 +882,6 @@
     
 
 
-    <!-- http://iot.linkeddata.es/def/core#EBikeCharger -->
-
-
-    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#EBikeCharger">
-        <rdfs:label xml:lang="en">eBikeCharger</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://iot.linkeddata.es/def/core#EVCharger -->
-
-
-    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#EVCharger">
-        <rdfs:label xml:lang="en">Electric vehicle charging point</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electric vehicle chargeren</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://iot.linkeddata.es/def/core#Ecosystem -->
 
 
