@@ -179,6 +179,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://iot.linkeddata.es/def/core#isComposedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/core#isComposedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <http://iot.linkeddata.es/def/core#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#ComposedThing> .
+<http://iot.linkeddata.es/def/core#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://iot.linkeddata.es/def/core#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things."@en .
 <http://iot.linkeddata.es/def/core#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is composed by"@en .
 # 
@@ -213,6 +214,15 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://iot.linkeddata.es/def/core#isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from a relative endpoint to the (non relative) endpoint to which it is relative."@en .
 <http://iot.linkeddata.es/def/core#isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#label> "is relative to"@en .
 # 
+# http://iot.linkeddata.es/def/core#isRepresentedBy
+<http://iot.linkeddata.es/def/core#isRepresentedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/core#isRepresentedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://iot.linkeddata.es/def/core#represents> .
+<http://iot.linkeddata.es/def/core#isRepresentedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://iot.linkeddata.es/def/core#isRepresentedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://iot.linkeddata.es/def/core#isRepresentedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://iot.linkeddata.es/def/wot#Thing> .
+<http://iot.linkeddata.es/def/core#isRepresentedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is represented by"@en .
+<http://iot.linkeddata.es/def/core#isRepresentedBy> <http://www.w3.org/2000/01/rdf-schema#label> "relation between anything, virtual or physical, and its wot:Thing representation(s)"@en .
+# 
 # http://iot.linkeddata.es/def/core#literalValue
 <http://iot.linkeddata.es/def/core#literalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/core#literalValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Value> .
@@ -231,6 +241,14 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A linkd between an agent and the entities, like devices or services, it provides or owns."@en .
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#label> "owns"@en .
 <http://iot.linkeddata.es/def/core#owns> <http://www.w3.org/2000/01/rdf-schema#label> "provides"@en .
+# 
+# http://iot.linkeddata.es/def/core#represents
+<http://iot.linkeddata.es/def/core#represents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/core#represents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://iot.linkeddata.es/def/core#represents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/wot#Thing> .
+<http://iot.linkeddata.es/def/core#represents> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://iot.linkeddata.es/def/core#represents> <http://www.w3.org/2000/01/rdf-schema#label> "relation between a wot:Thing and the virtual or phyisical thing it represents"@en .
+<http://iot.linkeddata.es/def/core#represents> <http://www.w3.org/2000/01/rdf-schema#label> "represents"@en .
 # 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#value
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -477,7 +495,6 @@ _:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#isComposedBy> .
 _:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#Thing> .
-<http://iot.linkeddata.es/def/core#ComposedThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#Thing> .
 <http://iot.linkeddata.es/def/core#ComposedThing> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things."@en .
 <http://iot.linkeddata.es/def/core#ComposedThing> <http://www.w3.org/2000/01/rdf-schema#label> "Composed thing"@en .
 # 
@@ -541,7 +558,6 @@ _:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.e
 # 
 # http://iot.linkeddata.es/def/core#PhysicalThing
 <http://iot.linkeddata.es/def/core#PhysicalThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#PhysicalThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#Thing> .
 <http://iot.linkeddata.es/def/core#PhysicalThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 <http://iot.linkeddata.es/def/core#PhysicalThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
@@ -638,7 +654,6 @@ _:genid27 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://iot.linkeddata.es/def/core#VirtualThing
 <http://iot.linkeddata.es/def/core#VirtualThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/core#VirtualThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#Thing> .
 <http://iot.linkeddata.es/def/core#VirtualThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/core#isComposedBy> .

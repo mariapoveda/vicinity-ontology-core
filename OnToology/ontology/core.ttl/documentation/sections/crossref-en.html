@@ -316,10 +316,6 @@ This section provides details for each class and property defined by Vicinity co
             <span class="logic">some</span> 
             <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
          </dd>
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
@@ -840,9 +836,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
-         </dd>
          <dd>
             <span class="dotted"
                   title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">spatial thing</span>
@@ -1395,9 +1388,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
-         </dd>
-         <dd>
             <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
@@ -1541,6 +1531,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#isRelativeTo" title="http://iot.linkeddata.es/def/core#isRelativeTo">is relative to</a>
       </li>
       <li>
+         <a href="#isRepresentedBy"
+            title="http://iot.linkeddata.es/def/core#isRepresentedBy">is represented by</a>
+      </li>
+      <li>
          <a href="#literalValue" title="http://iot.linkeddata.es/def/core#literalValue">literal value</a>
       </li>
       <li>
@@ -1553,6 +1547,9 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <li>
          <a href="#http://www.w3.org/ns/ssn/systems/qualityOfObservation"
             title="http://www.w3.org/ns/ssn/systems/qualityOfObservation">quality of observation</a>
+      </li>
+      <li>
+         <a href="#represents" title="http://iot.linkeddata.es/def/core#represents">relation between a wot:Thing and the virtual or phyisical thing it represents</a>
       </li>
       <li>
          <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#value" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">value</a>
@@ -2193,6 +2190,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                <a href="#ComposedThing" title="http://iot.linkeddata.es/def/core#ComposedThing">Composed thing</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -2364,6 +2366,34 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <span class="markdown">Link from a relative endpoint to the (non relative) endpoint to which it is relative.</span>
       </div>
    </div>
+   <div class="entity" id="isRepresentedBy">
+      <h3>is represented by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isRepresentedBy</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> inverse functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#represents" title="http://iot.linkeddata.es/def/core#represents">relation between a wot:Thing and the virtual or phyisical thing it represents</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="literalValue">
       <h3>literal value<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2450,6 +2480,35 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <dt>has super-properties</dt>
             <dd>
                <a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="represents">
+      <h3>relation between a wot:Thing and the virtual or phyisical thing it represents<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#represents</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://iot.linkeddata.es/def/wot#Thing">thing</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isRepresentedBy"
+                  title="http://iot.linkeddata.es/def/core#isRepresentedBy">is represented by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>

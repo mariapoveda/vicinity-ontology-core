@@ -317,6 +317,7 @@
     <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#isComposedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#ComposedThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things.</rdfs:comment>
         <rdfs:label xml:lang="en">is composed by</rdfs:label>
     </owl:ObjectProperty>
@@ -379,6 +380,20 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#isRepresentedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#isRepresentedBy">
+        <owl:inverseOf rdf:resource="http://iot.linkeddata.es/def/core#represents"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+        <rdfs:label xml:lang="en">is represented by</rdfs:label>
+        <rdfs:label xml:lang="en">relation between anything, virtual or physical, and its wot:Thing representation(s)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#literalValue -->
 
 
@@ -409,6 +424,19 @@
         <rdfs:isDefinedBy xml:lang="en">A linkd between an agent and the entities, like devices or services, it provides or owns.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">owns</rdfs:label>
         <rdfs:label xml:lang="en">provides</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#represents -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#represents">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">relation between a wot:Thing and the virtual or phyisical thing it represents</rdfs:label>
+        <rdfs:label xml:lang="en">represents</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -817,7 +845,6 @@
                 <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
         <rdfs:comment xml:lang="en">This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things.</rdfs:comment>
         <rdfs:label xml:lang="en">Composed thing</rdfs:label>
     </owl:Class>
@@ -932,7 +959,6 @@
 
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#PhysicalThing">
-        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1086,7 +1112,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#VirtualThing">
-        <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#isComposedBy"/>
