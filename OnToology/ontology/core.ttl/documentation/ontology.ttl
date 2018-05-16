@@ -563,17 +563,6 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                 rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
-###  http://iot.linkeddata.es/def/core#EBikeCharger
-<http://iot.linkeddata.es/def/core#EBikeCharger> rdf:type owl:Class ;
-                                                 rdfs:label "eBikeCharger"@en .
-
-
-###  http://iot.linkeddata.es/def/core#EVCharger
-<http://iot.linkeddata.es/def/core#EVCharger> rdf:type owl:Class ;
-                                              rdfs:label "Electric vehicle charging point"@en ,
-                                                         "Electric vehicle chargeren"^^xsd:string .
-
-
 ###  http://iot.linkeddata.es/def/core#Ecosystem
 <http://iot.linkeddata.es/def/core#Ecosystem> rdf:type owl:Class ;
                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
