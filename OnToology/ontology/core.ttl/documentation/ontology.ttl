@@ -244,8 +244,8 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                     rdf:type owl:InverseFunctionalProperty ;
                                                     rdfs:domain owl:Thing ;
                                                     rdfs:range <http://iot.linkeddata.es/def/wot#Thing> ;
-                                                    rdfs:label "is represented by"@en ,
-                                                               "relation between anything, virtual or physical, and its wot:Thing representation(s)"@en .
+                                                    rdfs:comment "relation between anything, virtual or physical, and its wot:Thing representation(s)"@en ;
+                                                    rdfs:label "is represented by"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#literalValue
@@ -275,8 +275,8 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                         owl:FunctionalProperty ;
                                                rdfs:domain <http://iot.linkeddata.es/def/wot#Thing> ;
                                                rdfs:range owl:Thing ;
-                                               rdfs:label "relation between a wot:Thing and the virtual or phyisical thing it represents"@en ,
-                                                          "represents"@en .
+                                               rdfs:comment "relation between a wot:Thing and the virtual or phyisical thing it represents"@en ;
+                                               rdfs:label "represents"@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
