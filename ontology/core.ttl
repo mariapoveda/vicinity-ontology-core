@@ -218,6 +218,7 @@ _:genid2 a rdf:List ;
 
 :isComposedBy a owl:ObjectProperty , owl:TransitiveProperty ;
 	rdfs:domain :ComposedThing ;
+	rdfs:range owl:Thing ;
 	rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things while physical things can contain physicial or virtual things."@en ;
 	rdfs:label "is composed by"@en .
 # 
@@ -256,6 +257,15 @@ _:genid2 a rdf:List ;
 	rdfs:comment "Link from a relative endpoint to the (non relative) endpoint to which it is relative."@en ;
 	rdfs:label "is relative to"@en .
 # 
+# http://iot.linkeddata.es/def/core#isRepresentedBy
+
+:isRepresentedBy a owl:ObjectProperty ;
+	owl:inverseOf :represents ;
+	a owl:InverseFunctionalProperty ;
+	rdfs:domain owl:Thing ;
+	rdfs:range <http://iot.linkeddata.es/def/wot#Thing> ;
+	rdfs:label "is represented by"@en , "relation between anything, virtual or physical, and its wot:Thing representation(s)"@en .
+# 
 # http://iot.linkeddata.es/def/core#literalValue
 
 :literalValue a owl:ObjectProperty ;
@@ -276,6 +286,13 @@ _:genid2 a rdf:List ;
 :owns a owl:ObjectProperty ;
 	rdfs:isDefinedBy "A linkd between an agent and the entities, like devices or services, it provides or owns."@en ;
 	rdfs:label "owns"@en , "provides"@en .
+# 
+# http://iot.linkeddata.es/def/core#represents
+
+:represents a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:domain <http://iot.linkeddata.es/def/wot#Thing> ;
+	rdfs:range owl:Thing ;
+	rdfs:label "relation between a wot:Thing and the virtual or phyisical thing it represents"@en , "represents"@en .
 # 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#value
 
@@ -559,8 +576,7 @@ _:genid10 a owl:Restriction ;
 	owl:onProperty :isComposedBy ;
 	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Thing> .
 
-:ComposedThing rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> ;
-	rdfs:comment "This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things."@en ;
+:ComposedThing rdfs:comment "This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things."@en ;
 	rdfs:label "Composed thing"@en .
 # 
 # http://iot.linkeddata.es/def/core#Device
@@ -634,7 +650,7 @@ _:genid13 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#PhysicalThing
 
 :PhysicalThing a owl:Class ;
-	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , geo:SpatialThing , _:genid14 .
+	rdfs:subClassOf geo:SpatialThing , _:genid14 .
 
 _:genid14 a owl:Restriction ;
 	owl:onProperty geo:location ;
@@ -761,7 +777,7 @@ _:genid27 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#VirtualThing
 
 :VirtualThing a owl:Class ;
-	rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Thing> , _:genid28 .
+	rdfs:subClassOf _:genid28 .
 
 _:genid28 a owl:Restriction ;
 	owl:onProperty :isComposedBy ;
