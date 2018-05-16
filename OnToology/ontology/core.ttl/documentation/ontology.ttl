@@ -19,7 +19,7 @@
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core"^^xsd:string ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/core"^^xsd:string ;
                                       rdfs:comment "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
-                                      owl:versionInfo "0.2.0"^^xsd:string .
+                                      owl:versionInfo "0.2.1"^^xsd:string .
 
 #################################################################
 #    Annotation properties

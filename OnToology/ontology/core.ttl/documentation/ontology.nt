@@ -11,7 +11,7 @@
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core" .
 <http://iot.linkeddata.es/def/core#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/core" .
 <http://iot.linkeddata.es/def/core#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en .
-<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" .
+<http://iot.linkeddata.es/def/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.1" .
 # 
 # 
 # #################################################################
