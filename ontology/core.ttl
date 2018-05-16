@@ -23,7 +23,7 @@
 	dcterms:creator <http://purl.org/net/mpoveda> ;
 	rdfs:comment "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
-	owl:versionInfo "0.2.0" ;
+	owl:versionInfo "0.2.1" ;
 	dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	vann:preferredNamespacePrefix "vcnt-core" ;
