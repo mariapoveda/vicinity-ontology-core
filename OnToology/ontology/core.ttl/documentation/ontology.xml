@@ -665,6 +665,18 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#dataModelVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/core#dataModelVersion">
+        <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Data model version, equivalent to &quot;dmv&quot; field in &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Data model version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#description -->
 
 
@@ -698,6 +710,18 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of a device</rdfs:comment>
         <rdfs:label xml:lang="en">device name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#protocolIndependentId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/core#protocolIndependentId">
+        <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Protocol independent ID, equivalent to &quot;piid&quot; field in &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Protocol independent ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -759,6 +783,31 @@
         <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">service version</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#softwareVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/core#softwareVersion">
+        <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Software version, equivalent to &quot;sv&quot; field in &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Software version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#specVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/core#specVersion">
+        <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Specification version, equivalent to &quot;icv&quot; field in &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">Spec Version</rdfs:label>
+        <rdfs:label xml:lang="en">Specification version</rdfs:label>
     </owl:DatatypeProperty>
     
 
