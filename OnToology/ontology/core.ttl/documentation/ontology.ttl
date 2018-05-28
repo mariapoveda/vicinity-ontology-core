@@ -422,6 +422,14 @@ rdf:value rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://iot.linkeddata.es/def/core#dataModelVersion
+<http://iot.linkeddata.es/def/core#dataModelVersion> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://iot.linkeddata.es/def/core#Device> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:comment "Data model version, equivalent to \"dmv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+                                                     rdfs:label "Data model version"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#description
 <http://iot.linkeddata.es/def/core#description> rdf:type owl:DatatypeProperty ;
                                                 rdfs:range xsd:string ;
@@ -445,6 +453,14 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                rdfs:range xsd:string ;
                                                rdfs:comment "Name of a device"^^xsd:string ;
                                                rdfs:label "device name"@en .
+
+
+###  http://iot.linkeddata.es/def/core#protocolIndependentId
+<http://iot.linkeddata.es/def/core#protocolIndependentId> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://iot.linkeddata.es/def/core#Device> ;
+                                                          rdfs:range xsd:string ;
+                                                          rdfs:comment "Protocol independent ID, equivalent to \"piid\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+                                                          rdfs:label "Protocol independent ID"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#relativeHref
@@ -486,6 +502,23 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <http://iot.linkeddata.es/def/core#Service> ;
                                                    rdfs:range xsd:string ;
                                                    rdfs:comment "service version"@en .
+
+
+###  http://iot.linkeddata.es/def/core#softwareVersion
+<http://iot.linkeddata.es/def/core#softwareVersion> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://iot.linkeddata.es/def/core#Device> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:comment "Software version, equivalent to \"sv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+                                                    rdfs:label "Software version"@en .
+
+
+###  http://iot.linkeddata.es/def/core#specVersion
+<http://iot.linkeddata.es/def/core#specVersion> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://iot.linkeddata.es/def/core#Device> ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "Specification version, equivalent to \"icv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+                                                rdfs:label "Spec Version"@en ,
+                                                           "Specification version"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#timeStamp

@@ -386,6 +386,13 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
+# http://iot.linkeddata.es/def/core#dataModelVersion
+<http://iot.linkeddata.es/def/core#dataModelVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://iot.linkeddata.es/def/core#dataModelVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
+<http://iot.linkeddata.es/def/core#dataModelVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/core#dataModelVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Data model version, equivalent to \"dmv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
+<http://iot.linkeddata.es/def/core#dataModelVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Data model version"@en .
+# 
 # http://iot.linkeddata.es/def/core#description
 <http://iot.linkeddata.es/def/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://iot.linkeddata.es/def/core#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
@@ -407,6 +414,13 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://iot.linkeddata.es/def/core#deviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#deviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a device" .
 <http://iot.linkeddata.es/def/core#deviceName> <http://www.w3.org/2000/01/rdf-schema#label> "device name"@en .
+# 
+# http://iot.linkeddata.es/def/core#protocolIndependentId
+<http://iot.linkeddata.es/def/core#protocolIndependentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://iot.linkeddata.es/def/core#protocolIndependentId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
+<http://iot.linkeddata.es/def/core#protocolIndependentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/core#protocolIndependentId> <http://www.w3.org/2000/01/rdf-schema#comment> "Protocol independent ID, equivalent to \"piid\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
+<http://iot.linkeddata.es/def/core#protocolIndependentId> <http://www.w3.org/2000/01/rdf-schema#label> "Protocol independent ID"@en .
 # 
 # http://iot.linkeddata.es/def/core#relativeHref
 <http://iot.linkeddata.es/def/core#relativeHref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -443,6 +457,21 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://iot.linkeddata.es/def/core#serviceVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Service> .
 <http://iot.linkeddata.es/def/core#serviceVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/core#serviceVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "service version"@en .
+# 
+# http://iot.linkeddata.es/def/core#softwareVersion
+<http://iot.linkeddata.es/def/core#softwareVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://iot.linkeddata.es/def/core#softwareVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
+<http://iot.linkeddata.es/def/core#softwareVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/core#softwareVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Software version, equivalent to \"sv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
+<http://iot.linkeddata.es/def/core#softwareVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Software version"@en .
+# 
+# http://iot.linkeddata.es/def/core#specVersion
+<http://iot.linkeddata.es/def/core#specVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://iot.linkeddata.es/def/core#specVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Device> .
+<http://iot.linkeddata.es/def/core#specVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/core#specVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification version, equivalent to \"icv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
+<http://iot.linkeddata.es/def/core#specVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Spec Version"@en .
+<http://iot.linkeddata.es/def/core#specVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Specification version"@en .
 # 
 # http://iot.linkeddata.es/def/core#timeStamp
 <http://iot.linkeddata.es/def/core#timeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
