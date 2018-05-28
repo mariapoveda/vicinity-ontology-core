@@ -453,6 +453,14 @@ s4bldg:isContainedIn a owl:ObjectProperty ;
 # #################################################################
 # 
 # 
+# http://iot.linkeddata.es/def/core#dataModelVersion
+
+:dataModelVersion a owl:DatatypeProperty ;
+	rdfs:domain :Device ;
+	rdfs:range xsd:string ;
+	rdfs:comment "Data model version, equivalent to \"dmv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+	rdfs:label "Data model version"@en .
+# 
 # http://iot.linkeddata.es/def/core#description
 
 :description a owl:DatatypeProperty ;
@@ -477,6 +485,14 @@ s4bldg:isContainedIn a owl:ObjectProperty ;
 	rdfs:range xsd:string ;
 	rdfs:comment "Name of a device" ;
 	rdfs:label "device name"@en .
+# 
+# http://iot.linkeddata.es/def/core#protocolIndependentId
+
+:protocolIndependentId a owl:DatatypeProperty ;
+	rdfs:domain :Device ;
+	rdfs:range xsd:string ;
+	rdfs:comment "Protocol independent ID, equivalent to \"piid\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+	rdfs:label "Protocol independent ID"@en .
 # 
 # http://iot.linkeddata.es/def/core#relativeHref
 
@@ -518,6 +534,22 @@ s4bldg:isContainedIn a owl:ObjectProperty ;
 	rdfs:domain :Service ;
 	rdfs:range xsd:string ;
 	rdfs:comment "service version"@en .
+# 
+# http://iot.linkeddata.es/def/core#softwareVersion
+
+:softwareVersion a owl:DatatypeProperty ;
+	rdfs:domain :Device ;
+	rdfs:range xsd:string ;
+	rdfs:comment "Software version, equivalent to \"sv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+	rdfs:label "Software version"@en .
+# 
+# http://iot.linkeddata.es/def/core#specVersion
+
+:specVersion a owl:DatatypeProperty ;
+	rdfs:domain :Device ;
+	rdfs:range xsd:string ;
+	rdfs:comment "Specification version, equivalent to \"icv\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+	rdfs:label "Spec Version"@en , "Specification version"@en .
 # 
 # http://iot.linkeddata.es/def/core#timeStamp
 
