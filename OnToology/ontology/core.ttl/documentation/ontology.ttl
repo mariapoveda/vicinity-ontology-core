@@ -488,6 +488,14 @@ rdf:value rdf:type owl:ObjectProperty ;
                                                        rdfs:label "service description"@en .
 
 
+###  http://iot.linkeddata.es/def/core#serviceId
+<http://iot.linkeddata.es/def/core#serviceId> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://iot.linkeddata.es/def/core#Service> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "Unique dentifier of the service"@en ;
+                                              rdfs:label "service identifier"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#serviceName
 <http://iot.linkeddata.es/def/core#serviceName> rdf:type owl:DatatypeProperty ;
                                                 rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> ;
