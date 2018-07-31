@@ -519,6 +519,14 @@ s4bldg:isContainedIn a owl:ObjectProperty ;
 	rdfs:comment "Natural language description of a service."@en ;
 	rdfs:label "service description"@en .
 # 
+# http://iot.linkeddata.es/def/core#serviceId
+
+:serviceId a owl:DatatypeProperty ;
+	rdfs:domain :Service ;
+	rdfs:range xsd:string ;
+	rdfs:comment "Unique dentifier of the service"@en ;
+	rdfs:label "service identifier"@en .
+# 
 # http://iot.linkeddata.es/def/core#serviceName
 
 :serviceName a owl:DatatypeProperty ;
