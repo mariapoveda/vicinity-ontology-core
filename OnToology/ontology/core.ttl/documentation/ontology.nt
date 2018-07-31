@@ -444,6 +444,13 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural language description of a service."@en .
 <http://iot.linkeddata.es/def/core#serviceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "service description"@en .
 # 
+# http://iot.linkeddata.es/def/core#serviceId
+<http://iot.linkeddata.es/def/core#serviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://iot.linkeddata.es/def/core#serviceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/core#Service> .
+<http://iot.linkeddata.es/def/core#serviceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/core#serviceId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique dentifier of the service"@en .
+<http://iot.linkeddata.es/def/core#serviceId> <http://www.w3.org/2000/01/rdf-schema#label> "service identifier"@en .
+# 
 # http://iot.linkeddata.es/def/core#serviceName
 <http://iot.linkeddata.es/def/core#serviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://iot.linkeddata.es/def/core#serviceName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#name> .
