@@ -828,7 +828,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 
 _:genid29 a owl:Restriction ;
 	owl:onProperty ssn:forProperty ;
-	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
+	owl:someValuesFrom <http://iot.linkeddata.es/def/core#Property> .
 
 <http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf _:genid30 .
 
@@ -842,7 +842,7 @@ _:genid30 a owl:Restriction ;
 
 _:genid31 a owl:Restriction ;
 	owl:onProperty sosa:observes ;
-	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
+	owl:someValuesFrom <http://iot.linkeddata.es/def/core#Property> .
 
 <http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf _:genid32 .
 
@@ -856,7 +856,7 @@ _:genid32 a owl:Restriction ;
 
 _:genid33 a owl:Restriction ;
 	owl:onProperty sosa:observes ;
-	owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property> .
+	owl:someValuesFrom <http://iot.linkeddata.es/def/core#Property> .
 
 <http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf _:genid34 .
 
