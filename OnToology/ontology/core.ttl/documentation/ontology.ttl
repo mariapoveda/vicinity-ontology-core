@@ -654,6 +654,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                                   rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
+###  http://iot.linkeddata.es/def/core#Property
+<http://iot.linkeddata.es/def/core#Property> rdf:type owl:Class .
+
+
 ###  http://iot.linkeddata.es/def/core#RelativeEndpoint
 <http://iot.linkeddata.es/def/core#RelativeEndpoint> rdf:type owl:Class ;
                                                      rdfs:subClassOf <http://iot.linkeddata.es/def/wot#Link> ,
@@ -757,7 +761,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/wot#Action
 <http://iot.linkeddata.es/def/wot#Action> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                             owl:onProperty <http://www.w3.org/ns/ssn/forProperty> ;
-                                                            owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                            owl:someValuesFrom <http://iot.linkeddata.es/def/core#Property>
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty <http://iot.linkeddata.es/def/core#actsOnFeatureProperty> ;
@@ -768,7 +772,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/wot#Event
 <http://iot.linkeddata.es/def/wot#Event> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://www.w3.org/ns/sosa/observes> ;
-                                                           owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                           owl:someValuesFrom <http://iot.linkeddata.es/def/core#Property>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> ;
@@ -779,7 +783,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/wot#Property
 <http://iot.linkeddata.es/def/wot#Property> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                               owl:onProperty <http://www.w3.org/ns/sosa/observes> ;
-                                                              owl:someValuesFrom <http://iot.linkeddata.es/def/wot#Property>
+                                                              owl:someValuesFrom <http://iot.linkeddata.es/def/core#Property>
                                                             ] ,
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty <http://iot.linkeddata.es/def/core#monitorsFeatureProperty> ;

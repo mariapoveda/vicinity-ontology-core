@@ -1019,6 +1019,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#Property -->
+
+
+    <owl:Class rdf:about="http://iot.linkeddata.es/def/core#Property"/>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#RelativeEndpoint -->
 
 
@@ -1177,7 +1184,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
-                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1197,7 +1204,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
-                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1217,7 +1224,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
-                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Property"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
