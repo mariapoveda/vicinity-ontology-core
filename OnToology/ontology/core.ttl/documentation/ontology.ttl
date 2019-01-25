@@ -19,7 +19,7 @@
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core" ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/core" ;
                                       rdfs:comment "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
-                                      owl:versionInfo "0.2.2" .
+                                      owl:versionInfo "0.2.3" .
 
 #################################################################
 #    Annotation properties
@@ -293,6 +293,24 @@ owl:cardinality rdf:type owl:AnnotationProperty .
             rdfs:label "represents"@en .
 
 
+###  http://iot.linkeddata.es/def/core#requestedService
+:requestedService rdf:type owl:ObjectProperty ;
+                  rdfs:label "Service requested in the contract"@en ,
+                             "requested service"@en .
+
+
+###  http://iot.linkeddata.es/def/core#serviceOwner
+:serviceOwner rdf:type owl:ObjectProperty ;
+              rdfs:label "Indicates the organization that owns the service involved in the contract"@en ,
+                         "service owner"@en .
+
+
+###  http://iot.linkeddata.es/def/core#servicePetitioner
+:servicePetitioner rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Agent who request access to a service by a contract"@en ;
+                   rdfs:label "service petitioner"@en .
+
+
 ###  http://www.opengis.net/ont/geosparql#hasGeometry
 <http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
 
@@ -465,6 +483,14 @@ rdf:value rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://iot.linkeddata.es/def/core#contractId
+:contractId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Contract ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Identifier of the contract"@en ,
+                         "contract identifier"@en .
+
+
 ###  http://iot.linkeddata.es/def/core#dataModelVersion
 :dataModelVersion rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Device ;
@@ -504,6 +530,16 @@ rdf:value rdf:type owl:ObjectProperty ;
                        rdfs:range xsd:string ;
                        rdfs:comment "Protocol independent ID, equivalent to \"piid\" field in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
                        rdfs:label "Protocol independent ID"@en .
+
+
+###  http://iot.linkeddata.es/def/core#readWrite
+:readWrite rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Contract ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "Indicates wether there are read and writes rigths over the service involved in the contrat."@en ,
+                        "Read and write rights"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#relativeHref
@@ -624,6 +660,24 @@ rdf:value rdf:type owl:ObjectProperty ;
                                    ] ;
                rdfs:comment "This class represent the things (Virtual or Physical) that are composed by other things. While Physicial things can be composed any type of thing, Virtual things can only be composed by Virtual things."@en ;
                rdfs:label "Composed thing"@en .
+
+
+###  http://iot.linkeddata.es/def/core#Contract
+:Contract rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :requestedService ;
+                            owl:someValuesFrom :Service
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :serviceOwner ;
+                            owl:someValuesFrom :Agent
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :servicePetitioner ;
+                            owl:someValuesFrom :Agent
+                          ] ;
+          rdfs:comment "Contract between organizations and requested services."@en ;
+          rdfs:label "Contract"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#Device
