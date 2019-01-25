@@ -1,4 +1,4 @@
-<h2  id="crossreference" class="list">Cross reference for Vicinity core model classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<html><h2 id="crossreference" class="list">Cross reference for Vicinity core model classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Vicinity core model.
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
@@ -8,6 +8,10 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#Actuator" title="http://iot.linkeddata.es/def/core#Actuator">Actuator</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/saref4city#AdministrativeArea"
+            title="https://w3id.org/def/saref4city#AdministrativeArea">Administrative area</a>
       </li>
       <li>
          <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
@@ -20,13 +24,22 @@ This section provides details for each class and property defined by Vicinity co
             title="http://www.w3.org/ns/ssn/systems/BatteryLifetime">Battery Lifetime</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/saref4bldg#Building" title="https://w3id.org/def/saref4bldg#Building">Building</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/saref4bldg#BuildingSpace" title="https://w3id.org/def/saref4bldg#BuildingSpace">Building space</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/saref4city#City" title="https://w3id.org/def/saref4city#City">City</a>
       </li>
       <li>
          <a href="#ComposedThing" title="http://iot.linkeddata.es/def/core#ComposedThing">Composed thing</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition">Condition</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/saref4city#Country" title="https://w3id.org/def/saref4city#Country">Country</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/ssn/systems/DetectionLimit" title="http://www.w3.org/ns/ssn/systems/DetectionLimit">detection limit</a>
@@ -42,6 +55,9 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#Ecosystem" title="http://iot.linkeddata.es/def/core#Ecosystem">Ecosystem</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
       </li>
       <li>
          <a href="#FeatureProperty"
@@ -118,6 +134,10 @@ This section provides details for each class and property defined by Vicinity co
       </li>
       <li>
          <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+            title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/ssn/systems/SurvivalProperty"
@@ -205,6 +225,30 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/def/saref4city#AdministrativeArea">
+      <h3>Administrative area<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#AdministrativeArea</p>
+      <div class="comment">
+         <span class="markdown">An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/def/saref4city#City" title="https://w3id.org/def/saref4city#City">City</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4city#Country" title="https://w3id.org/def/saref4city#Country">Country</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Agent">
       <h3>Agent<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -275,6 +319,31 @@ This section provides details for each class and property defined by Vicinity co
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/def/saref4bldg#Building">
+      <h3>Building<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4bldg#Building</p>
+      <div class="comment">
+         <span class="markdown">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="https://w3id.org/def/saref4bldg#hasSpace">has space</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/def/saref4bldg#BuildingSpace" title="https://w3id.org/def/saref4bldg#BuildingSpace">Building space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/def/saref4bldg#BuildingSpace">
       <h3>Building space<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -289,6 +358,56 @@ This section provides details for each class and property defined by Vicinity co
          <dt>Is defined by</dt>
          <dd>
             <a href="https://w3id.org/def/saref4bldg#">https://w3id.org/def/saref4bldg#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="https://w3id.org/def/saref4bldg#contains">contains</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="https://w3id.org/def/saref4bldg#PhysicalObject">physical object</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="https://w3id.org/def/saref4bldg#hasSpace">has space</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/def/saref4bldg#BuildingSpace" title="https://w3id.org/def/saref4bldg#BuildingSpace">Building space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="https://w3id.org/def/saref4bldg#isSpaceOf">is space of</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/def/saref4bldg#Building" title="https://w3id.org/def/saref4bldg#Building">Building</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">or</span> 
+            <a href="#https://w3id.org/def/saref4bldg#BuildingSpace" title="https://w3id.org/def/saref4bldg#BuildingSpace">Building space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/saref4city#City">
+      <h3>City<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#City</p>
+      <div class="comment">
+         <span class="markdown">A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/def/saref4city#AdministrativeArea"
+               title="https://w3id.org/def/saref4city#AdministrativeArea">Administrative area</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -335,6 +454,25 @@ This section provides details for each class and property defined by Vicinity co
          <dt>has super-classes</dt>
          <dd>
             <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/saref4city#Country">
+      <h3>Country<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#Country</p>
+      <div class="comment">
+         <span class="markdown">A country is a region that is identified as a distinct national entity in political geography. (https://en.wikipedia.org/wiki/Country)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/def/saref4city#AdministrativeArea"
+               title="https://w3id.org/def/saref4city#AdministrativeArea">Administrative area</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -468,6 +606,55 @@ This section provides details for each class and property defined by Vicinity co
             <span class="logic">some</span> 
             <a href="#ThingEcosystemDescription"
                title="http://iot.linkeddata.es/def/core#ThingEcosystemDescription">Thing ecosystem description</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Feature">
+      <h3>Feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Feature</p>
+      <div class="comment">
+         <span class="markdown">This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+      </dl>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.opengis.net/ont/geosparql#Geometry">geometry</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/def/saref4city#AdministrativeArea"
+               title="https://w3id.org/def/saref4city#AdministrativeArea">Administrative area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#Building" title="https://w3id.org/def/saref4bldg#Building">Building</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#BuildingSpace" title="https://w3id.org/def/saref4bldg#BuildingSpace">Building space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <span class="dotted" title="http://www.opengis.net/ont/geosparql#Geometry">geometry</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -822,16 +1009,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">spatial thing</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</span>
+            <a href="#isLocatedAt" title="http://iot.linkeddata.es/def/core#isLocatedAt">The relation between a phisical thing, for example a device, and the geographical feature in which it is located.</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">spatial thing</span>
+            <span class="logic">some</span> 
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1090,7 +1271,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://iot.linkeddata.es/def/core#serviceDescription">service description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceId" title="http://iot.linkeddata.es/def/core#serviceId">service identifier</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">service name</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceVersion" title="http://iot.linkeddata.es/def/core#serviceVersion">service version</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceVersion"
+               title="http://iot.linkeddata.es/def/core#serviceVersion">service version</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
@@ -1114,6 +1296,62 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl>
          <dt>Term status</dt>
          <dd>unstable</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#SpatialObject">
+      <h3>SpatialObject<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#SpatialObject</p>
+      <div class="comment">
+         <span class="markdown">The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+      </dl>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">contains</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">point</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">contains</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin">within</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">contains</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin">within</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="http://www.w3.org/ns/ssn/systems/SurvivalProperty">
@@ -1413,6 +1651,9 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#avatar" title="http://iot.linkeddata.es/def/core#avatar">avatar</a>
       </li>
       <li>
+         <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">contains</a>
+      </li>
+      <li>
          <a href="#describesEcosystem"
             title="http://iot.linkeddata.es/def/core#describesEcosystem">describes ecosystem</a>
       </li>
@@ -1494,9 +1735,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#isComposedBy" title="http://iot.linkeddata.es/def/core#isComposedBy">is composed by</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/saref4bldg#isContainedIn" title="https://w3id.org/def/saref4bldg#isContainedIn">is contained in</a>
-      </li>
-      <li>
          <a href="#isDescribedBy" title="http://iot.linkeddata.es/def/core#isDescribedBy">is described by</a>
       </li>
       <li>
@@ -1538,7 +1776,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#represents" title="http://iot.linkeddata.es/def/core#represents">represents</a>
       </li>
       <li>
+         <a href="#isLocatedAt" title="http://iot.linkeddata.es/def/core#isLocatedAt">The relation between a phisical thing, for example a device, and the geographical feature in which it is located.</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#value" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">value</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin">within</a>
       </li>
    </ul>
    <div class="entity" id="exposes">
@@ -1621,6 +1865,43 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <dd>
                <span class="dotted" title="http://xmlns.com/foaf/0.1/depiction">depiction</span>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#sfContains">
+      <h3>contains<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfContains</p>
+      <div class="comment">
+         <span class="markdown">Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+      </dl>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+                  title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+                  title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -2184,21 +2465,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/def/saref4bldg#isContainedIn">
-      <h3>is contained in<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4bldg#isContainedIn</p>
-      <div class="comment">
-         <span class="markdown">A relation between an object and the physical space in which it is located.</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>http://iot.linkeddata.es/def/core</dd>
-      </dl>
-   </div>
    <div class="entity" id="isDescribedBy">
       <h3>is described by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2506,6 +2772,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
+   <div class="entity" id="isLocatedAt">
+      <h3>The relation between a phisical thing, for example a device, and the geographical feature in which it is located.<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#isLocatedAt</p>
+   </div>
    <div class="entity" id="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">
       <h3>value<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2538,6 +2812,43 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#sfWithin">
+      <h3>within<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfWithin</p>
+      <div class="comment">
+         <span class="markdown">Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+      </dl>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+                  title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+                  title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2581,7 +2892,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#serviceName" title="http://iot.linkeddata.es/def/core#serviceName">service name</a>
       </li>
       <li>
-         <a href="#serviceVersion" title="http://iot.linkeddata.es/def/core#serviceVersion">
+         <a href="#serviceVersion"
+            title="http://iot.linkeddata.es/def/core#serviceVersion">
             <span>service version</span>
          </a>
       </li>
@@ -2961,3 +3273,4 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
+</html>
