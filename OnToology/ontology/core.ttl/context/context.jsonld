@@ -73,6 +73,9 @@
     "Thing" : {
       "@id" : "http://iot.linkeddata.es/def/wot#Thing"
     },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
     "deviceName" : {
       "@id" : "http://iot.linkeddata.es/def/core#deviceName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -131,6 +134,10 @@
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
+    "serviceOwner" : {
+      "@id" : "http://iot.linkeddata.es/def/core#serviceOwner",
+      "@type" : "@id"
+    },
     "contains" : {
       "@id" : "https://w3id.org/def/saref4bldg#contains",
       "@type" : "@id"
@@ -142,6 +149,9 @@
     "monitorsFeatureProperty" : {
       "@id" : "http://iot.linkeddata.es/def/core#monitorsFeatureProperty",
       "@type" : "@id"
+    },
+    "Contract" : {
+      "@id" : "http://iot.linkeddata.es/def/core#Contract"
     },
     "Resolution" : {
       "@id" : "http://www.w3.org/ns/ssn/systems/Resolution"
@@ -382,6 +392,10 @@
     "ThingDescription" : {
       "@id" : "http://iot.linkeddata.es/def/core#ThingDescription"
     },
+    "contractId" : {
+      "@id" : "http://iot.linkeddata.es/def/core#contractId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "isPropertyOf" : {
       "@id" : "http://www.w3.org/ns/ssn/isPropertyOf",
       "@type" : "@id"
@@ -400,8 +414,16 @@
       "@id" : "http://iot.linkeddata.es/def/core#literalValue",
       "@type" : "@id"
     },
+    "servicePetitioner" : {
+      "@id" : "http://iot.linkeddata.es/def/core#servicePetitioner",
+      "@type" : "@id"
+    },
     "City" : {
       "@id" : "https://w3id.org/def/saref4city#City"
+    },
+    "readWrite" : {
+      "@id" : "http://iot.linkeddata.es/def/core#readWrite",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "InteractionPattern" : {
       "@id" : "http://iot.linkeddata.es/def/wot#InteractionPattern"
@@ -531,6 +553,10 @@
     },
     "isDescribedBy" : {
       "@id" : "http://iot.linkeddata.es/def/core#isDescribedBy",
+      "@type" : "@id"
+    },
+    "requestedService" : {
+      "@id" : "http://iot.linkeddata.es/def/core#requestedService",
       "@type" : "@id"
     },
     "softwareVersion" : {

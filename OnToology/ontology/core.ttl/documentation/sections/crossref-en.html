@@ -39,6 +39,9 @@ This section provides details for each class and property defined by Vicinity co
          <a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition">Condition</a>
       </li>
       <li>
+         <a href="#Contract" title="http://iot.linkeddata.es/def/core#Contract">Contract</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/saref4city#Country" title="https://w3id.org/def/saref4city#Country">Country</a>
       </li>
       <li>
@@ -455,6 +458,49 @@ This section provides details for each class and property defined by Vicinity co
          <dd>
             <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Contract">
+      <h3>Contract<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#Contract</p>
+      <div class="comment">
+         <span class="markdown">Contract between organizations and requested services.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#requestedService"
+               title="http://iot.linkeddata.es/def/core#requestedService">Service requested in the contract</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Service" title="http://iot.linkeddata.es/def/core#Service">Service</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#serviceOwner" title="http://iot.linkeddata.es/def/core#serviceOwner">Indicates the organization that owns the service involved in the contract</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#servicePetitioner"
+               title="http://iot.linkeddata.es/def/core#servicePetitioner">service petitioner</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#contractId" title="http://iot.linkeddata.es/def/core#contractId">contract id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#readWrite" title="http://iot.linkeddata.es/def/core#readWrite">read write</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -1723,6 +1769,9 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             title="http://iot.linkeddata.es/def/core#hasPartnershipWith">hasPartnershipWith</a>
       </li>
       <li>
+         <a href="#serviceOwner" title="http://iot.linkeddata.es/def/core#serviceOwner">Indicates the organization that owns the service involved in the contract</a>
+      </li>
+      <li>
          <a href="#interactsUsing" title="http://iot.linkeddata.es/def/core#interactsUsing">interacts using</a>
       </li>
       <li>
@@ -1774,6 +1823,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </li>
       <li>
          <a href="#represents" title="http://iot.linkeddata.es/def/core#represents">represents</a>
+      </li>
+      <li>
+         <a href="#servicePetitioner"
+            title="http://iot.linkeddata.es/def/core#servicePetitioner">service petitioner</a>
+      </li>
+      <li>
+         <a href="#requestedService"
+            title="http://iot.linkeddata.es/def/core#requestedService">Service requested in the contract</a>
       </li>
       <li>
          <a href="#isLocatedAt" title="http://iot.linkeddata.es/def/core#isLocatedAt">The relation between a phisical thing, for example a device, and the geographical feature in which it is located.</a>
@@ -2379,6 +2436,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
+   <div class="entity" id="serviceOwner">
+      <h3>Indicates the organization that owns the service involved in the contract<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#serviceOwner</p>
+   </div>
    <div class="entity" id="interactsUsing">
       <h3>interacts using<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2772,6 +2837,25 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
+   <div class="entity" id="servicePetitioner">
+      <h3>service petitioner<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#servicePetitioner</p>
+      <div class="comment">
+         <span class="markdown">Agent who request access to a service by a contract</span>
+      </div>
+   </div>
+   <div class="entity" id="requestedService">
+      <h3>Service requested in the contract<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#requestedService</p>
+   </div>
    <div class="entity" id="isLocatedAt">
       <h3>The relation between a phisical thing, for example a device, and the geographical feature in which it is located.<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2858,6 +2942,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#contractId" title="http://iot.linkeddata.es/def/core#contractId">
+            <span>contract id</span>
+         </a>
+      </li>
+      <li>
          <a href="#dataModelVersion"
             title="http://iot.linkeddata.es/def/core#dataModelVersion">Data model version</a>
       </li>
@@ -2874,6 +2963,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <li>
          <a href="#protocolIndependentId"
             title="http://iot.linkeddata.es/def/core#protocolIndependentId">Protocol independent ID</a>
+      </li>
+      <li>
+         <a href="#readWrite" title="http://iot.linkeddata.es/def/core#readWrite">
+            <span>read write</span>
+         </a>
       </li>
       <li>
          <a href="#relativeHref" title="http://iot.linkeddata.es/def/core#relativeHref">relative href</a>
@@ -2908,6 +3002,30 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#timeStamp" title="http://iot.linkeddata.es/def/core#timeStamp">time stamp</a>
       </li>
    </ul>
+   <div class="entity" id="contractId">
+      <h3>contract id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#contractId</p>
+      <div class="comment">
+         <span class="markdown">Identifier of the contract</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Contract" title="http://iot.linkeddata.es/def/core#Contract">Contract</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="dataModelVersion">
       <h3>Data model version<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -3036,6 +3154,36 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="readWrite">
+      <h3>read write<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#readWrite</p>
+      <div class="comment">
+         <span class="markdown">Indicates wether there are read and writes rigths over the service involved in the contrat.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Contract" title="http://iot.linkeddata.es/def/core#Contract">Contract</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
             </dd>
          </dl>
       </div>
