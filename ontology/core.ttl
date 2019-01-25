@@ -22,7 +22,7 @@
 	owl:imports <http://www.w3.org/ns/sosa/> , <http://iot.linkeddata.es/def/wot#> , <http://www.w3.org/ns/org#> ;
 	dcterms:creator <http://purl.org/net/mpoveda> ;
 	rdfs:comment "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
-	owl:versionInfo "0.2.1" ;
+	owl:versionInfo "0.2.2" ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
 	dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
@@ -39,6 +39,10 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/elements/1.1/creator
+
+dc:creator a owl:AnnotationProperty .
+# 
 # http://purl.org/dc/elements/1.1/source
 
 dc:source a owl:AnnotationProperty .
@@ -54,6 +58,10 @@ owl:cardinality a owl:AnnotationProperty .
 # http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
 
 vs:term_status a owl:AnnotationProperty .
+# 
+# http://www.w3.org/ns/prov#hadPrimarySource
+
+<http://www.w3.org/ns/prov#hadPrimarySource> a owl:AnnotationProperty .
 # 
 # 
 # 
@@ -241,6 +249,11 @@ _:genid2 a rdf:List ;
 	rdfs:isDefinedBy "A link between an agent and all the neighbouthoods it is involved in."@en ;
 	rdfs:label "is involved in"@en .
 # 
+# http://iot.linkeddata.es/def/core#isLocatedAt
+
+:isLocatedAt a owl:ObjectProperty ;
+	rdfs:label "The relation between a phisical thing, for example a device, and the geographical feature in which it is located."@en , "is located at"@en .
+# 
 # http://iot.linkeddata.es/def/core#isNeighbourhoodOf
 
 :isNeighbourhoodOf a owl:ObjectProperty ;
@@ -295,6 +308,30 @@ _:genid2 a rdf:List ;
 	rdfs:range owl:Thing ;
 	rdfs:comment "relation between a wot:Thing and the virtual or phyisical thing it represents"@en ;
 	rdfs:label "represents"@en .
+# 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+
+<http://www.opengis.net/ont/geosparql#hasGeometry> a owl:ObjectProperty .
+# 
+# http://www.opengis.net/ont/geosparql#sfContains
+
+<http://www.opengis.net/ont/geosparql#sfContains> a owl:ObjectProperty ;
+	rdfs:domain <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+	rdfs:range <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+	rdfs:comment "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "contains"@en .
+# 
+# http://www.opengis.net/ont/geosparql#sfWithin
+
+<http://www.opengis.net/ont/geosparql#sfWithin> a owl:ObjectProperty ;
+	rdfs:domain <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+	rdfs:range <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+	rdfs:comment "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "within"@en .
 # 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#value
 
@@ -437,12 +474,17 @@ ssn-system:qualityOfObservation a owl:ObjectProperty ;
 
 foaf:depiction a owl:ObjectProperty .
 # 
-# https://w3id.org/def/saref4bldg#isContainedIn
+# https://w3id.org/def/saref4bldg#contains
 
-s4bldg:isContainedIn a owl:ObjectProperty ;
-	rdfs:comment "A relation between an object and the physical space in which it is located."@en ;
-	rdfs:isDefinedBy "https://w3id.org/def/saref4bldg#"@en ;
-	rdfs:label "is contained in"@en .
+s4bldg:contains a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4bldg#hasSpace
+
+s4bldg:hasSpace a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4bldg#isSpaceOf
+
+s4bldg:isSpaceOf a owl:ObjectProperty .
 # 
 # 
 # 
@@ -682,11 +724,11 @@ _:genid13 a owl:Restriction ;
 # http://iot.linkeddata.es/def/core#PhysicalThing
 
 :PhysicalThing a owl:Class ;
-	rdfs:subClassOf geo:SpatialThing , _:genid14 .
+	rdfs:subClassOf _:genid14 .
 
 _:genid14 a owl:Restriction ;
-	owl:onProperty geo:location ;
-	owl:allValuesFrom geo:SpatialThing .
+	owl:onProperty :isLocatedAt ;
+	owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Feature> .
 
 :PhysicalThing rdfs:comment """A physical entity is a real-world thing. A physical entity is a specialization of entity. A physical entity may contain other physical entities. A physical entity is a discrete, identifiable part of the physical environment that is of interest to the user for the completion of her goal. Physical entities can be almost any physical object or environment; from humans or animals to cars; from store or logistics chain items to computers; from electronic appliances to closed or open environments.
 
@@ -864,13 +906,52 @@ _:genid34 a owl:Restriction ;
 	owl:onProperty :monitorsFeatureProperty ;
 	owl:allValuesFrom :FeatureProperty .
 # 
+# http://www.opengis.net/ont/geosparql#Feature
+
+<http://www.opengis.net/ont/geosparql#Feature> a owl:Class ;
+	rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> , _:genid35 .
+
+_:genid35 a owl:Restriction ;
+	owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+	owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry> .
+
+<http://www.opengis.net/ont/geosparql#Feature> owl:disjointWith <http://www.opengis.net/ont/geosparql#Geometry> ;
+	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+	rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "Feature"@en .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+
+<http://www.opengis.net/ont/geosparql#Geometry> a owl:Class .
+# 
+# http://www.opengis.net/ont/geosparql#SpatialObject
+
+<http://www.opengis.net/ont/geosparql#SpatialObject> a owl:Class ;
+	rdfs:subClassOf _:genid36 .
+
+_:genid36 a owl:Restriction ;
+	owl:onProperty <http://www.opengis.net/ont/geosparql#sfContains> ;
+	owl:allValuesFrom <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdfs:subClassOf _:genid37 .
+
+_:genid37 a owl:Restriction ;
+	owl:onProperty geo:location ;
+	owl:allValuesFrom geo:Point .
+
+<http://www.opengis.net/ont/geosparql#SpatialObject> dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+	rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "SpatialObject"@en .
+# 
 # http://www.w3.org/2000/01/rdf-schema#Resource
 
 rdfs:Resource a owl:Class .
 # 
-# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
 
-geo:SpatialThing a owl:Class .
+geo:Point a owl:Class .
 # 
 # http://www.w3.org/ns/sosa/ActuatableProperty
 
@@ -895,15 +976,15 @@ ssn:Deployment a owl:Class .
 # http://www.w3.org/ns/ssn/Property
 
 ssn:Property a owl:Class ;
-	rdfs:subClassOf _:genid35 .
+	rdfs:subClassOf _:genid38 .
 
-_:genid35 a owl:Restriction ;
+_:genid38 a owl:Restriction ;
 	owl:onProperty ssn:isPropertyOf ;
 	owl:someValuesFrom sosa:FeatureOfInterest .
 
-ssn:Property rdfs:subClassOf _:genid36 .
+ssn:Property rdfs:subClassOf _:genid39 .
 
-_:genid36 a owl:Restriction ;
+_:genid39 a owl:Restriction ;
 	owl:onProperty ssn:isPropertyOf ;
 	owl:allValuesFrom sosa:FeatureOfInterest .
 
@@ -918,38 +999,38 @@ ssn:Property dc:source """skos:exactMatch 'property' [O&M]
 # http://www.w3.org/ns/ssn/System
 
 ssn:System a owl:Class ;
-	rdfs:subClassOf _:genid37 .
-
-_:genid37 a owl:Restriction ;
-	owl:onProperty sosa:isHostedBy ;
-	owl:allValuesFrom sosa:Platform .
-
-ssn:System rdfs:subClassOf _:genid38 .
-
-_:genid38 a owl:Restriction ;
-	owl:onProperty ssn:hasDeployment ;
-	owl:allValuesFrom ssn:Deployment .
-
-ssn:System rdfs:subClassOf _:genid39 .
-
-_:genid39 a owl:Restriction ;
-	owl:onProperty ssn:hasSubSystem ;
-	owl:allValuesFrom ssn:System .
-
-ssn:System rdfs:subClassOf _:genid40 .
+	rdfs:subClassOf _:genid40 .
 
 _:genid40 a owl:Restriction ;
-	owl:onProperty ssn:implements ;
-	owl:allValuesFrom sosa:Procedure .
+	owl:onProperty sosa:isHostedBy ;
+	owl:allValuesFrom sosa:Platform .
 
 ssn:System rdfs:subClassOf _:genid41 .
 
 _:genid41 a owl:Restriction ;
-	owl:onProperty _:genid42 .
+	owl:onProperty ssn:hasDeployment ;
+	owl:allValuesFrom ssn:Deployment .
 
-_:genid42 owl:inverseOf ssn:hasSubSystem .
+ssn:System rdfs:subClassOf _:genid42 .
 
-_:genid41 owl:allValuesFrom ssn:System .
+_:genid42 a owl:Restriction ;
+	owl:onProperty ssn:hasSubSystem ;
+	owl:allValuesFrom ssn:System .
+
+ssn:System rdfs:subClassOf _:genid43 .
+
+_:genid43 a owl:Restriction ;
+	owl:onProperty ssn:implements ;
+	owl:allValuesFrom sosa:Procedure .
+
+ssn:System rdfs:subClassOf _:genid44 .
+
+_:genid44 a owl:Restriction ;
+	owl:onProperty _:genid45 .
+
+_:genid45 owl:inverseOf ssn:hasSubSystem .
+
+_:genid44 owl:allValuesFrom ssn:System .
 
 ssn:System rdfs:comment "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
@@ -1066,15 +1147,15 @@ ssn-system:OperatingProperty a owl:Class ;
 # http://www.w3.org/ns/ssn/systems/OperatingRange
 
 ssn-system:OperatingRange a owl:Class ;
-	rdfs:subClassOf ssn:Property , _:genid43 .
+	rdfs:subClassOf ssn:Property , _:genid46 .
 
-_:genid43 a owl:Restriction ;
+_:genid46 a owl:Restriction ;
 	owl:onProperty ssn-system:hasOperatingProperty ;
 	owl:allValuesFrom ssn-system:OperatingProperty .
 
-ssn-system:OperatingRange rdfs:subClassOf _:genid44 .
+ssn-system:OperatingRange rdfs:subClassOf _:genid47 .
 
-_:genid44 a owl:Restriction ;
+_:genid47 a owl:Restriction ;
 	owl:onProperty ssn-system:inCondition ;
 	owl:allValuesFrom ssn-system:Condition .
 
@@ -1154,15 +1235,15 @@ ssn-system:SurvivalProperty a owl:Class ;
 # http://www.w3.org/ns/ssn/systems/SurvivalRange
 
 ssn-system:SurvivalRange a owl:Class ;
-	rdfs:subClassOf ssn:Property , _:genid45 .
+	rdfs:subClassOf ssn:Property , _:genid48 .
 
-_:genid45 a owl:Restriction ;
+_:genid48 a owl:Restriction ;
 	owl:onProperty ssn-system:hasSurvivalProperty ;
 	owl:allValuesFrom ssn-system:SurvivalProperty .
 
-ssn-system:SurvivalRange rdfs:subClassOf _:genid46 .
+ssn-system:SurvivalRange rdfs:subClassOf _:genid49 .
 
-_:genid46 a owl:Restriction ;
+_:genid49 a owl:Restriction ;
 	owl:onProperty ssn-system:inCondition ;
 	owl:allValuesFrom ssn-system:Condition .
 
@@ -1176,21 +1257,21 @@ ssn-system:SurvivalRange dc:source """skos:narrowerMatch 'limiting operating con
 # http://www.w3.org/ns/ssn/systems/SystemCapability
 
 ssn-system:SystemCapability a owl:Class ;
-	rdfs:subClassOf ssn:Property , _:genid47 .
+	rdfs:subClassOf ssn:Property , _:genid50 .
 
-_:genid47 a owl:Restriction ;
+_:genid50 a owl:Restriction ;
 	owl:onProperty ssn:forProperty ;
 	owl:allValuesFrom ssn:Property .
 
-ssn-system:SystemCapability rdfs:subClassOf _:genid48 .
+ssn-system:SystemCapability rdfs:subClassOf _:genid51 .
 
-_:genid48 a owl:Restriction ;
+_:genid51 a owl:Restriction ;
 	owl:onProperty ssn-system:hasSystemProperty ;
 	owl:allValuesFrom ssn-system:SystemProperty .
 
-ssn-system:SystemCapability rdfs:subClassOf _:genid49 .
+ssn-system:SystemCapability rdfs:subClassOf _:genid52 .
 
-_:genid49 a owl:Restriction ;
+_:genid52 a owl:Restriction ;
 	owl:onProperty ssn-system:inCondition ;
 	owl:allValuesFrom ssn-system:Condition .
 
@@ -1230,12 +1311,80 @@ ssn-system:SystemProperty a owl:Class ;
 
 foaf:Image a owl:Class .
 # 
+# https://w3id.org/def/saref4bldg#Building
+
+s4bldg:Building a owl:Class ;
+	rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> , _:genid53 .
+
+_:genid53 a owl:Restriction ;
+	owl:onProperty s4bldg:hasSpace ;
+	owl:allValuesFrom s4bldg:BuildingSpace .
+
+s4bldg:Building rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
+	rdfs:label "Building"@en ;
+	rdfs:seeAlso <https://w3id.org/ifc/IFC4_ADD1#IfcBuilding> ;
+	<http://www.w3.org/ns/prov#hadPrimarySource> <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifcbuilding.htm> .
+# 
 # https://w3id.org/def/saref4bldg#BuildingSpace
 
 s4bldg:BuildingSpace a owl:Class ;
-	rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
+	rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> , _:genid54 .
+
+_:genid54 a owl:Restriction ;
+	owl:onProperty s4bldg:contains ;
+	owl:allValuesFrom s4bldg:PhysicalObject .
+
+s4bldg:BuildingSpace rdfs:subClassOf _:genid55 .
+
+_:genid55 a owl:Restriction ;
+	owl:onProperty s4bldg:hasSpace ;
+	owl:allValuesFrom s4bldg:BuildingSpace .
+
+s4bldg:BuildingSpace rdfs:subClassOf _:genid56 .
+
+_:genid56 a owl:Restriction ;
+	owl:onProperty s4bldg:isSpaceOf ;
+	owl:allValuesFrom _:genid57 .
+
+_:genid57 a owl:Class ;
+	owl:unionOf _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first s4bldg:Building ;
+	rdf:rest _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first s4bldg:BuildingSpace ;
+	rdf:rest rdf:nil .
+
+s4bldg:BuildingSpace rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
 	rdfs:isDefinedBy <https://w3id.org/def/saref4bldg#> ;
 	rdfs:label "Building space"@en .
+# 
+# https://w3id.org/def/saref4bldg#PhysicalObject
+
+s4bldg:PhysicalObject a owl:Class .
+# 
+# https://w3id.org/def/saref4city#AdministrativeArea
+
+<https://w3id.org/def/saref4city#AdministrativeArea> a owl:Class ;
+	rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+	rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
+	rdfs:label "Administrative area"@en .
+# 
+# https://w3id.org/def/saref4city#City
+
+<https://w3id.org/def/saref4city#City> a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
+	rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
+	rdfs:label "City"@en .
+# 
+# https://w3id.org/def/saref4city#Country
+
+<https://w3id.org/def/saref4city#Country> a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
+	rdfs:comment "A country is a region that is identified as a distinct national entity in political geography. (https://en.wikipedia.org/wiki/Country)"@en ;
+	rdfs:label "Country"@en .
 # 
 # https://w3id.org/saref#Service
 
@@ -1246,5 +1395,5 @@ saref:Service a owl:Class ;
 	vs:term_status "unstable" .
 # 
 
-_:genid50 owl:cardinality "1"^^xsd:nonNegativeInteger .
+_:genid60 owl:cardinality "1"^^xsd:nonNegativeInteger .
 # Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
