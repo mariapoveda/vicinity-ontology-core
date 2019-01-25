@@ -9,6 +9,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
@@ -27,7 +28,7 @@
         <vann:preferredNamespacePrefix>vcnt-core</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://iot.linkeddata.es/def/core</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions.</rdfs:comment>
-        <owl:versionInfo>0.2.1</owl:versionInfo>
+        <owl:versionInfo>0.2.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -41,6 +42,13 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -69,6 +77,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#hadPrimarySource -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#hadPrimarySource"/>
     
 
 
@@ -356,6 +371,16 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/core#isLocatedAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#isLocatedAt">
+        <rdfs:label xml:lang="en">The relation between a phisical thing, for example a device, and the geographical feature in which it is located.</rdfs:label>
+        <rdfs:label xml:lang="en">is located at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://iot.linkeddata.es/def/core#isNeighbourhoodOf -->
 
 
@@ -437,6 +462,41 @@
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">relation between a wot:Thing and the virtual or phyisical thing it represents</rdfs:comment>
         <rdfs:label xml:lang="en">represents</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfContains -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
+        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfWithin -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
+        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label xml:lang="en">within</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -642,14 +702,24 @@
     
 
 
-    <!-- https://w3id.org/def/saref4bldg#isContainedIn -->
+    <!-- https://w3id.org/def/saref4bldg#contains -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4bldg#isContainedIn">
-        <rdfs:comment xml:lang="en">A relation between an object and the physical space in which it is located.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/def/saref4bldg#</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">is contained in</rdfs:label>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4bldg#contains"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4bldg#hasSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4bldg#hasSpace"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4bldg#isSpaceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4bldg#isSpaceOf"/>
     
 
 
@@ -1001,11 +1071,10 @@
 
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#PhysicalThing">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#isLocatedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A physical entity is a real-world thing. A physical entity is a specialization of entity. A physical entity may contain other physical entities. A physical entity is a discrete, identifiable part of the physical environment that is of interest to the user for the completion of her goal. Physical entities can be almost any physical object or environment; from humans or animals to cars; from store or logistics chain items to computers; from electronic appliances to closed or open environments.
@@ -1230,6 +1299,57 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfContains"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label xml:lang="en">SpatialObject</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
 
@@ -1237,10 +1357,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
     
 
 
-    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
     
 
 
@@ -1734,13 +1854,98 @@ The conditions specified here are those that affect the measurement properties, 
     
 
 
+    <!-- https://w3id.org/def/saref4bldg#Building -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4bldg#Building">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#hasSpace"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4bldg#BuildingSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).</rdfs:comment>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/ifc/IFC4_ADD1#IfcBuilding"/>
+        <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifcbuilding.htm"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/saref4bldg#BuildingSpace -->
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4bldg#BuildingSpace">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#contains"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4bldg#PhysicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#hasSpace"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4bldg#BuildingSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#isSpaceOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#Building"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#BuildingSpace"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An entity used to define the physical spaces of the building. A building space contains devices or building objects.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/saref4bldg#"/>
         <rdfs:label xml:lang="en">Building space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4bldg#PhysicalObject -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4bldg#PhysicalObject"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#AdministrativeArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4city#AdministrativeArea">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:comment xml:lang="en">An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)</rdfs:comment>
+        <rdfs:label xml:lang="en">Administrative area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#City -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4city#City">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4city#AdministrativeArea"/>
+        <rdfs:comment xml:lang="en">A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)</rdfs:comment>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#Country -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4city#Country">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4city#AdministrativeArea"/>
+        <rdfs:comment xml:lang="en">A country is a region that is identified as a distinct national entity in political geography. (https://en.wikipedia.org/wiki/Country)</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
     </owl:Class>
     
 

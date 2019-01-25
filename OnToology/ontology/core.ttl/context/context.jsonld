@@ -40,6 +40,10 @@
     "Platform" : {
       "@id" : "http://www.w3.org/ns/sosa/Platform"
     },
+    "hasSpace" : {
+      "@id" : "https://w3id.org/def/saref4bldg#hasSpace",
+      "@type" : "@id"
+    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
@@ -48,6 +52,9 @@
     },
     "Deployment" : {
       "@id" : "http://www.w3.org/ns/ssn/Deployment"
+    },
+    "Country" : {
+      "@id" : "https://w3id.org/def/saref4city#Country"
     },
     "describes" : {
       "@id" : "http://iot.linkeddata.es/def/core#describes",
@@ -83,6 +90,9 @@
     "Ecosystem" : {
       "@id" : "http://iot.linkeddata.es/def/core#Ecosystem"
     },
+    "Geometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+    },
     "depiction" : {
       "@id" : "http://xmlns.com/foaf/0.1/depiction",
       "@type" : "@id"
@@ -93,6 +103,10 @@
     },
     "inCondition" : {
       "@id" : "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type" : "@id"
+    },
+    "sfWithin" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type" : "@id"
     },
     "DataSchema" : {
@@ -111,8 +125,15 @@
     "ActuatableProperty" : {
       "@id" : "http://www.w3.org/ns/sosa/ActuatableProperty"
     },
+    "Feature" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contains" : {
+      "@id" : "https://w3id.org/def/saref4bldg#contains",
+      "@type" : "@id"
     },
     "serviceDescription" : {
       "@id" : "http://iot.linkeddata.es/def/core#serviceDescription",
@@ -181,11 +202,15 @@
       "@id" : "http://iot.linkeddata.es/def/core#describesEcosystem",
       "@type" : "@id"
     },
+    "isLocatedAt" : {
+      "@id" : "http://iot.linkeddata.es/def/core#isLocatedAt",
+      "@type" : "@id"
+    },
     "Agent" : {
       "@id" : "http://xmlns.com/foaf/0.1/Agent"
     },
     "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator"
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
     "href" : {
       "@id" : "http://iot.linkeddata.es/def/wot#href",
@@ -203,6 +228,9 @@
       "@id" : "http://iot.linkeddata.es/def/core#avatar",
       "@type" : "@id"
     },
+    "Building" : {
+      "@id" : "https://w3id.org/def/saref4bldg#Building"
+    },
     "specVersion" : {
       "@id" : "http://iot.linkeddata.es/def/core#specVersion",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -217,10 +245,6 @@
     },
     "isRepresentedBy" : {
       "@id" : "http://iot.linkeddata.es/def/core#isRepresentedBy",
-      "@type" : "@id"
-    },
-    "isContainedIn" : {
-      "@id" : "https://w3id.org/def/saref4bldg#isContainedIn",
       "@type" : "@id"
     },
     "location" : {
@@ -257,6 +281,9 @@
     "Value" : {
       "@id" : "http://iot.linkeddata.es/def/core#Value"
     },
+    "hadPrimarySource" : {
+      "@id" : "http://www.w3.org/ns/prov#hadPrimarySource"
+    },
     "hasSubSystem" : {
       "@id" : "http://www.w3.org/ns/ssn/hasSubSystem",
       "@type" : "@id"
@@ -290,6 +317,9 @@
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
     },
+    "Point" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+    },
     "definition" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#definition"
     },
@@ -316,8 +346,16 @@
     "Drift" : {
       "@id" : "http://www.w3.org/ns/ssn/systems/Drift"
     },
+    "hasGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type" : "@id"
+    },
     "Property" : {
       "@id" : "http://iot.linkeddata.es/def/wot#Property"
+    },
+    "sfContains" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#sfContains",
+      "@type" : "@id"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
@@ -330,6 +368,9 @@
     },
     "publisher" : {
       "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "SpatialObject" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
     },
     "hasSurvivalProperty" : {
       "@id" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
@@ -359,6 +400,9 @@
       "@id" : "http://iot.linkeddata.es/def/core#literalValue",
       "@type" : "@id"
     },
+    "City" : {
+      "@id" : "https://w3id.org/def/saref4city#City"
+    },
     "InteractionPattern" : {
       "@id" : "http://iot.linkeddata.es/def/wot#InteractionPattern"
     },
@@ -377,9 +421,6 @@
     },
     "Actuator" : {
       "@id" : "http://iot.linkeddata.es/def/core#Actuator"
-    },
-    "SpatialThing" : {
-      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
     },
     "BuildingSpace" : {
       "@id" : "https://w3id.org/def/saref4bldg#BuildingSpace"
@@ -464,6 +505,9 @@
       "@id" : "http://iot.linkeddata.es/def/core#serialNumber",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "AdministrativeArea" : {
+      "@id" : "https://w3id.org/def/saref4city#AdministrativeArea"
+    },
     "MeasurementRange" : {
       "@id" : "http://www.w3.org/ns/ssn/systems/MeasurementRange"
     },
@@ -477,6 +521,13 @@
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "isSpaceOf" : {
+      "@id" : "https://w3id.org/def/saref4bldg#isSpaceOf",
+      "@type" : "@id"
+    },
+    "PhysicalObject" : {
+      "@id" : "https://w3id.org/def/saref4bldg#PhysicalObject"
     },
     "isDescribedBy" : {
       "@id" : "http://iot.linkeddata.es/def/core#isDescribedBy",
