@@ -301,8 +301,8 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/core#requestedService
 :requestedService rdf:type owl:ObjectProperty ;
-                  rdfs:label "Service requested in the contract"@en ,
-                             "requested service"@en .
+                  rdfs:comment "Service requested in the contract"@en ;
+                  rdfs:label "requested service"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#serviceOwner
