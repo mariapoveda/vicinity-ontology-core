@@ -1,0 +1,625 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://w3id.org/def/vtc#desiredBehaviour
+<http://w3id.org/def/vtc#desiredBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://w3id.org/def/vtc#isRelatedToRequirement
+<http://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/def/vtc#TestCaseDesign
+<http://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# urn:default:baseUri:Test-case10
+<urn:default:baseUri:Test-case10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case10> <http://purl.org/dc/terms/description> "Which attributes can have a device?" .
+<urn:default:baseUri:Test-case10> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf avatar some Image" .
+<urn:default:baseUri:Test-case10> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf deviceName only string" .
+<urn:default:baseUri:Test-case10> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf serialNumber only string" .
+<urn:default:baseUri:Test-case10> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform23> .
+# 
+# urn:default:baseUri:Test-case11
+<urn:default:baseUri:Test-case11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case11> <http://purl.org/dc/terms/description> "What is a device profile?" .
+<urn:default:baseUri:Test-case11> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf avatar some Image" .
+<urn:default:baseUri:Test-case11> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf deviceDescription only string" .
+<urn:default:baseUri:Test-case11> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf deviceName only string" .
+<urn:default:baseUri:Test-case11> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf serialNumber only string" .
+<urn:default:baseUri:Test-case11> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform33> .
+# 
+# urn:default:baseUri:Test-case12
+<urn:default:baseUri:Test-case12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case12> <http://purl.org/dc/terms/description> "A device can have a status" .
+<urn:default:baseUri:Test-case12> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf observes some Property" .
+<urn:default:baseUri:Test-case12> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#35> .
+# 
+# urn:default:baseUri:Test-case13
+<urn:default:baseUri:Test-case13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case13> <http://purl.org/dc/terms/description> "A device can have a location" .
+<urn:default:baseUri:Test-case13> <http://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf SpatialThing" .
+<urn:default:baseUri:Test-case13> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#37> .
+# 
+# urn:default:baseUri:Test-case14
+<urn:default:baseUri:Test-case14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case14> <http://purl.org/dc/terms/description> "A device can have a location" .
+<urn:default:baseUri:Test-case14> <http://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf SpatialThing" .
+<urn:default:baseUri:Test-case14> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#41> .
+# 
+# urn:default:baseUri:Test-case15
+<urn:default:baseUri:Test-case15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case15> <http://purl.org/dc/terms/description> "Which are the social relationships a device can be involved in?" .
+<urn:default:baseUri:Test-case15> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassof hasOwner some Agent" .
+<urn:default:baseUri:Test-case15> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#42> .
+# 
+# urn:default:baseUri:Test-case16
+<urn:default:baseUri:Test-case16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case16> <http://purl.org/dc/terms/description> "Which roles are involved in a ownership relationship?" .
+<urn:default:baseUri:Test-case16> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case16> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case16> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#43> .
+# 
+# urn:default:baseUri:Test-case17
+<urn:default:baseUri:Test-case17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case17> <http://purl.org/dc/terms/description> "What is a user?" .
+<urn:default:baseUri:Test-case17> <http://w3id.org/def/vtc#desiredBehaviour> "HumanUser subClassOf Person" .
+<urn:default:baseUri:Test-case17> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#44> .
+# 
+# urn:default:baseUri:Test-case18
+<urn:default:baseUri:Test-case18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case18> <http://purl.org/dc/terms/description> "Who is a service provider?" .
+<urn:default:baseUri:Test-case18> <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf owns some Service" .
+<urn:default:baseUri:Test-case18> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#46> .
+# 
+# urn:default:baseUri:Test-case19
+<urn:default:baseUri:Test-case19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case19> <http://purl.org/dc/terms/description> "What are the parameters that has a service?" .
+<urn:default:baseUri:Test-case19> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf avatar some Image" .
+<urn:default:baseUri:Test-case19> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case19> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf serviceDescription only string" .
+<urn:default:baseUri:Test-case19> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf serviceName only string" .
+<urn:default:baseUri:Test-case19> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#52> .
+# 
+# urn:default:baseUri:Test-case2
+<urn:default:baseUri:Test-case2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case2> <http://purl.org/dc/terms/description> "What is an IoT device?" .
+<urn:default:baseUri:Test-case2> <http://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf PhysicalThing" .
+<urn:default:baseUri:Test-case2> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform2> .
+# 
+# urn:default:baseUri:Test-case20
+<urn:default:baseUri:Test-case20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case20> <http://purl.org/dc/terms/description> "What is a service logical name?" .
+<urn:default:baseUri:Test-case20> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf serviceName only string" .
+<urn:default:baseUri:Test-case20> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#57> .
+# 
+# urn:default:baseUri:Test-case21
+<urn:default:baseUri:Test-case21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case21> <http://purl.org/dc/terms/description> "What is an IoT device agent?" .
+<urn:default:baseUri:Test-case21> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case21> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#79> .
+# 
+# urn:default:baseUri:Test-case22
+<urn:default:baseUri:Test-case22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case22> <http://purl.org/dc/terms/description> "Which devices are there?" .
+<urn:default:baseUri:Test-case22> <http://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf PhysicalThing" .
+<urn:default:baseUri:Test-case22> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#80> .
+# 
+# urn:default:baseUri:Test-case23
+<urn:default:baseUri:Test-case23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case23> <http://purl.org/dc/terms/description> "What are the devices of a given agent or organization?" .
+<urn:default:baseUri:Test-case23> <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf hasMember some Agent" .
+<urn:default:baseUri:Test-case23> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#81> .
+# 
+# urn:default:baseUri:Test-case24
+<urn:default:baseUri:Test-case24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case24> <http://purl.org/dc/terms/description> "Which devices can I see?" .
+<urn:default:baseUri:Test-case24> <http://w3id.org/def/vtc#desiredBehaviour> "Device SubClassOf PhysicalThing" .
+<urn:default:baseUri:Test-case24> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#82> .
+# 
+# urn:default:baseUri:Test-case25
+<urn:default:baseUri:Test-case25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case25> <http://purl.org/dc/terms/description> "Which services can I see?" .
+<urn:default:baseUri:Test-case25> <http://w3id.org/def/vtc#desiredBehaviour> "Service SubClassOf VirtualThing" .
+<urn:default:baseUri:Test-case25> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#83> .
+# 
+# urn:default:baseUri:Test-case26
+<urn:default:baseUri:Test-case26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case26> <http://purl.org/dc/terms/description> "What are the devices of a specific partner?" .
+<urn:default:baseUri:Test-case26> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case26> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#85> .
+# 
+# urn:default:baseUri:Test-case29
+<urn:default:baseUri:Test-case29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case29> <http://purl.org/dc/terms/description> "Which is the profile of a given device?" .
+<urn:default:baseUri:Test-case29> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf avatar some Image" .
+<urn:default:baseUri:Test-case29> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf deviceDescription only string" .
+<urn:default:baseUri:Test-case29> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf deviceName some string" .
+<urn:default:baseUri:Test-case29> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf serialNumber only string" .
+<urn:default:baseUri:Test-case29> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#87> .
+# 
+# urn:default:baseUri:Test-case3
+<urn:default:baseUri:Test-case3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case3> <http://purl.org/dc/terms/description> "What attributes has a partnership?" .
+<urn:default:baseUri:Test-case3> <http://purl.org/dc/terms/description> "What is a partnership?" .
+<urn:default:baseUri:Test-case3> <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization" .
+<urn:default:baseUri:Test-case3> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform4> .
+<urn:default:baseUri:Test-case3> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform5> .
+# 
+# urn:default:baseUri:Test-case30
+<urn:default:baseUri:Test-case30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case30> <http://purl.org/dc/terms/description> "A device profile indicates the device name" .
+<urn:default:baseUri:Test-case30> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf deviceName only string" .
+<urn:default:baseUri:Test-case30> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#88> .
+# 
+# urn:default:baseUri:Test-case31
+<urn:default:baseUri:Test-case31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case31> <http://purl.org/dc/terms/description> "A device profile indicates the device avatar" .
+<urn:default:baseUri:Test-case31> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf avatar some Image" .
+<urn:default:baseUri:Test-case31> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#89> .
+# 
+# urn:default:baseUri:Test-case32
+<urn:default:baseUri:Test-case32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case32> <http://purl.org/dc/terms/description> "A device profile indicates the type of device, e.g: sensor or actuator" .
+<urn:default:baseUri:Test-case32> <http://w3id.org/def/vtc#desiredBehaviour> "Actuator subClassOf Device" .
+<urn:default:baseUri:Test-case32> <http://w3id.org/def/vtc#desiredBehaviour> "Sensor subClassOf Device" .
+<urn:default:baseUri:Test-case32> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#90> .
+# 
+# urn:default:baseUri:Test-case33
+<urn:default:baseUri:Test-case33> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case33> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case33> <http://purl.org/dc/terms/description> "A device profile indicates the device vendor" .
+<urn:default:baseUri:Test-case33> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case33> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#91> .
+# 
+# urn:default:baseUri:Test-case34
+<urn:default:baseUri:Test-case34> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case34> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case34> <http://purl.org/dc/terms/description> "A device profile indicates the device serial number" .
+<urn:default:baseUri:Test-case34> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf serialNumber some string" .
+<urn:default:baseUri:Test-case34> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#92> .
+# 
+# urn:default:baseUri:Test-case35
+<urn:default:baseUri:Test-case35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case35> <http://purl.org/dc/terms/description> "A device profile indicates the device owner" .
+<urn:default:baseUri:Test-case35> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case35> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#94> .
+# 
+# urn:default:baseUri:Test-case36
+<urn:default:baseUri:Test-case36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case36> <http://purl.org/dc/terms/description> "A service profile indicates the service name" .
+<urn:default:baseUri:Test-case36> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf serviceName only string" .
+<urn:default:baseUri:Test-case36> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#95> .
+# 
+# urn:default:baseUri:Test-case37
+<urn:default:baseUri:Test-case37> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case37> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case37> <http://purl.org/dc/terms/description> "A service profile indicates the service avatar" .
+<urn:default:baseUri:Test-case37> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf avatar some Image" .
+<urn:default:baseUri:Test-case37> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#96> .
+# 
+# urn:default:baseUri:Test-case38
+<urn:default:baseUri:Test-case38> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case38> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case38> <http://purl.org/dc/terms/description> "A service profile indicates the service  owner" .
+<urn:default:baseUri:Test-case38> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case38> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#97> .
+# 
+# urn:default:baseUri:Test-case39
+<urn:default:baseUri:Test-case39> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case39> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case39> <http://purl.org/dc/terms/description> "A service profile indicates the service provider" .
+<urn:default:baseUri:Test-case39> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf hasOwner some Agent" .
+<urn:default:baseUri:Test-case39> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#98> .
+# 
+# urn:default:baseUri:Test-case40
+<urn:default:baseUri:Test-case40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case40> <http://purl.org/dc/terms/description> "A service profile indicates the service description (in text)" .
+<urn:default:baseUri:Test-case40> <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf serviceDescription some string" .
+<urn:default:baseUri:Test-case40> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#99> .
+# 
+# urn:default:baseUri:Test-case41
+<urn:default:baseUri:Test-case41> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case41> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case41> <http://purl.org/dc/terms/description> "A partnership is established between organizations" .
+<urn:default:baseUri:Test-case41> <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf hasPartnershipWith some Organization" .
+<urn:default:baseUri:Test-case41> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#101> .
+# 
+# urn:default:baseUri:Test-case42
+<urn:default:baseUri:Test-case42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case42> <http://purl.org/dc/terms/description> "A partnership is established between only 2 organizations" .
+<urn:default:baseUri:Test-case42> <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization" .
+<urn:default:baseUri:Test-case42> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#102> .
+# 
+# urn:default:baseUri:Test-case43
+<urn:default:baseUri:Test-case43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case43> <http://purl.org/dc/terms/description> "A neighbourhood is the group of partnerships you have" .
+<urn:default:baseUri:Test-case43> <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf hasNeighbourhood some Neighbourhood" .
+<urn:default:baseUri:Test-case43> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#103> .
+# 
+# urn:default:baseUri:Test-case44
+<urn:default:baseUri:Test-case44> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case44> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case44> <http://purl.org/dc/terms/description> "An organization has users" .
+<urn:default:baseUri:Test-case44> <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf memberOf some Organization" .
+<urn:default:baseUri:Test-case44> <http://w3id.org/def/vtc#desiredBehaviour> "DigitalUser subClassOf Agent" .
+<urn:default:baseUri:Test-case44> <http://w3id.org/def/vtc#desiredBehaviour> "HumanUser subClassOf Person" .
+<urn:default:baseUri:Test-case44> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#104> .
+# 
+# urn:default:baseUri:Test-case45
+<urn:default:baseUri:Test-case45> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case45> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case45> <http://purl.org/dc/terms/description> "One of the users of an organization is the manager" .
+<urn:default:baseUri:Test-case45> <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf hasMembership some Membership" .
+<urn:default:baseUri:Test-case45> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#105> .
+# 
+# urn:default:baseUri:Test-case46
+<urn:default:baseUri:Test-case46> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case46> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case46> <http://purl.org/dc/terms/description> "Users has to belong to one organization" .
+<urn:default:baseUri:Test-case46> <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf memberOf some Organization" .
+<urn:default:baseUri:Test-case46> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#106> .
+# 
+# urn:default:baseUri:Test-case47
+<urn:default:baseUri:Test-case47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case47> <http://purl.org/dc/terms/description> "All organizations have the same roles in a partnership" .
+<urn:default:baseUri:Test-case47> <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf  SymmetricProperty(hasPartnershipWith) some Organization" .
+<urn:default:baseUri:Test-case47> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#107> .
+# 
+# urn:default:baseUri:Test-case48
+<urn:default:baseUri:Test-case48> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case48> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case48> <http://purl.org/dc/terms/description> "Users can have different roles in the organization" .
+<urn:default:baseUri:Test-case48> <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf hasMembership some Membership" .
+<urn:default:baseUri:Test-case48> <http://w3id.org/def/vtc#desiredBehaviour> "Membership subclassOf role some Role" .
+<urn:default:baseUri:Test-case48> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#108> .
+# 
+# urn:default:baseUri:Test-case49
+<urn:default:baseUri:Test-case49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case49> <http://purl.org/dc/terms/description> "What is a building?" .
+<urn:default:baseUri:Test-case49> <http://w3id.org/def/vtc#desiredBehaviour> "PhysicalThing subclassOf isContainedIn some BuildingSpace" .
+<urn:default:baseUri:Test-case49> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#112> .
+# 
+# urn:default:baseUri:Test-case5
+<urn:default:baseUri:Test-case5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case5> <http://purl.org/dc/terms/description> "Which are the relationships a partnership is involved in?" .
+<urn:default:baseUri:Test-case5> <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf hasPartnershipWith some Organization>" .
+<urn:default:baseUri:Test-case5> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform8> .
+# 
+# urn:default:baseUri:Test-case50
+<urn:default:baseUri:Test-case50> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case50> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case50> <http://purl.org/dc/terms/description> "Where is something located?" .
+<urn:default:baseUri:Test-case50> <http://purl.org/dc/terms/description> "Which devices measure temperature?" .
+<urn:default:baseUri:Test-case50> <http://w3id.org/def/vtc#desiredBehaviour> "PhysicalThing subclassOf location some SpatialThing" .
+<urn:default:baseUri:Test-case50> <http://w3id.org/def/vtc#desiredBehaviour> "Thermometer subclassOf observes some AmbientTemperatureProperty" .
+<urn:default:baseUri:Test-case50> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#113> .
+<urn:default:baseUri:Test-case50> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#114> .
+# 
+# urn:default:baseUri:Test-case51
+<urn:default:baseUri:Test-case51> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case51> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case51> <http://purl.org/dc/terms/description> "Which devices measure CO2?" .
+<urn:default:baseUri:Test-case51> <http://w3id.org/def/vtc#desiredBehaviour> "CO2Sensor subclassOf observes some CarbonDioxide" .
+<urn:default:baseUri:Test-case51> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#115> .
+# 
+# urn:default:baseUri:Test-case52
+<urn:default:baseUri:Test-case52> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case52> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case52> <http://purl.org/dc/terms/description> "Which devices measure noise?" .
+<urn:default:baseUri:Test-case52> <http://w3id.org/def/vtc#desiredBehaviour> "NoiseSensor subclassOf observes some NoiseLevel" .
+<urn:default:baseUri:Test-case52> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#116> .
+# 
+# urn:default:baseUri:Test-case53
+<urn:default:baseUri:Test-case53> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case53> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case53> <http://purl.org/dc/terms/description> "Which devices measure humidity?" .
+<urn:default:baseUri:Test-case53> <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor subclassOf observes some AmbientHumidityProperty" .
+<urn:default:baseUri:Test-case53> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#117> .
+# 
+# urn:default:baseUri:Test-case54
+<urn:default:baseUri:Test-case54> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case54> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case54> <http://purl.org/dc/terms/description> "What is a thing description?" .
+<urn:default:baseUri:Test-case54> <http://w3id.org/def/vtc#desiredBehaviour> "ThingDescription type Class" .
+<urn:default:baseUri:Test-case54> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#155> .
+# 
+# urn:default:baseUri:Test-case55
+<urn:default:baseUri:Test-case55> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case55> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case55> <http://purl.org/dc/terms/description> "Each thing is described by WoT Thing Descriptions" .
+<urn:default:baseUri:Test-case55> <http://w3id.org/def/vtc#desiredBehaviour> "ThingDescription subclassOf describes some Thing" .
+<urn:default:baseUri:Test-case55> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#155> .
+# 
+# urn:default:baseUri:Test-case56
+<urn:default:baseUri:Test-case56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case56> <http://purl.org/dc/terms/description> "Which devices are located at a CERTH lab?" .
+<urn:default:baseUri:Test-case56> <http://w3id.org/def/vtc#desiredBehaviour> "HVACSensor SubClassOf Device" .
+<urn:default:baseUri:Test-case56> <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor subClassOf Device" .
+<urn:default:baseUri:Test-case56> <http://w3id.org/def/vtc#desiredBehaviour> "PeopleCounter SubClassOf Device" .
+<urn:default:baseUri:Test-case56> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#158> .
+# 
+# urn:default:baseUri:Test-case57
+<urn:default:baseUri:Test-case57> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case57> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case57> <http://purl.org/dc/terms/description> "Which properties does a people counting observe?" .
+<urn:default:baseUri:Test-case57> <http://w3id.org/def/vtc#desiredBehaviour> "PeopleCounter subclassOf observes some Presence" .
+<urn:default:baseUri:Test-case57> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#158> .
+# 
+# urn:default:baseUri:Test-case58
+<urn:default:baseUri:Test-case58> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case58> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case58> <http://purl.org/dc/terms/description> "Which properties does a humidity sensor observe?" .
+<urn:default:baseUri:Test-case58> <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor subclassOf observes some AmbientHumidityProperty" .
+<urn:default:baseUri:Test-case58> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#160> .
+# 
+# urn:default:baseUri:Test-case59
+<urn:default:baseUri:Test-case59> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case59> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case59> <http://purl.org/dc/terms/description> "Which properties does a light switch observe?" .
+<urn:default:baseUri:Test-case59> <http://w3id.org/def/vtc#desiredBehaviour> "LightSwitch subclassOf forProperty only Property" .
+<urn:default:baseUri:Test-case59> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#161> .
+# 
+# urn:default:baseUri:Test-case6
+<urn:default:baseUri:Test-case6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case6> <http://purl.org/dc/terms/description> "How many organizations can have a partnership?" .
+<urn:default:baseUri:Test-case6> <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization" .
+<urn:default:baseUri:Test-case6> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform9> .
+# 
+# urn:default:baseUri:Test-case60
+<urn:default:baseUri:Test-case60> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case60> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case60> <http://purl.org/dc/terms/description> "Which properties does a motion sensor observe?" .
+<urn:default:baseUri:Test-case60> <http://w3id.org/def/vtc#desiredBehaviour> "MotionSensor subclassOf observes some MotionProperty" .
+<urn:default:baseUri:Test-case60> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#162> .
+# 
+# urn:default:baseUri:Test-case61
+<urn:default:baseUri:Test-case61> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case61> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case61> <http://purl.org/dc/terms/description> "Which properties does a thermometer observe?" .
+<urn:default:baseUri:Test-case61> <http://w3id.org/def/vtc#desiredBehaviour> "Thermometer subclassOf observes some AmbientTemperatureProperty" .
+<urn:default:baseUri:Test-case61> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#163> .
+# 
+# urn:default:baseUri:Test-case62
+<urn:default:baseUri:Test-case62> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case62> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case62> <http://purl.org/dc/terms/description> "Which properties does a CO2 sensor observe?" .
+<urn:default:baseUri:Test-case62> <http://w3id.org/def/vtc#desiredBehaviour> "CO2Sensor subclassOf observes some CarbonDioxide" .
+<urn:default:baseUri:Test-case62> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#164> .
+# 
+# urn:default:baseUri:Test-case63
+<urn:default:baseUri:Test-case63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case63> <http://purl.org/dc/terms/description> "Which properties does a HVAC sensor observe?" .
+<urn:default:baseUri:Test-case63> <http://w3id.org/def/vtc#desiredBehaviour> "HVACSensor subclassOf observes some Property" .
+<urn:default:baseUri:Test-case63> <http://w3id.org/def/vtc#desiredBehaviour> "OperationalStatus subclassOf ssn#Property" .
+<urn:default:baseUri:Test-case63> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#165> .
+# 
+# urn:default:baseUri:Test-case64
+<urn:default:baseUri:Test-case64> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case64> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case64> <http://purl.org/dc/terms/description> "WWhich devices are located at a Oslo SciencePark?" .
+<urn:default:baseUri:Test-case64> <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor SubclassOf Device" .
+<urn:default:baseUri:Test-case64> <http://w3id.org/def/vtc#desiredBehaviour> "LuminanceMeter SubClassOf Device" .
+<urn:default:baseUri:Test-case64> <http://w3id.org/def/vtc#desiredBehaviour> "Thermometer SubClassOf Device" .
+<urn:default:baseUri:Test-case64> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#166> .
+# 
+# urn:default:baseUri:Test-case65
+<urn:default:baseUri:Test-case65> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case65> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case65> <http://purl.org/dc/terms/description> "Which devices are located at UNIKL?" .
+<urn:default:baseUri:Test-case65> <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor SubclassOf Device" .
+<urn:default:baseUri:Test-case65> <http://w3id.org/def/vtc#desiredBehaviour> "Lightbulb SubClassOf Device" .
+<urn:default:baseUri:Test-case65> <http://w3id.org/def/vtc#desiredBehaviour> "Thermometer SubClassOf Device" .
+<urn:default:baseUri:Test-case65> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#167> .
+# 
+# urn:default:baseUri:Test-case66
+<urn:default:baseUri:Test-case66> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case66> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case66> <http://purl.org/dc/terms/description> "Which properties does an e-bike charger observe?" .
+<urn:default:baseUri:Test-case66> <http://w3id.org/def/vtc#desiredBehaviour> "ChargeStatus type Property" .
+<urn:default:baseUri:Test-case66> <http://w3id.org/def/vtc#desiredBehaviour> "EBikeCharger subclassOf observes some Property" .
+<urn:default:baseUri:Test-case66> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#168> .
+# 
+# urn:default:baseUri:Test-case67
+<urn:default:baseUri:Test-case67> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case67> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case67> <http://purl.org/dc/terms/description> "Which properties does a light bulb observe?" .
+<urn:default:baseUri:Test-case67> <http://w3id.org/def/vtc#desiredBehaviour> "LuminanceMeter subclassOf observes some Property" .
+<urn:default:baseUri:Test-case67> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#169> .
+# 
+# urn:default:baseUri:Test-case68
+<urn:default:baseUri:Test-case68> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case68> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case68> <http://purl.org/dc/terms/description> "\tWhich properties does a thermostat observe?" .
+<urn:default:baseUri:Test-case68> <http://w3id.org/def/vtc#desiredBehaviour> "Mode type Property" .
+<urn:default:baseUri:Test-case68> <http://w3id.org/def/vtc#desiredBehaviour> "Thermostat subclassOf observes some Property" .
+<urn:default:baseUri:Test-case68> <http://w3id.org/def/vtc#desiredBehaviour> "ValvePosition type Property" .
+<urn:default:baseUri:Test-case68> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#172> .
+# 
+# urn:default:baseUri:Test-case69
+<urn:default:baseUri:Test-case69> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case69> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case69> <http://purl.org/dc/terms/description> "Which devices are located at a CERTH lab?" .
+<urn:default:baseUri:Test-case69> <http://w3id.org/def/vtc#desiredBehaviour> "BloodPressureMonitor SubClassOf Device" .
+<urn:default:baseUri:Test-case69> <http://w3id.org/def/vtc#desiredBehaviour> "WeightScale subClassOf Device" .
+<urn:default:baseUri:Test-case69> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#179> .
+# 
+# urn:default:baseUri:Test-case7
+<urn:default:baseUri:Test-case7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case7> <http://purl.org/dc/terms/description> "What is the relation between organization and devices?" .
+<urn:default:baseUri:Test-case7> <http://w3id.org/def/vtc#desiredBehaviour> " Agent subclassOf memberOf some Organization" .
+<urn:default:baseUri:Test-case7> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform11> .
+# 
+# urn:default:baseUri:Test-case70
+<urn:default:baseUri:Test-case70> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case70> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case70> <http://purl.org/dc/terms/description> "Which properties does a weight scale observe?" .
+<urn:default:baseUri:Test-case70> <http://w3id.org/def/vtc#desiredBehaviour> "Weight type Property" .
+<urn:default:baseUri:Test-case70> <http://w3id.org/def/vtc#desiredBehaviour> "WeightScale subclassOf observes some Property" .
+<urn:default:baseUri:Test-case70> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#180> .
+# 
+# urn:default:baseUri:Test-case71
+<urn:default:baseUri:Test-case71> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case71> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case71> <http://purl.org/dc/terms/description> "Which properties does a weight scale affect?" .
+<urn:default:baseUri:Test-case71> <http://w3id.org/def/vtc#desiredBehaviour> "WeightScale subclassOf monitorsFeatureProperty only FeatureProperty" .
+<urn:default:baseUri:Test-case71> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#181> .
+# 
+# urn:default:baseUri:Test-case72
+<urn:default:baseUri:Test-case72> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case72> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case72> <http://purl.org/dc/terms/description> "Which properties from a weight scale are observed in events?" .
+<urn:default:baseUri:Test-case72> <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf observes some Property" .
+<urn:default:baseUri:Test-case72> <http://w3id.org/def/vtc#desiredBehaviour> "Weight type Property" .
+<urn:default:baseUri:Test-case72> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#182> .
+# 
+# urn:default:baseUri:Test-case73
+<urn:default:baseUri:Test-case73> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case73> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case73> <http://purl.org/dc/terms/description> "Which properties does a blood pressure monitor observe?" .
+<urn:default:baseUri:Test-case73> <http://w3id.org/def/vtc#desiredBehaviour> "BloodPressureMonitor subclassOf observes some Property" .
+<urn:default:baseUri:Test-case73> <http://w3id.org/def/vtc#desiredBehaviour> "DiastolicBloodPressure type Property" .
+<urn:default:baseUri:Test-case73> <http://w3id.org/def/vtc#desiredBehaviour> "HeartRate type Property" .
+<urn:default:baseUri:Test-case73> <http://w3id.org/def/vtc#desiredBehaviour> "SystolicBloodPressure type Property" .
+<urn:default:baseUri:Test-case73> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#183> .
+# 
+# urn:default:baseUri:Test-case74
+<urn:default:baseUri:Test-case74> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case74> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case74> <http://purl.org/dc/terms/description> "Which properties does a blood pressure monitor affect?" .
+<urn:default:baseUri:Test-case74> <http://w3id.org/def/vtc#desiredBehaviour> "BloodPressureMonitor subclassOf monitorsFeatureProperty only FeatureProperty" .
+<urn:default:baseUri:Test-case74> <http://w3id.org/def/vtc#desiredBehaviour> "DiastolicBloodPressure type Property" .
+<urn:default:baseUri:Test-case74> <http://w3id.org/def/vtc#desiredBehaviour> "HeartRate type Property" .
+<urn:default:baseUri:Test-case74> <http://w3id.org/def/vtc#desiredBehaviour> "SystolicBloodPressure type Property" .
+<urn:default:baseUri:Test-case74> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#184> .
+# 
+# urn:default:baseUri:Test-case75
+<urn:default:baseUri:Test-case75> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case75> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case75> <http://purl.org/dc/terms/description> "Which properties from a blood pressure monitor are observed in events?" .
+<urn:default:baseUri:Test-case75> <http://w3id.org/def/vtc#desiredBehaviour> "DiastolicBloodPressure type Property" .
+<urn:default:baseUri:Test-case75> <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf observes some Property" .
+<urn:default:baseUri:Test-case75> <http://w3id.org/def/vtc#desiredBehaviour> "HeartRate type Property" .
+<urn:default:baseUri:Test-case75> <http://w3id.org/def/vtc#desiredBehaviour> "SystolicBloodPressure type Property" .
+<urn:default:baseUri:Test-case75> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#185> .
+# 
+# urn:default:baseUri:Test-case76
+<urn:default:baseUri:Test-case76> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case76> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case76> <http://purl.org/dc/terms/description> "Which properties does an activity tracker observe?" .
+<urn:default:baseUri:Test-case76> <http://w3id.org/def/vtc#desiredBehaviour> "ActivityTracker subclassOf observes some Property" .
+<urn:default:baseUri:Test-case76> <http://w3id.org/def/vtc#desiredBehaviour> "CaloriesBurned type Property" .
+<urn:default:baseUri:Test-case76> <http://w3id.org/def/vtc#desiredBehaviour> "Sleep type Property" .
+<urn:default:baseUri:Test-case76> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#186> .
+# 
+# urn:default:baseUri:Test-case77
+<urn:default:baseUri:Test-case77> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case77> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case77> <http://purl.org/dc/terms/description> "Which properties does an activity tracker affect?" .
+<urn:default:baseUri:Test-case77> <http://w3id.org/def/vtc#desiredBehaviour> "ActivityTracker subclassOf monitorsFeatureProperty only FeatureProperty" .
+<urn:default:baseUri:Test-case77> <http://w3id.org/def/vtc#desiredBehaviour> "CaloriesBurned type Property" .
+<urn:default:baseUri:Test-case77> <http://w3id.org/def/vtc#desiredBehaviour> "Sleep type Property" .
+<urn:default:baseUri:Test-case77> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#187> .
+# 
+# urn:default:baseUri:Test-case78
+<urn:default:baseUri:Test-case78> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case78> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case78> <http://purl.org/dc/terms/description> "Which properties from an activity trackerare observed in events?" .
+<urn:default:baseUri:Test-case78> <http://w3id.org/def/vtc#desiredBehaviour> "CaloriesBurned type Property" .
+<urn:default:baseUri:Test-case78> <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf observes some Property" .
+<urn:default:baseUri:Test-case78> <http://w3id.org/def/vtc#desiredBehaviour> "Sleep type Property" .
+<urn:default:baseUri:Test-case78> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#188> .
+# 
+# urn:default:baseUri:Test-case79
+<urn:default:baseUri:Test-case79> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case79> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case79> <http://purl.org/dc/terms/description> "Which properties from a panic button observed in events?" .
+<urn:default:baseUri:Test-case79> <http://w3id.org/def/vtc#desiredBehaviour> "DeviceStatus type Property" .
+<urn:default:baseUri:Test-case79> <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf observes some Property" .
+<urn:default:baseUri:Test-case79> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#189> .
+# 
+# urn:default:baseUri:Test-case8
+<urn:default:baseUri:Test-case8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case8> <http://purl.org/dc/terms/description> "Who is the owner of a given device?" .
+<urn:default:baseUri:Test-case8> <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf owns some  Device" .
+<urn:default:baseUri:Test-case8> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform21> .
+# 
+# urn:default:baseUri:Test-case80
+<urn:default:baseUri:Test-case80> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case80> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case80> <http://purl.org/dc/terms/description> "Which properties does a motion sensor observe?" .
+<urn:default:baseUri:Test-case80> <http://w3id.org/def/vtc#desiredBehaviour> "AmbientTemperatureProperty subclassof Property" .
+<urn:default:baseUri:Test-case80> <http://w3id.org/def/vtc#desiredBehaviour> "LuminusIntensity subclassof Property" .
+<urn:default:baseUri:Test-case80> <http://w3id.org/def/vtc#desiredBehaviour> "MotionSensor subclassOf observes some Property" .
+<urn:default:baseUri:Test-case80> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#189> .
+# 
+# urn:default:baseUri:Test-case9
+<urn:default:baseUri:Test-case9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:Test-case9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:Test-case9> <http://purl.org/dc/terms/description> "A device has a unique identifier" .
+<urn:default:baseUri:Test-case9> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf serialNumber only string" .
+<urn:default:baseUri:Test-case9> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform22> .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

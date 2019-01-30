@@ -1,0 +1,1032 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#TestCaseDesign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#desiredBehaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#isRelatedToRequirement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which attributes can have a device?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf avatar some Image"
+  }, {
+    "@value" : "Device subclassOf deviceName only string"
+  }, {
+    "@value" : "Device subclassOf serialNumber only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform23"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is a device profile?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf avatar some Image"
+  }, {
+    "@value" : "Device subclassOf deviceDescription only string"
+  }, {
+    "@value" : "Device subclassOf deviceName only string"
+  }, {
+    "@value" : "Device subclassOf serialNumber only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform33"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device can have a status"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf observes some Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#35"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device can have a location"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subClassOf SpatialThing"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#37"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device can have a location"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subClassOf SpatialThing"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#41"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which are the social relationships a device can be involved in?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassof hasOwner some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#42"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which roles are involved in a ownership relationship?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf hasOwner some Agent"
+  }, {
+    "@value" : "Service subclassOf hasOwner some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#43"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is a user?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HumanUser subClassOf Person"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#44"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Who is a service provider?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Agent subclassOf owns some Service"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#46"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What are the parameters that has a service?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Service subclassOf avatar some Image"
+  }, {
+    "@value" : "Service subclassOf hasOwner some Agent"
+  }, {
+    "@value" : "Service subclassOf serviceDescription only string"
+  }, {
+    "@value" : "Service subclassOf serviceName only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#52"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is an IoT device?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subClassOf PhysicalThing"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform2"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is a service logical name?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Service subclassOf serviceName only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#57"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is an IoT device agent?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf hasOwner some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#79"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which devices are there?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subClassOf PhysicalThing"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#80"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What are the devices of a given agent or organization?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Organization subclassOf hasMember some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#81"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which devices can I see?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device SubClassOf PhysicalThing"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#82"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which services can I see?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Service SubClassOf VirtualThing"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#83"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What are the devices of a specific partner?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf hasOwner some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#85"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which is the profile of a given device?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf avatar some Image"
+  }, {
+    "@value" : "Device subclassOf deviceDescription only string"
+  }, {
+    "@value" : "Device subclassOf deviceName some string"
+  }, {
+    "@value" : "Device subclassOf serialNumber only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#87"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What attributes has a partnership?"
+  }, {
+    "@value" : "What is a partnership?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform4"
+  }, {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform5"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device profile indicates the device name"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf deviceName only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#88"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device profile indicates the device avatar"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf avatar some Image"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#89"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device profile indicates the type of device, e.g: sensor or actuator"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Actuator subClassOf Device"
+  }, {
+    "@value" : "Sensor subClassOf Device"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#90"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device profile indicates the device vendor"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf hasOwner some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#91"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device profile indicates the device serial number"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf serialNumber some string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#92"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device profile indicates the device owner"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf hasOwner some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#94"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A service profile indicates the service name"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Service subclassOf serviceName only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#95"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A service profile indicates the service avatar"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Service subclassOf avatar some Image"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#96"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A service profile indicates the service  owner"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Service subclassOf hasOwner some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#97"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A service profile indicates the service provider"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Service subclassOf hasOwner some Agent"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#98"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A service profile indicates the service description (in text)"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Service subclassOf serviceDescription some string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#99"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A partnership is established between organizations"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Organization subclassOf hasPartnershipWith some Organization"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#101"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A partnership is established between only 2 organizations"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#102"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A neighbourhood is the group of partnerships you have"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Agent subclassOf hasNeighbourhood some Neighbourhood"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#103"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "An organization has users"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Agent subclassOf memberOf some Organization"
+  }, {
+    "@value" : "DigitalUser subClassOf Agent"
+  }, {
+    "@value" : "HumanUser subClassOf Person"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#104"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "One of the users of an organization is the manager"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Agent subclassOf hasMembership some Membership"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#105"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Users has to belong to one organization"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Agent subclassOf memberOf some Organization"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#106"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "All organizations have the same roles in a partnership"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Organization subclassOf  SymmetricProperty(hasPartnershipWith) some Organization"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#107"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Users can have different roles in the organization"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Agent subclassOf hasMembership some Membership"
+  }, {
+    "@value" : "Membership subclassOf role some Role"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#108"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is a building?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "PhysicalThing subclassOf isContainedIn some BuildingSpace"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#112"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which are the relationships a partnership is involved in?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Organization subclassOf hasPartnershipWith some Organization>"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform8"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Where is something located?"
+  }, {
+    "@value" : "Which devices measure temperature?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "PhysicalThing subclassOf location some SpatialThing"
+  }, {
+    "@value" : "Thermometer subclassOf observes some AmbientTemperatureProperty"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#113"
+  }, {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#114"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which devices measure CO2?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "CO2Sensor subclassOf observes some CarbonDioxide"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#115"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which devices measure noise?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "NoiseSensor subclassOf observes some NoiseLevel"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#116"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which devices measure humidity?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HumiditySensor subclassOf observes some AmbientHumidityProperty"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#117"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is a thing description?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "ThingDescription type Class"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#155"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Each thing is described by WoT Thing Descriptions"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "ThingDescription subclassOf describes some Thing"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#155"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which devices are located at a CERTH lab?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HVACSensor SubClassOf Device"
+  }, {
+    "@value" : "HumiditySensor subClassOf Device"
+  }, {
+    "@value" : "PeopleCounter SubClassOf Device"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#158"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a people counting observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "PeopleCounter subclassOf observes some Presence"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#158"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a humidity sensor observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HumiditySensor subclassOf observes some AmbientHumidityProperty"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#160"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a light switch observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "LightSwitch subclassOf forProperty only Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#161"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "How many organizations can have a partnership?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform9"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a motion sensor observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "MotionSensor subclassOf observes some MotionProperty"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#162"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a thermometer observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Thermometer subclassOf observes some AmbientTemperatureProperty"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#163"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a CO2 sensor observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "CO2Sensor subclassOf observes some CarbonDioxide"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#164"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a HVAC sensor observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HVACSensor subclassOf observes some Property"
+  }, {
+    "@value" : "OperationalStatus subclassOf ssn#Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#165"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "WWhich devices are located at a Oslo SciencePark?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HumiditySensor SubclassOf Device"
+  }, {
+    "@value" : "LuminanceMeter SubClassOf Device"
+  }, {
+    "@value" : "Thermometer SubClassOf Device"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#166"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which devices are located at UNIKL?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HumiditySensor SubclassOf Device"
+  }, {
+    "@value" : "Lightbulb SubClassOf Device"
+  }, {
+    "@value" : "Thermometer SubClassOf Device"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#167"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does an e-bike charger observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "ChargeStatus type Property"
+  }, {
+    "@value" : "EBikeCharger subclassOf observes some Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#168"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a light bulb observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "LuminanceMeter subclassOf observes some Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#169"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "\tWhich properties does a thermostat observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Mode type Property"
+  }, {
+    "@value" : "Thermostat subclassOf observes some Property"
+  }, {
+    "@value" : "ValvePosition type Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#172"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which devices are located at a CERTH lab?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "BloodPressureMonitor SubClassOf Device"
+  }, {
+    "@value" : "WeightScale subClassOf Device"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#179"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is the relation between organization and devices?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : " Agent subclassOf memberOf some Organization"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform11"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a weight scale observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Weight type Property"
+  }, {
+    "@value" : "WeightScale subclassOf observes some Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#180"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a weight scale affect?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "WeightScale subclassOf monitorsFeatureProperty only FeatureProperty"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#181"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case72",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties from a weight scale are observed in events?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subclassOf observes some Property"
+  }, {
+    "@value" : "Weight type Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#182"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a blood pressure monitor observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "BloodPressureMonitor subclassOf observes some Property"
+  }, {
+    "@value" : "DiastolicBloodPressure type Property"
+  }, {
+    "@value" : "HeartRate type Property"
+  }, {
+    "@value" : "SystolicBloodPressure type Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#183"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a blood pressure monitor affect?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "BloodPressureMonitor subclassOf monitorsFeatureProperty only FeatureProperty"
+  }, {
+    "@value" : "DiastolicBloodPressure type Property"
+  }, {
+    "@value" : "HeartRate type Property"
+  }, {
+    "@value" : "SystolicBloodPressure type Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#184"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties from a blood pressure monitor are observed in events?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "DiastolicBloodPressure type Property"
+  }, {
+    "@value" : "Event subclassOf observes some Property"
+  }, {
+    "@value" : "HeartRate type Property"
+  }, {
+    "@value" : "SystolicBloodPressure type Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#185"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does an activity tracker observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "ActivityTracker subclassOf observes some Property"
+  }, {
+    "@value" : "CaloriesBurned type Property"
+  }, {
+    "@value" : "Sleep type Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#186"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does an activity tracker affect?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "ActivityTracker subclassOf monitorsFeatureProperty only FeatureProperty"
+  }, {
+    "@value" : "CaloriesBurned type Property"
+  }, {
+    "@value" : "Sleep type Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#187"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case78",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties from an activity trackerare observed in events?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "CaloriesBurned type Property"
+  }, {
+    "@value" : "Event subclassOf observes some Property"
+  }, {
+    "@value" : "Sleep type Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#188"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case79",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties from a panic button observed in events?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "DeviceStatus type Property"
+  }, {
+    "@value" : "Event subclassOf observes some Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#189"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Who is the owner of a given device?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Agent subclassOf owns some  Device"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform21"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Which properties does a motion sensor observe?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "AmbientTemperatureProperty subclassof Property"
+  }, {
+    "@value" : "LuminusIntensity subclassof Property"
+  }, {
+    "@value" : "MotionSensor subclassOf observes some Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#189"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:Test-case9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A device has a unique identifier"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf serialNumber only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform22"
+  } ]
+} ]
