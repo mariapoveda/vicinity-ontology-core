@@ -319,7 +319,8 @@ _:genid2 a rdf:List ;
 # http://iot.linkeddata.es/def/core#requestedService
 
 :requestedService a owl:ObjectProperty ;
-	rdfs:label "Service requested in the contract"@en , "requested service"@en .
+	rdfs:comment "Service requested in the contract"@en ;
+	rdfs:label "requested service"@en .
 # 
 # http://iot.linkeddata.es/def/core#serviceOwner
 
