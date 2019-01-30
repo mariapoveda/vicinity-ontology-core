@@ -252,7 +252,8 @@ _:genid2 a rdf:List ;
 # http://iot.linkeddata.es/def/core#isLocatedAt
 
 :isLocatedAt a owl:ObjectProperty ;
-	rdfs:label "The relation between a phisical thing, for example a device, and the geographical feature in which it is located."@en , "is located at"@en .
+	rdfs:comment "The relation between a phisical thing, for example a device, and the geographical feature in which it is located."@en ;
+	rdfs:label "is located at"@en .
 # 
 # http://iot.linkeddata.es/def/core#isNeighbourhoodOf
 
