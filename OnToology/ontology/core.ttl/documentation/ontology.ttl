@@ -232,8 +232,8 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/core#isLocatedAt
 :isLocatedAt rdf:type owl:ObjectProperty ;
-             rdfs:label "The relation between a phisical thing, for example a device, and the geographical feature in which it is located."@en ,
-                        "is located at"@en .
+             rdfs:comment "The relation between a phisical thing, for example a device, and the geographical feature in which it is located."@en ;
+             rdfs:label "is located at"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#isNeighbourhoodOf
