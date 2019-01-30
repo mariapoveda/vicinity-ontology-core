@@ -294,6 +294,10 @@
     "hadPrimarySource" : {
       "@id" : "http://www.w3.org/ns/prov#hadPrimarySource"
     },
+    "petitionerItemInvolved" : {
+      "@id" : "http://iot.linkeddata.es/def/core#petitionerItemInvolved",
+      "@type" : "@id"
+    },
     "hasSubSystem" : {
       "@id" : "http://www.w3.org/ns/ssn/hasSubSystem",
       "@type" : "@id"

@@ -28,7 +28,7 @@
         <vann:preferredNamespacePrefix>vcnt-core</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://iot.linkeddata.es/def/core</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions.</rdfs:comment>
-        <owl:versionInfo>0.2.3</owl:versionInfo>
+        <owl:versionInfo>0.2.4</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -449,6 +449,16 @@
         <rdfs:isDefinedBy xml:lang="en">A linkd between an agent and the entities, like devices or services, it provides or owns.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">owns</rdfs:label>
         <rdfs:label xml:lang="en">provides</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/core#petitionerItemInvolved -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#petitionerItemInvolved">
+        <rdfs:comment xml:lang="en">Devices or services belonging to the contract petitioner that are involved in the contract  to use the requested service.</rdfs:comment>
+        <rdfs:label xml:lang="en">petitioner item involved</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1044,20 +1054,35 @@
     <owl:Class rdf:about="http://iot.linkeddata.es/def/core#Contract">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#requestedService"/>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#petitionerItemInvolved"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#petitionerItemInvolved"/>
                 <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#requestedService"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://iot.linkeddata.es/def/core#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#serviceOwner"/>
-                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Agent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://iot.linkeddata.es/def/core#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/core#servicePetitioner"/>
-                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/core#Agent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://iot.linkeddata.es/def/core#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Contract between organizations and requested services.</rdfs:comment>

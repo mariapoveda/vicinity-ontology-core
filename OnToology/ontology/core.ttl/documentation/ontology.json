@@ -21,52 +21,64 @@
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#requestedService"
+    "@id" : "http://iot.linkeddata.es/def/core#petitionerItemInvolved"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#Service"
+    "@id" : "http://iot.linkeddata.es/def/core#Device"
   } ]
 }, {
   "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#serviceOwner"
+    "@id" : "http://iot.linkeddata.es/def/core#petitionerItemInvolved"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#Agent"
+    "@id" : "http://iot.linkeddata.es/def/core#Service"
   } ]
 }, {
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#servicePetitioner"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#Agent"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#Service"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#requestedService"
   } ]
 }, {
   "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#Service"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#Agent"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#interactsUsing"
+    "@id" : "http://iot.linkeddata.es/def/core#serviceOwner"
   } ]
 }, {
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#isDescribedBy"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#ThingEcosystemDescription"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#Agent"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#servicePetitioner"
   } ]
 }, {
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#Application"
+    "@id" : "http://iot.linkeddata.es/def/core#Service"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://iot.linkeddata.es/def/core#interactsUsing"
@@ -75,42 +87,60 @@
   "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#isDescribedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#ThingEcosystemDescription"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#Application"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#interactsUsing"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://iot.linkeddata.es/def/core#isLocatedAt"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid19"
+    "@id" : "_:genid21"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://iot.linkeddata.es/def/core#isRelativeTo"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://iot.linkeddata.es/def/wot#Link"
     }, {
-      "@id" : "_:genid21"
+      "@id" : "_:genid23"
     } ]
   } ]
 }, {
-  "@id" : "_:genid21",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#complementOf" : [ {
     "@id" : "http://iot.linkeddata.es/def/core#RelativeEndpoint"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://iot.linkeddata.es/def/core#FeatureProperty"
@@ -119,7 +149,7 @@
     "@id" : "http://iot.linkeddata.es/def/core#monitorsFeatureProperty"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://iot.linkeddata.es/def/wot#Property"
@@ -128,7 +158,7 @@
     "@id" : "http://www.w3.org/ns/sosa/observes"
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://iot.linkeddata.es/def/core#describes"
@@ -137,7 +167,7 @@
     "@id" : "http://iot.linkeddata.es/def/wot#Thing"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://iot.linkeddata.es/def/wot#Thing"
@@ -146,7 +176,7 @@
     "@id" : "http://iot.linkeddata.es/def/core#describes"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://iot.linkeddata.es/def/core#describes"
@@ -155,7 +185,7 @@
     "@id" : "http://iot.linkeddata.es/def/core#Ecosystem"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
@@ -164,7 +194,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://iot.linkeddata.es/def/wot#DataSchema"
@@ -173,7 +203,7 @@
     "@id" : "http://iot.linkeddata.es/def/core#expressedInFormat"
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -186,7 +216,7 @@
     "@id" : "http://iot.linkeddata.es/def/core#timeStamp"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://iot.linkeddata.es/def/core#VirtualThing"
@@ -195,28 +225,10 @@
     "@id" : "http://iot.linkeddata.es/def/core#isComposedBy"
   } ]
 }, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/forProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/Property"
-  } ]
-}, {
-  "@id" : "_:genid33",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#FeatureProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#actsOnFeatureProperty"
-  } ]
-}, {
   "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/observes"
+    "@id" : "http://www.w3.org/ns/ssn/forProperty"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/ssn/Property"
@@ -228,7 +240,7 @@
     "@id" : "http://iot.linkeddata.es/def/core#FeatureProperty"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://iot.linkeddata.es/def/core#monitorsFeatureProperty"
+    "@id" : "http://iot.linkeddata.es/def/core#actsOnFeatureProperty"
   } ]
 }, {
   "@id" : "_:genid36",
@@ -251,6 +263,24 @@
 }, {
   "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/observes"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#FeatureProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://iot.linkeddata.es/def/core#monitorsFeatureProperty"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
   } ],
@@ -258,7 +288,7 @@
     "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
@@ -267,7 +297,7 @@
     "@id" : "http://www.opengis.net/ont/geosparql#sfContains"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
@@ -276,7 +306,7 @@
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/ssn/isPropertyOf"
@@ -285,7 +315,7 @@
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
@@ -294,7 +324,7 @@
     "@id" : "http://www.w3.org/ns/ssn/isPropertyOf"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Platform"
@@ -303,7 +333,7 @@
     "@id" : "http://www.w3.org/ns/sosa/isHostedBy"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/ssn/Deployment"
@@ -312,7 +342,7 @@
     "@id" : "http://www.w3.org/ns/ssn/hasDeployment"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/ssn/System"
@@ -321,7 +351,7 @@
     "@id" : "http://www.w3.org/ns/ssn/hasSubSystem"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Procedure"
@@ -330,45 +360,27 @@
     "@id" : "http://www.w3.org/ns/ssn/implements"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/ssn/System"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "_:genid48"
+    "@id" : "_:genid50"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid50",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/hasSubSystem"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/ssn/systems/OperatingProperty"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/ssn/systems/hasOperatingProperty"
-  } ]
-}, {
-  "@id" : "_:genid50",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/systems/Condition"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/systems/inCondition"
-  } ]
-}, {
-  "@id" : "_:genid51",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/systems/SurvivalProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty"
   } ]
 }, {
   "@id" : "_:genid52",
@@ -383,22 +395,13 @@
   "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/Property"
+    "@id" : "http://www.w3.org/ns/ssn/systems/SurvivalProperty"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/forProperty"
+    "@id" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty"
   } ]
 }, {
   "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/systems/SystemProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty"
-  } ]
-}, {
-  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/ssn/systems/Condition"
@@ -407,22 +410,31 @@
     "@id" : "http://www.w3.org/ns/ssn/systems/inCondition"
   } ]
 }, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/forProperty"
+  } ]
+}, {
   "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/saref4bldg#BuildingSpace"
+    "@id" : "http://www.w3.org/ns/ssn/systems/SystemProperty"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/saref4bldg#hasSpace"
+    "@id" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty"
   } ]
 }, {
   "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/saref4bldg#PhysicalObject"
+    "@id" : "http://www.w3.org/ns/ssn/systems/Condition"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/saref4bldg#contains"
+    "@id" : "http://www.w3.org/ns/ssn/systems/inCondition"
   } ]
 }, {
   "@id" : "_:genid58",
@@ -437,13 +449,31 @@
   "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid60"
+    "@id" : "https://w3id.org/def/saref4bldg#PhysicalObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#contains"
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#BuildingSpace"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#hasSpace"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid62"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/saref4bldg#isSpaceOf"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -453,7 +483,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid63",
+  "@id" : "_:genid65",
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -515,7 +545,7 @@
     "@id" : "http://www.w3.org/ns/sosa/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.2.3"
+    "@value" : "0.2.4"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#Actuator",
@@ -604,6 +634,10 @@
     "@id" : "_:genid12"
   }, {
     "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#Device",
@@ -643,7 +677,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Agent"
   }, {
-    "@id" : "_:genid14"
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#Ecosystem",
@@ -657,7 +691,7 @@
     "@value" : "Ecosystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid15"
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#FeatureProperty",
@@ -688,7 +722,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   }, {
-    "@id" : "_:genid16"
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#Neighbourhood",
@@ -720,7 +754,7 @@
     "@value" : "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid17"
+    "@id" : "_:genid19"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#RelativeEndpoint",
@@ -736,7 +770,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://iot.linkeddata.es/def/wot#Link"
   }, {
-    "@id" : "_:genid18"
+    "@id" : "_:genid20"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#Sensor",
@@ -758,9 +792,9 @@
   }, {
     "@id" : "http://www.w3.org/ns/sosa/Sensor"
   }, {
-    "@id" : "_:genid23"
+    "@id" : "_:genid25"
   }, {
-    "@id" : "_:genid24"
+    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#Service",
@@ -792,9 +826,9 @@
     "@value" : "Thing description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid25"
+    "@id" : "_:genid27"
   }, {
-    "@id" : "_:genid26"
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#ThingEcosystemDescription",
@@ -807,7 +841,7 @@
     "@value" : "Thing ecosystem description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid29"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#Value",
@@ -821,11 +855,11 @@
     "@value" : "Value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid28"
-  }, {
-    "@id" : "_:genid29"
-  }, {
     "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid31"
+  }, {
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#VirtualThing",
@@ -843,7 +877,7 @@
     "@value" : "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid31"
+    "@id" : "_:genid33"
   } ]
 }, {
   "@id" : "http://iot.linkeddata.es/def/core#aboutFeatureOfInterest",
@@ -1373,6 +1407,17 @@
     "@value" : "provides"
   } ]
 }, {
+  "@id" : "http://iot.linkeddata.es/def/core#petitionerItemInvolved",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Devices or services belonging to the contract petitioner that are involved in the contract  to use the requested service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "petitioner item involved"
+  } ]
+}, {
   "@id" : "http://iot.linkeddata.es/def/core#protocolIndependentId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1611,23 +1656,23 @@
 }, {
   "@id" : "http://iot.linkeddata.es/def/wot#Action",
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid32"
-  }, {
-    "@id" : "_:genid33"
-  } ]
-}, {
-  "@id" : "http://iot.linkeddata.es/def/wot#Event",
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid34"
   }, {
     "@id" : "_:genid35"
   } ]
 }, {
-  "@id" : "http://iot.linkeddata.es/def/wot#Property",
+  "@id" : "http://iot.linkeddata.es/def/wot#Event",
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid36"
   }, {
     "@id" : "_:genid37"
+  } ]
+}, {
+  "@id" : "http://iot.linkeddata.es/def/wot#Property",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid38"
+  }, {
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
@@ -1658,7 +1703,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid40"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
@@ -1684,9 +1729,9 @@
     "@value" : "SpatialObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid41"
   }, {
-    "@id" : "_:genid40"
+    "@id" : "_:genid42"
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -1839,9 +1884,9 @@
     "@value" : "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid41"
+    "@id" : "_:genid43"
   }, {
-    "@id" : "_:genid42"
+    "@id" : "_:genid44"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1862,15 +1907,15 @@
     "@value" : "System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid43"
-  }, {
-    "@id" : "_:genid44"
-  }, {
     "@id" : "_:genid45"
   }, {
     "@id" : "_:genid46"
   }, {
     "@id" : "_:genid47"
+  }, {
+    "@id" : "_:genid48"
+  }, {
+    "@id" : "_:genid49"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2174,9 +2219,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/Property"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid51"
   }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid52"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/ssn/systems/Precision",
@@ -2322,9 +2367,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/Property"
   }, {
-    "@id" : "_:genid51"
+    "@id" : "_:genid53"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid54"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/ssn/systems/SystemCapability",
@@ -2347,11 +2392,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/Property"
   }, {
-    "@id" : "_:genid53"
-  }, {
-    "@id" : "_:genid54"
-  }, {
     "@id" : "_:genid55"
+  }, {
+    "@id" : "_:genid56"
+  }, {
+    "@id" : "_:genid57"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/ssn/systems/SystemLifetime",
@@ -2544,7 +2589,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   }, {
-    "@id" : "_:genid56"
+    "@id" : "_:genid58"
   } ],
   "http://www.w3.org/ns/prov#hadPrimarySource" : [ {
     "@id" : "http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifcbuilding.htm"
@@ -2566,11 +2611,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   }, {
-    "@id" : "_:genid57"
-  }, {
-    "@id" : "_:genid58"
-  }, {
     "@id" : "_:genid59"
+  }, {
+    "@id" : "_:genid60"
+  }, {
+    "@id" : "_:genid61"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4bldg#PhysicalObject",

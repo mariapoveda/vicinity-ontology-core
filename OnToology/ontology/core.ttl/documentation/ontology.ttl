@@ -19,7 +19,7 @@
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-core" ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/core" ;
                                       rdfs:comment "This ontology represents the core terms to allow interoperability in an IoT context based on  VICINITY technological solutions."@en ;
-                                      owl:versionInfo "0.2.3" .
+                                      owl:versionInfo "0.2.4" .
 
 #################################################################
 #    Annotation properties
@@ -282,6 +282,12 @@ owl:cardinality rdf:type owl:AnnotationProperty .
       rdfs:isDefinedBy "A linkd between an agent and the entities, like devices or services, it provides or owns."@en ;
       rdfs:label "owns"@en ,
                  "provides"@en .
+
+
+###  http://iot.linkeddata.es/def/core#petitionerItemInvolved
+:petitionerItemInvolved rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Devices or services belonging to the contract petitioner that are involved in the contract  to use the requested service."@en ;
+                        rdfs:label "petitioner item involved"@en .
 
 
 ###  http://iot.linkeddata.es/def/core#represents
@@ -665,16 +671,27 @@ rdf:value rdf:type owl:ObjectProperty ;
 ###  http://iot.linkeddata.es/def/core#Contract
 :Contract rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :requestedService ;
+                            owl:onProperty :petitionerItemInvolved ;
+                            owl:someValuesFrom :Device
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :petitionerItemInvolved ;
                             owl:someValuesFrom :Service
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :requestedService ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Service
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :serviceOwner ;
-                            owl:someValuesFrom :Agent
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Agent
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :servicePetitioner ;
-                            owl:someValuesFrom :Agent
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Agent
                           ] ;
           rdfs:comment "Contract between organizations and requested services."@en ;
           rdfs:label "Contract"@en .
