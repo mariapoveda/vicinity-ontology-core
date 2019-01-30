@@ -1,991 +1,197 @@
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
-@prefix qt:    <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> 
-@prefix mf:    <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> 
-@prefix dc:    <http://purl.org/dc/terms/>
-@prefix  :     <http://vicinity.iot.linkeddata.es/vicinity/tests/testsuite-iso.ttl> 
-
-: rdf:type mf:Manifest;
-	mf:name "Test suite  for  ISO/IEC CC 30141. Information technology - Internet of Things Reference architecture"; 
-	mf:entries (
-		:class-test1
-		:class-test2
-		:class-test3
-		:class-test4
-		:class-test5
-		:class-test6
-		:class-test7
-		:class-test8
-		:class-test9
-		:class-test10
-		:class-test11
-		:class-test12
-		:class-test13
-		:class-test14
-		:objproperty-test1
-		:objproperty-test2
-		:objproperty-test3
-		:objproperty-test4
-		:objproperty-test5
-		:objproperty-test6
-		:objproperty-test7
-		:objproperty-test8
-		:objproperty-test9
-		:objproperty-test10
-		:objproperty-test11
-		:objproperty-test12
-		:objproperty-test13
-		:objproperty-test14
-		:objproperty-test15
-		:objproperty-test16
-		:objproperty-test17
-		:objproperty-test18
-		:objproperty-test19
-		:objproperty-test20
-		:objproperty-test21
-		:datatype-test1
-		:datatype-test2
-	) .
-#
-#
-# #################################################################
-# #
-# #    Tests about classes
-# #
-# #################################################################
-#
-#
-
-:TCC1 a mf:QueryEvaluationTest;
-	dc:identifier "platform119";
-	mf:name "Test case 1- Class";
-	dc:description "Related to requirement platform119 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415173";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([DigitalUser]),
- 					Class([HumanUser]),
- 					SubClassOf([DigitalUser],[Agent])  ,
- 					SubClassOf([HumanUser],[Person])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC2 a mf:QueryEvaluationTest;
-	dc:identifier "platform120";
-	mf:name "Test case 2- Class";
-	dc:description "Related to requirement platform120 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415174";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Service]),
- 					SubClassOf([Service],[VirtualEntity])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC3 a mf:QueryEvaluationTest;
-	dc:identifier "platform121";
-	mf:name "Test case 3- Class";
-	dc:description "Related to requirement platform121 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415175";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Application])
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC4 a mf:QueryEvaluationTest;
-	dc:identifier "platform122";
-	mf:name "Test case 4- Class";
-	dc:description "Related to requirement platform122 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415176";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Application]),
- 					SubClassOf([Application],[Service])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC5 a mf:QueryEvaluationTest;
-	dc:identifier "platform123";
-	mf:name "Test case 5- Class";
-	dc:description "Related to requirement platform123 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415177";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Network]),
- 					SubClassOf([Network],[Network])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC6 a mf:QueryEvaluationTest;
-	dc:identifier "platform124";
-	mf:name "Test case 6- Class";
-	dc:description "Related to requirement platform124 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415179";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([PhysicalEntity]),
- 					SubClassOf([PhysicalEntity],[Entity])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC7 a mf:QueryEvaluationTest;
-	dc:identifier "platform124";
-	mf:name "Test case 7- Class";
-	dc:description "Related to requirement platform124 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415180";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([VirtualEntity]),
- 					SubClassOf([VirtualEntity],[Entity])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC8 a mf:QueryEvaluationTest;
-	dc:identifier "platform125";
-	mf:name "Test case 8- Class";
-	dc:description "Related to requirement platform125 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415181";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Actuator]),
- 					SubClassOf([Actuator],[Device])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC9 a mf:QueryEvaluationTest;
-	dc:identifier "platform126";
-	mf:name "Test case 9- Class";
-	dc:description "Related to requirement platform126 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415182";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Sensor]),
- 					SubClassOf([Sensor],[Device])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC10 a mf:QueryEvaluationTest;
-	dc:identifier "platform129";
-	mf:name "Test case 10- Class";
-	dc:description "Related to requirement platform129 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415183";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Device]),
- 					Class([Actuator]),
- 					Class([Sensor])
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC11 a mf:QueryEvaluationTest;
-	dc:identifier "platform131";
-	mf:name "Test case 11- Class";
-	dc:description "Related to requirement platform131 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415184";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Gateway]),
- 					SubClassOf([Gateway],[Entity])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC12 a mf:QueryEvaluationTest;
-	dc:identifier "plaform135";
-	mf:name "Test case 12- Class";
-	dc:description "Related to requirement plaform135 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415185";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Endpoint]),
- 					SubClassOf([Endpoint],[Entity])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC13 a mf:QueryEvaluationTest;
-	dc:identifier "platform137";
-	mf:name "Test case 13- Class";
-	dc:description "Related to requirement platform137 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415186";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([Gateway]),
- 					SubClassOf([Gateway],[VirtualEntity])  
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCC14 a mf:QueryEvaluationTest;
-	dc:identifier "platform151";
-	mf:name "Test case 14- Class";
-	dc:description "Related to requirement platform151 in https://docs.google.com/spreadsheets/d/14UwT6IveLM0r-0JEs0qRvRtKSqZbB2I82uBJ9Huz8-Y/edit#gid=2093415187";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					Class([DataStore])
-				} 
-				"""
-			];
-
-	mf:result "true".		
-
-
-#
-#
-# #################################################################
-# #
-# #    Tests about object properties
-# #
-# #################################################################
-#
-#
-
-:TCP1 a mf:QueryEvaluationTest;
-	dc:identifier "platform120";
-	mf:name "Test case 1-Object Properties";
-	dc:description "Related to requirement platform120 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=0";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactsusing])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [DigitalUser] .
-				[interactsusing] a  [ObjectProperty].
- 				[:range1]   a [Service] .
-				[:domain1] [interactsusing] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP2 a mf:QueryEvaluationTest;
-	dc:identifier "platform121";
-	mf:name "Test case 2-Object Properties";
-	dc:description "Related to requirement platform121 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactsusing])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [HumanUser] .
-				[interactsusing] a  [ObjectProperty].
- 				[:range1]   a [Application] .
-				[:domain1] [interactsusing] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP3 a mf:QueryEvaluationTest;
-	dc:identifier "platform123";
-	mf:name "Test case 3-Object Properties";
-	dc:description "Related to requirement platform123 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=2";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactsthrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Application] .
-				[interactsthrough] a  [ObjectProperty].
- 				[:range1]   a [Network] .
-				[:domain1] [interactsthrough] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP4 a mf:QueryEvaluationTest;
-	dc:identifier "platform125";
-	mf:name "Test case 4-Object Properties";
-	dc:description "Related to requirement platform125 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=3";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([actsOn])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Actuator] .
-				[actsOn] a  [ObjectProperty].
- 				[:range1]   a [PhysicalEntity] .
-				[:domain1] [actsOn] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP5 a mf:QueryEvaluationTest;
-	dc:identifier "platform126";
-	mf:name "Test case 5-Object Properties";
-	dc:description "Related to requirement platform126 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=4";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([monitors])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Sensor] .
-				[monitors] a  [ObjectProperty].
- 				[:range1]   a [PhysicalEntity] .
-				[:domain1] [monitors] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP6 a mf:QueryEvaluationTest;
-	dc:identifier "platform128";
-	mf:name "Test case 6-Object Properties";
-	dc:description "Related to requirement platform128 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=5";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([represent])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [VirtualEntity] .
-				[represent] a  [ObjectProperty].
- 				[:range1]   a [PhysicalEntity] .
-				[:domain1] [represent] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP7 a mf:QueryEvaluationTest;
-	dc:identifier "platform130";
-	mf:name "Test case 7-Object Properties";
-	dc:description "Related to requirement platform130 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=6";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactsthrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[interactsthrough] a  [ObjectProperty].
- 				[:range1]   a [Network] .
-				[:domain1] [interactsthrough] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP8 a mf:QueryEvaluationTest;
-	dc:identifier "platform135";
-	mf:name "Test case 8-Object Properties";
-	dc:description "Related to requirement platform135 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=8";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([connects])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Network] .
-				[connects] a  [ObjectProperty].
- 				[:range1]   a [Endpoint] .
-				[:domain1] [connects] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP9 a mf:QueryEvaluationTest;
-	dc:identifier "platform136";
-	mf:name "Test case 9-Object Properties";
-	dc:description "Related to requirement platform136 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=9";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([isaccessiblethrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[isaccessiblethrough] a  [ObjectProperty].
- 				[:range1]   a [Endpoint] .
-				[:domain1] [isaccessiblethrough] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP10 a mf:QueryEvaluationTest;
-	dc:identifier "platform138";
-	mf:name "Test case 10-Object Properties";
-	dc:description "Related to requirement platform138 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=10";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactsthrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Gateway] .
-				[interactsthrough] a  [ObjectProperty].
- 				[:range1]   a [Network] .
-				[:domain1] [interactsthrough] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP11 a mf:QueryEvaluationTest;
-	dc:identifier "platform139";
-	mf:name "Test case 11-Object Properties";
-	dc:description "Related to requirement platform139 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=11";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([exposes])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Gateway] .
-				[exposes] a  [ObjectProperty].
- 				[:range1]   a [Endpoint] .
-				[:domain1] [exposes] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP12 a mf:QueryEvaluationTest;
-	dc:identifier "platform140";
-	mf:name "Test case 12-Object Properties";
-	dc:description "Related to requirement platform140 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=12";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([connects])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Gateway] .
-				[connects] a  [ObjectProperty].
- 				[:range1]   a [Device] .
-				[:domain1] [connects] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP13 a mf:QueryEvaluationTest;
-	dc:identifier "platform142";
-	mf:name "Test case 13-Object Properties";
-	dc:description "Related to requirement platform142 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=13";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactsthrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[interactsthrough] a  [ObjectProperty].
- 				[:range1]   a [Network] .
-				[:domain1] [interactsthrough] [:range1].
- 				[:range2]   a [Network] .
-				[:domain1] [interactsthrough] [:range2].
- 				[:range2] owl:differentFrom [:range1] .
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP14 a mf:QueryEvaluationTest;
-	dc:identifier "platform143";
-	mf:name "Test case 14-Object Properties";
-	dc:description "Related to requirement platform143 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=14";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([isaccessiblethrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Device] .
-				[isaccessiblethrough] a  [ObjectProperty].
- 				[:range1]   a [Endpoint] .
-				[:domain1] [isaccessiblethrough] [:range1].
- 				[:range2]   a [Endpoint] .
-				[:domain1] [isaccessiblethrough] [:range2].
- 				[:range2] owl:differentFrom [:range1] .
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP15 a mf:QueryEvaluationTest;
-	dc:identifier "platform144";
-	mf:name "Test case 15-Object Properties";
-	dc:description "Related to requirement platform144 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=15";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactsthrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[interactsthrough] a  [ObjectProperty].
- 				[:range1]   a [Network] .
-				[:domain1] [interactsthrough] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP16 a mf:QueryEvaluationTest;
-	dc:identifier "platform145";
-	mf:name "Test case 16-Object Properties";
-	dc:description "Related to requirement platform145 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=16";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactsthrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[interactsthrough] a  [ObjectProperty].
- 				[:range1]   a [Gateway] .
-				[:domain1] [interactsthrough] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP17 a mf:QueryEvaluationTest;
-	dc:identifier "platform146";
-	mf:name "Test case 17-Object Properties";
-	dc:description "Related to requirement platform146 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=17";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([interactswith])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[interactswith] a  [ObjectProperty].
- 				[:range1]   a [Device] .
-				[:domain1] [interactswith] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP18 a mf:QueryEvaluationTest;
-	dc:identifier "platform147";
-	mf:name "Test case 18-Object Properties";
-	dc:description "Related to requirement platform147 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=18";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([contains])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[contains] a  [ObjectProperty].
- 				[:range1]   a [Service] .
-				[:domain1] [contains] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP19 a mf:QueryEvaluationTest;
-	dc:identifier "platform149";
-	mf:name "Test case 19-Object Properties";
-	dc:description "Related to requirement platform149 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=19";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([isaccessiblethrough])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [VirtualEntity] .
-				[isaccessiblethrough] a  [ObjectProperty].
- 				[:range1]   a [Endpoint] .
-				[:domain1] [isaccessiblethrough] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCP20 a mf:QueryEvaluationTest;
-	dc:identifier "platform151";
-	mf:name "Test case 20-Object Properties";
-	dc:description "Related to requirement platform151 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=20";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
- 					ObjectProperty([uses]),
- 					ObjectProperty([uses]),
- 					ObjectProperty([uses])
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [Service] .
-				[:domain1] a [Device] .
-				[:domain1] a [Gateway] .
-				[uses] a  [ObjectProperty].
- 				[:range1]   a [Datastore] .
-				[:domain1] [uses] [:range1].
- 				[uses] a  [ObjectProperty].
- 				[:range1]   a [Datastore] .
-				[:domain1] [uses] [:range1].
- 				[uses] a  [ObjectProperty].
- 				[:range1]   a [Datastore] .
-				[:domain1] [uses] [:range1].
-  
-				"""
-			];
-
-	mf:result "true".	
-
-:TCP21 a mf:QueryEvaluationTest;
-	dc:identifier "platform152";
-	mf:name "Test case 21-Object Properties";
-	dc:description "Related to requirement platform151 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=20";
-	mf:action[qt:query """
-
-				PREFIX owl: <http://www.w3.org/2002/07/owl#>
-				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-				ASK {
-					Class([Application]),
-					Class([DigitalUser]),
- 					ObjectProperty([interactsusing])
- 					
-				} 
-				""";
-
-			qt:data """
-			
-				[:domain1] a [DigitalUser] .
-				[interactsusing] a  [ObjectProperty].
- 				[:range1]   a [Application] .
-				[:domain1] [interactsusing] [:range1].
- 				
-				"""
-			];
-
-	mf:result "true".		
-
-
-#
-#
-# #################################################################
-# #
-# #    Tests about datatype properties
-# #
-# #################################################################
-#
-#
-
-:TCDP1 a mf:QueryEvaluationTest;
-	dc:identifier "platform127";
-	mf:name "Test case 1-Datatype Properties";
-	dc:description "Related to requirement platform127 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=0";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [PhysicalEntity] .
-				[:domain1] [tag] "tag".
-  
-				"""
-			];
-
-	mf:result "true".		
-
-
-
-
-:TCDP2 a mf:QueryEvaluationTest;
-	dc:identifier "platform133";
-	mf:name "Test case 2-Datatype Properties";
-	dc:description "Related to requirement platform133 in https://docs.google.com/spreadsheets/d/13HH1yVbEwKCMeI11nqC-o3RM0kJ3Rb2RP1Dx8fFv_Ls/edit#gid=1";
-	mf:action[
-			qt:data """
-			
-				[:domain1] a [Entity] .
-				[:domain1] [identifier] "id".
-  
-				"""
-			];
-
-	mf:result "true".		
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+@prefix vtc: <http://w3id.org/def/vtc#> .
+@prefix  :     <> .
+
+
+
+:Test-case-platfmor119 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform119>;
+	dc:description "The IoT-User can be human (human user) or non-human (digital user)";
+	vtc:desiredBehaviour "HumanUser subClassOf Person";
+	vtc:desiredBehaviour "VirtualUser subClassOf Agent".
+
+:Test-case-platform120 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform120>;
+	dc:description "Digital user consumes services";
+	vtc:desiredBehaviour "DigitalUser subclassOf interactsUsing some Service".
+
+:Test-case-platform121 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform121>;
+	dc:description "A human user interacts using applications";
+	vtc:desiredBehaviour "HumanUser subclassOf interactsUsing some Application".
+
+:Test-case-platform122 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform122>;
+	dc:description "An application is a specialized form of service";
+	vtc:desiredBehaviour "Application subClassOf Service". 
+
+:Test-case-platform123 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform123>;
+	dc:description "An applications can interact with other services via the network";
+	vtc:desiredBehaviour "Application subclassOf interactsUsing some Network". 
+		
+:Test-case-platform124 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform124>;
+	dc:description "An Entity can be physical or virtual";
+	vtc:desiredBehaviour "PhysicalThing subClassOf Thing". 
+
+:Test-case-platform125 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform125>;
+	dc:description "A physical entity is controlled by an actuator";
+	vtc:desiredBehaviour "PhysicalThing subclassOf  actsOnFeatureProperty some FeatureProperty>".
+
+:Test-case-platform126 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform126>;
+	dc:description "A physical entity is controlled by an actuator";
+	vtc:desiredBehaviour "PhysicalThing subclassOf monitorsFeatureProperty some FeatureProperty".
+
+:Test-case-platform127 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform127>;
+	dc:description "A physical entity may have one or more  attached tag";
+	vtc:desiredBehaviour "PhysicalThing subclassOf hasTag some  Tag".
+
+:Test-case-platform128 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform128>;
+	dc:description "A virtual entity represents a physical entity";
+	vtc:desiredBehaviour "VirtualThing subclassOf represents some PhysicalThing".
+
+:Test-case-platform129 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform129>;
+	dc:description "Actuators and sensors are kinds of IoT device";
+	vtc:desiredBehaviour "Actuator subclassof Device";
+	vtc:desiredBehaviour  "Sensor subclassof Device".
+
+:Test-case-platform130 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform130>;
+	dc:description "IoT devices interact through a network";
+	vtc:desiredBehaviour "Device subclassOf interactsThrough some Network".
+
+:Test-case-platform131 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform131>;
+	dc:description "IoT devices are connected with an IoT gateway ";
+	vtc:desiredBehaviour "Device subclassOf areConnectedWith some Gateway".
+
+:Test-case-platform132 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform132>;
+	dc:description "Data Stores hold data relating to IoT systems ";
+	vtc:desiredBehaviour "DataStore subclassOf holds some IoTSystem".
+
+:Test-case-platform133 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform133>;
+	dc:description "An entity  has an identifier";
+	vtc:desiredBehaviour "Thing subclassOf thingName some xsd:string".
+
+:Test-case-platform134 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform134>;
+	dc:description "An entity can have more than one identifier";
+	vtc:desiredBehaviour "Thing subclassOf thingName min 1 xsd:string".
+
+:Test-case-platform135 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform135>;
+	dc:description "A network connects endpoints";
+	vtc:desiredBehaviour "Network subclassOf connects some Link".
+
+:Test-case-platform136 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform136>;
+	dc:description "A service exposes one or more endpoints by which it can be invoked";
+	vtc:desiredBehaviour "Service subClassOf exposes min 1 Link".
+
+:Test-case-platform137 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform137>;
+	dc:description "An IoT gateway is a digital entity ";
+	vtc:desiredBehaviour "Gateway subClassOf DigitalThing".
+
+:Test-case-platform138 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform138>;
+	dc:description "IoT gateways interact through networks";
+	vtc:desiredBehaviour "Gateway subclassOf interactsThrough some Network".
+
+:Test-case-platform139 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform139>;
+	dc:description "IoT gateways expose endpoints";
+	vtc:desiredBehaviour "Gateway subclassOf exposes some Links".
+
+:Test-case-platform140 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform140>;
+	dc:description "IoT gateways connect IoT devices";
+	vtc:desiredBehaviour "Gateway subclassOf connects some Device".
+
+:Test-case-platform141 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform141>;
+	dc:description "IoT gateways use data stores";
+	vtc:desiredBehaviour "Gateway subclassOf uses some DataStore".
+
+:Test-case-platform142 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform142>;
+	dc:description "IoT device interacts with one or more networks ";
+	vtc:desiredBehaviour "Device subclassOf interactsWith some Network".
+
+:Test-case-platform143 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform143>;
+	dc:description "IoT device exposes one or more endpoints";
+	vtc:desiredBehaviour "Device subclassOf isAccessibleThrough some Link".
+
+:Test-case-platform144 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform144>;
+	dc:description "A service interacts with other entities via one or more networks";
+	vtc:desiredBehaviour "Service subclassOf interactsWith some Network".
+
+:Test-case-platform145 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform145>;
+	dc:description "A service interacts with zero or more IoT gateways";
+	vtc:desiredBehaviour "Service subclassOf interactsWith some Gateway".
+
+:Test-case-platform146 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform146>;
+	dc:description "A service interacts with zero or more IoT devices";
+	vtc:desiredBehaviour "Service subclassOf interactsWith some Device".
+
+
+:Test-case-platform147 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform147>;
+	dc:description "A service can interact with other services";
+	vtc:desiredBehaviour "Service subclassOf interactsWith some Service".
+
+
+:Test-case-platform148 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform148>;
+	dc:description "A service can use data stores";
+	vtc:desiredBehaviour "Service subclassOf uses some DataStore".
+
+
+:Test-case-platform149 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform149>;
+	dc:description "A virtual entity interacts through an endpoint";
+	vtc:desiredBehaviour "VirtualThing subclassOf isAccessibleThrough some Link".
+
+:Test-case-platform150 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform150>;
+	dc:description "Everything in an IoT system is a kind of entity";
+	vtc:desiredBehaviour "VirtualThing subClassOf Thing";
+	vtc:desiredBehaviour "PhysicalThing subClassOf Thing".
+
+
+:Test-case-platform151 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform151>;
+	dc:description "Data associated with services, devices and gateways can be held in data stores";
+	vtc:desiredBehaviour "Service subclassOf uses some DataStore";
+	vtc:desiredBehaviour "Device subclassOf uses some DataStore";
+	vtc:desiredBehaviour "Gateway subclassOf uses some DataStore".
+
+:Test-case-platform152 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform152>;
+	dc:description "Human users uses applications";
+	vtc:desiredBehaviour "HumanUser subclassOf interactsUsing some Application".
+
+:Test-case-platform153 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform153>;
+	dc:description "An application typically uses Services";
+	vtc:desiredBehaviour "Application subClassOf Service".
+
+:Test-case-platform154 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform154>;
+	dc:description "Sensors can monitor the tag attached to a physical entity rather than the physical entity itself";
+	vtc:desiredBehaviour "Sensor subclassOf monitors some Tag";
+	vtc:desiredBehaviour "PhysicalThing subclassOf hasTag some Tag".
