@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/def/v1/saref4bldg" uri="file:/Users/mpoveda/Documents/workspace/saref-ext/SAREF4BLD/ontology/saref4bldg.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/def/v1/saref4city" uri="file:/Users/mpoveda/Documents/workspace/saref-ext/SAREF4CITY/ontology/saref4city.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
 </catalog>
