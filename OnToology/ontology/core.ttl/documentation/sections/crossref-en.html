@@ -474,26 +474,39 @@ This section provides details for each class and property defined by Vicinity co
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#requestedService"
-               title="http://iot.linkeddata.es/def/core#requestedService">Service requested in the contract</a>
+            <a href="#petitionerItemInvolved"
+               title="http://iot.linkeddata.es/def/core#petitionerItemInvolved">petitioner item involved</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Device" title="http://iot.linkeddata.es/def/core#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#petitionerItemInvolved"
+               title="http://iot.linkeddata.es/def/core#petitionerItemInvolved">petitioner item involved</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
             <a href="#Service" title="http://iot.linkeddata.es/def/core#Service">Service</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#requestedService"
+               title="http://iot.linkeddata.es/def/core#requestedService">Service requested in the contract</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#Service" title="http://iot.linkeddata.es/def/core#Service">Service</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#serviceOwner" title="http://iot.linkeddata.es/def/core#serviceOwner">Indicates the organization that owns the service involved in the contract</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
+            <span class="logic">max</span> 1 <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#servicePetitioner"
                title="http://iot.linkeddata.es/def/core#servicePetitioner">service petitioner</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
+            <span class="logic">max</span> 1 <a href="#Agent" title="http://iot.linkeddata.es/def/core#Agent">Agent</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -1818,6 +1831,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#owns" title="http://iot.linkeddata.es/def/core#owns">owns</a>
       </li>
       <li>
+         <a href="#petitionerItemInvolved"
+            title="http://iot.linkeddata.es/def/core#petitionerItemInvolved">petitioner item involved</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/ns/ssn/systems/qualityOfObservation"
             title="http://www.w3.org/ns/ssn/systems/qualityOfObservation">quality of observation</a>
       </li>
@@ -2779,6 +2796,17 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="petitionerItemInvolved">
+      <h3>petitioner item involved<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/core#petitionerItemInvolved</p>
+      <div class="comment">
+         <span class="markdown">Devices or services belonging to the contract petitioner that are involved in the contract  to use the requested service.</span>
       </div>
    </div>
    <div class="entity" id="http://www.w3.org/ns/ssn/systems/qualityOfObservation">
