@@ -375,7 +375,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#isLocatedAt">
-        <rdfs:label xml:lang="en">The relation between a phisical thing, for example a device, and the geographical feature in which it is located.</rdfs:label>
+        <rdfs:comment xml:lang="en">The relation between a phisical thing, for example a device, and the geographical feature in which it is located.</rdfs:comment>
         <rdfs:label xml:lang="en">is located at</rdfs:label>
     </owl:ObjectProperty>
     
