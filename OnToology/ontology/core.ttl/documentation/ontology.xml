@@ -480,7 +480,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/core#requestedService">
-        <rdfs:label xml:lang="en">Service requested in the contract</rdfs:label>
+        <rdfs:comment xml:lang="en">Service requested in the contract</rdfs:comment>
         <rdfs:label xml:lang="en">requested service</rdfs:label>
     </owl:ObjectProperty>
     
