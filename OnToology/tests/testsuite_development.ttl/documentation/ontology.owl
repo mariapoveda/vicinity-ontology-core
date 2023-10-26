@@ -1,0 +1,1046 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vtc="http://w3id.org/def/vtc#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://w3id.org/def/vtc#desiredBehaviour -->
+
+
+    <AnnotationProperty rdf:about="http://w3id.org/def/vtc#desiredBehaviour"/>
+    
+
+
+    <!-- http://w3id.org/def/vtc#isRelatedToRequirement -->
+
+
+    <AnnotationProperty rdf:about="http://w3id.org/def/vtc#isRelatedToRequirement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/def/vtc#TestCaseDesign -->
+
+
+    <Class rdf:about="http://w3id.org/def/vtc#TestCaseDesign"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case10 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case10">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which attributes can have a device?</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf avatar some Image</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Device subclassOf deviceName only string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Device subclassOf serialNumber only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform23"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case11 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case11">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is a device profile?</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf avatar some Image</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Device subclassOf deviceDescription only string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Device subclassOf deviceName only string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Device subclassOf serialNumber only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform33"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case12 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case12">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device can have a status</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#35"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case13 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case13">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device can have a location</terms:description>
+        <vtc:desiredBehaviour>Device subClassOf SpatialThing</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#37"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case14 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case14">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device can have a location</terms:description>
+        <vtc:desiredBehaviour>Device subClassOf SpatialThing</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#41"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case15 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case15">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which are the social relationships a device can be involved in?</terms:description>
+        <vtc:desiredBehaviour>Device subclassof hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#42"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case16 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case16">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which roles are involved in a ownership relationship?</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Service subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#43"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case17 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case17">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is a user?</terms:description>
+        <vtc:desiredBehaviour>HumanUser subClassOf Person</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#44"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case18 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case18">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Who is a service provider?</terms:description>
+        <vtc:desiredBehaviour>Agent subclassOf owns some Service</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#46"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case19 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case19">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What are the parameters that has a service?</terms:description>
+        <vtc:desiredBehaviour>Service subclassOf avatar some Image</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Service subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Service subclassOf serviceDescription only string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Service subclassOf serviceName only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#52"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case2 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case2">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is an IoT device?</terms:description>
+        <vtc:desiredBehaviour>Device subClassOf PhysicalThing</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case20 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case20">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is a service logical name?</terms:description>
+        <vtc:desiredBehaviour>Service subclassOf serviceName only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#57"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case21 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case21">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is an IoT device agent?</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#79"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case22 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case22">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which devices are there?</terms:description>
+        <vtc:desiredBehaviour>Device subClassOf PhysicalThing</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#80"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case23 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case23">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What are the devices of a given agent or organization?</terms:description>
+        <vtc:desiredBehaviour>Organization subclassOf hasMember some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#81"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case24 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case24">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which devices can I see?</terms:description>
+        <vtc:desiredBehaviour>Device SubClassOf PhysicalThing</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#82"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case25 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case25">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which services can I see?</terms:description>
+        <vtc:desiredBehaviour>Service SubClassOf VirtualThing</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#83"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case26 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case26">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What are the devices of a specific partner?</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#85"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case29 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case29">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which is the profile of a given device?</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf avatar some Image</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Device subclassOf deviceDescription only string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Device subclassOf deviceName some string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Device subclassOf serialNumber only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#87"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case3 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case3">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What attributes has a partnership?</terms:description>
+        <terms:description>What is a partnership?</terms:description>
+        <vtc:desiredBehaviour>Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform4"/>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform5"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case30 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case30">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device profile indicates the device name</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf deviceName only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#88"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case31 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case31">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device profile indicates the device avatar</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf avatar some Image</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#89"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case32 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case32">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device profile indicates the type of device, e.g: sensor or actuator</terms:description>
+        <vtc:desiredBehaviour>Actuator subClassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Sensor subClassOf Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#90"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case33 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case33">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device profile indicates the device vendor</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#91"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case34 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case34">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device profile indicates the device serial number</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf serialNumber some string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#92"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case35 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case35">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device profile indicates the device owner</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#94"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case36 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case36">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A service profile indicates the service name</terms:description>
+        <vtc:desiredBehaviour>Service subclassOf serviceName only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#95"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case37 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case37">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A service profile indicates the service avatar</terms:description>
+        <vtc:desiredBehaviour>Service subclassOf avatar some Image</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#96"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case38 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case38">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A service profile indicates the service  owner</terms:description>
+        <vtc:desiredBehaviour>Service subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#97"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case39 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case39">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A service profile indicates the service provider</terms:description>
+        <vtc:desiredBehaviour>Service subclassOf hasOwner some Agent</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#98"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case40 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case40">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A service profile indicates the service description (in text)</terms:description>
+        <vtc:desiredBehaviour>Service subclassOf serviceDescription some string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#99"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case41 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case41">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A partnership is established between organizations</terms:description>
+        <vtc:desiredBehaviour>Organization subclassOf hasPartnershipWith some Organization</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#101"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case42 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case42">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A partnership is established between only 2 organizations</terms:description>
+        <vtc:desiredBehaviour>Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#102"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case43 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case43">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A neighbourhood is the group of partnerships you have</terms:description>
+        <vtc:desiredBehaviour>Agent subclassOf hasNeighbourhood some Neighbourhood</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#103"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case44 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case44">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>An organization has users</terms:description>
+        <vtc:desiredBehaviour>Agent subclassOf memberOf some Organization</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>DigitalUser subClassOf Agent</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>HumanUser subClassOf Person</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#104"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case45 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case45">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>One of the users of an organization is the manager</terms:description>
+        <vtc:desiredBehaviour>Agent subclassOf hasMembership some Membership</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#105"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case46 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case46">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Users has to belong to one organization</terms:description>
+        <vtc:desiredBehaviour>Agent subclassOf memberOf some Organization</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#106"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case47 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case47">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>All organizations have the same roles in a partnership</terms:description>
+        <vtc:desiredBehaviour>Organization subclassOf  SymmetricProperty(hasPartnershipWith) some Organization</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#107"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case48 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case48">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Users can have different roles in the organization</terms:description>
+        <vtc:desiredBehaviour>Agent subclassOf hasMembership some Membership</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Membership subclassOf role some Role</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#108"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case49 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case49">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is a building?</terms:description>
+        <vtc:desiredBehaviour>PhysicalThing subclassOf isContainedIn some BuildingSpace</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#112"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case5 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case5">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which are the relationships a partnership is involved in?</terms:description>
+        <vtc:desiredBehaviour>Organization subclassOf hasPartnershipWith some Organization&gt;</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform8"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case50 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case50">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Where is something located?</terms:description>
+        <terms:description>Which devices measure temperature?</terms:description>
+        <vtc:desiredBehaviour>PhysicalThing subclassOf location some SpatialThing</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Thermometer subclassOf observes some AmbientTemperatureProperty</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#113"/>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#114"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case51 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case51">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which devices measure CO2?</terms:description>
+        <vtc:desiredBehaviour>CO2Sensor subclassOf observes some CarbonDioxide</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#115"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case52 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case52">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which devices measure noise?</terms:description>
+        <vtc:desiredBehaviour>NoiseSensor subclassOf observes some NoiseLevel</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#116"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case53 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case53">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which devices measure humidity?</terms:description>
+        <vtc:desiredBehaviour>HumiditySensor subclassOf observes some AmbientHumidityProperty</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#117"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case54 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case54">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is a thing description?</terms:description>
+        <vtc:desiredBehaviour>ThingDescription type Class</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#155"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case55 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case55">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Each thing is described by WoT Thing Descriptions</terms:description>
+        <vtc:desiredBehaviour>ThingDescription subclassOf describes some Thing</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#155"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case56 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case56">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which devices are located at a CERTH lab?</terms:description>
+        <vtc:desiredBehaviour>HVACSensor SubClassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>HumiditySensor subClassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>PeopleCounter SubClassOf Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#158"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case57 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case57">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a people counting observe?</terms:description>
+        <vtc:desiredBehaviour>PeopleCounter subclassOf observes some Presence</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#158"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case58 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case58">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a humidity sensor observe?</terms:description>
+        <vtc:desiredBehaviour>HumiditySensor subclassOf observes some AmbientHumidityProperty</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#160"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case59 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case59">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a light switch observe?</terms:description>
+        <vtc:desiredBehaviour>LightSwitch subclassOf forProperty only Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#161"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case6 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case6">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>How many organizations can have a partnership?</terms:description>
+        <vtc:desiredBehaviour>Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform9"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case60 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case60">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a motion sensor observe?</terms:description>
+        <vtc:desiredBehaviour>MotionSensor subclassOf observes some MotionProperty</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#162"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case61 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case61">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a thermometer observe?</terms:description>
+        <vtc:desiredBehaviour>Thermometer subclassOf observes some AmbientTemperatureProperty</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#163"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case62 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case62">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a CO2 sensor observe?</terms:description>
+        <vtc:desiredBehaviour>CO2Sensor subclassOf observes some CarbonDioxide</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#164"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case63 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case63">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a HVAC sensor observe?</terms:description>
+        <vtc:desiredBehaviour>HVACSensor subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>OperationalStatus subclassOf ssn#Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#165"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case64 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case64">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>WWhich devices are located at a Oslo SciencePark?</terms:description>
+        <vtc:desiredBehaviour>HumiditySensor SubclassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>LuminanceMeter SubClassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Thermometer SubClassOf Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#166"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case65 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case65">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which devices are located at UNIKL?</terms:description>
+        <vtc:desiredBehaviour>HumiditySensor SubclassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Lightbulb SubClassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Thermometer SubClassOf Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#167"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case66 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case66">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does an e-bike charger observe?</terms:description>
+        <vtc:desiredBehaviour>ChargeStatus type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>EBikeCharger subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#168"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case67 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case67">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a light bulb observe?</terms:description>
+        <vtc:desiredBehaviour>LuminanceMeter subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#169"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case68 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case68">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>	Which properties does a thermostat observe?</terms:description>
+        <vtc:desiredBehaviour>Mode type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Thermostat subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>ValvePosition type Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#172"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case69 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case69">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which devices are located at a CERTH lab?</terms:description>
+        <vtc:desiredBehaviour>BloodPressureMonitor SubClassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>WeightScale subClassOf Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#179"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case7 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case7">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is the relation between organization and devices?</terms:description>
+        <vtc:desiredBehaviour> Agent subclassOf memberOf some Organization</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform11"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case70 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case70">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a weight scale observe?</terms:description>
+        <vtc:desiredBehaviour>Weight type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>WeightScale subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#180"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case71 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case71">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a weight scale affect?</terms:description>
+        <vtc:desiredBehaviour>WeightScale subclassOf monitorsFeatureProperty only FeatureProperty</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#181"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case72 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case72">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties from a weight scale are observed in events?</terms:description>
+        <vtc:desiredBehaviour>Event subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Weight type Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#182"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case73 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case73">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a blood pressure monitor observe?</terms:description>
+        <vtc:desiredBehaviour>BloodPressureMonitor subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>DiastolicBloodPressure type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>HeartRate type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>SystolicBloodPressure type Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#183"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case74 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case74">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a blood pressure monitor affect?</terms:description>
+        <vtc:desiredBehaviour>BloodPressureMonitor subclassOf monitorsFeatureProperty only FeatureProperty</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>DiastolicBloodPressure type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>HeartRate type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>SystolicBloodPressure type Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#184"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case75 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case75">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties from a blood pressure monitor are observed in events?</terms:description>
+        <vtc:desiredBehaviour>DiastolicBloodPressure type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Event subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>HeartRate type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>SystolicBloodPressure type Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#185"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case76 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case76">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does an activity tracker observe?</terms:description>
+        <vtc:desiredBehaviour>ActivityTracker subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>CaloriesBurned type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Sleep type Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#186"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case77 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case77">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does an activity tracker affect?</terms:description>
+        <vtc:desiredBehaviour>ActivityTracker subclassOf monitorsFeatureProperty only FeatureProperty</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>CaloriesBurned type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Sleep type Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#187"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case78 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case78">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties from an activity trackerare observed in events?</terms:description>
+        <vtc:desiredBehaviour>CaloriesBurned type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Event subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Sleep type Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#188"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case79 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case79">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties from a panic button observed in events?</terms:description>
+        <vtc:desiredBehaviour>DeviceStatus type Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Event subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#189"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case8 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case8">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Who is the owner of a given device?</terms:description>
+        <vtc:desiredBehaviour>Agent subclassOf owns some  Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform21"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case80 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case80">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Which properties does a motion sensor observe?</terms:description>
+        <vtc:desiredBehaviour>AmbientTemperatureProperty subclassof Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>LuminusIntensity subclassof Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>MotionSensor subclassOf observes some Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#189"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case9 -->
+
+
+    <NamedIndividual rdf:about="file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case9">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A device has a unique identifier</terms:description>
+        <vtc:desiredBehaviour>Device subclassOf serialNumber only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform22"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

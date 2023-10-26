@@ -1,0 +1,699 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/vtc#desiredBehaviour
+<http://w3id.org/def/vtc#desiredBehaviour> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/vtc#isRelatedToRequirement
+<http://w3id.org/def/vtc#isRelatedToRequirement> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/def/vtc#TestCaseDesign
+<http://w3id.org/def/vtc#TestCaseDesign> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case10
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case10> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which attributes can have a device?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf avatar some Image" ,
+                                                                                                                                         "Device subclassOf deviceName only string" ,
+                                                                                                                                         "Device subclassOf serialNumber only string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform23> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case11
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case11> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What is a device profile?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf avatar some Image" ,
+                                                                                                                                         "Device subclassOf deviceDescription only string" ,
+                                                                                                                                         "Device subclassOf deviceName only string" ,
+                                                                                                                                         "Device subclassOf serialNumber only string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform33> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case12
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case12> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device can have a status" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf observes some Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#35> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case13
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case13> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device can have a location" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf SpatialThing" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#37> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case14
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case14> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device can have a location" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf SpatialThing" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#41> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case15
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case15> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which are the social relationships a device can be involved in?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassof hasOwner some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#42> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case16
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case16> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which roles are involved in a ownership relationship?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" ,
+                                                                                                                                         "Service subclassOf hasOwner some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#43> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case17
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case17> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What is a user?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "HumanUser subClassOf Person" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#44> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case18
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case18> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Who is a service provider?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf owns some Service" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#46> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case19
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case19> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What are the parameters that has a service?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf avatar some Image" ,
+                                                                                                                                         "Service subclassOf hasOwner some Agent" ,
+                                                                                                                                         "Service subclassOf serviceDescription only string" ,
+                                                                                                                                         "Service subclassOf serviceName only string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#52> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case2
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case2> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                             <http://purl.org/dc/terms/description> "What is an IoT device?" ;
+                                                                                             <http://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf PhysicalThing" ;
+                                                                                             <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform2> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case20
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case20> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What is a service logical name?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf serviceName only string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#57> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case21
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case21> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What is an IoT device agent?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#79> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case22
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case22> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which devices are there?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf PhysicalThing" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#80> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case23
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case23> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What are the devices of a given agent or organization?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf hasMember some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#81> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case24
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case24> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which devices can I see?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device SubClassOf PhysicalThing" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#82> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case25
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case25> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which services can I see?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Service SubClassOf VirtualThing" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#83> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case26
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case26> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What are the devices of a specific partner?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#85> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case29
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case29> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which is the profile of a given device?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf avatar some Image" ,
+                                                                                                                                         "Device subclassOf deviceDescription only string" ,
+                                                                                                                                         "Device subclassOf deviceName some string" ,
+                                                                                                                                         "Device subclassOf serialNumber only string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#87> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case3
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case3> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                             <http://purl.org/dc/terms/description> "What attributes has a partnership?" ,
+                                                                                                                                    "What is a partnership?" ;
+                                                                                             <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization" ;
+                                                                                             <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform4> ,
+                                                                                                                                              <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform5> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case30
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case30> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device profile indicates the device name" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf deviceName only string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#88> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case31
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case31> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device profile indicates the device avatar" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf avatar some Image" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#89> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case32
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case32> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device profile indicates the type of device, e.g: sensor or actuator" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Actuator subClassOf Device" ,
+                                                                                                                                         "Sensor subClassOf Device" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#90> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case33
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case33> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device profile indicates the device vendor" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#91> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case34
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case34> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device profile indicates the device serial number" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf serialNumber some string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#92> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case35
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case35> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A device profile indicates the device owner" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf hasOwner some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#94> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case36
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case36> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A service profile indicates the service name" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf serviceName only string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#95> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case37
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case37> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A service profile indicates the service avatar" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf avatar some Image" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#96> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case38
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case38> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A service profile indicates the service  owner" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf hasOwner some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#97> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case39
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case39> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A service profile indicates the service provider" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf hasOwner some Agent" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#98> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case40
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case40> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A service profile indicates the service description (in text)" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Service subclassOf serviceDescription some string" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#99> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case41
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case41> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A partnership is established between organizations" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf hasPartnershipWith some Organization" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#101> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case42
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case42> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A partnership is established between only 2 organizations" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#102> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case43
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case43> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "A neighbourhood is the group of partnerships you have" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf hasNeighbourhood some Neighbourhood" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#103> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case44
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case44> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "An organization has users" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf memberOf some Organization" ,
+                                                                                                                                         "DigitalUser subClassOf Agent" ,
+                                                                                                                                         "HumanUser subClassOf Person" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#104> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case45
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case45> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "One of the users of an organization is the manager" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf hasMembership some Membership" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#105> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case46
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case46> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Users has to belong to one organization" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf memberOf some Organization" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#106> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case47
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case47> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "All organizations have the same roles in a partnership" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf  SymmetricProperty(hasPartnershipWith) some Organization" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#107> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case48
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case48> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Users can have different roles in the organization" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf hasMembership some Membership" ,
+                                                                                                                                         "Membership subclassOf role some Role" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#108> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case49
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case49> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What is a building?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "PhysicalThing subclassOf isContainedIn some BuildingSpace" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#112> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case5
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case5> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                             <http://purl.org/dc/terms/description> "Which are the relationships a partnership is involved in?" ;
+                                                                                             <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf hasPartnershipWith some Organization>" ;
+                                                                                             <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform8> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case50
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case50> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Where is something located?" ,
+                                                                                                                                     "Which devices measure temperature?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "PhysicalThing subclassOf location some SpatialThing" ,
+                                                                                                                                         "Thermometer subclassOf observes some AmbientTemperatureProperty" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#113> ,
+                                                                                                                                               <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#114> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case51
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case51> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which devices measure CO2?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "CO2Sensor subclassOf observes some CarbonDioxide" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#115> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case52
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case52> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which devices measure noise?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "NoiseSensor subclassOf observes some NoiseLevel" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#116> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case53
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case53> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which devices measure humidity?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor subclassOf observes some AmbientHumidityProperty" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#117> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case54
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case54> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "What is a thing description?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "ThingDescription type Class" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#155> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case55
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case55> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Each thing is described by WoT Thing Descriptions" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "ThingDescription subclassOf describes some Thing" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#155> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case56
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case56> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which devices are located at a CERTH lab?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "HVACSensor SubClassOf Device" ,
+                                                                                                                                         "HumiditySensor subClassOf Device" ,
+                                                                                                                                         "PeopleCounter SubClassOf Device" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#158> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case57
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case57> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a people counting observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "PeopleCounter subclassOf observes some Presence" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#158> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case58
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case58> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a humidity sensor observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor subclassOf observes some AmbientHumidityProperty" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#160> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case59
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case59> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a light switch observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "LightSwitch subclassOf forProperty only Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#161> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case6
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case6> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                             <http://purl.org/dc/terms/description> "How many organizations can have a partnership?" ;
+                                                                                             <http://w3id.org/def/vtc#desiredBehaviour> "Organization subclassOf SymmetricProperty(hasPartnershipWith) some Organization" ;
+                                                                                             <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform9> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case60
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case60> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a motion sensor observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "MotionSensor subclassOf observes some MotionProperty" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#162> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case61
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case61> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a thermometer observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Thermometer subclassOf observes some AmbientTemperatureProperty" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#163> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case62
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case62> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a CO2 sensor observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "CO2Sensor subclassOf observes some CarbonDioxide" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#164> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case63
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case63> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a HVAC sensor observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "HVACSensor subclassOf observes some Property" ,
+                                                                                                                                         "OperationalStatus subclassOf ssn#Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#165> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case64
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case64> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "WWhich devices are located at a Oslo SciencePark?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor SubclassOf Device" ,
+                                                                                                                                         "LuminanceMeter SubClassOf Device" ,
+                                                                                                                                         "Thermometer SubClassOf Device" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#166> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case65
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case65> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which devices are located at UNIKL?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "HumiditySensor SubclassOf Device" ,
+                                                                                                                                         "Lightbulb SubClassOf Device" ,
+                                                                                                                                         "Thermometer SubClassOf Device" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#167> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case66
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case66> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does an e-bike charger observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "ChargeStatus type Property" ,
+                                                                                                                                         "EBikeCharger subclassOf observes some Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#168> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case67
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case67> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a light bulb observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "LuminanceMeter subclassOf observes some Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#169> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case68
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case68> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "	Which properties does a thermostat observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Mode type Property" ,
+                                                                                                                                         "Thermostat subclassOf observes some Property" ,
+                                                                                                                                         "ValvePosition type Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#172> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case69
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case69> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which devices are located at a CERTH lab?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "BloodPressureMonitor SubClassOf Device" ,
+                                                                                                                                         "WeightScale subClassOf Device" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#179> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case7
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case7> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                             <http://purl.org/dc/terms/description> "What is the relation between organization and devices?" ;
+                                                                                             <http://w3id.org/def/vtc#desiredBehaviour> " Agent subclassOf memberOf some Organization" ;
+                                                                                             <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform11> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case70
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case70> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a weight scale observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Weight type Property" ,
+                                                                                                                                         "WeightScale subclassOf observes some Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#180> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case71
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case71> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a weight scale affect?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "WeightScale subclassOf monitorsFeatureProperty only FeatureProperty" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#181> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case72
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case72> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties from a weight scale are observed in events?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf observes some Property" ,
+                                                                                                                                         "Weight type Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#182> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case73
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case73> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a blood pressure monitor observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "BloodPressureMonitor subclassOf observes some Property" ,
+                                                                                                                                         "DiastolicBloodPressure type Property" ,
+                                                                                                                                         "HeartRate type Property" ,
+                                                                                                                                         "SystolicBloodPressure type Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#183> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case74
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case74> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a blood pressure monitor affect?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "BloodPressureMonitor subclassOf monitorsFeatureProperty only FeatureProperty" ,
+                                                                                                                                         "DiastolicBloodPressure type Property" ,
+                                                                                                                                         "HeartRate type Property" ,
+                                                                                                                                         "SystolicBloodPressure type Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#184> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case75
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case75> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties from a blood pressure monitor are observed in events?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "DiastolicBloodPressure type Property" ,
+                                                                                                                                         "Event subclassOf observes some Property" ,
+                                                                                                                                         "HeartRate type Property" ,
+                                                                                                                                         "SystolicBloodPressure type Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#185> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case76
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case76> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does an activity tracker observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "ActivityTracker subclassOf observes some Property" ,
+                                                                                                                                         "CaloriesBurned type Property" ,
+                                                                                                                                         "Sleep type Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#186> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case77
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case77> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does an activity tracker affect?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "ActivityTracker subclassOf monitorsFeatureProperty only FeatureProperty" ,
+                                                                                                                                         "CaloriesBurned type Property" ,
+                                                                                                                                         "Sleep type Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#187> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case78
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case78> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties from an activity trackerare observed in events?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "CaloriesBurned type Property" ,
+                                                                                                                                         "Event subclassOf observes some Property" ,
+                                                                                                                                         "Sleep type Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#188> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case79
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case79> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties from a panic button observed in events?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "DeviceStatus type Property" ,
+                                                                                                                                         "Event subclassOf observes some Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#189> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case8
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case8> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                             <http://purl.org/dc/terms/description> "Who is the owner of a given device?" ;
+                                                                                             <http://w3id.org/def/vtc#desiredBehaviour> "Agent subclassOf owns some  Device" ;
+                                                                                             <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform21> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case80
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case80> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                              <http://purl.org/dc/terms/description> "Which properties does a motion sensor observe?" ;
+                                                                                              <http://w3id.org/def/vtc#desiredBehaviour> "AmbientTemperatureProperty subclassof Property" ,
+                                                                                                                                         "LuminusIntensity subclassof Property" ,
+                                                                                                                                         "MotionSensor subclassOf observes some Property" ;
+                                                                                              <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#189> .
+
+
+###  file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case9
+<file:/home/ahmad/repos/mpovedavillalon@gmail.com/tests/testsuite_development.ttlTest-case9> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                                             <http://purl.org/dc/terms/description> "A device has a unique identifier" ;
+                                                                                             <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf serialNumber only string" ;
+                                                                                             <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-core.html#platform22> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
